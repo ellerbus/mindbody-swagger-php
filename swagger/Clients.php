@@ -13,10 +13,10 @@ class Clients
         $this->paths = $paths;
     }
 
-    public function generate()
+    public function generate($output)
     {
         $this->generateClients();
-        $this->generateClasses();
+        $this->generateClasses($output);
     }
 
     private function generateClients()
@@ -46,17 +46,17 @@ class Clients
         }
     }
 
-    private function generateClasses()
+    private function generateClasses($output)
     {
         foreach ($this->clients as $client_key => $client)
         {
             ob_start();
 
-            include 'swagger-client.tpl.php';
+            include 'Client.tpl.php';
 
             $contents = ob_get_clean();
 
-            $f = fopen("../MindBody/Clients/{$client_key}Client.php", 'w');
+            $f = fopen("$output/MindBody/Clients/{$client_key}Client.php", 'w');
 
             fwrite($f, '<?php' . PHP_EOL);
             fwrite($f, $contents);

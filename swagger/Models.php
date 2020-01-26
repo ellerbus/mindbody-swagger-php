@@ -9,7 +9,7 @@ class Models
         $this->definitions = $definitions;
     }
 
-    public function generate()
+    public function generate($output)
     {
         foreach ($this->definitions as $definition_key => $definition)
         {
@@ -17,11 +17,11 @@ class Models
 
             ob_start();
 
-            include 'swagger-definition.tpl.php';
+            include 'Model.tpl.php';
 
             $contents = ob_get_clean();
 
-            $f = fopen("../MindBody/Models/{$class_name}.php", 'w');
+            $f = fopen("$output/MindBody/Models/{$class_name}.php", 'w');
 
             fwrite($f, '<?php' . PHP_EOL);
             fwrite($f, $contents);
@@ -29,6 +29,8 @@ class Models
             fclose($f);
 
             echo $class_name . PHP_EOL;
+
+            die();
         }
     }
 
