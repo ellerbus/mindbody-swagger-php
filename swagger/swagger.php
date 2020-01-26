@@ -1,8 +1,8 @@
 <?php
-require_once './SqlTables.php';
-require_once './Tables.php';
-require_once './Models.php';
-require_once './Clients.php';
+require_once __DIR__ . '/SqlTables.php';
+require_once __DIR__ . '/Tables.php';
+require_once __DIR__ . '/Models.php';
+require_once __DIR__ . '/Clients.php';
 
 $json = file_get_contents('./swagger.json');
 
