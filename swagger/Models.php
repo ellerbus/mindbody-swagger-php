@@ -29,8 +29,6 @@ class Models
             fclose($f);
 
             echo $class_name . PHP_EOL;
-
-            die();
         }
     }
 
