@@ -56,7 +56,7 @@ class Clients
 
             $contents = ob_get_clean();
 
-            $f = fopen("$output/MindBody/Clients/{$client_key}Client.php", 'w');
+            $f = fopen("$output/{$client_key}Client.php", 'w');
 
             fwrite($f, '<?php' . PHP_EOL);
             fwrite($f, $contents);

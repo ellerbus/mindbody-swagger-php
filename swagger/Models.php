@@ -21,7 +21,7 @@ class Models
 
             $contents = ob_get_clean();
 
-            $f = fopen("$output/MindBody/Models/{$class_name}.php", 'w');
+            $f = fopen("$output/{$class_name}.php", 'w');
 
             fwrite($f, '<?php' . PHP_EOL);
             fwrite($f, $contents);

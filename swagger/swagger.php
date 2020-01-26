@@ -4,7 +4,7 @@ require_once __DIR__ . '/Tables.php';
 require_once __DIR__ . '/Models.php';
 require_once __DIR__ . '/Clients.php';
 
-$json = file_get_contents('./swagger.json');
+$json = file_get_contents(__DIR__ . '/swagger.json');
 
 $swagger = json_decode($json);
 
