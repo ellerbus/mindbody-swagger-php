@@ -7,14 +7,16 @@ If you use this, the ReferencedClasses will need to be copied to your project an
 namespaces fixed appropriately. This is NOT intended to work out of the box, developer
 intervention is required. This is a ONE time slam the baseline code out there and customize.
 
-|Parameter|Values|Description|
+|Template|OutpathDescription|
 |---|---|---|
-|output|string|Path to output resulting files to|
-|templates|string|Generate which templates? (models,clients,sql)|
+|tables|path-to-folder|Generate interface to DB objects at the specified folder|
+|models|path-to-folder|Generate Models at the specified folder|
+|clients|path-to-folder|Generate Clients at the specified folder|
+|sql|path-to-folder|Generate .sql at the specified folder|
 
 ```
 prompt:> php -f swagger.php
 
 # only outputs sql
-prompt:> php -f swagger.php output=../path templates[sql]=1
+prompt:> php -f swagger.php --sql=path-tol-folder
 ```

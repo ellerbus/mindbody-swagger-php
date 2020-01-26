@@ -1,6 +1,6 @@
 <?php
 
-class SqlTables
+class Tables
 {
     protected $definitions;
 
@@ -13,23 +13,26 @@ class SqlTables
     {
         foreach ($this->definitions as $definition_key => $definition)
         {
-            $table_name = $this->getName($definition_key);
+            $class_name = $this->getName($definition_key);
 
-            if ($table_name != '')
+            if ($class_name != '')
             {
+                $table_name = $this->snakeCase($class_name);
+
                 ob_start();
 
-                include 'SqlTable.tpl.php';
+                include 'Table.tpl.php';
 
                 $contents = ob_get_clean();
 
-                $f = fopen("$output/{$table_name}.sql", 'w');
+                $f = fopen("$output/{$class_name}.php", 'w');
 
+                fwrite($f, '<?php' . PHP_EOL);
                 fwrite($f, $contents);
 
                 fclose($f);
 
-                echo $table_name . PHP_EOL;
+                echo $class_name . PHP_EOL;
             }
         }
     }
@@ -45,7 +48,7 @@ class SqlTables
             return null;
         }
 
-        return 'mindbody_' . $this->snakeCase($nm);
+        return $nm;
     }
 
     public function getType($p)
@@ -54,22 +57,23 @@ class SqlTables
 
         if (isset($p->type))
         {
-            switch ($p->type)
+            if ($p->type == 'array' && isset($p->items->type))
             {
-                case 'boolean':
-                    return 'smallint';
-                case 'integer':
-                    return 'int';
-                case 'number':
-                    return 'float';
-                case 'string':
-                    return 'varchar(50)';
+                return 'arrayof[' . $p->items->type . ']';
             }
-
+            if ($p->type == 'array' && isset($p->items->$ref))
+            {
+                return 'arrayof[' . $p->items->$ref . ']';
+            }
             return $p->type;
         }
 
-        return 'another-object';
+        if (isset($p->$ref))
+        {
+            return $p->$ref;
+        }
+
+        return 'none';
     }
 
     /**
