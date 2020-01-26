@@ -15,8 +15,6 @@ intervention is required. This is a ONE time slam the baseline code out there an
 |sql|path-to-folder|Generate .sql at the specified folder|
 
 ```
-prompt:> php -f swagger.php
-
 # only outputs sql
-prompt:> php -f swagger.php --sql=path-tol-folder
+prompt:> php -f swagger.php --sql=path-to-folder
 ```
