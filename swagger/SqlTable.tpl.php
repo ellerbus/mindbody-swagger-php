@@ -8,6 +8,7 @@ create table <?=$table_name?>
     <?=str_pad($this->snakeCase($key), 30)?> <?=$this->getType($property)?> null,
     <?php endforeach?>
 
+    created_at              timestamp with time zone default CURRENT_TIMESTAMP
 );
 
 alter table <?=$table_name?>
