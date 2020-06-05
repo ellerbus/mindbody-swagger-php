@@ -31,12 +31,3 @@ class ModelsGenerator(object):
         nm = strutils.snake_case(key)
         model_file = os.path.join(self.path, nm + '.py')
         return (nm, model_file)
-
-    # def write_constructor(self, file,  definition):
-    #     if 'required' in definition:
-    #         required = definition['required']
-    #         names = list(map(lambda x: strutils.snake_case(x), required))
-    #         parameters = ', '.join(names)
-    #         file.write(f'\tdef __init__(self, {parameters}):\n')
-    #         for name in names:
-    #             file.write(f'\t\tself.{name} = {name}\n')
