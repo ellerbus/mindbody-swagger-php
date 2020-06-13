@@ -1,6 +1,8 @@
 from .base_model import BaseModel
 
+from .contract_item import ContractItem
 from .autopay_schedule import AutopaySchedule
+from .membership_type_restriction import MembershipTypeRestriction
 
 class Contract(BaseModel):
 	"""
@@ -149,7 +151,7 @@ class Contract(BaseModel):
 		'AssignsMembershipId': 'assigns_membership_id',
 		'AssignsMembershipName': 'assigns_membership_name',
 		'SoldOnline': 'sold_online',
-		'ContractItems': 'contract_items',
+		'ContractItems': ['contract_items', ContractItem],
 		'IntroOffer': 'intro_offer',
 		'AutopaySchedule': ('autopay_schedule', AutopaySchedule),
 		'NumberOfAutopays': 'number_of_autopays',
@@ -162,7 +164,7 @@ class Contract(BaseModel):
 		'FirstAutopayFree': 'first_autopay_free',
 		'LastAutopayFree': 'last_autopay_free',
 		'ClientTerminateOnline': 'client_terminate_online',
-		'MembershipTypeRestrictions': 'membership_type_restrictions',
+		'MembershipTypeRestrictions': ['membership_type_restrictions', MembershipTypeRestriction],
 		'LocationPurchaseRestrictionIds': 'location_purchase_restriction_ids',
 		'LocationPurchaseRestrictionNames': 'location_purchase_restriction_names',
 		'AgreementTerms': 'agreement_terms',

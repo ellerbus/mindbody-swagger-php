@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .resource import Resource
 
 class GetResourcesResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetResourcesResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Resources': 'resources',
+		'Resources': ['resources', Resource],
 		}
 
 	output_map = {

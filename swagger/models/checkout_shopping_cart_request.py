@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .checkout_item_wrapper import CheckoutItemWrapper
+from .checkout_payment_info import CheckoutPaymentInfo
 
 class CheckoutShoppingCartRequest(BaseModel):
 	"""
@@ -62,10 +64,10 @@ class CheckoutShoppingCartRequest(BaseModel):
 		'CartId': 'cart_id',
 		'ClientId': 'client_id',
 		'Test': 'test',
-		'Items': 'items',
+		'Items': ['items', CheckoutItemWrapper],
 		'InStore': 'in_store',
 		'PromotionCode': 'promotion_code',
-		'Payments': 'payments',
+		'Payments': ['payments', CheckoutPaymentInfo],
 		'SendEmail': 'send_email',
 		'LocationId': 'location_id',
 		'Image': 'image',

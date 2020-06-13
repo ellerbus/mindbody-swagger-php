@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .time_card_event import TimeCardEvent
 
 class GetTimeCardsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetTimeCardsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'TimeCards': 'time_cards',
+		'TimeCards': ['time_cards', TimeCardEvent],
 		}
 
 	output_map = {

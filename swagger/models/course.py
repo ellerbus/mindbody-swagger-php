@@ -51,7 +51,7 @@ class Course(BaseModel):
 		'StartDate': 'start_date',
 		'EndDate': 'end_date',
 		'Location': ('location', Location),
-		'Organizer': ('organizer', Organizer),
+		'Organizer': ('organizer', Staff),
 		'Program': ('program', Program),
 		'ImageUrl': 'image_url',
 		}

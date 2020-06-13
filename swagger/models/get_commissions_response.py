@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .commission_payroll_event import CommissionPayrollEvent
 
 class GetCommissionsResponse(BaseModel):
 	"""
@@ -19,7 +20,7 @@ class GetCommissionsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Commissions': 'commissions',
+		'Commissions': ['commissions', CommissionPayrollEvent],
 		}
 
 	output_map = {

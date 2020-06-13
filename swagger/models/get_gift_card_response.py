@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .gift_card import GiftCard
 
 class GetGiftCardResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetGiftCardResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'GiftCards': 'gift_cards',
+		'GiftCards': ['gift_cards', GiftCard],
 		}
 
 	output_map = {

@@ -1,5 +1,8 @@
 from .base_model import BaseModel
 
+from .appointment import Appointment
+from .unavailability import Unavailability
+from .availability import Availability
 
 class Staff(BaseModel):
 	"""
@@ -113,9 +116,9 @@ class Staff(BaseModel):
 		'State': 'state',
 		'WorkPhone': 'work_phone',
 		'ImageUrl': 'image_url',
-		'Appointments': 'appointments',
-		'Unavailabilities': 'unavailabilities',
-		'Availabilities': 'availabilities',
+		'Appointments': ['appointments', Appointment],
+		'Unavailabilities': ['unavailabilities', Unavailability],
+		'Availabilities': ['availabilities', Availability],
 		}
 
 	output_map = {

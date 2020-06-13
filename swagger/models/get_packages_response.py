@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .package import Package
 from .pagination_response import PaginationResponse
 
 class GetPackagesResponse(BaseModel):
@@ -16,7 +17,7 @@ class GetPackagesResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Packages': 'packages',
+		'Packages': ['packages', Package],
 		'PaginationResponse': ('pagination_response', PaginationResponse),
 		}
 

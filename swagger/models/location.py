@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .amenity import Amenity
 
 class Location(BaseModel):
 	"""
@@ -99,7 +100,7 @@ class Location(BaseModel):
 		'AdditionalImageURLs': 'additional_image_ur_ls',
 		'Address': 'address',
 		'Address2': 'address_2',
-		'Amenities': 'amenities',
+		'Amenities': ['amenities', Amenity],
 		'BusinessDescription': 'business_description',
 		'City': 'city',
 		'Description': 'description',

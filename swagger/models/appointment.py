@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .resource import Resource
 
 class Appointment(BaseModel):
 	"""
@@ -80,7 +81,7 @@ class Appointment(BaseModel):
 		'ClientId': 'client_id',
 		'FirstAppointment': 'first_appointment',
 		'ClientServiceId': 'client_service_id',
-		'Resources': 'resources',
+		'Resources': ['resources', Resource],
 		}
 
 	output_map = {

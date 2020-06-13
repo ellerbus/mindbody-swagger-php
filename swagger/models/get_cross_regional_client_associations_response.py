@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .cross_regional_client_association import CrossRegionalClientAssociation
 
 class GetCrossRegionalClientAssociationsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetCrossRegionalClientAssociationsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'CrossRegionalClientAssociations': 'cross_regional_client_associations',
+		'CrossRegionalClientAssociations': ['cross_regional_client_associations', CrossRegionalClientAssociation],
 		}
 
 	output_map = {

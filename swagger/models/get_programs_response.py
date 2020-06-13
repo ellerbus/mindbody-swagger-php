@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .program import Program
 
 class GetProgramsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetProgramsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Programs': 'programs',
+		'Programs': ['programs', Program],
 		}
 
 	output_map = {

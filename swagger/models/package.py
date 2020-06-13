@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .service import Service
+from .product import Product
 
 class Package(BaseModel):
 	"""
@@ -32,8 +34,8 @@ class Package(BaseModel):
 		'Name': 'name',
 		'DiscountPercentage': 'discount_percentage',
 		'SellOnline': 'sell_online',
-		'Services': 'services',
-		'Products': 'products',
+		'Services': ['services', Service],
+		'Products': ['products', Product],
 		}
 
 	output_map = {

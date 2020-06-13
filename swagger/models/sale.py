@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .purchased_item import PurchasedItem
+from .sale_payment import SalePayment
 
 class Sale(BaseModel):
 	"""
@@ -39,9 +41,9 @@ class Sale(BaseModel):
 		'SaleTime': 'sale_time',
 		'SaleDateTime': 'sale_date_time',
 		'ClientId': 'client_id',
-		'PurchasedItems': 'purchased_items',
+		'PurchasedItems': ['purchased_items', PurchasedItem],
 		'LocationId': 'location_id',
-		'Payments': 'payments',
+		'Payments': ['payments', SalePayment],
 		}
 
 	output_map = {

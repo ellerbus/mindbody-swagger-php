@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .program_membership import ProgramMembership
 
 class Membership(BaseModel):
 	"""
@@ -56,7 +57,7 @@ class Membership(BaseModel):
 		'MemberRetailDiscount': 'member_retail_discount',
 		'MemberServiceDiscount': 'member_service_discount',
 		'AllowClientsToScheduleUnpaid': 'allow_clients_to_schedule_unpaid',
-		'OnlineBookingRestrictedToMembersOnly': 'online_booking_restricted_to_members_only',
+		'OnlineBookingRestrictedToMembersOnly': ['online_booking_restricted_to_members_only', ProgramMembership],
 		'DayOfMonthSchedulingOpensForNextMonth': 'day_of_month_scheduling_opens_for_next_month',
 		'RestrictSelfSignInToMembersOnly': 'restrict_self_sign_in_to_members_only',
 		'AllowMembersToBookAppointmentsWithoutPaying': 'allow_members_to_book_appointments_without_paying',

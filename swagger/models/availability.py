@@ -2,6 +2,7 @@ from .base_model import BaseModel
 
 from .staff import Staff
 from .session_type import SessionType
+from .program import Program
 from .location import Location
 
 class Availability(BaseModel):
@@ -39,7 +40,7 @@ class Availability(BaseModel):
 		'Id': 'id',
 		'Staff': ('staff', Staff),
 		'SessionType': ('session_type', SessionType),
-		'Programs': 'programs',
+		'Programs': ['programs', Program],
 		'StartDateTime': 'start_date_time',
 		'EndDateTime': 'end_date_time',
 		'BookableEndDateTime': 'bookable_end_date_time',

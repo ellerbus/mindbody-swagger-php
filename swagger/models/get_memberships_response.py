@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .membership import Membership
 
 class GetMembershipsResponse(BaseModel):
 	"""
@@ -12,7 +13,7 @@ class GetMembershipsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Memberships': 'memberships',
+		'Memberships': ['memberships', Membership],
 		}
 
 	output_map = {

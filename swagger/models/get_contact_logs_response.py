@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .contact_log import ContactLog
 
 class GetContactLogsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetContactLogsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'ContactLogs': 'contact_logs',
+		'ContactLogs': ['contact_logs', ContactLog],
 		}
 
 	output_map = {

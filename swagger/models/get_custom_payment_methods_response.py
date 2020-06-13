@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .custom_payment_method import CustomPaymentMethod
 
 class GetCustomPaymentMethodsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetCustomPaymentMethodsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'PaymentMethods': 'payment_methods',
+		'PaymentMethods': ['payment_methods', CustomPaymentMethod],
 		}
 
 	output_map = {

@@ -73,7 +73,7 @@ class PurchaseGiftCardRequest(BaseModel):
 		'Title': 'title',
 		'GiftMessage': 'gift_message',
 		'DeliveryDate': 'delivery_date',
-		'PaymentInfo': ('payment_info', PaymentInfo),
+		'PaymentInfo': ('payment_info', CheckoutPaymentInfo),
 		'SalesRepId': 'sales_rep_id',
 		}
 

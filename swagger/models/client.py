@@ -1,8 +1,12 @@
 from .base_model import BaseModel
 
+from .custom_client_field_value import CustomClientFieldValue
 from .client_credit_card import ClientCreditCard
+from .assigned_client_index import AssignedClientIndex
+from .client_relationship import ClientRelationship
 from .liability import Liability
 from .prospect_stage import ProspectStage
+from .sales_rep import SalesRep
 
 class Client(BaseModel):
 	"""
@@ -232,10 +236,10 @@ class Client(BaseModel):
 		'BirthDate': 'birth_date',
 		'Country': 'country',
 		'CreationDate': 'creation_date',
-		'CustomClientFields': 'custom_client_fields',
+		'CustomClientFields': ['custom_client_fields', CustomClientFieldValue],
 		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
-		'ClientIndexes': 'client_indexes',
-		'ClientRelationships': 'client_relationships',
+		'ClientIndexes': ['client_indexes', AssignedClientIndex],
+		'ClientRelationships': ['client_relationships', ClientRelationship],
 		'FirstAppointmentDate': 'first_appointment_date',
 		'FirstName': 'first_name',
 		'Id': 'id',
@@ -273,7 +277,7 @@ class Client(BaseModel):
 		'Gender': 'gender',
 		'LastFormulaNotes': 'last_formula_notes',
 		'Active': 'active',
-		'SalesReps': 'sales_reps',
+		'SalesReps': ['sales_reps', SalesRep],
 		'Status': 'status',
 		'Action': 'action',
 		'SendAccountEmails': 'send_account_emails',

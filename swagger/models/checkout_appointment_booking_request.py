@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .resource import Resource
 
 class CheckoutAppointmentBookingRequest(BaseModel):
 	"""
@@ -39,7 +40,7 @@ class CheckoutAppointmentBookingRequest(BaseModel):
 		'StaffId': 'staff_id',
 		'LocationId': 'location_id',
 		'SessionTypeId': 'session_type_id',
-		'Resources': 'resources',
+		'Resources': ['resources', Resource],
 		'StartDateTime': 'start_date_time',
 		'EndDateTime': 'end_date_time',
 		'ProviderId': 'provider_id',

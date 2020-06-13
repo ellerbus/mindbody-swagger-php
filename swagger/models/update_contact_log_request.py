@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .update_contact_log_comment import UpdateContactLogComment
+from .update_contact_log_type import UpdateContactLogType
 
 class UpdateContactLogRequest(BaseModel):
 	"""
@@ -52,8 +54,8 @@ class UpdateContactLogRequest(BaseModel):
 		'ContactName': 'contact_name',
 		'FollowupByDate': 'followup_by_date',
 		'ContactMethod': 'contact_method',
-		'Comments': 'comments',
-		'Types': 'types',
+		'Comments': ['comments', UpdateContactLogComment],
+		'Types': ['types', UpdateContactLogType],
 		}
 
 	output_map = {

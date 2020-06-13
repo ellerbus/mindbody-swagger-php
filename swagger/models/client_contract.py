@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .upcoming_autopay_event import UpcomingAutopayEvent
 
 class ClientContract(BaseModel):
 	"""
@@ -44,7 +45,7 @@ class ClientContract(BaseModel):
 		'OriginationLocationId': 'origination_location_id',
 		'StartDate': 'start_date',
 		'SiteId': 'site_id',
-		'UpcomingAutopayEvents': 'upcoming_autopay_events',
+		'UpcomingAutopayEvents': ['upcoming_autopay_events', UpcomingAutopayEvent],
 		}
 
 	output_map = {

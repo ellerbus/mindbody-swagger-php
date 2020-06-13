@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .contact_log_sub_type import ContactLogSubType
 
 class ContactLogType(BaseModel):
 	"""
@@ -16,7 +17,7 @@ class ContactLogType(BaseModel):
 
 	input_map = {
 		'Id': 'id',
-		'SubTypes': 'sub_types',
+		'SubTypes': ['sub_types', ContactLogSubType],
 		}
 
 	output_map = {

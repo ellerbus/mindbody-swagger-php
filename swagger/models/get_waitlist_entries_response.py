@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .waitlist_entry import WaitlistEntry
 
 class GetWaitlistEntriesResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetWaitlistEntriesResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'WaitlistEntries': 'waitlist_entries',
+		'WaitlistEntries': ['waitlist_entries', WaitlistEntry],
 		}
 
 	output_map = {

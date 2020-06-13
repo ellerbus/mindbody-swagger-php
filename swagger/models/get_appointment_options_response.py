@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .appointment_option import AppointmentOption
 
 class GetAppointmentOptionsResponse(BaseModel):
 	"""
@@ -12,7 +13,7 @@ class GetAppointmentOptionsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Options': 'options',
+		'Options': ['options', AppointmentOption],
 		}
 
 	output_map = {

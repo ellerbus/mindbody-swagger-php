@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .formula_note import FormulaNote
 
 class GetClientFormulaNotesResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetClientFormulaNotesResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'FormulaNotes': 'formula_notes',
+		'FormulaNotes': ['formula_notes', FormulaNote],
 		}
 
 	output_map = {

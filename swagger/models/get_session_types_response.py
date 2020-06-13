@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .session_type import SessionType
 
 class GetSessionTypesResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetSessionTypesResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'SessionTypes': 'session_types',
+		'SessionTypes': ['session_types', SessionType],
 		}
 
 	output_map = {

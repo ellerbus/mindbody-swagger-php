@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .commission_detail import CommissionDetail
 
 class CommissionPayrollEvent(BaseModel):
 	"""
@@ -32,7 +33,7 @@ class CommissionPayrollEvent(BaseModel):
 		'SaleDateTime': 'sale_date_time',
 		'SaleId': 'sale_id',
 		'ProductId': 'product_id',
-		'EarningsDetails': 'earnings_details',
+		'EarningsDetails': ['earnings_details', CommissionDetail],
 		'Earnings': 'earnings',
 		}
 

@@ -74,6 +74,11 @@ class ModelGenerator(object):
                 name = parts[-1]
                 file_name = strutils.snake_case(name)
                 file.write(f'from .{file_name} import {name}\n')
+            elif prop['type'] == 'array' and '$ref' in prop['items']:
+                parts = prop['items']['$ref'].split('/')
+                name = parts[-1]
+                file_name = strutils.snake_case(name)
+                file.write(f'from .{file_name} import {name}\n')
         file.write('\n')
 
     def write_constructor(self, file):
@@ -108,7 +113,13 @@ class ModelGenerator(object):
             prop = properties[key]
             name = strutils.snake_case(key)
             if '$ref' in prop:
-                file.write(f"\t\t\'{key}': ('{name}', {key}),\n")
+                parts = prop['$ref'].split('/')
+                object_name = parts[-1]
+                file.write(f"\t\t\'{key}': ('{name}', {object_name}),\n")
+            elif prop['type'] == 'array' and '$ref' in prop['items']:
+                parts = prop['items']['$ref'].split('/')
+                object_name = parts[-1]
+                file.write(f"\t\t\'{key}': ['{name}', {object_name}],\n")
             else:
                 file.write(f"\t\t'{key}': '{name}',\n")
         file.write(f'\t\t}}\n')

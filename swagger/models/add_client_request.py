@@ -1,9 +1,13 @@
 from .base_model import BaseModel
 
 from .client_credit_card import ClientCreditCard
+from .assigned_client_index import AssignedClientIndex
+from .client_relationship import ClientRelationship
+from .custom_client_field_value import CustomClientFieldValue
 from .location import Location
 from .liability import Liability
 from .prospect_stage import ProspectStage
+from .sales_rep import SalesRep
 
 class AddClientRequest(BaseModel):
 	"""
@@ -240,11 +244,11 @@ class AddClientRequest(BaseModel):
 		'BirthDate': 'birth_date',
 		'City': 'city',
 		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
-		'ClientIndexes': 'client_indexes',
-		'ClientRelationships': 'client_relationships',
+		'ClientIndexes': ['client_indexes', AssignedClientIndex],
+		'ClientRelationships': ['client_relationships', ClientRelationship],
 		'Country': 'country',
 		'CreationDate': 'creation_date',
-		'CustomClientFields': 'custom_client_fields',
+		'CustomClientFields': ['custom_client_fields', CustomClientFieldValue],
 		'Email': 'email',
 		'EmergencyContactInfoEmail': 'emergency_contact_info_email',
 		'EmergencyContactInfoName': 'emergency_contact_info_name',
@@ -253,7 +257,7 @@ class AddClientRequest(BaseModel):
 		'FirstAppointmentDate': 'first_appointment_date',
 		'FirstName': 'first_name',
 		'Gender': 'gender',
-		'HomeLocation': ('home_location', HomeLocation),
+		'HomeLocation': ('home_location', Location),
 		'HomePhone': 'home_phone',
 		'IsCompany': 'is_company',
 		'IsProspect': 'is_prospect',
@@ -273,7 +277,7 @@ class AddClientRequest(BaseModel):
 		'ProspectStage': ('prospect_stage', ProspectStage),
 		'RedAlert': 'red_alert',
 		'ReferredBy': 'referred_by',
-		'SalesReps': 'sales_reps',
+		'SalesReps': ['sales_reps', SalesRep],
 		'SiteId': 'site_id',
 		'State': 'state',
 		'Status': 'status',

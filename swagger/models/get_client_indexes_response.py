@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .client_index import ClientIndex
 
 class GetClientIndexesResponse(BaseModel):
 	"""
@@ -12,7 +13,7 @@ class GetClientIndexesResponse(BaseModel):
 	"""
 
 	input_map = {
-		'ClientIndexes': 'client_indexes',
+		'ClientIndexes': ['client_indexes', ClientIndex],
 		}
 
 	output_map = {

@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .checkout_item import CheckoutItem
+from .checkout_appointment_booking_request import CheckoutAppointmentBookingRequest
 
 class CheckoutItemWrapper(BaseModel):
 	"""
@@ -46,9 +47,9 @@ class CheckoutItemWrapper(BaseModel):
 	"""
 
 	input_map = {
-		'Item': ('item', Item),
+		'Item': ('item', CheckoutItem),
 		'DiscountAmount': 'discount_amount',
-		'AppointmentBookingRequests': 'appointment_booking_requests',
+		'AppointmentBookingRequests': ['appointment_booking_requests', CheckoutAppointmentBookingRequest],
 		'EnrollmentIds': 'enrollment_ids',
 		'ClassIds': 'class_ids',
 		'CourseIds': 'course_ids',

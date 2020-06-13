@@ -3,6 +3,8 @@ from .base_model import BaseModel
 from .client import Client
 from .staff import Staff
 from .staff import Staff
+from .contact_log_comment import ContactLogComment
+from .contact_log_type import ContactLogType
 
 class ContactLog(BaseModel):
 	"""
@@ -54,10 +56,10 @@ class ContactLog(BaseModel):
 		'ContactMethod': 'contact_method',
 		'ContactName': 'contact_name',
 		'Client': ('client', Client),
-		'CreatedBy': ('created_by', CreatedBy),
-		'AssignedTo': ('assigned_to', AssignedTo),
-		'Comments': 'comments',
-		'Types': 'types',
+		'CreatedBy': ('created_by', Staff),
+		'AssignedTo': ('assigned_to', Staff),
+		'Comments': ['comments', ContactLogComment],
+		'Types': ['types', ContactLogType],
 		}
 
 	output_map = {

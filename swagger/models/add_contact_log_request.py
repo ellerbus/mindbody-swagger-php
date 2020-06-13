@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .add_contact_log_type import AddContactLogType
 
 class AddContactLogRequest(BaseModel):
 	"""
@@ -46,7 +47,7 @@ class AddContactLogRequest(BaseModel):
 		'ContactMethod': 'contact_method',
 		'ContactName': 'contact_name',
 		'Comments': 'comments',
-		'Types': 'types',
+		'Types': ['types', AddContactLogType],
 		'Test': 'test',
 		}
 

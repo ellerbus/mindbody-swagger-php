@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .location import Location
 from .program import Program
 
 class ClientMembership(BaseModel):
@@ -66,7 +67,7 @@ class ClientMembership(BaseModel):
 	"""
 
 	input_map = {
-		'RestrictedLocations': 'restricted_locations',
+		'RestrictedLocations': ['restricted_locations', Location],
 		'IconCode': 'icon_code',
 		'MembershipId': 'membership_id',
 		'ActiveDate': 'active_date',

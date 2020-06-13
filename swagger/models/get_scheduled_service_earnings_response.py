@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .scheduled_service_earnings_event import ScheduledServiceEarningsEvent
 
 class GetScheduledServiceEarningsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetScheduledServiceEarningsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'ScheduledServiceEarnings': 'scheduled_service_earnings',
+		'ScheduledServiceEarnings': ['scheduled_service_earnings', ScheduledServiceEarningsEvent],
 		}
 
 	output_map = {

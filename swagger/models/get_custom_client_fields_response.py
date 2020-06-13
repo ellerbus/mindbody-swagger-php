@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .custom_client_field import CustomClientField
 
 class GetCustomClientFieldsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetCustomClientFieldsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'CustomClientFields': 'custom_client_fields',
+		'CustomClientFields': ['custom_client_fields', CustomClientField],
 		}
 
 	output_map = {

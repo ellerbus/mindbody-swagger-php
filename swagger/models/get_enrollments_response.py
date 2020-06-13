@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .class_schedule import ClassSchedule
 
 class GetEnrollmentsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetEnrollmentsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Enrollments': 'enrollments',
+		'Enrollments': ['enrollments', ClassSchedule],
 		}
 
 	output_map = {

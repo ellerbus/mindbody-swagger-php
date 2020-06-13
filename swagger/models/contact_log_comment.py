@@ -25,7 +25,7 @@ class ContactLogComment(BaseModel):
 		'Id': 'id',
 		'Text': 'text',
 		'CreatedDateTime': 'created_date_time',
-		'CreatedBy': ('created_by', CreatedBy),
+		'CreatedBy': ('created_by', Staff),
 		}
 
 	output_map = {

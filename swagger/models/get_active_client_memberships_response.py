@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .client_membership import ClientMembership
 
 class GetActiveClientMembershipsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetActiveClientMembershipsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'ClientMemberships': 'client_memberships',
+		'ClientMemberships': ['client_memberships', ClientMembership],
 		}
 
 	output_map = {

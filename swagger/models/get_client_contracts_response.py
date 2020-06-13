@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .client_contract import ClientContract
 from .pagination_response import PaginationResponse
 
 class GetClientContractsResponse(BaseModel):
@@ -16,7 +17,7 @@ class GetClientContractsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Contracts': 'contracts',
+		'Contracts': ['contracts', ClientContract],
 		'PaginationResponse': ('pagination_response', PaginationResponse),
 		}
 

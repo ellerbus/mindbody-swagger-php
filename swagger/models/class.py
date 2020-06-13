@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .visit import Visit
+from .client import Client
 from .location import Location
 from .resource import Resource
 from .class_description import ClassDescription
@@ -107,8 +109,8 @@ class Class(BaseModel):
 
 	input_map = {
 		'ClassScheduleId': 'class_schedule_id',
-		'Visits': 'visits',
-		'Clients': 'clients',
+		'Visits': ['visits', Visit],
+		'Clients': ['clients', Client],
 		'Location': ('location', Location),
 		'Resource': ('resource', Resource),
 		'MaxCapacity': 'max_capacity',

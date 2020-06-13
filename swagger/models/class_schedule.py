@@ -1,5 +1,7 @@
 from .base_model import BaseModel
 
+from .class import Class
+from .client import Client
 from .course import Course
 from .class_description import ClassDescription
 from .staff import Staff
@@ -90,8 +92,8 @@ class ClassSchedule(BaseModel):
 	"""
 
 	input_map = {
-		'Classes': 'classes',
-		'Clients': 'clients',
+		'Classes': ['classes', Class],
+		'Clients': ['clients', Client],
 		'Course': ('course', Course),
 		'SemesterId': 'semester_id',
 		'IsAvailable': 'is_available',

@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .gift_card_layout import GiftCardLayout
 
 class GiftCard(BaseModel):
 	"""
@@ -58,7 +59,7 @@ class GiftCard(BaseModel):
 		'GiftCardTerms': 'gift_card_terms',
 		'ContactInfo': 'contact_info',
 		'DisplayLogo': 'display_logo',
-		'Layouts': 'layouts',
+		'Layouts': ['layouts', GiftCardLayout],
 		}
 
 	output_map = {

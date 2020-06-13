@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 
+from .client_index_value import ClientIndexValue
 
 class ClientIndex(BaseModel):
 	"""
@@ -33,7 +34,7 @@ class ClientIndex(BaseModel):
 		'Name': 'name',
 		'RequiredBusinessMode': 'required_business_mode',
 		'RequiredConsumerMode': 'required_consumer_mode',
-		'Values': 'values',
+		'Values': ['values', ClientIndexValue],
 		'Action': 'action',
 		}
 

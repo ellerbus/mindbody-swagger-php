@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .tip import Tip
 
 class GetTipsResponse(BaseModel):
 	"""
@@ -19,7 +20,7 @@ class GetTipsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Tips': 'tips',
+		'Tips': ['tips', Tip],
 		}
 
 	output_map = {

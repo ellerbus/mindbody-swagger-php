@@ -14,7 +14,7 @@ class SubstituteClassTeacherResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Class': ('class', Class),
+		'Class': ('class', SubstituteTeacherClass),
 		}
 
 	output_map = {

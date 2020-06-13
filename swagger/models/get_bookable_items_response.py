@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .availability import Availability
 
 class GetBookableItemsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetBookableItemsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'Availabilities': 'availabilities',
+		'Availabilities': ['availabilities', Availability],
 		}
 
 	output_map = {

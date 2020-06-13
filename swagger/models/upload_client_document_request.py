@@ -17,7 +17,7 @@ class UploadClientDocumentRequest(BaseModel):
 
 	input_map = {
 		'ClientId': 'client_id',
-		'File': ('file', File),
+		'File': ('file', ClientDocument),
 		}
 
 	output_map = {

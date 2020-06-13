@@ -1,6 +1,7 @@
 from .base_model import BaseModel
 
 from .pagination_response import PaginationResponse
+from .class_description import ClassDescription
 
 class GetClassDescriptionsResponse(BaseModel):
 	"""
@@ -17,7 +18,7 @@ class GetClassDescriptionsResponse(BaseModel):
 
 	input_map = {
 		'PaginationResponse': ('pagination_response', PaginationResponse),
-		'ClassDescriptions': 'class_descriptions',
+		'ClassDescriptions': ['class_descriptions', ClassDescription],
 		}
 
 	output_map = {
