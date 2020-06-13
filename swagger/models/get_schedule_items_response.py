@@ -25,6 +25,6 @@ class GetScheduleItemsResponse(BaseModel):
 		'staff_members': 'StaffMembers',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	staff_members = None
 

@@ -60,7 +60,7 @@ class ClientPurchaseRecord(BaseModel):
 		'quantity': 'Quantity',
 		}
 
-		'Sale': ('sale', Sale),
+	sale = None
 	description = None
 	account_payment = None
 	price = None

@@ -20,5 +20,5 @@ class UpdateClientVisitResponse(BaseModel):
 		'visit': 'Visit',
 		}
 
-		'Visit': ('visit', Visit),
+	visit = None
 

@@ -20,5 +20,5 @@ class UpdateClientResponse(BaseModel):
 		'client': 'Client',
 		}
 
-		'Client': ('client', Client),
+	client = None
 

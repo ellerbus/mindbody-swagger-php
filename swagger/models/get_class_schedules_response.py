@@ -25,6 +25,6 @@ class GetClassSchedulesResponse(BaseModel):
 		'class_schedules': 'ClassSchedules',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	class_schedules = None
 

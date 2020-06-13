@@ -25,6 +25,6 @@ class GetStaffAppointmentsResponse(BaseModel):
 		'appointments': 'Appointments',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	appointments = None
 

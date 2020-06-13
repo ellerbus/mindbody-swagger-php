@@ -20,5 +20,5 @@ class GetClassVisitsResponse(BaseModel):
 		'class': 'Class',
 		}
 
-		'Class': ('class', Class),
+	class = None
 

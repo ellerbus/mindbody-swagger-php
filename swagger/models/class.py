@@ -166,8 +166,8 @@ class Class(BaseModel):
 	class_schedule_id = None
 	visits = None
 	clients = None
-		'Location': ('location', Location),
-		'Resource': ('resource', Resource),
+	location = None
+	resource = None
 	max_capacity = None
 	web_capacity = None
 	total_booked = None
@@ -185,8 +185,8 @@ class Class(BaseModel):
 	start_date_time = None
 	end_date_time = None
 	last_modified_date_time = None
-		'ClassDescription': ('class_description', ClassDescription),
-		'Staff': ('staff', Staff),
-		'BookingWindow': ('booking_window', BookingWindow),
+	class_description = None
+	staff = None
+	booking_window = None
 	booking_status = None
 

@@ -20,5 +20,5 @@ class AddAppointmentResponse(BaseModel):
 		'appointment': 'Appointment',
 		}
 
-		'Appointment': ('appointment', Appointment),
+	appointment = None
 

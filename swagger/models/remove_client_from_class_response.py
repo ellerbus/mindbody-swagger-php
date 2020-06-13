@@ -21,5 +21,5 @@ class RemoveClientFromClassResponse(BaseModel):
 		'class': 'Class',
 		}
 
-		'Class': ('class', Class),
+	class = None
 

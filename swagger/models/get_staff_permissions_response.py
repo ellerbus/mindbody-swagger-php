@@ -21,5 +21,5 @@ class GetStaffPermissionsResponse(BaseModel):
 		'user_group': 'UserGroup',
 		}
 
-		'UserGroup': ('user_group', UserGroup),
+	user_group = None
 

@@ -25,6 +25,6 @@ class GetScheduledServiceEarningsResponse(BaseModel):
 		'scheduled_service_earnings': 'ScheduledServiceEarnings',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	scheduled_service_earnings = None
 

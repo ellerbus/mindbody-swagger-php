@@ -80,9 +80,9 @@ class ContactLog(BaseModel):
 	followup_by_date = None
 	contact_method = None
 	contact_name = None
-		'Client': ('client', Client),
-		'CreatedBy': ('created_by', CreatedBy),
-		'AssignedTo': ('assigned_to', AssignedTo),
+	client = None
+	created_by = None
+	assigned_to = None
 	comments = None
 	types = None
 

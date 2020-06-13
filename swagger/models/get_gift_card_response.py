@@ -25,6 +25,6 @@ class GetGiftCardResponse(BaseModel):
 		'gift_cards': 'GiftCards',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	gift_cards = None
 

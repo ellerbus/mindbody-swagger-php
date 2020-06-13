@@ -20,5 +20,5 @@ class AddClientToClassResponse(BaseModel):
 		'visit': 'Visit',
 		}
 
-		'Visit': ('visit', Visit),
+	visit = None
 

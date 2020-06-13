@@ -46,7 +46,7 @@ class UpdateClientRequest(BaseModel):
 		'new_id': 'NewId',
 		}
 
-		'Client': ('client', Client),
+	client = None
 	test = None
 	cross_regional_update = None
 	new_id = None

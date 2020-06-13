@@ -29,5 +29,5 @@ class IssueResponse(BaseModel):
 
 	token_type = None
 	access_token = None
-		'User': ('user', User),
+	user = None
 

@@ -25,6 +25,6 @@ class GetClassesResponse(BaseModel):
 		'classes': 'Classes',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	classes = None
 

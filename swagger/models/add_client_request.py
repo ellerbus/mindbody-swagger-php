@@ -352,7 +352,7 @@ class AddClientRequest(BaseModel):
 	appt_gender_pref_male = None
 	birth_date = None
 	city = None
-		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
+	client_credit_card = None
 	client_indexes = None
 	client_relationships = None
 	country = None
@@ -366,14 +366,14 @@ class AddClientRequest(BaseModel):
 	first_appointment_date = None
 	first_name = None
 	gender = None
-		'HomeLocation': ('home_location', HomeLocation),
+	home_location = None
 	home_phone = None
 	is_company = None
 	is_prospect = None
 	last_formula_notes = None
 	last_modified_date_time = None
 	last_name = None
-		'Liability': ('liability', Liability),
+	liability = None
 	liability_release = None
 	membership_icon = None
 	middle_name = None
@@ -383,7 +383,7 @@ class AddClientRequest(BaseModel):
 	notes = None
 	photo_url = None
 	postal_code = None
-		'ProspectStage': ('prospect_stage', ProspectStage),
+	prospect_stage = None
 	red_alert = None
 	referred_by = None
 	sales_reps = None

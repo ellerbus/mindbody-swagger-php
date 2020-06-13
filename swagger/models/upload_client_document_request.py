@@ -26,7 +26,7 @@ class UploadClientDocumentRequest(BaseModel):
 		}
 
 	client_id = None
-		'File': ('file', File),
+	file = None
 
 
 

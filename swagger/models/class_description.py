@@ -102,12 +102,12 @@ class ClassDescription(BaseModel):
 	id = None
 	image_url = None
 	last_updated = None
-		'Level': ('level', Level),
+	level = None
 	name = None
 	notes = None
 	prereq = None
-		'Program': ('program', Program),
-		'SessionType': ('session_type', SessionType),
+	program = None
+	session_type = None
 	category = None
 	category_id = None
 	subcategory = None

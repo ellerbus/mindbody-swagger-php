@@ -25,6 +25,6 @@ class GetCustomPaymentMethodsResponse(BaseModel):
 		'payment_methods': 'PaymentMethods',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	payment_methods = None
 

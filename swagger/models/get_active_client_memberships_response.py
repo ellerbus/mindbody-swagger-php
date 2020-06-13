@@ -25,6 +25,6 @@ class GetActiveClientMembershipsResponse(BaseModel):
 		'client_memberships': 'ClientMemberships',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	client_memberships = None
 

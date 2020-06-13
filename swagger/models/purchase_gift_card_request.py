@@ -104,7 +104,7 @@ class PurchaseGiftCardRequest(BaseModel):
 	title = None
 	gift_message = None
 	delivery_date = None
-		'PaymentInfo': ('payment_info', PaymentInfo),
+	payment_info = None
 	sales_rep_id = None
 
 

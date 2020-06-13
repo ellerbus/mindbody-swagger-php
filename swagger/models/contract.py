@@ -224,7 +224,7 @@ class Contract(BaseModel):
 	sold_online = None
 	contract_items = None
 	intro_offer = None
-		'AutopaySchedule': ('autopay_schedule', AutopaySchedule),
+	autopay_schedule = None
 	number_of_autopays = None
 	autopay_trigger_type = None
 	action_upon_completion_of_autopays = None

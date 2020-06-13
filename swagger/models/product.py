@@ -82,6 +82,6 @@ class Product(BaseModel):
 	online_price = None
 	short_description = None
 	long_description = None
-		'Color': ('color', Color),
-		'Size': ('size', Size),
+	color = None
+	size = None
 

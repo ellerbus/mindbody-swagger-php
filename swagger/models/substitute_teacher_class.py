@@ -136,7 +136,7 @@ class SubstituteTeacherClass(BaseModel):
 		}
 
 	class_schedule_id = None
-		'Location': ('location', Location),
+	location = None
 	max_capacity = None
 	web_capacity = None
 	total_booked = None
@@ -153,6 +153,6 @@ class SubstituteTeacherClass(BaseModel):
 	start_date_time = None
 	end_date_time = None
 	last_modified_date_time = None
-		'ClassDescription': ('class_description', ClassDescription),
-		'Staff': ('staff', Staff),
+	class_description = None
+	staff = None
 

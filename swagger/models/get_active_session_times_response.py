@@ -31,6 +31,6 @@ class GetActiveSessionTimesResponse(BaseModel):
 		'active_session_times': 'ActiveSessionTimes',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	active_session_times = None
 

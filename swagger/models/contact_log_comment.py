@@ -38,5 +38,5 @@ class ContactLogComment(BaseModel):
 	id = None
 	text = None
 	created_date_time = None
-		'CreatedBy': ('created_by', CreatedBy),
+	created_by = None
 

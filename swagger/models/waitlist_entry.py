@@ -69,8 +69,8 @@ class WaitlistEntry(BaseModel):
 
 	class_date = None
 	class_id = None
-		'ClassSchedule': ('class_schedule', ClassSchedule),
-		'Client': ('client', Client),
+	class_schedule = None
+	client = None
 	enrollment_date_forward = None
 	id = None
 	request_date_time = None

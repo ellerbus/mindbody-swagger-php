@@ -25,6 +25,6 @@ class GetClientPurchasesResponse(BaseModel):
 		'purchases': 'Purchases',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	purchases = None
 

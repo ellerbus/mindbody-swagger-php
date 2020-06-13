@@ -21,5 +21,5 @@ class SubstituteClassTeacherResponse(BaseModel):
 		'class': 'Class',
 		}
 
-		'Class': ('class', Class),
+	class = None
 

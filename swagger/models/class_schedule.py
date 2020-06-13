@@ -141,11 +141,11 @@ class ClassSchedule(BaseModel):
 
 	classes = None
 	clients = None
-		'Course': ('course', Course),
+	course = None
 	semester_id = None
 	is_available = None
 	id = None
-		'ClassDescription': ('class_description', ClassDescription),
+	class_description = None
 	day_sunday = None
 	day_monday = None
 	day_tuesday = None
@@ -159,6 +159,6 @@ class ClassSchedule(BaseModel):
 	end_time = None
 	start_date = None
 	end_date = None
-		'Staff': ('staff', Staff),
-		'Location': ('location', Location),
+	staff = None
+	location = None
 

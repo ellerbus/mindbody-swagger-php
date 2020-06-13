@@ -94,7 +94,7 @@ class ClientService(BaseModel):
 	product_id = None
 	name = None
 	payment_date = None
-		'Program': ('program', Program),
+	program = None
 	remaining = None
 	site_id = None
 	action = None

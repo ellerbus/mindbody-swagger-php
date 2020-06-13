@@ -27,6 +27,6 @@ class GetTipsResponse(BaseModel):
 		'tips': 'Tips',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	tips = None
 

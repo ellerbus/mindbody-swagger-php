@@ -346,7 +346,7 @@ class Client(BaseModel):
 	country = None
 	creation_date = None
 	custom_client_fields = None
-		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
+	client_credit_card = None
 	client_indexes = None
 	client_relationships = None
 	first_appointment_date = None
@@ -355,7 +355,7 @@ class Client(BaseModel):
 	is_company = None
 	is_prospect = None
 	last_name = None
-		'Liability': ('liability', Liability),
+	liability = None
 	liability_release = None
 	membership_icon = None
 	mobile_provider = None
@@ -366,7 +366,7 @@ class Client(BaseModel):
 	red_alert = None
 	yellow_alert = None
 	middle_name = None
-		'ProspectStage': ('prospect_stage', ProspectStage),
+	prospect_stage = None
 	email = None
 	mobile_phone = None
 	home_phone = None

@@ -25,6 +25,6 @@ class GetClientVisitsResponse(BaseModel):
 		'visits': 'Visits',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	visits = None
 

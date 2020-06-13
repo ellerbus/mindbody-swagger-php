@@ -36,7 +36,7 @@ class ClientRelationship(BaseModel):
 		}
 
 	related_client_id = None
-		'Relationship': ('relationship', Relationship),
+	relationship = None
 	relationship_name = None
 	delete = None
 

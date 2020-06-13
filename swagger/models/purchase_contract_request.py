@@ -112,8 +112,8 @@ class PurchaseContractRequest(BaseModel):
 	first_payment_occurs = None
 	client_signature = None
 	promotion_code = None
-		'CreditCardInfo': ('credit_card_info', CreditCardInfo),
-		'StoredCardInfo': ('stored_card_info', StoredCardInfo),
+	credit_card_info = None
+	stored_card_info = None
 	send_notifications = None
 	sales_rep_id = None
 	use_direct_debit = None

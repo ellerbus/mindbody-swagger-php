@@ -25,6 +25,6 @@ class GetServicesResponse(BaseModel):
 		'services': 'Services',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	services = None
 

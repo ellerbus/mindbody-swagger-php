@@ -25,6 +25,6 @@ class GetContactLogsResponse(BaseModel):
 		'contact_logs': 'ContactLogs',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	contact_logs = None
 

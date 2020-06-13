@@ -75,8 +75,8 @@ class Course(BaseModel):
 	notes = None
 	start_date = None
 	end_date = None
-		'Location': ('location', Location),
-		'Organizer': ('organizer', Organizer),
-		'Program': ('program', Program),
+	location = None
+	organizer = None
+	program = None
 	image_url = None
 

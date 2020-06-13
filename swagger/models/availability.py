@@ -58,11 +58,11 @@ class Availability(BaseModel):
 		}
 
 	id = None
-		'Staff': ('staff', Staff),
-		'SessionType': ('session_type', SessionType),
+	staff = None
+	session_type = None
 	programs = None
 	start_date_time = None
 	end_date_time = None
 	bookable_end_date_time = None
-		'Location': ('location', Location),
+	location = None
 

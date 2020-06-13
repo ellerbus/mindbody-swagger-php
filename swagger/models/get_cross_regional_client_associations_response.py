@@ -25,6 +25,6 @@ class GetCrossRegionalClientAssociationsResponse(BaseModel):
 		'cross_regional_client_associations': 'CrossRegionalClientAssociations',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	cross_regional_client_associations = None
 

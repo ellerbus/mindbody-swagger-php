@@ -128,8 +128,5 @@ class ModelGenerator(object):
         for key in properties:
             prop = properties[key]
             name = strutils.snake_case(key)
-            if '$ref' in prop:
-                file.write(f"\t\t\'{key}': ('{name}', {key}),\n")
-            else:
-                file.write(f"\t{name} = None\n")
+            file.write(f"\t{name} = None\n")
         file.write(f'\n')

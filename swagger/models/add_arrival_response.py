@@ -27,5 +27,5 @@ class AddArrivalResponse(BaseModel):
 		}
 
 	arrival_added = None
-		'ClientService': ('client_service', ClientService),
+	client_service = None
 

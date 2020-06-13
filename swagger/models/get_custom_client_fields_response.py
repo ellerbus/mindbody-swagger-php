@@ -25,6 +25,6 @@ class GetCustomClientFieldsResponse(BaseModel):
 		'custom_client_fields': 'CustomClientFields',
 		}
 
-		'PaginationResponse': ('pagination_response', PaginationResponse),
+	pagination_response = None
 	custom_client_fields = None
 
