@@ -49,3 +49,11 @@ class GetActiveSessionTimesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	schedule_type = None
+	session_type_ids = None
+	start_time = None
+	end_time = None
+	limit = None
+	offset = None
+

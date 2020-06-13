@@ -85,3 +85,17 @@ class ClientService(BaseModel):
 		'site_id': 'SiteId',
 		'action': 'Action',
 		}
+
+	active_date = None
+	count = None
+	current = None
+	expiration_date = None
+	id = None
+	product_id = None
+	name = None
+	payment_date = None
+		'Program': ('program', Program),
+	remaining = None
+	site_id = None
+	action = None
+

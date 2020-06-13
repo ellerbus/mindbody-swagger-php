@@ -65,5 +65,17 @@ class GetContactLogsRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	client_id = None
+	start_date = None
+	end_date = None
+	staff_ids = None
+	show_system_generated = None
+	type_ids = None
+	subtype_ids = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, client_id):
 		self.client_id = client_id

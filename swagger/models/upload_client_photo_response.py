@@ -23,3 +23,7 @@ class UploadClientPhotoResponse(BaseModel):
 		'client_id': 'ClientId',
 		'photo_url': 'PhotoUrl',
 		}
+
+	client_id = None
+	photo_url = None
+

@@ -44,3 +44,11 @@ class Package(BaseModel):
 		'services': 'Services',
 		'products': 'Products',
 		}
+
+	id = None
+	name = None
+	discount_percentage = None
+	sell_online = None
+	services = None
+	products = None
+

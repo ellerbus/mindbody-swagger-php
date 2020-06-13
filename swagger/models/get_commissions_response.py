@@ -26,3 +26,7 @@ class GetCommissionsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'commissions': 'Commissions',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	commissions = None
+

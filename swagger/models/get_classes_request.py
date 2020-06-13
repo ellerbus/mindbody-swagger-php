@@ -97,3 +97,20 @@ class GetClassesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	class_description_ids = None
+	class_ids = None
+	staff_ids = None
+	start_date_time = None
+	end_date_time = None
+	client_id = None
+	program_ids = None
+	session_type_ids = None
+	location_ids = None
+	semester_ids = None
+	hide_canceled_classes = None
+	scheduling_window = None
+	last_modified_date = None
+	limit = None
+	offset = None
+

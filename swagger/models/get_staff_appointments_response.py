@@ -24,3 +24,7 @@ class GetStaffAppointmentsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'appointments': 'Appointments',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	appointments = None
+

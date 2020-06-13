@@ -63,3 +63,12 @@ class GetWaitlistEntriesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	class_ids = None
+	class_schedule_ids = None
+	client_ids = None
+	hide_past_entries = None
+	waitlist_entry_ids = None
+	limit = None
+	offset = None
+

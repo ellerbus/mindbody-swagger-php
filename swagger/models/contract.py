@@ -215,3 +215,39 @@ class Contract(BaseModel):
 		'total_contract_amount_tax': 'TotalContractAmountTax',
 		'total_contract_amount_total': 'TotalContractAmountTotal',
 		}
+
+	id = None
+	name = None
+	description = None
+	assigns_membership_id = None
+	assigns_membership_name = None
+	sold_online = None
+	contract_items = None
+	intro_offer = None
+		'AutopaySchedule': ('autopay_schedule', AutopaySchedule),
+	number_of_autopays = None
+	autopay_trigger_type = None
+	action_upon_completion_of_autopays = None
+	clients_charged_on = None
+	clients_charged_on_specific_date = None
+	discount_amount = None
+	deposit_amount = None
+	first_autopay_free = None
+	last_autopay_free = None
+	client_terminate_online = None
+	membership_type_restrictions = None
+	location_purchase_restriction_ids = None
+	location_purchase_restriction_names = None
+	agreement_terms = None
+	requires_electronic_confirmation = None
+	autopay_enabled = None
+	first_payment_amount_subtotal = None
+	first_payment_amount_tax = None
+	first_payment_amount_total = None
+	recurring_payment_amount_subtotal = None
+	recurring_payment_amount_tax = None
+	recurring_payment_amount_total = None
+	total_contract_amount_subtotal = None
+	total_contract_amount_tax = None
+	total_contract_amount_total = None
+

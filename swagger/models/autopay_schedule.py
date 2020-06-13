@@ -32,3 +32,8 @@ class AutopaySchedule(BaseModel):
 		'frequency_value': 'FrequencyValue',
 		'frequency_time_unit': 'FrequencyTimeUnit',
 		}
+
+	frequency_type = None
+	frequency_value = None
+	frequency_time_unit = None
+

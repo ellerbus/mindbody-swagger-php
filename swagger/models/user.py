@@ -34,3 +34,9 @@ class User(BaseModel):
 		'last_name': 'LastName',
 		'type': 'Type',
 		}
+
+	id = None
+	first_name = None
+	last_name = None
+	type = None
+

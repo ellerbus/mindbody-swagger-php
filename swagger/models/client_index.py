@@ -45,3 +45,11 @@ class ClientIndex(BaseModel):
 		'values': 'Values',
 		'action': 'Action',
 		}
+
+	id = None
+	name = None
+	required_business_mode = None
+	required_consumer_mode = None
+	values = None
+	action = None
+

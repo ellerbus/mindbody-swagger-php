@@ -49,3 +49,12 @@ class TimeCardEvent(BaseModel):
 		'hourly_rate': 'HourlyRate',
 		'earnings': 'Earnings',
 		}
+
+	staff_id = None
+	task = None
+	time_in = None
+	time_out = None
+	hours = None
+	hourly_rate = None
+	earnings = None
+

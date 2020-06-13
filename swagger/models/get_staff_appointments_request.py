@@ -56,3 +56,13 @@ class GetStaffAppointmentsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	appointment_ids = None
+	location_ids = None
+	start_date = None
+	end_date = None
+	staff_ids = None
+	client_id = None
+	limit = None
+	offset = None
+

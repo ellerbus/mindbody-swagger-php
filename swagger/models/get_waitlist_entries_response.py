@@ -24,3 +24,7 @@ class GetWaitlistEntriesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'waitlist_entries': 'WaitlistEntries',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	waitlist_entries = None
+

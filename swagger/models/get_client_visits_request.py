@@ -62,5 +62,16 @@ class GetClientVisitsRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	client_id = None
+	client_associated_sites_offset = None
+	cross_regional_lookup = None
+	end_date = None
+	start_date = None
+	unpaids_only = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, client_id):
 		self.client_id = client_id

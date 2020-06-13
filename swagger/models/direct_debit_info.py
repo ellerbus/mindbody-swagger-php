@@ -33,3 +33,9 @@ class DirectDebitInfo(BaseModel):
 		'account_number': 'AccountNumber',
 		'account_type': 'AccountType',
 		}
+
+	name_on_account = None
+	routing_number = None
+	account_number = None
+	account_type = None
+

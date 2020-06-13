@@ -23,3 +23,7 @@ class GetLocationsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	limit = None
+	offset = None
+

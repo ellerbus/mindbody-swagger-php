@@ -54,3 +54,13 @@ class Sale(BaseModel):
 		'location_id': 'LocationId',
 		'payments': 'Payments',
 		}
+
+	id = None
+	sale_date = None
+	sale_time = None
+	sale_date_time = None
+	client_id = None
+	purchased_items = None
+	location_id = None
+	payments = None
+

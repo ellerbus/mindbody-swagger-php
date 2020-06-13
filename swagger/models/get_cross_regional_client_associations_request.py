@@ -37,3 +37,9 @@ class GetCrossRegionalClientAssociationsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	client_id = None
+	email = None
+	limit = None
+	offset = None
+

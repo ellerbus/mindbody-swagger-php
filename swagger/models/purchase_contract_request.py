@@ -104,6 +104,22 @@ class PurchaseContractRequest(BaseModel):
 		'use_direct_debit': 'UseDirectDebit',
 		}
 
+	test = None
+	location_id = None
+	client_id = None
+	contract_id = None
+	start_date = None
+	first_payment_occurs = None
+	client_signature = None
+	promotion_code = None
+		'CreditCardInfo': ('credit_card_info', CreditCardInfo),
+		'StoredCardInfo': ('stored_card_info', StoredCardInfo),
+	send_notifications = None
+	sales_rep_id = None
+	use_direct_debit = None
+
+
+
 	def __init__(self, client_id, contract_id):
 		self.client_id = client_id
 		self.contract_id = contract_id

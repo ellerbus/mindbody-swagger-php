@@ -23,3 +23,7 @@ class AssignedClientIndex(BaseModel):
 		'id': 'Id',
 		'value_id': 'ValueId',
 		}
+
+	id = None
+	value_id = None
+

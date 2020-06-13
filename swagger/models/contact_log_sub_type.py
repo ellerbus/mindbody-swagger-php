@@ -18,3 +18,6 @@ class ContactLogSubType(BaseModel):
 	output_map = {
 		'id': 'Id',
 		}
+
+	id = None
+

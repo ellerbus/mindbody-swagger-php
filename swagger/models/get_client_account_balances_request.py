@@ -40,5 +40,13 @@ class GetClientAccountBalancesRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	balance_date = None
+	class_id = None
+	client_ids = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, client_ids):
 		self.client_ids = client_ids

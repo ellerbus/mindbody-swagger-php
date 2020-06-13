@@ -50,3 +50,10 @@ class GetTimeCardsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	staff_id = None
+	start_date_time = None
+	end_date_time = None
+	limit = None
+	offset = None
+

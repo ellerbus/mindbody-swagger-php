@@ -28,3 +28,7 @@ class CheckoutItem(BaseModel):
 		'type': 'Type',
 		'metadata': 'Metadata',
 		}
+
+	type = None
+	metadata = None
+

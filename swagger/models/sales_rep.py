@@ -42,3 +42,10 @@ class SalesRep(BaseModel):
 		'sales_rep_number': 'SalesRepNumber',
 		'sales_rep_numbers': 'SalesRepNumbers',
 		}
+
+	first_name = None
+	id = None
+	last_name = None
+	sales_rep_number = None
+	sales_rep_numbers = None
+

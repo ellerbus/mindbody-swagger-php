@@ -93,6 +93,22 @@ class PurchaseGiftCardRequest(BaseModel):
 		'sales_rep_id': 'SalesRepId',
 		}
 
+	test = None
+	location_id = None
+	layout_id = None
+	purchaser_client_id = None
+	gift_card_id = None
+	send_email_receipt = None
+	recipient_email = None
+	recipient_name = None
+	title = None
+	gift_message = None
+	delivery_date = None
+		'PaymentInfo': ('payment_info', PaymentInfo),
+	sales_rep_id = None
+
+
+
 	def __init__(self, location_id, purchaser_client_id, gift_card_id):
 		self.location_id = location_id
 		self.purchaser_client_id = purchaser_client_id

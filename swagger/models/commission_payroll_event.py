@@ -44,3 +44,11 @@ class CommissionPayrollEvent(BaseModel):
 		'earnings_details': 'EarningsDetails',
 		'earnings': 'Earnings',
 		}
+
+	staff_id = None
+	sale_date_time = None
+	sale_id = None
+	product_id = None
+	earnings_details = None
+	earnings = None
+

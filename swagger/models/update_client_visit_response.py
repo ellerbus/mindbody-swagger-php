@@ -19,3 +19,6 @@ class UpdateClientVisitResponse(BaseModel):
 	output_map = {
 		'visit': 'Visit',
 		}
+
+		'Visit': ('visit', Visit),
+

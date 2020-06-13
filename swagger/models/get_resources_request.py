@@ -46,3 +46,11 @@ class GetResourcesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	session_type_ids = None
+	location_id = None
+	start_date_time = None
+	end_date_time = None
+	limit = None
+	offset = None
+

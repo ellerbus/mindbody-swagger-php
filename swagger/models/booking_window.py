@@ -37,3 +37,9 @@ class BookingWindow(BaseModel):
 		'daily_start_time': 'DailyStartTime',
 		'daily_end_time': 'DailyEndTime',
 		}
+
+	start_date_time = None
+	end_date_time = None
+	daily_start_time = None
+	daily_end_time = None
+

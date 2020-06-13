@@ -35,3 +35,9 @@ class PurchaseContractResponse(BaseModel):
 		'contract_id': 'ContractId',
 		'client_contract_id': 'ClientContractId',
 		}
+
+	client_id = None
+	location_id = None
+	contract_id = None
+	client_contract_id = None
+

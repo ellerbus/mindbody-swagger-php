@@ -33,3 +33,9 @@ class AppointmentOption(BaseModel):
 		'value': 'Value',
 		'type': 'Type',
 		}
+
+	display_name = None
+	name = None
+	value = None
+	type = None
+

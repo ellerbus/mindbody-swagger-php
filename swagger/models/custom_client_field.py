@@ -28,3 +28,8 @@ class CustomClientField(BaseModel):
 		'data_type': 'DataType',
 		'name': 'Name',
 		}
+
+	id = None
+	data_type = None
+	name = None
+

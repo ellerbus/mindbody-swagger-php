@@ -24,3 +24,7 @@ class GetClientContractsResponse(BaseModel):
 		'contracts': 'Contracts',
 		'pagination_response': 'PaginationResponse',
 		}
+
+	contracts = None
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+

@@ -19,3 +19,6 @@ class GetRequiredClientFieldsResponse(BaseModel):
 	output_map = {
 		'required_client_fields': 'RequiredClientFields',
 		}
+
+	required_client_fields = None
+

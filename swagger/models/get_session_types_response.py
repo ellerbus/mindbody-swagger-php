@@ -24,3 +24,7 @@ class GetSessionTypesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'session_types': 'SessionTypes',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	session_types = None
+

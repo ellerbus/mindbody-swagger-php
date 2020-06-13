@@ -100,3 +100,20 @@ class ClientMembership(BaseModel):
 		'site_id': 'SiteId',
 		'action': 'Action',
 		}
+
+	restricted_locations = None
+	icon_code = None
+	membership_id = None
+	active_date = None
+	count = None
+	current = None
+	expiration_date = None
+	id = None
+	product_id = None
+	name = None
+	payment_date = None
+		'Program': ('program', Program),
+	remaining = None
+	site_id = None
+	action = None
+

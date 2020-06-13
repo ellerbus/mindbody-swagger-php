@@ -36,5 +36,12 @@ class UpdateClientServiceRequest(BaseModel):
 		'test': 'Test',
 		}
 
+	service_id = None
+	active_date = None
+	expiration_date = None
+	test = None
+
+
+
 	def __init__(self, service_id):
 		self.service_id = service_id

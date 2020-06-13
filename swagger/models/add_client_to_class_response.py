@@ -19,3 +19,6 @@ class AddClientToClassResponse(BaseModel):
 	output_map = {
 		'visit': 'Visit',
 		}
+
+		'Visit': ('visit', Visit),
+

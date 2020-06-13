@@ -80,5 +80,20 @@ class UpdateAppointmentRequest(BaseModel):
 		'test': 'Test',
 		}
 
+	appointment_id = None
+	end_date_time = None
+	execute = None
+	gender_preference = None
+	notes = None
+	provider_id = None
+	resource_ids = None
+	send_email = None
+	session_type_id = None
+	staff_id = None
+	start_date_time = None
+	test = None
+
+
+
 	def __init__(self, appointment_id):
 		self.appointment_id = appointment_id

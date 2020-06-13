@@ -103,6 +103,25 @@ class AddAppointmentRequest(BaseModel):
 		'test': 'Test',
 		}
 
+	apply_payment = None
+	client_id = None
+	duration = None
+	execute = None
+	end_date_time = None
+	gender_preference = None
+	location_id = None
+	notes = None
+	provider_id = None
+	resource_ids = None
+	send_email = None
+	session_type_id = None
+	staff_id = None
+	staff_requested = None
+	start_date_time = None
+	test = None
+
+
+
 	def __init__(self, client_id, location_id, session_type_id, staff_id, start_date_time):
 		self.client_id = client_id
 		self.location_id = location_id

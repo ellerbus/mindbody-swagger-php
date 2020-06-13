@@ -68,3 +68,15 @@ class Course(BaseModel):
 		'program': 'Program',
 		'image_url': 'ImageUrl',
 		}
+
+	id = None
+	name = None
+	description = None
+	notes = None
+	start_date = None
+	end_date = None
+		'Location': ('location', Location),
+		'Organizer': ('organizer', Organizer),
+		'Program': ('program', Program),
+	image_url = None
+

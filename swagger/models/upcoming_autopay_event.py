@@ -33,3 +33,9 @@ class UpcomingAutopayEvent(BaseModel):
 		'payment_method': 'PaymentMethod',
 		'schedule_date': 'ScheduleDate',
 		}
+
+	client_contract_id = None
+	charge_amount = None
+	payment_method = None
+	schedule_date = None
+

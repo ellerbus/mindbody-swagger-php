@@ -35,3 +35,9 @@ class GetSessionTypesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	program_i_ds = None
+	online_only = None
+	limit = None
+	offset = None
+

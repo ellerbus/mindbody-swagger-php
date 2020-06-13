@@ -55,3 +55,12 @@ class GetStaffRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	staff_ids = None
+	filters = None
+	session_type_id = None
+	start_date_time = None
+	location_id = None
+	limit = None
+	offset = None
+

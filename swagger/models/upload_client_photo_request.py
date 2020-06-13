@@ -24,6 +24,11 @@ class UploadClientPhotoRequest(BaseModel):
 		'client_id': 'ClientId',
 		}
 
+	bytes = None
+	client_id = None
+
+
+
 	def __init__(self, bytes, client_id):
 		self.bytes = bytes
 		self.client_id = client_id

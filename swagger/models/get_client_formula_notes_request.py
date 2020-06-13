@@ -34,3 +34,9 @@ class GetClientFormulaNotesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	client_id = None
+	appointment_id = None
+	limit = None
+	offset = None
+

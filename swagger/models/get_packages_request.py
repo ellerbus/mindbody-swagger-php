@@ -34,3 +34,9 @@ class GetPackagesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	package_ids = None
+	sell_online = None
+	limit = None
+	offset = None
+

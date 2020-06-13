@@ -36,3 +36,10 @@ class ScheduledServiceEarningsEvent(BaseModel):
 		'earnings': 'Earnings',
 		'date_time': 'DateTime',
 		}
+
+	staff_id = None
+	scheduled_service_id = None
+	scheduled_service_type = None
+	earnings = None
+	date_time = None
+

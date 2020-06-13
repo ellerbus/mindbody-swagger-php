@@ -23,3 +23,7 @@ class IssueRequest(BaseModel):
 		'username': 'Username',
 		'password': 'Password',
 		}
+
+	username = None
+	password = None
+

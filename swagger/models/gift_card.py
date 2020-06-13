@@ -75,3 +75,17 @@ class GiftCard(BaseModel):
 		'display_logo': 'DisplayLogo',
 		'layouts': 'Layouts',
 		}
+
+	id = None
+	location_ids = None
+	description = None
+	editable_by_consumer = None
+	card_value = None
+	sale_price = None
+	sold_online = None
+	membership_restriction_ids = None
+	gift_card_terms = None
+	contact_info = None
+	display_logo = None
+	layouts = None
+

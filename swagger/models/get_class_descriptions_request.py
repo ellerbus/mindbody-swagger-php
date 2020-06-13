@@ -57,3 +57,13 @@ class GetClassDescriptionsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	class_description_id = None
+	program_ids = None
+	start_class_date_time = None
+	end_class_date_time = None
+	staff_id = None
+	location_id = None
+	limit = None
+	offset = None
+

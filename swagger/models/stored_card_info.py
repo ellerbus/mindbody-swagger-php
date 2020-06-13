@@ -15,3 +15,6 @@ class StoredCardInfo(BaseModel):
 	output_map = {
 		'last_four': 'LastFour',
 		}
+
+	last_four = None
+

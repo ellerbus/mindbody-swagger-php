@@ -46,5 +46,13 @@ class GetClientContractsRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	client_id = None
+	cross_regional_lookup = None
+	client_associated_sites_offset = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, client_id):
 		self.client_id = client_id

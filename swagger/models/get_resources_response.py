@@ -24,3 +24,7 @@ class GetResourcesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'resources': 'Resources',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	resources = None
+

@@ -31,3 +31,8 @@ class PurchasedItem(BaseModel):
 		'is_service': 'IsService',
 		'barcode_id': 'BarcodeId',
 		}
+
+	id = None
+	is_service = None
+	barcode_id = None
+

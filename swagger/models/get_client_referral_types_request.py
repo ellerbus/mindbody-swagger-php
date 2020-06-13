@@ -20,3 +20,6 @@ class GetClientReferralTypesRequest(BaseModel):
 	output_map = {
 		'include_inactive': 'IncludeInactive',
 		}
+
+	include_inactive = None
+

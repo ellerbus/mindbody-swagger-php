@@ -62,6 +62,18 @@ class AddContactLogRequest(BaseModel):
 		'test': 'Test',
 		}
 
+	client_id = None
+	assigned_to_staff_id = None
+	text = None
+	followup_by_date = None
+	contact_method = None
+	contact_name = None
+	comments = None
+	types = None
+	test = None
+
+
+
 	def __init__(self, client_id, contact_method):
 		self.client_id = client_id
 		self.contact_method = contact_method

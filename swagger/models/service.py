@@ -60,3 +60,14 @@ class Service(BaseModel):
 		'name': 'Name',
 		'count': 'Count',
 		}
+
+	price = None
+	online_price = None
+	tax_included = None
+	program_id = None
+	tax_rate = None
+	product_id = None
+	id = None
+	name = None
+	count = None
+

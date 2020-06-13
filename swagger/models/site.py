@@ -146,3 +146,26 @@ class Site(BaseModel):
 		'time_zone': 'TimeZone',
 		'accepts_direct_debit': 'AcceptsDirectDebit',
 		}
+
+	accepts_american_express = None
+	accepts_discover = None
+	accepts_master_card = None
+	accepts_visa = None
+	allows_dashboard_access = None
+	contact_email = None
+	description = None
+	id = None
+	logo_url = None
+	name = None
+	page_color_1 = None
+	page_color_2 = None
+	page_color_3 = None
+	page_color_4 = None
+	pricing_level = None
+	sms_package_enabled = None
+	tax_inclusive_prices = None
+	currency_iso_code = None
+	country_code = None
+	time_zone = None
+	accepts_direct_debit = None
+

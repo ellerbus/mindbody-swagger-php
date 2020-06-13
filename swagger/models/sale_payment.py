@@ -38,3 +38,10 @@ class SalePayment(BaseModel):
 		'type': 'Type',
 		'notes': 'Notes',
 		}
+
+	id = None
+	amount = None
+	method = None
+	type = None
+	notes = None
+

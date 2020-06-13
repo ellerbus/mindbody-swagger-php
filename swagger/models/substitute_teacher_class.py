@@ -134,3 +134,25 @@ class SubstituteTeacherClass(BaseModel):
 		'class_description': 'ClassDescription',
 		'staff': 'Staff',
 		}
+
+	class_schedule_id = None
+		'Location': ('location', Location),
+	max_capacity = None
+	web_capacity = None
+	total_booked = None
+	total_booked_waitlist = None
+	web_booked = None
+	semester_id = None
+	is_canceled = None
+	substitute = None
+	active = None
+	is_waitlist_available = None
+	hide_cancel = None
+	id = None
+	is_available = None
+	start_date_time = None
+	end_date_time = None
+	last_modified_date_time = None
+		'ClassDescription': ('class_description', ClassDescription),
+		'Staff': ('staff', Staff),
+

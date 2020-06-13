@@ -18,3 +18,6 @@ class GetClientIndexesResponse(BaseModel):
 	output_map = {
 		'client_indexes': 'ClientIndexes',
 		}
+
+	client_indexes = None
+

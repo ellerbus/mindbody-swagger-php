@@ -33,3 +33,9 @@ class Program(BaseModel):
 		'schedule_type': 'ScheduleType',
 		'cancel_offset': 'CancelOffset',
 		}
+
+	id = None
+	name = None
+	schedule_type = None
+	cancel_offset = None
+

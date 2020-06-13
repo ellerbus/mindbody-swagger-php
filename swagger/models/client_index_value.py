@@ -30,3 +30,8 @@ class ClientIndexValue(BaseModel):
 		'id': 'Id',
 		'name': 'Name',
 		}
+
+	active = None
+	id = None
+	name = None
+

@@ -63,3 +63,15 @@ class ClientCreditCard(BaseModel):
 		'postal_code': 'PostalCode',
 		'state': 'State',
 		}
+
+	address = None
+	card_holder = None
+	card_number = None
+	card_type = None
+	city = None
+	exp_month = None
+	exp_year = None
+	last_four = None
+	postal_code = None
+	state = None
+

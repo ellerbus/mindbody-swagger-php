@@ -27,3 +27,7 @@ class CommissionDetail(BaseModel):
 		'commission_type': 'CommissionType',
 		'commission_earnings': 'CommissionEarnings',
 		}
+
+	commission_type = None
+	commission_earnings = None
+

@@ -25,3 +25,7 @@ class GetSalesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'sales': 'Sales',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	sales = None
+

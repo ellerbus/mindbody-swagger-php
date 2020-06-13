@@ -24,3 +24,7 @@ class GetClientsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'clients': 'Clients',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	clients = None
+

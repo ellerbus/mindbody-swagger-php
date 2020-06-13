@@ -23,3 +23,7 @@ class GetGiftCardBalanceResponse(BaseModel):
 		'barcode_id': 'BarcodeId',
 		'remaining_balance': 'RemainingBalance',
 		}
+
+	barcode_id = None
+	remaining_balance = None
+

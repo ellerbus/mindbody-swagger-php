@@ -340,3 +340,59 @@ class Client(BaseModel):
 		'send_schedule_emails': 'SendScheduleEmails',
 		'send_schedule_texts': 'SendScheduleTexts',
 		}
+
+	appointment_gender_preference = None
+	birth_date = None
+	country = None
+	creation_date = None
+	custom_client_fields = None
+		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
+	client_indexes = None
+	client_relationships = None
+	first_appointment_date = None
+	first_name = None
+	id = None
+	is_company = None
+	is_prospect = None
+	last_name = None
+		'Liability': ('liability', Liability),
+	liability_release = None
+	membership_icon = None
+	mobile_provider = None
+	notes = None
+	state = None
+	unique_id = None
+	last_modified_date_time = None
+	red_alert = None
+	yellow_alert = None
+	middle_name = None
+		'ProspectStage': ('prospect_stage', ProspectStage),
+	email = None
+	mobile_phone = None
+	home_phone = None
+	work_phone = None
+	account_balance = None
+	address_line_1 = None
+	address_line_2 = None
+	city = None
+	postal_code = None
+	work_extension = None
+	referred_by = None
+	photo_url = None
+	emergency_contact_info_name = None
+	emergency_contact_info_email = None
+	emergency_contact_info_phone = None
+	emergency_contact_info_relationship = None
+	gender = None
+	last_formula_notes = None
+	active = None
+	sales_reps = None
+	status = None
+	action = None
+	send_account_emails = None
+	send_account_texts = None
+	send_promotional_emails = None
+	send_promotional_texts = None
+	send_schedule_emails = None
+	send_schedule_texts = None
+

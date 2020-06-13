@@ -24,3 +24,7 @@ class GetPackagesResponse(BaseModel):
 		'packages': 'Packages',
 		'pagination_response': 'PaginationResponse',
 		}
+
+	packages = None
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+

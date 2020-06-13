@@ -35,3 +35,9 @@ class GetProgramsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	schedule_type = None
+	online_only = None
+	limit = None
+	offset = None
+

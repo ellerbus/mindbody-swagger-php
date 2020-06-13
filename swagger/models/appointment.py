@@ -102,3 +102,22 @@ class Appointment(BaseModel):
 		'client_service_id': 'ClientServiceId',
 		'resources': 'Resources',
 		}
+
+	gender_preference = None
+	duration = None
+	provider_id = None
+	id = None
+	status = None
+	start_date_time = None
+	end_date_time = None
+	notes = None
+	staff_requested = None
+	program_id = None
+	session_type_id = None
+	location_id = None
+	staff_id = None
+	client_id = None
+	first_appointment = None
+	client_service_id = None
+	resources = None
+

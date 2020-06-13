@@ -59,3 +59,14 @@ class ClientPurchaseRecord(BaseModel):
 		'returned': 'Returned',
 		'quantity': 'Quantity',
 		}
+
+		'Sale': ('sale', Sale),
+	description = None
+	account_payment = None
+	price = None
+	amount_paid = None
+	discount = None
+	tax = None
+	returned = None
+	quantity = None
+

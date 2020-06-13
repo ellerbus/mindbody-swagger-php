@@ -49,3 +49,12 @@ class ContractItem(BaseModel):
 		'quantity': 'Quantity',
 		'one_time_item': 'OneTimeItem',
 		}
+
+	id = None
+	name = None
+	description = None
+	type = None
+	price = None
+	quantity = None
+	one_time_item = None
+

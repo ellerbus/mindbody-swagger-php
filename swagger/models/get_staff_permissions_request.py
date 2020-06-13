@@ -19,5 +19,9 @@ class GetStaffPermissionsRequest(BaseModel):
 		'staff_id': 'StaffId',
 		}
 
+	staff_id = None
+
+
+
 	def __init__(self, staff_id):
 		self.staff_id = staff_id

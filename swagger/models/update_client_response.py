@@ -19,3 +19,6 @@ class UpdateClientResponse(BaseModel):
 	output_map = {
 		'client': 'Client',
 		}
+
+		'Client': ('client', Client),
+

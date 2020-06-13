@@ -24,3 +24,7 @@ class GetActiveClientMembershipsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'client_memberships': 'ClientMemberships',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	client_memberships = None
+

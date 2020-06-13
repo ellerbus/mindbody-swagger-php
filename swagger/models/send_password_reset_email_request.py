@@ -32,6 +32,12 @@ class SendPasswordResetEmailRequest(BaseModel):
 		'user_last_name': 'UserLastName',
 		}
 
+	user_email = None
+	user_first_name = None
+	user_last_name = None
+
+
+
 	def __init__(self, user_email, user_first_name, user_last_name):
 		self.user_email = user_email
 		self.user_first_name = user_first_name

@@ -23,3 +23,7 @@ class GiftCardLayout(BaseModel):
 		'layout_id': 'LayoutId',
 		'layout_name': 'LayoutName',
 		}
+
+	layout_id = None
+	layout_name = None
+

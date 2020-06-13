@@ -19,3 +19,6 @@ class GetClassVisitsResponse(BaseModel):
 	output_map = {
 		'class': 'Class',
 		}
+
+		'Class': ('class', Class),
+

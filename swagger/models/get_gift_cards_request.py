@@ -41,3 +41,10 @@ class GetGiftCardsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	location_id = None
+	sold_online = None
+	ids = None
+	limit = None
+	offset = None
+

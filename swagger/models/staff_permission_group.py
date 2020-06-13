@@ -40,3 +40,9 @@ class StaffPermissionGroup(BaseModel):
 		'allowed_permissions': 'AllowedPermissions',
 		'denied_permissions': 'DeniedPermissions',
 		}
+
+	permission_group_name = None
+	ip_restricted = None
+	allowed_permissions = None
+	denied_permissions = None
+

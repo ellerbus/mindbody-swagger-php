@@ -86,6 +86,20 @@ class CheckoutShoppingCartRequest(BaseModel):
 		'image_file_name': 'ImageFileName',
 		}
 
+	cart_id = None
+	client_id = None
+	test = None
+	items = None
+	in_store = None
+	promotion_code = None
+	payments = None
+	send_email = None
+	location_id = None
+	image = None
+	image_file_name = None
+
+
+
 	def __init__(self, client_id, items, payments):
 		self.client_id = client_id
 		self.items = items

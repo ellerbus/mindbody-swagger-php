@@ -34,3 +34,9 @@ class ContactLogComment(BaseModel):
 		'created_date_time': 'CreatedDateTime',
 		'created_by': 'CreatedBy',
 		}
+
+	id = None
+	text = None
+	created_date_time = None
+		'CreatedBy': ('created_by', CreatedBy),
+

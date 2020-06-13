@@ -54,3 +54,12 @@ class CheckoutAppointmentBookingRequest(BaseModel):
 		'end_date_time': 'EndDateTime',
 		'provider_id': 'ProviderId',
 		}
+
+	staff_id = None
+	location_id = None
+	session_type_id = None
+	resources = None
+	start_date_time = None
+	end_date_time = None
+	provider_id = None
+

@@ -48,6 +48,15 @@ class SubstituteClassTeacherRequest(BaseModel):
 		'send_substitute_teacher_email': 'SendSubstituteTeacherEmail',
 		}
 
+	class_id = None
+	staff_id = None
+	override_conflicts = None
+	send_client_email = None
+	send_original_teacher_email = None
+	send_substitute_teacher_email = None
+
+
+
 	def __init__(self, class_id, staff_id):
 		self.class_id = class_id
 		self.staff_id = staff_id

@@ -20,3 +20,6 @@ class GetClientIndexesRequest(BaseModel):
 	output_map = {
 		'required_only': 'RequiredOnly',
 		}
+
+	required_only = None
+

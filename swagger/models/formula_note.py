@@ -38,3 +38,10 @@ class FormulaNote(BaseModel):
 		'entry_date_time': 'EntryDateTime',
 		'appointment_id': 'AppointmentId',
 		}
+
+	id = None
+	client_id = None
+	note = None
+	entry_date_time = None
+	appointment_id = None
+

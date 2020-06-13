@@ -138,3 +138,27 @@ class ClassSchedule(BaseModel):
 		'staff': 'Staff',
 		'location': 'Location',
 		}
+
+	classes = None
+	clients = None
+		'Course': ('course', Course),
+	semester_id = None
+	is_available = None
+	id = None
+		'ClassDescription': ('class_description', ClassDescription),
+	day_sunday = None
+	day_monday = None
+	day_tuesday = None
+	day_wednesday = None
+	day_thursday = None
+	day_friday = None
+	day_saturday = None
+	allow_open_enrollment = None
+	allow_date_forward_enrollment = None
+	start_time = None
+	end_time = None
+	start_date = None
+	end_date = None
+		'Staff': ('staff', Staff),
+		'Location': ('location', Location),
+

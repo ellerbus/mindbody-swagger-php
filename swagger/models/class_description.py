@@ -96,3 +96,20 @@ class ClassDescription(BaseModel):
 		'subcategory': 'Subcategory',
 		'subcategory_id': 'SubcategoryId',
 		}
+
+	active = None
+	description = None
+	id = None
+	image_url = None
+	last_updated = None
+		'Level': ('level', Level),
+	name = None
+	notes = None
+	prereq = None
+		'Program': ('program', Program),
+		'SessionType': ('session_type', SessionType),
+	category = None
+	category_id = None
+	subcategory = None
+	subcategory_id = None
+

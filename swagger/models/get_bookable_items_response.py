@@ -24,3 +24,7 @@ class GetBookableItemsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'availabilities': 'Availabilities',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	availabilities = None
+

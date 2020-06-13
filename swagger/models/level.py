@@ -28,3 +28,8 @@ class Level(BaseModel):
 		'name': 'Name',
 		'description': 'Description',
 		}
+
+	id = None
+	name = None
+	description = None
+

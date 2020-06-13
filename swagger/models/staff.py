@@ -144,3 +144,29 @@ class Staff(BaseModel):
 		'unavailabilities': 'Unavailabilities',
 		'availabilities': 'Availabilities',
 		}
+
+	address = None
+	appointment_instructor = None
+	always_allow_double_booking = None
+	bio = None
+	city = None
+	country = None
+	email = None
+	first_name = None
+	home_phone = None
+	id = None
+	independent_contractor = None
+	is_male = None
+	last_name = None
+	mobile_phone = None
+	name = None
+	postal_code = None
+	class_teacher = None
+	sort_order = None
+	state = None
+	work_phone = None
+	image_url = None
+	appointments = None
+	unavailabilities = None
+	availabilities = None
+

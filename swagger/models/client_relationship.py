@@ -34,3 +34,9 @@ class ClientRelationship(BaseModel):
 		'relationship_name': 'RelationshipName',
 		'delete': 'Delete',
 		}
+
+	related_client_id = None
+		'Relationship': ('relationship', Relationship),
+	relationship_name = None
+	delete = None
+

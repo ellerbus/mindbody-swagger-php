@@ -26,3 +26,8 @@ class IssueResponse(BaseModel):
 		'access_token': 'AccessToken',
 		'user': 'User',
 		}
+
+	token_type = None
+	access_token = None
+		'User': ('user', User),
+

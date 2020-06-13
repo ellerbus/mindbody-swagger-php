@@ -49,5 +49,14 @@ class GetContractsRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	contract_ids = None
+	sold_online = None
+	location_id = None
+	consumer_id = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, location_id):
 		self.location_id = location_id

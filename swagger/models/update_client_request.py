@@ -46,5 +46,12 @@ class UpdateClientRequest(BaseModel):
 		'new_id': 'NewId',
 		}
 
+		'Client': ('client', Client),
+	test = None
+	cross_regional_update = None
+	new_id = None
+
+
+
 	def __init__(self, client):
 		self.client = client

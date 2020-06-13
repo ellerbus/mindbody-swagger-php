@@ -139,3 +139,26 @@ class Visit(BaseModel):
 		'web_signup': 'WebSignup',
 		'action': 'Action',
 		}
+
+	appointment_id = None
+	appointment_gender_preference = None
+	appointment_status = None
+	class_id = None
+	client_id = None
+	start_date_time = None
+	end_date_time = None
+	id = None
+	last_modified_date_time = None
+	late_cancelled = None
+	site_id = None
+	location_id = None
+	make_up = None
+	name = None
+	service_id = None
+	service_name = None
+	product_id = None
+	signed_in = None
+	staff_id = None
+	web_signup = None
+	action = None
+

@@ -64,3 +64,15 @@ class PurchaseGiftCardResponse(BaseModel):
 		'recipient_email': 'RecipientEmail',
 		'sale_id': 'SaleId',
 		}
+
+	barcode_id = None
+	value = None
+	amount_paid = None
+	from_name = None
+	layout_id = None
+	email_receipt = None
+	purchaser_client_id = None
+	purchaser_email = None
+	recipient_email = None
+	sale_id = None
+

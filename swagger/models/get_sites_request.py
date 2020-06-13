@@ -29,3 +29,8 @@ class GetSitesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	site_ids = None
+	limit = None
+	offset = None
+

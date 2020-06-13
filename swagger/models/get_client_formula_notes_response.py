@@ -24,3 +24,7 @@ class GetClientFormulaNotesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'formula_notes': 'FormulaNotes',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	formula_notes = None
+

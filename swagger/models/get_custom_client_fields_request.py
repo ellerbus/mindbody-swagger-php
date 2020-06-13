@@ -23,3 +23,7 @@ class GetCustomClientFieldsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	limit = None
+	offset = None
+

@@ -37,3 +37,8 @@ class Liability(BaseModel):
 		'is_released': 'IsReleased',
 		'released_by': 'ReleasedBy',
 		}
+
+	agreement_date = None
+	is_released = None
+	released_by = None
+

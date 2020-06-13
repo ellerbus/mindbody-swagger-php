@@ -18,3 +18,6 @@ class GetClientReferralTypesResponse(BaseModel):
 	output_map = {
 		'referral_types': 'ReferralTypes',
 		}
+
+	referral_types = None
+

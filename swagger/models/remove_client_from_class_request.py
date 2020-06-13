@@ -45,6 +45,14 @@ class RemoveClientFromClassRequest(BaseModel):
 		'late_cancel': 'LateCancel',
 		}
 
+	client_id = None
+	class_id = None
+	test = None
+	send_email = None
+	late_cancel = None
+
+
+
 	def __init__(self, client_id, class_id):
 		self.client_id = client_id
 		self.class_id = class_id

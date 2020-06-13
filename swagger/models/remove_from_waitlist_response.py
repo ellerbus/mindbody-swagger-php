@@ -13,3 +13,5 @@ class RemoveFromWaitlistResponse(BaseModel):
 
 	output_map = {
 		}
+
+

@@ -150,3 +150,30 @@ class Location(BaseModel):
 		'average_rating': 'AverageRating',
 		'total_number_of_deals': 'TotalNumberOfDeals',
 		}
+
+	additional_image_ur_ls = None
+	address = None
+	address_2 = None
+	amenities = None
+	business_description = None
+	city = None
+	description = None
+	has_classes = None
+	id = None
+	latitude = None
+	longitude = None
+	name = None
+	phone = None
+	phone_extension = None
+	postal_code = None
+	site_id = None
+	state_prov_code = None
+	tax_1 = None
+	tax_2 = None
+	tax_3 = None
+	tax_4 = None
+	tax_5 = None
+	total_number_of_ratings = None
+	average_rating = None
+	total_number_of_deals = None
+

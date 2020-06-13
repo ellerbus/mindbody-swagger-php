@@ -19,3 +19,6 @@ class GetMembershipsRequest(BaseModel):
 	output_map = {
 		'membership_ids': 'MembershipIds',
 		}
+
+	membership_ids = None
+

@@ -24,3 +24,7 @@ class GetClassDescriptionsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'class_descriptions': 'ClassDescriptions',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	class_descriptions = None
+

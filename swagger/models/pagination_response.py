@@ -33,3 +33,9 @@ class PaginationResponse(BaseModel):
 		'page_size': 'PageSize',
 		'total_results': 'TotalResults',
 		}
+
+	requested_limit = None
+	requested_offset = None
+	page_size = None
+	total_results = None
+

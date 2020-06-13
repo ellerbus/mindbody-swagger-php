@@ -31,3 +31,14 @@ class CreditCardInfo(BaseModel):
 		'billing_postal_code': 'BillingPostalCode',
 		'save_info': 'SaveInfo',
 		}
+
+	credit_card_number = None
+	exp_month = None
+	exp_year = None
+	billing_name = None
+	billing_address = None
+	billing_city = None
+	billing_state = None
+	billing_postal_code = None
+	save_info = None
+

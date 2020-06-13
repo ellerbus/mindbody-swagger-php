@@ -66,3 +66,14 @@ class WaitlistEntry(BaseModel):
 		'visit_ref_no': 'VisitRefNo',
 		'web': 'Web',
 		}
+
+	class_date = None
+	class_id = None
+		'ClassSchedule': ('class_schedule', ClassSchedule),
+		'Client': ('client', Client),
+	enrollment_date_forward = None
+	id = None
+	request_date_time = None
+	visit_ref_no = None
+	web = None
+

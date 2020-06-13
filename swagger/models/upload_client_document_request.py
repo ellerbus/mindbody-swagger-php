@@ -25,6 +25,11 @@ class UploadClientDocumentRequest(BaseModel):
 		'file': 'File',
 		}
 
+	client_id = None
+		'File': ('file', File),
+
+
+
 	def __init__(self, client_id, file):
 		self.client_id = client_id
 		self.file = file

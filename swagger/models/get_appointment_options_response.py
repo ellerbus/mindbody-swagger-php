@@ -18,3 +18,6 @@ class GetAppointmentOptionsResponse(BaseModel):
 	output_map = {
 		'options': 'Options',
 		}
+
+	options = None
+

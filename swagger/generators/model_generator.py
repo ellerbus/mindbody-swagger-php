@@ -21,6 +21,7 @@ class ModelGenerator(object):
             self.write_header(file)
             self.write_class_definition(file)
             self.write_attribute_maps(file)
+            self.write_attributes(file)
             self.write_constructor(file)
 
     def write_header(self, file):
@@ -120,3 +121,15 @@ class ModelGenerator(object):
             name = strutils.snake_case(key)
             file.write(f"\t\t'{name}': '{key}',\n")
         file.write(f'\t\t}}')
+
+    def write_attributes(self, file):
+        file.write(f'\n\n')
+        properties = self.definition['properties']
+        for key in properties:
+            prop = properties[key]
+            name = strutils.snake_case(key)
+            if '$ref' in prop:
+                file.write(f"\t\t\'{key}': ('{name}', {key}),\n")
+            else:
+                file.write(f"\t{name} = None\n")
+        file.write(f'\n')

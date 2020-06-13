@@ -73,3 +73,16 @@ class ContactLog(BaseModel):
 		'comments': 'Comments',
 		'types': 'Types',
 		}
+
+	id = None
+	text = None
+	created_date_time = None
+	followup_by_date = None
+	contact_method = None
+	contact_name = None
+		'Client': ('client', Client),
+		'CreatedBy': ('created_by', CreatedBy),
+		'AssignedTo': ('assigned_to', AssignedTo),
+	comments = None
+	types = None
+

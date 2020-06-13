@@ -20,3 +20,6 @@ class SubstituteClassTeacherResponse(BaseModel):
 	output_map = {
 		'class': 'Class',
 		}
+
+		'Class': ('class', Class),
+

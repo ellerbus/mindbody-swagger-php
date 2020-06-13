@@ -70,3 +70,15 @@ class CheckoutItemWrapper(BaseModel):
 		'id': 'Id',
 		'quantity': 'Quantity',
 		}
+
+		'Item': ('item', Item),
+	discount_amount = None
+	appointment_booking_requests = None
+	enrollment_ids = None
+	class_ids = None
+	course_ids = None
+	visit_ids = None
+	appointment_ids = None
+	id = None
+	quantity = None
+

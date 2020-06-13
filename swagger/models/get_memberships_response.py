@@ -18,3 +18,6 @@ class GetMembershipsResponse(BaseModel):
 	output_map = {
 		'memberships': 'Memberships',
 		}
+
+	memberships = None
+

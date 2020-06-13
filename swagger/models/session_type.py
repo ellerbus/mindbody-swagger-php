@@ -65,3 +65,15 @@ class SessionType(BaseModel):
 		'subcategory': 'Subcategory',
 		'subcategory_id': 'SubcategoryId',
 		}
+
+	type = None
+	default_time_length = None
+	id = None
+	name = None
+	num_deducted = None
+	program_id = None
+	category = None
+	category_id = None
+	subcategory = None
+	subcategory_id = None
+

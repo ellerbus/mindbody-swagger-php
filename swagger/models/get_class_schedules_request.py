@@ -60,3 +60,14 @@ class GetClassSchedulesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	class_schedule_ids = None
+	end_date = None
+	location_ids = None
+	program_ids = None
+	session_type_ids = None
+	staff_ids = None
+	start_date = None
+	limit = None
+	offset = None
+

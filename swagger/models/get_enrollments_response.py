@@ -24,3 +24,7 @@ class GetEnrollmentsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'enrollments': 'Enrollments',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	enrollments = None
+

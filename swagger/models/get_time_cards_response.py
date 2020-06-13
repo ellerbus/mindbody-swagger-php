@@ -24,3 +24,7 @@ class GetTimeCardsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'time_cards': 'TimeCards',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	time_cards = None
+

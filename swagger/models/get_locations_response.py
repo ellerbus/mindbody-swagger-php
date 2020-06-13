@@ -24,3 +24,7 @@ class GetLocationsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'locations': 'Locations',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	locations = None
+

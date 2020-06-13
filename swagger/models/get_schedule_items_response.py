@@ -24,3 +24,7 @@ class GetScheduleItemsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'staff_members': 'StaffMembers',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	staff_members = None
+

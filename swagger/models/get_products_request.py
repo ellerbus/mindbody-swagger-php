@@ -55,3 +55,13 @@ class GetProductsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	product_ids = None
+	search_text = None
+	category_ids = None
+	sub_category_ids = None
+	sell_online = None
+	location_id = None
+	limit = None
+	offset = None
+

@@ -24,3 +24,7 @@ class GetClassVisitsRequest(BaseModel):
 		'class_id': 'ClassID',
 		'last_modified_date': 'LastModifiedDate',
 		}
+
+	class_id = None
+	last_modified_date = None
+

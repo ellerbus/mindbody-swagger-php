@@ -58,3 +58,14 @@ class ClientContract(BaseModel):
 		'site_id': 'SiteId',
 		'upcoming_autopay_events': 'UpcomingAutopayEvents',
 		}
+
+	agreement_date = None
+	autopay_status = None
+	contract_name = None
+	end_date = None
+	id = None
+	origination_location_id = None
+	start_date = None
+	site_id = None
+	upcoming_autopay_events = None
+

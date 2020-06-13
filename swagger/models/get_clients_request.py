@@ -48,3 +48,11 @@ class GetClientsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	client_i_ds = None
+	search_text = None
+	is_prospect = None
+	last_modified_date = None
+	limit = None
+	offset = None
+

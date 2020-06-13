@@ -24,3 +24,7 @@ class GetClassSchedulesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'class_schedules': 'ClassSchedules',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	class_schedules = None
+

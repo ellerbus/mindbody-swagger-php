@@ -76,3 +76,16 @@ class GetServicesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	program_ids = None
+	session_type_ids = None
+	service_ids = None
+	class_id = None
+	class_schedule_id = None
+	sell_online = None
+	location_id = None
+	hide_related_programs = None
+	staff_id = None
+	limit = None
+	offset = None
+

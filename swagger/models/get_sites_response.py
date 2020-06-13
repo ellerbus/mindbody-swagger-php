@@ -24,3 +24,7 @@ class GetSitesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'sites': 'Sites',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	sites = None
+

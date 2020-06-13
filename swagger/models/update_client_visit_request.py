@@ -50,5 +50,14 @@ class UpdateClientVisitRequest(BaseModel):
 		'send_email': 'SendEmail',
 		}
 
+	visit_id = None
+	makeup = None
+	signed_in = None
+	execute = None
+	test = None
+	send_email = None
+
+
+
 	def __init__(self, visit_id):
 		self.visit_id = visit_id

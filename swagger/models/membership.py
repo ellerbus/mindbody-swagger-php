@@ -80,3 +80,18 @@ class Membership(BaseModel):
 		'allow_members_to_purchase_non_members_products': 'AllowMembersToPurchaseNonMembersProducts',
 		'is_active': 'IsActive',
 		}
+
+	membership_id = None
+	membership_name = None
+	priority = None
+	member_retail_discount = None
+	member_service_discount = None
+	allow_clients_to_schedule_unpaid = None
+	online_booking_restricted_to_members_only = None
+	day_of_month_scheduling_opens_for_next_month = None
+	restrict_self_sign_in_to_members_only = None
+	allow_members_to_book_appointments_without_paying = None
+	allow_members_to_purchase_non_members_services = None
+	allow_members_to_purchase_non_members_products = None
+	is_active = None
+

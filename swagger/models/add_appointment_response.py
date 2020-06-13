@@ -19,3 +19,6 @@ class AddAppointmentResponse(BaseModel):
 	output_map = {
 		'appointment': 'Appointment',
 		}
+
+		'Appointment': ('appointment', Appointment),
+

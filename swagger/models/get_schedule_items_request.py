@@ -51,3 +51,12 @@ class GetScheduleItemsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	location_ids = None
+	staff_ids = None
+	start_date = None
+	end_date = None
+	ignore_prep_finish_times = None
+	limit = None
+	offset = None
+

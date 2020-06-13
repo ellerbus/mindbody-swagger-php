@@ -24,3 +24,7 @@ class UpdateContactLogComment(BaseModel):
 		'id': 'Id',
 		'text': 'Text',
 		}
+
+	id = None
+	text = None
+

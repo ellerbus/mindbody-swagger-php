@@ -67,3 +67,14 @@ class UpdateContactLogRequest(BaseModel):
 		'comments': 'Comments',
 		'types': 'Types',
 		}
+
+	id = None
+	test = None
+	assigned_to_staff_id = None
+	text = None
+	contact_name = None
+	followup_by_date = None
+	contact_method = None
+	comments = None
+	types = None
+

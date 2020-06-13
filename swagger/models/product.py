@@ -72,3 +72,16 @@ class Product(BaseModel):
 		'color': 'Color',
 		'size': 'Size',
 		}
+
+	price = None
+	tax_included = None
+	tax_rate = None
+	id = None
+	group_id = None
+	name = None
+	online_price = None
+	short_description = None
+	long_description = None
+		'Color': ('color', Color),
+		'Size': ('size', Size),
+

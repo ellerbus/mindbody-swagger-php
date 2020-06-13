@@ -30,3 +30,7 @@ class GetActiveSessionTimesResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'active_session_times': 'ActiveSessionTimes',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	active_session_times = None
+

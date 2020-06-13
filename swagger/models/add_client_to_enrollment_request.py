@@ -61,6 +61,17 @@ class AddClientToEnrollmentRequest(BaseModel):
 		'waitlist_entry_id': 'WaitlistEntryId',
 		}
 
+	client_id = None
+	class_schedule_id = None
+	enroll_date_forward = None
+	enroll_open = None
+	test = None
+	send_email = None
+	waitlist = None
+	waitlist_entry_id = None
+
+
+
 	def __init__(self, client_id, class_schedule_id):
 		self.client_id = client_id
 		self.class_schedule_id = class_schedule_id

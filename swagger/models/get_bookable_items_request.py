@@ -64,5 +64,17 @@ class GetBookableItemsRequest(BaseModel):
 		'offset': 'Offset',
 		}
 
+	session_type_ids = None
+	location_ids = None
+	staff_ids = None
+	start_date = None
+	end_date = None
+	appointment_id = None
+	ignore_default_session_length = None
+	limit = None
+	offset = None
+
+
+
 	def __init__(self, session_type_ids):
 		self.session_type_ids = session_type_ids

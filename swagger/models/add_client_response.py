@@ -19,3 +19,6 @@ class AddClientResponse(BaseModel):
 	output_map = {
 		'client': 'Client',
 		}
+
+		'Client': ('client', Client),
+

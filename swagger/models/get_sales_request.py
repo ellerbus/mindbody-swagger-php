@@ -43,3 +43,11 @@ class GetSalesRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	sale_id = None
+	start_sale_date_time = None
+	end_sale_date_time = None
+	payment_method_id = None
+	limit = None
+	offset = None
+

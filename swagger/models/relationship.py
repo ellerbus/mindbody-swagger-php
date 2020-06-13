@@ -29,3 +29,8 @@ class Relationship(BaseModel):
 		'relationship_name_1': 'RelationshipName1',
 		'relationship_name_2': 'RelationshipName2',
 		}
+
+	id = None
+	relationship_name_1 = None
+	relationship_name_2 = None
+

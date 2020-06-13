@@ -19,5 +19,9 @@ class RemoveFromWaitlistRequest(BaseModel):
 		'waitlist_entry_ids': 'WaitlistEntryIds',
 		}
 
+	waitlist_entry_ids = None
+
+
+
 	def __init__(self, waitlist_entry_ids):
 		self.waitlist_entry_ids = waitlist_entry_ids

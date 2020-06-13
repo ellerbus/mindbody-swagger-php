@@ -23,3 +23,7 @@ class AddContactLogType(BaseModel):
 		'id': 'Id',
 		'sub_types': 'SubTypes',
 		}
+
+	id = None
+	sub_types = None
+

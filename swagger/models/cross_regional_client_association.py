@@ -28,3 +28,8 @@ class CrossRegionalClientAssociation(BaseModel):
 		'client_id': 'ClientId',
 		'unique_id': 'UniqueId',
 		}
+
+	site_id = None
+	client_id = None
+	unique_id = None
+

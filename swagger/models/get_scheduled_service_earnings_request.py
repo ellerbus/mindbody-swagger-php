@@ -61,3 +61,12 @@ class GetScheduledServiceEarningsRequest(BaseModel):
 		'limit': 'Limit',
 		'offset': 'Offset',
 		}
+
+	scheduled_service_type = None
+	scheduled_service_id = None
+	staff_id = None
+	start_date_time = None
+	end_date_time = None
+	limit = None
+	offset = None
+

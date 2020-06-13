@@ -23,3 +23,7 @@ class UploadClientDocumentResponse(BaseModel):
 		'file_size': 'FileSize',
 		'file_name': 'FileName',
 		}
+
+	file_size = None
+	file_name = None
+

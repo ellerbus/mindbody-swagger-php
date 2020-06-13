@@ -23,3 +23,7 @@ class CustomPaymentMethod(BaseModel):
 		'id': 'Id',
 		'name': 'Name',
 		}
+
+	id = None
+	name = None
+

@@ -344,6 +344,63 @@ class AddClientRequest(BaseModel):
 		'send_promotional_emails': 'SendPromotionalEmails',
 		}
 
+	account_balance = None
+	action = None
+	active = None
+	address_line_1 = None
+	address_line_2 = None
+	appt_gender_pref_male = None
+	birth_date = None
+	city = None
+		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
+	client_indexes = None
+	client_relationships = None
+	country = None
+	creation_date = None
+	custom_client_fields = None
+	email = None
+	emergency_contact_info_email = None
+	emergency_contact_info_name = None
+	emergency_contact_info_phone = None
+	emergency_contact_info_relationship = None
+	first_appointment_date = None
+	first_name = None
+	gender = None
+		'HomeLocation': ('home_location', HomeLocation),
+	home_phone = None
+	is_company = None
+	is_prospect = None
+	last_formula_notes = None
+	last_modified_date_time = None
+	last_name = None
+		'Liability': ('liability', Liability),
+	liability_release = None
+	membership_icon = None
+	middle_name = None
+	mobile_phone = None
+	mobile_provider = None
+	new_id = None
+	notes = None
+	photo_url = None
+	postal_code = None
+		'ProspectStage': ('prospect_stage', ProspectStage),
+	red_alert = None
+	referred_by = None
+	sales_reps = None
+	site_id = None
+	state = None
+	status = None
+	test = None
+	unique_id = None
+	work_extension = None
+	work_phone = None
+	yellow_alert = None
+	send_schedule_emails = None
+	send_account_emails = None
+	send_promotional_emails = None
+
+
+
 	def __init__(self, first_name, last_name):
 		self.first_name = first_name
 		self.last_name = last_name

@@ -24,3 +24,7 @@ class GetProductsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'products': 'Products',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	products = None
+

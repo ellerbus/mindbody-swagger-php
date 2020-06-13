@@ -20,3 +20,6 @@ class GetStaffPermissionsResponse(BaseModel):
 	output_map = {
 		'user_group': 'UserGroup',
 		}
+
+		'UserGroup': ('user_group', UserGroup),
+

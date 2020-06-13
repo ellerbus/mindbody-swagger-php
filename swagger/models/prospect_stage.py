@@ -31,3 +31,8 @@ class ProspectStage(BaseModel):
 		'description': 'Description',
 		'id': 'Id',
 		}
+
+	active = None
+	description = None
+	id = None
+

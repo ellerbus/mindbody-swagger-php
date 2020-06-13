@@ -162,3 +162,31 @@ class Class(BaseModel):
 		'booking_window': 'BookingWindow',
 		'booking_status': 'BookingStatus',
 		}
+
+	class_schedule_id = None
+	visits = None
+	clients = None
+		'Location': ('location', Location),
+		'Resource': ('resource', Resource),
+	max_capacity = None
+	web_capacity = None
+	total_booked = None
+	total_booked_waitlist = None
+	web_booked = None
+	semester_id = None
+	is_canceled = None
+	substitute = None
+	active = None
+	is_waitlist_available = None
+	is_enrolled = None
+	hide_cancel = None
+	id = None
+	is_available = None
+	start_date_time = None
+	end_date_time = None
+	last_modified_date_time = None
+		'ClassDescription': ('class_description', ClassDescription),
+		'Staff': ('staff', Staff),
+		'BookingWindow': ('booking_window', BookingWindow),
+	booking_status = None
+

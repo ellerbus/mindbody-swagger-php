@@ -24,3 +24,7 @@ class GetProgramsResponse(BaseModel):
 		'pagination_response': 'PaginationResponse',
 		'programs': 'Programs',
 		}
+
+		'PaginationResponse': ('pagination_response', PaginationResponse),
+	programs = None
+

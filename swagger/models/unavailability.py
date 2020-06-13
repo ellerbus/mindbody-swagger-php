@@ -33,3 +33,9 @@ class Unavailability(BaseModel):
 		'end_date_time': 'EndDateTime',
 		'description': 'Description',
 		}
+
+	id = None
+	start_date_time = None
+	end_date_time = None
+	description = None
+

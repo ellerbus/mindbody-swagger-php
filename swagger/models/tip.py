@@ -33,3 +33,9 @@ class Tip(BaseModel):
 		'sale_date_time': 'SaleDateTime',
 		'earnings': 'Earnings',
 		}
+
+	staff_id = None
+	sale_id = None
+	sale_date_time = None
+	earnings = None
+

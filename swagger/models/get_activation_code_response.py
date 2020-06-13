@@ -24,3 +24,7 @@ class GetActivationCodeResponse(BaseModel):
 		'activation_code': 'ActivationCode',
 		'activation_link': 'ActivationLink',
 		}
+
+	activation_code = None
+	activation_link = None
+
