@@ -16,7 +16,7 @@ class GetClientServicesResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'ClientServices': 'client_services',
 		}
 

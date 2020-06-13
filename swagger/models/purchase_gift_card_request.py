@@ -73,7 +73,7 @@ class PurchaseGiftCardRequest(BaseModel):
 		'Title': 'title',
 		'GiftMessage': 'gift_message',
 		'DeliveryDate': 'delivery_date',
-		'PaymentInfo': ('payment_info', PaymentInfo)
+		'PaymentInfo': ('payment_info', PaymentInfo),
 		'SalesRepId': 'sales_rep_id',
 		}
 
@@ -91,7 +91,9 @@ class PurchaseGiftCardRequest(BaseModel):
 		'delivery_date': 'DeliveryDate',
 		'payment_info': 'PaymentInfo',
 		'sales_rep_id': 'SalesRepId',
-		}	def __init__(self, location_id, purchaser_client_id, gift_card_id):
+		}
+
+	def __init__(self, location_id, purchaser_client_id, gift_card_id):
 		self.location_id = location_id
 		self.purchaser_client_id = purchaser_client_id
 		self.gift_card_id = gift_card_id

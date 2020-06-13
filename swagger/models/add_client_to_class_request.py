@@ -77,6 +77,8 @@ class AddClientToClassRequest(BaseModel):
 		'client_service_id': 'ClientServiceId',
 		'cross_regional_booking': 'CrossRegionalBooking',
 		'cross_regional_booking_client_service_site_id': 'CrossRegionalBookingClientServiceSiteId',
-		}	def __init__(self, client_id, class_id):
+		}
+
+	def __init__(self, client_id, class_id):
 		self.client_id = client_id
 		self.class_id = class_id

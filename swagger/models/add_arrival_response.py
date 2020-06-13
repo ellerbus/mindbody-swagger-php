@@ -18,7 +18,7 @@ class AddArrivalResponse(BaseModel):
 
 	input_map = {
 		'ArrivalAdded': 'arrival_added',
-		'ClientService': ('client_service', ClientService)
+		'ClientService': ('client_service', ClientService),
 		}
 
 	output_map = {

@@ -67,12 +67,12 @@ class ClassDescription(BaseModel):
 		'Id': 'id',
 		'ImageURL': 'image_url',
 		'LastUpdated': 'last_updated',
-		'Level': ('level', Level)
+		'Level': ('level', Level),
 		'Name': 'name',
 		'Notes': 'notes',
 		'Prereq': 'prereq',
-		'Program': ('program', Program)
-		'SessionType': ('session_type', SessionType)
+		'Program': ('program', Program),
+		'SessionType': ('session_type', SessionType),
 		'Category': 'category',
 		'CategoryId': 'category_id',
 		'Subcategory': 'subcategory',

@@ -18,7 +18,7 @@ class GetTipsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'Tips': 'tips',
 		}
 

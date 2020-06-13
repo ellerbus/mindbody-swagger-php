@@ -13,7 +13,7 @@ class AddClientResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Client': ('client', Client)
+		'Client': ('client', Client),
 		}
 
 	output_map = {

@@ -14,7 +14,7 @@ class RemoveClientFromClassResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Class': ('class', Class)
+		'Class': ('class', Class),
 		}
 
 	output_map = {

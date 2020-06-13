@@ -17,12 +17,14 @@ class UploadClientDocumentRequest(BaseModel):
 
 	input_map = {
 		'ClientId': 'client_id',
-		'File': ('file', File)
+		'File': ('file', File),
 		}
 
 	output_map = {
 		'client_id': 'ClientId',
 		'file': 'File',
-		}	def __init__(self, client_id, file):
+		}
+
+	def __init__(self, client_id, file):
 		self.client_id = client_id
 		self.file = file

@@ -53,9 +53,9 @@ class ContactLog(BaseModel):
 		'FollowupByDate': 'followup_by_date',
 		'ContactMethod': 'contact_method',
 		'ContactName': 'contact_name',
-		'Client': ('client', Client)
-		'CreatedBy': ('created_by', CreatedBy)
-		'AssignedTo': ('assigned_to', AssignedTo)
+		'Client': ('client', Client),
+		'CreatedBy': ('created_by', CreatedBy),
+		'AssignedTo': ('assigned_to', AssignedTo),
 		'Comments': 'comments',
 		'Types': 'types',
 		}

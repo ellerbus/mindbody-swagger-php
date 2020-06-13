@@ -65,7 +65,7 @@ class ClientService(BaseModel):
 		'ProductId': 'product_id',
 		'Name': 'name',
 		'PaymentDate': 'payment_date',
-		'Program': ('program', Program)
+		'Program': ('program', Program),
 		'Remaining': 'remaining',
 		'SiteId': 'site_id',
 		'Action': 'action',

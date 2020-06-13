@@ -37,7 +37,7 @@ class ClientPurchaseRecord(BaseModel):
 	"""
 
 	input_map = {
-		'Sale': ('sale', Sale)
+		'Sale': ('sale', Sale),
 		'Description': 'description',
 		'AccountPayment': 'account_payment',
 		'Price': 'price',

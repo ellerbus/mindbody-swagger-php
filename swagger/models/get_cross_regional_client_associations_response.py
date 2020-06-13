@@ -16,7 +16,7 @@ class GetCrossRegionalClientAssociationsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'CrossRegionalClientAssociations': 'cross_regional_client_associations',
 		}
 

@@ -81,8 +81,8 @@ class PurchaseContractRequest(BaseModel):
 		'FirstPaymentOccurs': 'first_payment_occurs',
 		'ClientSignature': 'client_signature',
 		'PromotionCode': 'promotion_code',
-		'CreditCardInfo': ('credit_card_info', CreditCardInfo)
-		'StoredCardInfo': ('stored_card_info', StoredCardInfo)
+		'CreditCardInfo': ('credit_card_info', CreditCardInfo),
+		'StoredCardInfo': ('stored_card_info', StoredCardInfo),
 		'SendNotifications': 'send_notifications',
 		'SalesRepId': 'sales_rep_id',
 		'UseDirectDebit': 'use_direct_debit',
@@ -102,6 +102,8 @@ class PurchaseContractRequest(BaseModel):
 		'send_notifications': 'SendNotifications',
 		'sales_rep_id': 'SalesRepId',
 		'use_direct_debit': 'UseDirectDebit',
-		}	def __init__(self, client_id, contract_id):
+		}
+
+	def __init__(self, client_id, contract_id):
 		self.client_id = client_id
 		self.contract_id = contract_id

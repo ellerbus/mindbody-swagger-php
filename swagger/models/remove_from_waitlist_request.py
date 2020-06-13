@@ -17,5 +17,7 @@ class RemoveFromWaitlistRequest(BaseModel):
 
 	output_map = {
 		'waitlist_entry_ids': 'WaitlistEntryIds',
-		}	def __init__(self, waitlist_entry_ids):
+		}
+
+	def __init__(self, waitlist_entry_ids):
 		self.waitlist_entry_ids = waitlist_entry_ids

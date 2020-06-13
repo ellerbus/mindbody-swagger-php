@@ -233,7 +233,7 @@ class Client(BaseModel):
 		'Country': 'country',
 		'CreationDate': 'creation_date',
 		'CustomClientFields': 'custom_client_fields',
-		'ClientCreditCard': ('client_credit_card', ClientCreditCard)
+		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
 		'ClientIndexes': 'client_indexes',
 		'ClientRelationships': 'client_relationships',
 		'FirstAppointmentDate': 'first_appointment_date',
@@ -242,7 +242,7 @@ class Client(BaseModel):
 		'IsCompany': 'is_company',
 		'IsProspect': 'is_prospect',
 		'LastName': 'last_name',
-		'Liability': ('liability', Liability)
+		'Liability': ('liability', Liability),
 		'LiabilityRelease': 'liability_release',
 		'MembershipIcon': 'membership_icon',
 		'MobileProvider': 'mobile_provider',
@@ -253,7 +253,7 @@ class Client(BaseModel):
 		'RedAlert': 'red_alert',
 		'YellowAlert': 'yellow_alert',
 		'MiddleName': 'middle_name',
-		'ProspectStage': ('prospect_stage', ProspectStage)
+		'ProspectStage': ('prospect_stage', ProspectStage),
 		'Email': 'email',
 		'MobilePhone': 'mobile_phone',
 		'HomePhone': 'home_phone',

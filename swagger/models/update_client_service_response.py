@@ -13,7 +13,7 @@ class UpdateClientServiceResponse(BaseModel):
 	"""
 
 	input_map = {
-		'ClientService': ('client_service', ClientService)
+		'ClientService': ('client_service', ClientService),
 		}
 
 	output_map = {

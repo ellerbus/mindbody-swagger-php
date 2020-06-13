@@ -92,11 +92,11 @@ class ClassSchedule(BaseModel):
 	input_map = {
 		'Classes': 'classes',
 		'Clients': 'clients',
-		'Course': ('course', Course)
+		'Course': ('course', Course),
 		'SemesterId': 'semester_id',
 		'IsAvailable': 'is_available',
 		'Id': 'id',
-		'ClassDescription': ('class_description', ClassDescription)
+		'ClassDescription': ('class_description', ClassDescription),
 		'DaySunday': 'day_sunday',
 		'DayMonday': 'day_monday',
 		'DayTuesday': 'day_tuesday',
@@ -110,8 +110,8 @@ class ClassSchedule(BaseModel):
 		'EndTime': 'end_time',
 		'StartDate': 'start_date',
 		'EndDate': 'end_date',
-		'Staff': ('staff', Staff)
-		'Location': ('location', Location)
+		'Staff': ('staff', Staff),
+		'Location': ('location', Location),
 		}
 
 	output_map = {

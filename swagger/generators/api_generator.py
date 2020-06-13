@@ -11,19 +11,63 @@ class MethodGenerator(object):
         self.path = path
         self.method = method
         self.name = name
+        self.parameters = self.path[self.method]['parameters']
+        self.responses = self.path[self.method]['responses']
 
     def write_references(self, file):
-        parameters = self.path[self.method]['parameters']
-        for parm in parameters:
+        for parm in self.parameters:
             if 'schema' in parm:
                 parts = parm['schema']['$ref'].split('/')
                 name = parts[-1]
                 file_name = strutils.snake_case(name)
                 file.write(f'from ..models.{file_name} import {name}\n')
 
+        if '200' in self.responses:
+            if 'schema' in self.responses['200']:
+                resp = self.responses['200']['schema']
+                if '$ref' in resp:
+                    parts = resp['$ref'].split('/')
+                    name = parts[-1]
+                    file_name = strutils.snake_case(name)
+                    file.write(f'from ..models.{file_name} import {name}\n')
+
     def write_method(self, file):
-        file.write(f'\n\tdef {self.method}_{self.name}(self):\n')
+        self.write_method_parameters(file)
+        if self.method == 'get':
+            self.write_get_method(file)
+        elif self.method == 'delete':
+            self.write_delete_method(file)
+        elif self.method == 'post':
+            self.write_post_method(file)
+        elif self.method == 'put':
+            self.write_put_method(file)
         file.write(f'\t\tpass\n')
+
+    def write_get_method(self, file):
+        pass
+
+    def write_delete_method(self, file):
+        pass
+
+    def write_post_method(self, file):
+        pass
+
+    def write_put_method(self, file):
+        pass
+
+    def write_method_parameters(self, file):
+        names = ['self']
+        for parm in self.parameters:
+            if parm['in'] == 'body':
+                #   get schema
+                names.append(parm['name'])
+            elif parm['in'] == 'query':
+                #   list item
+                names.append(parm['name'].replace('request.', ''))
+
+        parms = ', '.join(names)
+
+        file.write(f'\n\tdef {self.method}_{self.name}({parms}):\n')
 
 
 class ApiGenerator(object):
@@ -54,8 +98,8 @@ class ApiGenerator(object):
         file.write(f'class {self.class_name}(BaseApi):\n')
         api_segment = self.segments[-2]
         file.write(f'\tdef __init__(self, site_id, authorization):\n')
-        file.write(
-            f"\t\tsuper().__init__('{api_segment}', site_id, authorization)\n")
+        file.write(f"\t\tsuper()")
+        file.write(f".__init__('{api_segment}', site_id, authorization)\n")
 
     # def write_attribute_maps(self, file):
     #     # "properties": {

@@ -16,7 +16,7 @@ class GetClientVisitsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'Visits': 'visits',
 		}
 

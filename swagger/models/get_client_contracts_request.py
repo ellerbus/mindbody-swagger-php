@@ -44,5 +44,7 @@ class GetClientContractsRequest(BaseModel):
 		'client_associated_sites_offset': 'ClientAssociatedSitesOffset',
 		'limit': 'Limit',
 		'offset': 'Offset',
-		}	def __init__(self, client_id):
+		}
+
+	def __init__(self, client_id):
 		self.client_id = client_id

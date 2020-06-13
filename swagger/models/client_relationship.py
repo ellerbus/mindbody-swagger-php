@@ -23,7 +23,7 @@ class ClientRelationship(BaseModel):
 
 	input_map = {
 		'RelatedClientId': 'related_client_id',
-		'Relationship': ('relationship', Relationship)
+		'Relationship': ('relationship', Relationship),
 		'RelationshipName': 'relationship_name',
 		'Delete': 'delete',
 		}

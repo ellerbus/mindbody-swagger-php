@@ -16,7 +16,7 @@ class GetClientPurchasesResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'Purchases': 'purchases',
 		}
 

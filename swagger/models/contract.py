@@ -151,7 +151,7 @@ class Contract(BaseModel):
 		'SoldOnline': 'sold_online',
 		'ContractItems': 'contract_items',
 		'IntroOffer': 'intro_offer',
-		'AutopaySchedule': ('autopay_schedule', AutopaySchedule)
+		'AutopaySchedule': ('autopay_schedule', AutopaySchedule),
 		'NumberOfAutopays': 'number_of_autopays',
 		'AutopayTriggerType': 'autopay_trigger_type',
 		'ActionUponCompletionOfAutopays': 'action_upon_completion_of_autopays',

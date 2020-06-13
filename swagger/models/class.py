@@ -109,8 +109,8 @@ class Class(BaseModel):
 		'ClassScheduleId': 'class_schedule_id',
 		'Visits': 'visits',
 		'Clients': 'clients',
-		'Location': ('location', Location)
-		'Resource': ('resource', Resource)
+		'Location': ('location', Location),
+		'Resource': ('resource', Resource),
 		'MaxCapacity': 'max_capacity',
 		'WebCapacity': 'web_capacity',
 		'TotalBooked': 'total_booked',
@@ -128,9 +128,9 @@ class Class(BaseModel):
 		'StartDateTime': 'start_date_time',
 		'EndDateTime': 'end_date_time',
 		'LastModifiedDateTime': 'last_modified_date_time',
-		'ClassDescription': ('class_description', ClassDescription)
-		'Staff': ('staff', Staff)
-		'BookingWindow': ('booking_window', BookingWindow)
+		'ClassDescription': ('class_description', ClassDescription),
+		'Staff': ('staff', Staff),
+		'BookingWindow': ('booking_window', BookingWindow),
 		'BookingStatus': 'booking_status',
 		}
 

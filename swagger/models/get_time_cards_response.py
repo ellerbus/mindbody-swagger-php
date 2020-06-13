@@ -16,7 +16,7 @@ class GetTimeCardsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'TimeCards': 'time_cards',
 		}
 

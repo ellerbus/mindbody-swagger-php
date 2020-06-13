@@ -17,5 +17,7 @@ class GetStaffPermissionsRequest(BaseModel):
 
 	output_map = {
 		'staff_id': 'StaffId',
-		}	def __init__(self, staff_id):
+		}
+
+	def __init__(self, staff_id):
 		self.staff_id = staff_id

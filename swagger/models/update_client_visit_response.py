@@ -13,7 +13,7 @@ class UpdateClientVisitResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Visit': ('visit', Visit)
+		'Visit': ('visit', Visit),
 		}
 
 	output_map = {

@@ -46,7 +46,7 @@ class CheckoutItemWrapper(BaseModel):
 	"""
 
 	input_map = {
-		'Item': ('item', Item)
+		'Item': ('item', Item),
 		'DiscountAmount': 'discount_amount',
 		'AppointmentBookingRequests': 'appointment_booking_requests',
 		'EnrollmentIds': 'enrollment_ids',

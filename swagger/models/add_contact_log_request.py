@@ -60,6 +60,8 @@ class AddContactLogRequest(BaseModel):
 		'comments': 'Comments',
 		'types': 'Types',
 		'test': 'Test',
-		}	def __init__(self, client_id, contact_method):
+		}
+
+	def __init__(self, client_id, contact_method):
 		self.client_id = client_id
 		self.contact_method = contact_method

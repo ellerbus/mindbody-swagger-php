@@ -47,5 +47,7 @@ class GetContractsRequest(BaseModel):
 		'consumer_id': 'ConsumerId',
 		'limit': 'Limit',
 		'offset': 'Offset',
-		}	def __init__(self, location_id):
+		}
+
+	def __init__(self, location_id):
 		self.location_id = location_id

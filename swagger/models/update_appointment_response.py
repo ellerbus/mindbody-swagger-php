@@ -13,7 +13,7 @@ class UpdateAppointmentResponse(BaseModel):
 	"""
 
 	input_map = {
-		'Appointment': ('appointment', Appointment)
+		'Appointment': ('appointment', Appointment),
 		}
 
 	output_map = {

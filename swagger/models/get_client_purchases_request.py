@@ -44,5 +44,7 @@ class GetClientPurchasesRequest(BaseModel):
 		'sale_id': 'SaleId',
 		'limit': 'Limit',
 		'offset': 'Offset',
-		}	def __init__(self, client_id):
+		}
+
+	def __init__(self, client_id):
 		self.client_id = client_id

@@ -30,7 +30,9 @@ class ClientDocument(BaseModel):
 		'file_name': 'FileName',
 		'media_type': 'MediaType',
 		'buffer': 'Buffer',
-		}	def __init__(self, file_name, media_type, buffer):
+		}
+
+	def __init__(self, file_name, media_type, buffer):
 		self.file_name = file_name
 		self.media_type = media_type
 		self.buffer = buffer

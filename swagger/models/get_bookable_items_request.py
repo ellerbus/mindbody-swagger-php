@@ -62,5 +62,7 @@ class GetBookableItemsRequest(BaseModel):
 		'ignore_default_session_length': 'IgnoreDefaultSessionLength',
 		'limit': 'Limit',
 		'offset': 'Offset',
-		}	def __init__(self, session_type_ids):
+		}
+
+	def __init__(self, session_type_ids):
 		self.session_type_ids = session_type_ids

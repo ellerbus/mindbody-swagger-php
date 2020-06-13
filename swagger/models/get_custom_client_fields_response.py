@@ -16,7 +16,7 @@ class GetCustomClientFieldsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'CustomClientFields': 'custom_client_fields',
 		}
 

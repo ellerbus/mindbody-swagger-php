@@ -16,7 +16,7 @@ class GetClassDescriptionsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'ClassDescriptions': 'class_descriptions',
 		}
 

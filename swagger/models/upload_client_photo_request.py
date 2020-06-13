@@ -22,6 +22,8 @@ class UploadClientPhotoRequest(BaseModel):
 	output_map = {
 		'bytes': 'Bytes',
 		'client_id': 'ClientId',
-		}	def __init__(self, bytes, client_id):
+		}
+
+	def __init__(self, bytes, client_id):
 		self.bytes = bytes
 		self.client_id = client_id

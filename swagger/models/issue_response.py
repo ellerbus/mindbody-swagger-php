@@ -18,7 +18,7 @@ class IssueResponse(BaseModel):
 	input_map = {
 		'TokenType': 'token_type',
 		'AccessToken': 'access_token',
-		'User': ('user', User)
+		'User': ('user', User),
 		}
 
 	output_map = {

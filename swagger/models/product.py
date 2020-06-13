@@ -55,8 +55,8 @@ class Product(BaseModel):
 		'OnlinePrice': 'online_price',
 		'ShortDescription': 'short_description',
 		'LongDescription': 'long_description',
-		'Color': ('color', Color)
-		'Size': ('size', Size)
+		'Color': ('color', Color),
+		'Size': ('size', Size),
 		}
 
 	output_map = {

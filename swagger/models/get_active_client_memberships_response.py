@@ -16,7 +16,7 @@ class GetActiveClientMembershipsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'ClientMemberships': 'client_memberships',
 		}
 

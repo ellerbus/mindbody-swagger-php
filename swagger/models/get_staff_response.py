@@ -13,7 +13,7 @@ class GetStaffResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'StaffMembers': 'staff_members',
 		}
 

@@ -33,7 +33,7 @@ class UpdateClientRequest(BaseModel):
 	"""
 
 	input_map = {
-		'Client': ('client', Client)
+		'Client': ('client', Client),
 		'Test': 'test',
 		'CrossRegionalUpdate': 'cross_regional_update',
 		'NewId': 'new_id',
@@ -44,5 +44,7 @@ class UpdateClientRequest(BaseModel):
 		'test': 'Test',
 		'cross_regional_update': 'CrossRegionalUpdate',
 		'new_id': 'NewId',
-		}	def __init__(self, client):
+		}
+
+	def __init__(self, client):
 		self.client = client

@@ -16,7 +16,7 @@ class GetContactLogsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'ContactLogs': 'contact_logs',
 		}
 

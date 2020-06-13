@@ -37,13 +37,13 @@ class Availability(BaseModel):
 
 	input_map = {
 		'Id': 'id',
-		'Staff': ('staff', Staff)
-		'SessionType': ('session_type', SessionType)
+		'Staff': ('staff', Staff),
+		'SessionType': ('session_type', SessionType),
 		'Programs': 'programs',
 		'StartDateTime': 'start_date_time',
 		'EndDateTime': 'end_date_time',
 		'BookableEndDateTime': 'bookable_end_date_time',
-		'Location': ('location', Location)
+		'Location': ('location', Location),
 		}
 
 	output_map = {

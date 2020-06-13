@@ -78,5 +78,7 @@ class UpdateAppointmentRequest(BaseModel):
 		'staff_id': 'StaffId',
 		'start_date_time': 'StartDateTime',
 		'test': 'Test',
-		}	def __init__(self, appointment_id):
+		}
+
+	def __init__(self, appointment_id):
 		self.appointment_id = appointment_id

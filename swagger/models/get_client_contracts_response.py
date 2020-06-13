@@ -17,7 +17,7 @@ class GetClientContractsResponse(BaseModel):
 
 	input_map = {
 		'Contracts': 'contracts',
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		}
 
 	output_map = {

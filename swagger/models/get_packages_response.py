@@ -17,7 +17,7 @@ class GetPackagesResponse(BaseModel):
 
 	input_map = {
 		'Packages': 'packages',
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		}
 
 	output_map = {

@@ -50,9 +50,9 @@ class Course(BaseModel):
 		'Notes': 'notes',
 		'StartDate': 'start_date',
 		'EndDate': 'end_date',
-		'Location': ('location', Location)
-		'Organizer': ('organizer', Organizer)
-		'Program': ('program', Program)
+		'Location': ('location', Location),
+		'Organizer': ('organizer', Organizer),
+		'Program': ('program', Program),
 		'ImageUrl': 'image_url',
 		}
 

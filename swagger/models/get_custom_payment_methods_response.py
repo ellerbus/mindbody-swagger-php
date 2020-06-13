@@ -16,7 +16,7 @@ class GetCustomPaymentMethodsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'PaymentMethods': 'payment_methods',
 		}
 

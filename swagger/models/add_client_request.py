@@ -239,7 +239,7 @@ class AddClientRequest(BaseModel):
 		'ApptGenderPrefMale': 'appt_gender_pref_male',
 		'BirthDate': 'birth_date',
 		'City': 'city',
-		'ClientCreditCard': ('client_credit_card', ClientCreditCard)
+		'ClientCreditCard': ('client_credit_card', ClientCreditCard),
 		'ClientIndexes': 'client_indexes',
 		'ClientRelationships': 'client_relationships',
 		'Country': 'country',
@@ -253,14 +253,14 @@ class AddClientRequest(BaseModel):
 		'FirstAppointmentDate': 'first_appointment_date',
 		'FirstName': 'first_name',
 		'Gender': 'gender',
-		'HomeLocation': ('home_location', HomeLocation)
+		'HomeLocation': ('home_location', HomeLocation),
 		'HomePhone': 'home_phone',
 		'IsCompany': 'is_company',
 		'IsProspect': 'is_prospect',
 		'LastFormulaNotes': 'last_formula_notes',
 		'LastModifiedDateTime': 'last_modified_date_time',
 		'LastName': 'last_name',
-		'Liability': ('liability', Liability)
+		'Liability': ('liability', Liability),
 		'LiabilityRelease': 'liability_release',
 		'MembershipIcon': 'membership_icon',
 		'MiddleName': 'middle_name',
@@ -270,7 +270,7 @@ class AddClientRequest(BaseModel):
 		'Notes': 'notes',
 		'PhotoUrl': 'photo_url',
 		'PostalCode': 'postal_code',
-		'ProspectStage': ('prospect_stage', ProspectStage)
+		'ProspectStage': ('prospect_stage', ProspectStage),
 		'RedAlert': 'red_alert',
 		'ReferredBy': 'referred_by',
 		'SalesReps': 'sales_reps',
@@ -342,6 +342,8 @@ class AddClientRequest(BaseModel):
 		'send_schedule_emails': 'SendScheduleEmails',
 		'send_account_emails': 'SendAccountEmails',
 		'send_promotional_emails': 'SendPromotionalEmails',
-		}	def __init__(self, first_name, last_name):
+		}
+
+	def __init__(self, first_name, last_name):
 		self.first_name = first_name
 		self.last_name = last_name

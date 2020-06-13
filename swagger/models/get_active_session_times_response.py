@@ -22,7 +22,7 @@ class GetActiveSessionTimesResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'ActiveSessionTimes': 'active_session_times',
 		}
 

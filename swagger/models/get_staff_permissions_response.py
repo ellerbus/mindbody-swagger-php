@@ -14,7 +14,7 @@ class GetStaffPermissionsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'UserGroup': ('user_group', UserGroup)
+		'UserGroup': ('user_group', UserGroup),
 		}
 
 	output_map = {

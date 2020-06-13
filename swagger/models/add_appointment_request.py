@@ -101,7 +101,9 @@ class AddAppointmentRequest(BaseModel):
 		'staff_requested': 'StaffRequested',
 		'start_date_time': 'StartDateTime',
 		'test': 'Test',
-		}	def __init__(self, client_id, location_id, session_type_id, staff_id, start_date_time):
+		}
+
+	def __init__(self, client_id, location_id, session_type_id, staff_id, start_date_time):
 		self.client_id = client_id
 		self.location_id = location_id
 		self.session_type_id = session_type_id

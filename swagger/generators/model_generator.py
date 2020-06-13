@@ -80,7 +80,7 @@ class ModelGenerator(object):
             required = self.definition['required']
             names = list(map(lambda x: strutils.snake_case(x), required))
             parameters = ', '.join(names)
-            file.write(f'\tdef __init__(self, {parameters}):\n')
+            file.write(f'\n\n\tdef __init__(self, {parameters}):\n')
             for name in names:
                 file.write(f'\t\tself.{name} = {name}\n')
 
@@ -107,7 +107,7 @@ class ModelGenerator(object):
             prop = properties[key]
             name = strutils.snake_case(key)
             if '$ref' in prop:
-                file.write(f"\t\t\'{key}': ('{name}', {key})\n")
+                file.write(f"\t\t\'{key}': ('{name}', {key}),\n")
             else:
                 file.write(f"\t\t'{key}': '{name}',\n")
         file.write(f'\t\t}}\n')

@@ -91,7 +91,7 @@ class SubstituteTeacherClass(BaseModel):
 
 	input_map = {
 		'ClassScheduleId': 'class_schedule_id',
-		'Location': ('location', Location)
+		'Location': ('location', Location),
 		'MaxCapacity': 'max_capacity',
 		'WebCapacity': 'web_capacity',
 		'TotalBooked': 'total_booked',
@@ -108,8 +108,8 @@ class SubstituteTeacherClass(BaseModel):
 		'StartDateTime': 'start_date_time',
 		'EndDateTime': 'end_date_time',
 		'LastModifiedDateTime': 'last_modified_date_time',
-		'ClassDescription': ('class_description', ClassDescription)
-		'Staff': ('staff', Staff)
+		'ClassDescription': ('class_description', ClassDescription),
+		'Staff': ('staff', Staff),
 		}
 
 	output_map = {

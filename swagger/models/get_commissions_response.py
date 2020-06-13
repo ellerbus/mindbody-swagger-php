@@ -18,7 +18,7 @@ class GetCommissionsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'Commissions': 'commissions',
 		}
 

@@ -46,8 +46,8 @@ class WaitlistEntry(BaseModel):
 	input_map = {
 		'ClassDate': 'class_date',
 		'ClassId': 'class_id',
-		'ClassSchedule': ('class_schedule', ClassSchedule)
-		'Client': ('client', Client)
+		'ClassSchedule': ('class_schedule', ClassSchedule),
+		'Client': ('client', Client),
 		'EnrollmentDateForward': 'enrollment_date_forward',
 		'Id': 'id',
 		'RequestDateTime': 'request_date_time',

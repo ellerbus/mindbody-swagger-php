@@ -16,7 +16,7 @@ class GetLocationsResponse(BaseModel):
 	"""
 
 	input_map = {
-		'PaginationResponse': ('pagination_response', PaginationResponse)
+		'PaginationResponse': ('pagination_response', PaginationResponse),
 		'Locations': 'locations',
 		}
 
