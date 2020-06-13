@@ -8,8 +8,18 @@ class UsertokenApi(BaseApi):
 		super().__init__('usertoken', site_id, authorization)
 
 	def post_issue(self, request):
-		pass
+		"""
+		Get a staff user token.
+		"""
+
+		url = self.get_fullpath('issue')
+		return self.client.post(url, self.site_id, None, request, IssueResponse)
 
 	def delete_revoke(self):
-		pass
+		"""
+		Revokes the user token in the Authorization header.
+		"""
+
+		url = self.get_fullpath('revoke')
+		return self.client.delete(url, self.site_id, self.authorization, None, None)
 

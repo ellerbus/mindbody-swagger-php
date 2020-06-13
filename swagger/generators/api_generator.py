@@ -11,12 +11,25 @@ class MethodGenerator(object):
         self.path = path
         self.method = method
         self.name = name
+        self.method_name = f'{self.method}_{self.name}'
         self.parameters = self.path[self.method]['parameters']
         self.responses = self.path[self.method]['responses']
+        self.has_request = False
 
     def write_references(self, file):
         for parm in self.parameters:
+            if 'in' in parm:
+                if parm['in'] == 'query':
+                    self.has_request = True
+                    request = self.method_name + '_request'
+                    name = strutils.pascal_case(request)
+                    file_name = strutils.snake_case(request)
+                    file.write(f'from ..models.{file_name} import {name}\n')
+                    break
+
+        for parm in self.parameters:
             if 'schema' in parm:
+                self.has_request = True
                 parts = parm['schema']['$ref'].split('/')
                 name = parts[-1]
                 file_name = strutils.snake_case(name)
@@ -32,7 +45,8 @@ class MethodGenerator(object):
                     file.write(f'from ..models.{file_name} import {name}\n')
 
     def write_method(self, file):
-        self.write_method_parameters(file)
+        self.write_method_definition(file)
+        self.write_method_body(file)
         if self.method == 'get':
             self.write_get_method(file)
         elif self.method == 'delete':
@@ -41,7 +55,6 @@ class MethodGenerator(object):
             self.write_post_method(file)
         elif self.method == 'put':
             self.write_put_method(file)
-        file.write(f'\t\tpass\n')
 
     def write_get_method(self, file):
         pass
@@ -55,19 +68,62 @@ class MethodGenerator(object):
     def write_put_method(self, file):
         pass
 
-    def write_method_parameters(self, file):
+    def write_method_definition(self, file):
         names = ['self']
         for parm in self.parameters:
-            if parm['in'] == 'body':
-                #   get schema
-                names.append(parm['name'])
-            elif parm['in'] == 'query':
-                #   list item
-                names.append(parm['name'].replace('request.', ''))
-
+            if parm['in'] == 'body' or parm['in'] == 'query':
+                names.append('request')
+                break
         parms = ', '.join(names)
+        file.write(f'\n\tdef {self.method_name}({parms}):\n')
+        descr = self.get_description()
+        file.write(f'\t\t"""\n')
+        for x in textwrap.wrap(descr):
+            file.write(f'\t\t{x}\n')
+        file.write(f'\t\t"""\n')
+        file.write(f'\n')
 
-        file.write(f'\n\tdef {self.method}_{self.name}({parms}):\n')
+    def get_description(self):
+        descr = 'no description available'
+        if 'summary' in self.path[self.method]:
+            descr = self.path[self.method]['summary']
+        if 'description' in self.path[self.method]:
+            descr = self.path[self.method]['description']
+        return descr
+
+    def write_method_body(self, file):
+        file.write(f"\t\turl = self.get_fullpath('{self.name}')\n")
+        names = ['url', 'self.site_id']
+        names.append(self.get_authorization_parm())
+        names.append(self.get_request_parm())
+        names.append(self.get_response_parm())
+        parms = ', '.join(names)
+        file.write(f'\t\treturn self.client.{self.method}({parms})\n')
+
+        # return self.client.get(url, site_id, token, None, GetSiteResponse)
+
+    def get_authorization_parm(self):
+        for parm in self.parameters:
+            if 'in' in parm and parm['in'] == 'header':
+                if parm['name'] == 'authorization':
+                    return 'self.authorization'
+        return 'None'
+
+    def get_request_parm(self):
+        for parm in self.parameters:
+            if parm['in'] == 'body' or parm['in'] == 'query':
+                return 'request'
+        return 'None'
+
+    def get_response_parm(self):
+        if '200' in self.responses:
+            if 'schema' in self.responses['200']:
+                resp = self.responses['200']['schema']
+                if '$ref' in resp:
+                    parts = resp['$ref'].split('/')
+                    name = parts[-1]
+                    return name
+        return 'None'
 
 
 class ApiGenerator(object):
