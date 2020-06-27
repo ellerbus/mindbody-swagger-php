@@ -1,0 +1,23 @@
+<?php
+
+namespace App\MindBody\Models;
+
+/*
+ * no description available
+ */
+class GetStaffPermissionsRequest extends BaseModel
+{
+	/*
+	 * The ID of the staff member whose permissions you want to return.
+	 * 
+	 * @var integer
+	 */
+	public $staffId;
+	/*
+	 *
+	 */
+	public function __construct($staffId)
+	{
+		$this->staffId = $staffId;
+	}
+}
