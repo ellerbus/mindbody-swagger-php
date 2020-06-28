@@ -10,7 +10,7 @@ class StaffPermissionGroup extends BaseModel
 	/**
 	 * The name of the permission group.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $permissionGroupName;
 	/**
@@ -18,7 +18,7 @@ class StaffPermissionGroup extends BaseModel
 	 * specific IP addresses.<br />  When `false`, the staff member’s
 	 * permissions are not restricted to specific IP addresses.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $ipRestricted;
 	/**
@@ -26,7 +26,7 @@ class StaffPermissionGroup extends BaseModel
 	 * Values](https://developers.mindbodyonline.com/PublicDocumentation/V6#e
 	 * permission-values) for descriptions of the possible permissions.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $allowedPermissions;
 	/**
@@ -35,27 +35,27 @@ class StaffPermissionGroup extends BaseModel
 	 * m/PublicDocumentation/V6#epermission-values) for descriptions of the
 	 * possible permissions.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $deniedPermissions;
 
 	protected function getInputMap()
 	{
 		return [
-			'PermissionGroupName' => 'permissionGroupName',
-			'IpRestricted' => 'ipRestricted',
-			'AllowedPermissions' => 'allowedPermissions',
-			'DeniedPermissions' => 'deniedPermissions',
+			'PermissionGroupName' => ['permissionGroupName', 'string', null],
+			'IpRestricted' => ['ipRestricted', 'boolean', null],
+			'AllowedPermissions' => ['allowedPermissions', 'array', null],
+			'DeniedPermissions' => ['deniedPermissions', 'array', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'permissionGroupName' => 'PermissionGroupName',
-			'ipRestricted' => 'IpRestricted',
-			'allowedPermissions' => 'AllowedPermissions',
-			'deniedPermissions' => 'DeniedPermissions',
+			'permissionGroupName' => ['PermissionGroupName', 'string', null],
+			'ipRestricted' => ['IpRestricted', 'boolean', null],
+			'allowedPermissions' => ['AllowedPermissions', 'array', null],
+			'deniedPermissions' => ['DeniedPermissions', 'array', null],
 			];
 	}
 }

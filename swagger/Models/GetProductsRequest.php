@@ -10,79 +10,79 @@ class GetProductsRequest extends BaseModel
 	/**
 	 * An ID filter for products.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $productIds;
 	/**
 	 * A search filter, used for searching by term.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $searchText;
 	/**
 	 * A list of category IDs to filter by.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $categoryIds;
 	/**
 	 * A list of subcategory IDs to filter by.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $subCategoryIds;
 	/**
 	 * When `true`, only products that can be sold online are returned.<br />
 	 * When `false`, all products are returned.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sellOnline;
 	/**
 	 * The location ID to use to determine the tax for the products that this
 	 * request returns.<br />  Default: **online store**
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'ProductIds' => 'productIds',
-			'SearchText' => 'searchText',
-			'CategoryIds' => 'categoryIds',
-			'SubCategoryIds' => 'subCategoryIds',
-			'SellOnline' => 'sellOnline',
-			'LocationId' => 'locationId',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ProductIds' => ['productIds', 'array', null],
+			'SearchText' => ['searchText', 'string', null],
+			'CategoryIds' => ['categoryIds', 'array', null],
+			'SubCategoryIds' => ['subCategoryIds', 'array', null],
+			'SellOnline' => ['sellOnline', 'boolean', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'productIds' => 'ProductIds',
-			'searchText' => 'SearchText',
-			'categoryIds' => 'CategoryIds',
-			'subCategoryIds' => 'SubCategoryIds',
-			'sellOnline' => 'SellOnline',
-			'locationId' => 'LocationId',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'productIds' => ['ProductIds', 'array', null],
+			'searchText' => ['SearchText', 'string', null],
+			'categoryIds' => ['CategoryIds', 'array', null],
+			'subCategoryIds' => ['SubCategoryIds', 'array', null],
+			'sellOnline' => ['SellOnline', 'boolean', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

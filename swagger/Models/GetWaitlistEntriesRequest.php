@@ -14,7 +14,7 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * `ClassIds` is required; the others become optional.<br />  Default:
 	 * **all ClassIds**
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $classIds;
 	/**
@@ -24,7 +24,7 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * `WaitlistEntryIds`, or `ClassIds` is required; the others become
 	 * optional.<br />  Default: **all ClassScheduleIds**
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $classScheduleIds;
 	/**
@@ -32,7 +32,7 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * `ClientIds`, `WaitlistEntryIds`, or `ClassIds` is required; the others
 	 * become optional.<br />  Default: **all ClientIds**
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $clientIds;
 	/**
@@ -40,7 +40,7 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * clients.<br />  When `false`, indicates that past entries are not
 	 * hidden from clients.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $hidePastEntries;
 	/**
@@ -49,45 +49,45 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * required; the others become optional.<br />  Default: **all
 	 * WaitlistEntryIds**
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $waitlistEntryIds;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClassIds' => 'classIds',
-			'ClassScheduleIds' => 'classScheduleIds',
-			'ClientIds' => 'clientIds',
-			'HidePastEntries' => 'hidePastEntries',
-			'WaitlistEntryIds' => 'waitlistEntryIds',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClassIds' => ['classIds', 'array', null],
+			'ClassScheduleIds' => ['classScheduleIds', 'array', null],
+			'ClientIds' => ['clientIds', 'array', null],
+			'HidePastEntries' => ['hidePastEntries', 'boolean', null],
+			'WaitlistEntryIds' => ['waitlistEntryIds', 'array', null],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'classIds' => 'ClassIds',
-			'classScheduleIds' => 'ClassScheduleIds',
-			'clientIds' => 'ClientIds',
-			'hidePastEntries' => 'HidePastEntries',
-			'waitlistEntryIds' => 'WaitlistEntryIds',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'classIds' => ['ClassIds', 'array', null],
+			'classScheduleIds' => ['ClassScheduleIds', 'array', null],
+			'clientIds' => ['ClientIds', 'array', null],
+			'hidePastEntries' => ['HidePastEntries', 'boolean', null],
+			'waitlistEntryIds' => ['WaitlistEntryIds', 'array', null],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

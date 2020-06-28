@@ -36,7 +36,7 @@ class PayrollApi extends BaseApi
 	 * Payroll report in the web interface only returns the teacher’s
 	 * adjusted rate.
 	 */
-	public function GetScheduledServiceEarnings($request)
+	public function getScheduledServiceEarnings($request)
 	{
 		$url = $this->getFullPath('scheduledserviceearnings');
 
@@ -46,7 +46,7 @@ class PayrollApi extends BaseApi
 	/**
 	 * Get time card payroll for staff members.
 	 */
-	public function GetTimeCards($request)
+	public function getTimeCards($request)
 	{
 		$url = $this->getFullPath('timecards');
 
@@ -60,7 +60,7 @@ class PayrollApi extends BaseApi
 	 * endpoint returns either only the payroll information for that staff
 	 * member or it returns the payroll information for all staff members.
 	 */
-	public function GetCommissions($request)
+	public function getCommissions($request)
 	{
 		$url = $this->getFullPath('commissions');
 
@@ -70,7 +70,7 @@ class PayrollApi extends BaseApi
 	/**
 	 * Get tips for staff members.
 	 */
-	public function GetTips($request)
+	public function getTips($request)
 	{
 		$url = $this->getFullPath('tips');
 

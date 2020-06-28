@@ -10,7 +10,7 @@ class RemoveFromWaitlistRequest extends BaseModel
 	/**
 	 * A list of waiting list IDs to remove from waiting lists.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $waitlistEntryIds;
 	/**
@@ -24,14 +24,14 @@ class RemoveFromWaitlistRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'WaitlistEntryIds' => 'waitlistEntryIds',
+			'WaitlistEntryIds' => ['waitlistEntryIds', 'array', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'waitlistEntryIds' => 'WaitlistEntryIds',
+			'waitlistEntryIds' => ['WaitlistEntryIds', 'array', null],
 			];
 	}
 }

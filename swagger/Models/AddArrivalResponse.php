@@ -10,30 +10,30 @@ class AddArrivalResponse extends BaseModel
 	/**
 	 * When `true`, indicates that the arrival was added to the database.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $arrivalAdded;
 	/**
 	 * Contains information about the pricing option being used to pay for
 	 * the client’s current service session.
 	 * 
-	 * @var ClientService
+	 * @var ClientService 
 	 */
 	public $clientService;
 
 	protected function getInputMap()
 	{
 		return [
-			'ArrivalAdded' => 'arrivalAdded',
-			'ClientService' => ['clientService', ClientService::class],
+			'ArrivalAdded' => ['arrivalAdded', 'boolean', null],
+			'ClientService' => ['clientService', ClientService::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'arrivalAdded' => 'ArrivalAdded',
-			'clientService' => 'ClientService',
+			'arrivalAdded' => ['ArrivalAdded', 'boolean', null],
+			'clientService' => ['ClientService', ClientService::class, null],
 			];
 	}
 }

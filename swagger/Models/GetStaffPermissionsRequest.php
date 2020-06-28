@@ -10,7 +10,7 @@ class GetStaffPermissionsRequest extends BaseModel
 	/**
 	 * The ID of the staff member whose permissions you want to return.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $staffId;
 	/**
@@ -24,14 +24,14 @@ class GetStaffPermissionsRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'StaffId' => 'staffId',
+			'StaffId' => ['staffId', 'integer', 'int64'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'staffId' => 'StaffId',
+			'staffId' => ['StaffId', 'integer', 'int64'],
 			];
 	}
 }

@@ -11,7 +11,7 @@ class Liability extends BaseModel
 	 * The date and time at which the client agreed to the liability waiver
 	 * for the business.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $agreementDate;
 	/**
@@ -20,7 +20,7 @@ class Liability extends BaseModel
 	 * business.<br />  When `false`, indicates that the client has not
 	 * agreed to the liability release for the business.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $isReleased;
 	/**
@@ -31,25 +31,25 @@ class Liability extends BaseModel
 	 * that the business owner marked the liability waiver as signed on
 	 * behalf of the client.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $releasedBy;
 
 	protected function getInputMap()
 	{
 		return [
-			'AgreementDate' => 'agreementDate',
-			'IsReleased' => 'isReleased',
-			'ReleasedBy' => 'releasedBy',
+			'AgreementDate' => ['agreementDate', 'string', 'date-time'],
+			'IsReleased' => ['isReleased', 'boolean', null],
+			'ReleasedBy' => ['releasedBy', 'integer', 'int64'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'agreementDate' => 'AgreementDate',
-			'isReleased' => 'IsReleased',
-			'releasedBy' => 'ReleasedBy',
+			'agreementDate' => ['AgreementDate', 'string', 'date-time'],
+			'isReleased' => ['IsReleased', 'boolean', null],
+			'releasedBy' => ['ReleasedBy', 'integer', 'int64'],
 			];
 	}
 }

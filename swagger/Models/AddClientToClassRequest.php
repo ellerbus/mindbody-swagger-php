@@ -10,13 +10,13 @@ class AddClientToClassRequest extends BaseModel
 	/**
 	 * The ID of the client who is being booked into the class
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The ID of the class into which the client is being booked
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classId;
 	/**
@@ -24,7 +24,7 @@ class AddClientToClassRequest extends BaseModel
 	 * committed.<br />  When `false`, the information is committed and the
 	 * database is affected.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
@@ -32,7 +32,7 @@ class AddClientToClassRequest extends BaseModel
 	 * their account.<br />  When `false` or omitted, an active pricing
 	 * option is not required to complete the client’s booking.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $requirePayment;
 	/**
@@ -40,7 +40,7 @@ class AddClientToClassRequest extends BaseModel
 	 * class waiting list.<br />  When `false`, the client should not be
 	 * added to the waiting list.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $waitlist;
 	/**
@@ -50,14 +50,14 @@ class AddClientToClassRequest extends BaseModel
 	 * up.<br />  When `false`, indicates that the client does not receive
 	 * emails.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendEmail;
 	/**
 	 * The ID of the waiting list entry from which you are moving a client
 	 * into a class.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $waitlistEntryId;
 	/**
@@ -65,13 +65,13 @@ class AddClientToClassRequest extends BaseModel
 	 * to use to pay for this booking, if payment is required at the time of
 	 * the update.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $clientServiceId;
 	/**
 	 * When `true`, cross regional series are checked and used if applicable.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalBooking;
 	/**
@@ -79,7 +79,7 @@ class AddClientToClassRequest extends BaseModel
 	 * this specified site. If omitted, an attempt is made to use an
 	 * applicable pricing option from the local site.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $crossRegionalBookingClientServiceSiteId;
 	/**
@@ -94,32 +94,32 @@ class AddClientToClassRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'ClassId' => 'classId',
-			'Test' => 'test',
-			'RequirePayment' => 'requirePayment',
-			'Waitlist' => 'waitlist',
-			'SendEmail' => 'sendEmail',
-			'WaitlistEntryId' => 'waitlistEntryId',
-			'ClientServiceId' => 'clientServiceId',
-			'CrossRegionalBooking' => 'crossRegionalBooking',
-			'CrossRegionalBookingClientServiceSiteId' => 'crossRegionalBookingClientServiceSiteId',
+			'ClientId' => ['clientId', 'string', null],
+			'ClassId' => ['classId', 'integer', 'int32'],
+			'Test' => ['test', 'boolean', null],
+			'RequirePayment' => ['requirePayment', 'boolean', null],
+			'Waitlist' => ['waitlist', 'boolean', null],
+			'SendEmail' => ['sendEmail', 'boolean', null],
+			'WaitlistEntryId' => ['waitlistEntryId', 'integer', 'int32'],
+			'ClientServiceId' => ['clientServiceId', 'integer', 'int32'],
+			'CrossRegionalBooking' => ['crossRegionalBooking', 'boolean', null],
+			'CrossRegionalBookingClientServiceSiteId' => ['crossRegionalBookingClientServiceSiteId', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'classId' => 'ClassId',
-			'test' => 'Test',
-			'requirePayment' => 'RequirePayment',
-			'waitlist' => 'Waitlist',
-			'sendEmail' => 'SendEmail',
-			'waitlistEntryId' => 'WaitlistEntryId',
-			'clientServiceId' => 'ClientServiceId',
-			'crossRegionalBooking' => 'CrossRegionalBooking',
-			'crossRegionalBookingClientServiceSiteId' => 'CrossRegionalBookingClientServiceSiteId',
+			'clientId' => ['ClientId', 'string', null],
+			'classId' => ['ClassId', 'integer', 'int32'],
+			'test' => ['Test', 'boolean', null],
+			'requirePayment' => ['RequirePayment', 'boolean', null],
+			'waitlist' => ['Waitlist', 'boolean', null],
+			'sendEmail' => ['SendEmail', 'boolean', null],
+			'waitlistEntryId' => ['WaitlistEntryId', 'integer', 'int32'],
+			'clientServiceId' => ['ClientServiceId', 'integer', 'int32'],
+			'crossRegionalBooking' => ['CrossRegionalBooking', 'boolean', null],
+			'crossRegionalBookingClientServiceSiteId' => ['CrossRegionalBookingClientServiceSiteId', 'integer', 'int32'],
 			];
 	}
 }

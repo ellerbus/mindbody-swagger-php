@@ -10,21 +10,21 @@ class GetClientIndexesResponse extends BaseModel
 	/**
 	 * Contains information about the client indexes.
 	 * 
-	 * @var ClientIndex[]
+	 * @var ClientIndex[] 
 	 */
 	public $clientIndexes;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClientIndexes' => ['clientIndexes', ClientIndex::class],
+			'ClientIndexes' => ['clientIndexes', 'array', ClientIndex::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientIndexes' => 'ClientIndexes',
+			'clientIndexes' => ['ClientIndexes', 'array', ClientIndex::class],
 			];
 	}
 }

@@ -32,7 +32,7 @@ class SiteApi extends BaseApi
 	 * access to.  * Passing in one `SiteIds` returns more detailed
 	 * information about the specified site.
 	 */
-	public function GetSites($request)
+	public function getSites($request)
 	{
 		$url = $this->getFullPath('sites');
 
@@ -42,7 +42,7 @@ class SiteApi extends BaseApi
 	/**
 	 * Get the session types used at a site.
 	 */
-	public function GetSessionTypes($request)
+	public function getSessionTypes($request)
 	{
 		$url = $this->getFullPath('sessiontypes');
 
@@ -52,7 +52,7 @@ class SiteApi extends BaseApi
 	/**
 	 * Get locations for a site.
 	 */
-	public function GetLocations($request)
+	public function getLocations($request)
 	{
 		$url = $this->getFullPath('locations');
 
@@ -62,7 +62,7 @@ class SiteApi extends BaseApi
 	/**
 	 * Get service categories offered at a site.
 	 */
-	public function GetPrograms($request)
+	public function getPrograms($request)
 	{
 		$url = $this->getFullPath('programs');
 
@@ -72,7 +72,7 @@ class SiteApi extends BaseApi
 	/**
 	 * Get resources used at a site.
 	 */
-	public function GetResources($request)
+	public function getResources($request)
 	{
 		$url = $this->getFullPath('resources');
 
@@ -90,7 +90,7 @@ class SiteApi extends BaseApi
 	 * returns an activation code.This endpoint supports only one site per
 	 * call.
 	 */
-	public function GetActivationCode()
+	public function getActivationCode()
 	{
 		$url = $this->getFullPath('activationcode');
 
@@ -100,7 +100,7 @@ class SiteApi extends BaseApi
 	/**
 	 * Get the memberships at a site.
 	 */
-	public function GetMemberships($request)
+	public function getMemberships($request)
 	{
 		$url = $this->getFullPath('memberships');
 

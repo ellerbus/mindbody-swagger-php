@@ -11,21 +11,21 @@ class GetStaffPermissionsResponse extends BaseModel
 	 * Contains information about the requested staff member’s permission
 	 * group.
 	 * 
-	 * @var StaffPermissionGroup
+	 * @var StaffPermissionGroup 
 	 */
 	public $userGroup;
 
 	protected function getInputMap()
 	{
 		return [
-			'UserGroup' => ['userGroup', StaffPermissionGroup::class],
+			'UserGroup' => ['userGroup', StaffPermissionGroup::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'userGroup' => 'UserGroup',
+			'userGroup' => ['UserGroup', StaffPermissionGroup::class, null],
 			];
 	}
 }

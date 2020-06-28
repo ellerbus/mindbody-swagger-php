@@ -10,14 +10,14 @@ class GetStaffRequest extends BaseModel
 	/**
 	 * A list of the requested staff IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $staffIds;
 	/**
 	 * Filters to apply to the search. Possible values are:  * StaffViewable
 	 * * AppointmentInstructor  * ClassInstructor  * Male  * Female
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $filters;
 	/**
@@ -25,7 +25,7 @@ class GetStaffRequest extends BaseModel
 	 * type. You must supply a valid `StartDateTime` and `LocationID` to use
 	 * this parameter.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $sessionTypeId;
 	/**
@@ -33,7 +33,7 @@ class GetStaffRequest extends BaseModel
 	 * time. You must supply a valid `SessionTypeID` and `LocationID` to use
 	 * this parameter.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startDateTime;
 	/**
@@ -41,45 +41,45 @@ class GetStaffRequest extends BaseModel
 	 * location. You must supply a valid `SessionTypeID` and `StartDateTime`
 	 * to use this parameter.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'StaffIds' => 'staffIds',
-			'Filters' => 'filters',
-			'SessionTypeId' => 'sessionTypeId',
-			'StartDateTime' => 'startDateTime',
-			'LocationId' => 'locationId',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'StaffIds' => ['staffIds', 'array', null],
+			'Filters' => ['filters', 'array', null],
+			'SessionTypeId' => ['sessionTypeId', 'integer', 'int32'],
+			'StartDateTime' => ['startDateTime', 'string', 'date-time'],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'staffIds' => 'StaffIds',
-			'filters' => 'Filters',
-			'sessionTypeId' => 'SessionTypeId',
-			'startDateTime' => 'StartDateTime',
-			'locationId' => 'LocationId',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'staffIds' => ['StaffIds', 'array', null],
+			'filters' => ['Filters', 'array', null],
+			'sessionTypeId' => ['SessionTypeId', 'integer', 'int32'],
+			'startDateTime' => ['StartDateTime', 'string', 'date-time'],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

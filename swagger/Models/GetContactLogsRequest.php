@@ -10,61 +10,61 @@ class GetContactLogsRequest extends BaseModel
 	/**
 	 * The ID of the client whose contact logs are being requested.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * Filters the results to contact logs created on or after this date.<br
 	 * />  Default: **the current date**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startDate;
 	/**
 	 * Filters the results to contact logs created before this date.<br />
 	 * Default: **the start date**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $endDate;
 	/**
 	 * Filters the results to return contact logs assigned to one or more
 	 * staff IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $staffIds;
 	/**
 	 * When `true`, system-generated contact logs are returned in the
 	 * results.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $showSystemGenerated;
 	/**
 	 * Filters the results to contact logs assigned one or more of these type
 	 * IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $typeIds;
 	/**
 	 * Filters the results to contact logs assigned one or more of these
 	 * subtype IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $subtypeIds;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 	/**
@@ -78,30 +78,30 @@ class GetContactLogsRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'StartDate' => 'startDate',
-			'EndDate' => 'endDate',
-			'StaffIds' => 'staffIds',
-			'ShowSystemGenerated' => 'showSystemGenerated',
-			'TypeIds' => 'typeIds',
-			'SubtypeIds' => 'subtypeIds',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'StartDate' => ['startDate', 'string', 'date-time'],
+			'EndDate' => ['endDate', 'string', 'date-time'],
+			'StaffIds' => ['staffIds', 'array', null],
+			'ShowSystemGenerated' => ['showSystemGenerated', 'boolean', null],
+			'TypeIds' => ['typeIds', 'array', null],
+			'SubtypeIds' => ['subtypeIds', 'array', null],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'startDate' => 'StartDate',
-			'endDate' => 'EndDate',
-			'staffIds' => 'StaffIds',
-			'showSystemGenerated' => 'ShowSystemGenerated',
-			'typeIds' => 'TypeIds',
-			'subtypeIds' => 'SubtypeIds',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'startDate' => ['StartDate', 'string', 'date-time'],
+			'endDate' => ['EndDate', 'string', 'date-time'],
+			'staffIds' => ['StaffIds', 'array', null],
+			'showSystemGenerated' => ['ShowSystemGenerated', 'boolean', null],
+			'typeIds' => ['TypeIds', 'array', null],
+			'subtypeIds' => ['SubtypeIds', 'array', null],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

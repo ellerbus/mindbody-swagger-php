@@ -10,7 +10,7 @@ class UpdateContactLogRequest extends BaseModel
 	/**
 	 * The ID of the contact log being updated.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
@@ -18,40 +18,40 @@ class UpdateContactLogRequest extends BaseModel
 	 * inserted into the subscriber’s database.<br />  When `false`, the
 	 * database is updated.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
 	 * The ID of the staff member to whom the contact log is now being
 	 * assigned.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $assignedToStaffId;
 	/**
 	 * The contact log’s new text.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $text;
 	/**
 	 * The name of the new person to be contacted by the assigned staff
 	 * member.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $contactName;
 	/**
 	 * The new date by which the assigned staff member should complete this
 	 * contact log.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $followupByDate;
 	/**
 	 * The new method by which the client wants to be contacted.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $contactMethod;
 	/**
@@ -59,7 +59,7 @@ class UpdateContactLogRequest extends BaseModel
 	 * contact log. Comments that have an ID of `0` are added to the contact
 	 * log.
 	 * 
-	 * @var UpdateContactLogComment[]
+	 * @var UpdateContactLogComment[] 
 	 */
 	public $comments;
 	/**
@@ -67,37 +67,37 @@ class UpdateContactLogRequest extends BaseModel
 	 * the contact log, in addition to the contact log types that are already
 	 * assigned.
 	 * 
-	 * @var UpdateContactLogType[]
+	 * @var UpdateContactLogType[] 
 	 */
 	public $types;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'Test' => 'test',
-			'AssignedToStaffId' => 'assignedToStaffId',
-			'Text' => 'text',
-			'ContactName' => 'contactName',
-			'FollowupByDate' => 'followupByDate',
-			'ContactMethod' => 'contactMethod',
-			'Comments' => ['comments', UpdateContactLogComment::class],
-			'Types' => ['types', UpdateContactLogType::class],
+			'Id' => ['id', 'integer', 'int32'],
+			'Test' => ['test', 'boolean', null],
+			'AssignedToStaffId' => ['assignedToStaffId', 'integer', 'int64'],
+			'Text' => ['text', 'string', null],
+			'ContactName' => ['contactName', 'string', null],
+			'FollowupByDate' => ['followupByDate', 'string', 'date-time'],
+			'ContactMethod' => ['contactMethod', 'string', null],
+			'Comments' => ['comments', 'array', UpdateContactLogComment::class],
+			'Types' => ['types', 'array', UpdateContactLogType::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'test' => 'Test',
-			'assignedToStaffId' => 'AssignedToStaffId',
-			'text' => 'Text',
-			'contactName' => 'ContactName',
-			'followupByDate' => 'FollowupByDate',
-			'contactMethod' => 'ContactMethod',
-			'comments' => 'Comments',
-			'types' => 'Types',
+			'id' => ['Id', 'integer', 'int32'],
+			'test' => ['Test', 'boolean', null],
+			'assignedToStaffId' => ['AssignedToStaffId', 'integer', 'int64'],
+			'text' => ['Text', 'string', null],
+			'contactName' => ['ContactName', 'string', null],
+			'followupByDate' => ['FollowupByDate', 'string', 'date-time'],
+			'contactMethod' => ['ContactMethod', 'string', null],
+			'comments' => ['Comments', 'array', UpdateContactLogComment::class],
+			'types' => ['Types', 'array', UpdateContactLogType::class],
 			];
 	}
 }

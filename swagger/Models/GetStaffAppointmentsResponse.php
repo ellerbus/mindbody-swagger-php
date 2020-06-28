@@ -10,29 +10,29 @@ class GetStaffAppointmentsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used. ,
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about appointments and their details.
 	 * 
-	 * @var Appointment[]
+	 * @var Appointment[] 
 	 */
 	public $appointments;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Appointments' => ['appointments', Appointment::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Appointments' => ['appointments', 'array', Appointment::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'appointments' => 'Appointments',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'appointments' => ['Appointments', 'array', Appointment::class],
 			];
 	}
 }

@@ -34,7 +34,7 @@ class ClassApi extends BaseApi
 	/**
 	 * Get scheduled classes.
 	 */
-	public function GetClasses($request)
+	public function getClasses($request)
 	{
 		$url = $this->getFullPath('classes');
 
@@ -46,7 +46,7 @@ class ClassApi extends BaseApi
 	 * `StaffId`, `StartClassDateTime`, `EndClassDateTime`, or `LocationId`
 	 * in the request.
 	 */
-	public function GetClassDescriptions($request)
+	public function getClassDescriptions($request)
 	{
 		$url = $this->getFullPath('classdescriptions');
 
@@ -58,7 +58,7 @@ class ClassApi extends BaseApi
 	 * class. On success, this request returns the class object in the
 	 * response with a list of visits.
 	 */
-	public function GetClassVisits($request)
+	public function getClassVisits($request)
 	{
 		$url = $this->getFullPath('classvisits');
 
@@ -68,7 +68,7 @@ class ClassApi extends BaseApi
 	/**
 	 * Remove a client from a class.
 	 */
-	public function RemoveClientFromClass($request)
+	public function removeClientFromClass($request)
 	{
 		$url = $this->getFullPath('removeclientfromclass');
 
@@ -110,7 +110,7 @@ class ClassApi extends BaseApi
 	 * As a prerequisite to using this endpoint, your `SourceName` must have
 	 * been granted access to the organization to which the site belongs.
 	 */
-	public function AddClientToClass($request)
+	public function addClientToClass($request)
 	{
 		$url = $this->getFullPath('addclienttoclass');
 
@@ -120,7 +120,7 @@ class ClassApi extends BaseApi
 	/**
 	 * Get class schedules.
 	 */
-	public function GetClassSchedules($request)
+	public function getClassSchedules($request)
 	{
 		$url = $this->getFullPath('classschedules');
 
@@ -132,7 +132,7 @@ class ClassApi extends BaseApi
 	 * or class. The request requires staff credentials and either a class
 	 * schedule ID or class ID.
 	 */
-	public function GetWaitlistEntries($request)
+	public function getWaitlistEntries($request)
 	{
 		$url = $this->getFullPath('waitlistentries');
 
@@ -143,7 +143,7 @@ class ClassApi extends BaseApi
 	 * This endpoint does not return a response. If a call to this endpoint
 	 * results in a 200 OK HTTP status code, then the call was successful.
 	 */
-	public function RemoveFromWaitlist($request)
+	public function removeFromWaitlist($request)
 	{
 		$url = $this->getFullPath('removefromwaitlist');
 
@@ -153,7 +153,7 @@ class ClassApi extends BaseApi
 	/**
 	 * Substitute a class teacher.
 	 */
-	public function SubstituteClassTeacher($request)
+	public function substituteClassTeacher($request)
 	{
 		$url = $this->getFullPath('substituteclassteacher');
 

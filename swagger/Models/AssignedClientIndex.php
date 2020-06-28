@@ -10,29 +10,29 @@ class AssignedClientIndex extends BaseModel
 	/**
 	 * The index ID assigned to the client.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The index’s value ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $valueId;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'ValueId' => 'valueId',
+			'Id' => ['id', 'integer', 'int32'],
+			'ValueId' => ['valueId', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'valueId' => 'ValueId',
+			'id' => ['Id', 'integer', 'int32'],
+			'valueId' => ['ValueId', 'integer', 'int32'],
 			];
 	}
 }

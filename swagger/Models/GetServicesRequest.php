@@ -10,39 +10,39 @@ class GetServicesRequest extends BaseModel
 	/**
 	 * Filters to pricing options with the specified program IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $programIds;
 	/**
 	 * Filters to the pricing options with the specified session types IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $sessionTypeIds;
 	/**
 	 * Filters to the pricing options with the specified IDs. In this
 	 * context, service and pricing option are used interchangeably.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $serviceIds;
 	/**
 	 * Filters to the pricing options for the specified class ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classId;
 	/**
 	 * Filters to the pricing options for the specified class schedule ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classScheduleId;
 	/**
 	 * When `true`, filters to the pricing options that can be sold
 	 * online.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sellOnline;
 	/**
@@ -52,67 +52,67 @@ class GetServicesRequest extends BaseModel
 	 * given location, and for locations where Value-Added Tax (VAT) rules
 	 * apply, the `TaxRate` is set to zero.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
 	 * When `true`, indicates that pricing options of related programs are
 	 * omitted from the response.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $hideRelatedPrograms;
 	/**
 	 * Sets `Price` and `OnlinePrice` to the particular pricing of a specific
 	 * staff member, if allowed by the business.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $staffId;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'ProgramIds' => 'programIds',
-			'SessionTypeIds' => 'sessionTypeIds',
-			'ServiceIds' => 'serviceIds',
-			'ClassId' => 'classId',
-			'ClassScheduleId' => 'classScheduleId',
-			'SellOnline' => 'sellOnline',
-			'LocationId' => 'locationId',
-			'HideRelatedPrograms' => 'hideRelatedPrograms',
-			'StaffId' => 'staffId',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ProgramIds' => ['programIds', 'array', null],
+			'SessionTypeIds' => ['sessionTypeIds', 'array', null],
+			'ServiceIds' => ['serviceIds', 'array', null],
+			'ClassId' => ['classId', 'integer', 'int32'],
+			'ClassScheduleId' => ['classScheduleId', 'integer', 'int32'],
+			'SellOnline' => ['sellOnline', 'boolean', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'HideRelatedPrograms' => ['hideRelatedPrograms', 'boolean', null],
+			'StaffId' => ['staffId', 'integer', 'int64'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'programIds' => 'ProgramIds',
-			'sessionTypeIds' => 'SessionTypeIds',
-			'serviceIds' => 'ServiceIds',
-			'classId' => 'ClassId',
-			'classScheduleId' => 'ClassScheduleId',
-			'sellOnline' => 'SellOnline',
-			'locationId' => 'LocationId',
-			'hideRelatedPrograms' => 'HideRelatedPrograms',
-			'staffId' => 'StaffId',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'programIds' => ['ProgramIds', 'array', null],
+			'sessionTypeIds' => ['SessionTypeIds', 'array', null],
+			'serviceIds' => ['ServiceIds', 'array', null],
+			'classId' => ['ClassId', 'integer', 'int32'],
+			'classScheduleId' => ['ClassScheduleId', 'integer', 'int32'],
+			'sellOnline' => ['SellOnline', 'boolean', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'hideRelatedPrograms' => ['HideRelatedPrograms', 'boolean', null],
+			'staffId' => ['StaffId', 'integer', 'int64'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

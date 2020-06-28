@@ -10,29 +10,29 @@ class GetServicesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the services.
 	 * 
-	 * @var Service[]
+	 * @var Service[] 
 	 */
 	public $services;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Services' => ['services', Service::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Services' => ['services', 'array', Service::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'services' => 'Services',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'services' => ['Services', 'array', Service::class],
 			];
 	}
 }

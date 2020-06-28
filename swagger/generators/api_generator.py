@@ -11,7 +11,8 @@ class MethodGenerator(object):
         self.path = path
         self.method = method
         self.name = name
-        self.method_name = self.path[self.method]['operationId'].split('_')[-1]
+        nm = self.path[self.method]['operationId'].split('_')[-1]
+        self.method_name = strutils.camel_case(nm)
         self.parameters = self.path[self.method]['parameters']
         self.responses = self.path[self.method]['responses']
         self.has_request = False
@@ -57,26 +58,6 @@ class MethodGenerator(object):
         file.write(f'\t{{\n')
         self.write_method_body(file)
         file.write(f'\t}}\n\n')
-        # if self.method == 'get':
-        #     self.write_get_method(file)
-        # elif self.method == 'delete':
-        #     self.write_delete_method(file)
-        # elif self.method == 'post':
-        #     self.write_post_method(file)
-        # elif self.method == 'put':
-        #     self.write_put_method(file)
-
-    def write_get_method(self, file):
-        pass
-
-    def write_delete_method(self, file):
-        pass
-
-    def write_post_method(self, file):
-        pass
-
-    def write_put_method(self, file):
-        pass
 
     def get_description(self):
         descr = 'no description available'
@@ -151,79 +132,3 @@ class ApiGenerator(object):
         file.write(f"\t\tparent::__construct")
         file.write(f"('{api_segment}', $siteId, $authorization);\n")
         file.write(f'\t}}\n\n')
-
-    # def write_attribute_maps(self, file):
-    #     # "properties": {
-    #     #     "Test": {
-    #     #         "description": "When `true`, indicates that the contents of the cart are validated, but the transaction does not take place. You should use this parameter during testing and when checking the calculated totals of the items in the cart.<br />\r\nWhen `false`, the transaction takes place and the database is affected.<br />\r\nDefault: **false**",
-    #     #         "type": "boolean"
-    #     #     },
-    #     #     "Items": {
-    #     #         "description": "A list of the items in the cart.",
-    #     #         "type": "array",
-    #     #         "items": {
-    #     #             "$ref": "#/definitions/CheckoutItemWrapper"
-    #     #         }
-    #     #     },
-    #     self.write_input_map(file)
-    #     self.write_output_map(file)
-
-    # def write_input_map(self, file):
-    #     file.write(f'\tinput_map = {{\n')
-    #     properties = self.definition['properties']
-    #     for key in properties:
-    #         prop = properties[key]
-    #         name = strutils.snake_case(key)
-    #         if '$ref' in prop:
-    #             file.write(f"\t\t\'{key}': ('{name}', {key})\n")
-    #         else:
-    #             file.write(f"\t\t'{key}': '{name}',\n")
-    #     file.write(f'\t\t}}\n')
-    #     file.write(f'\n')
-
-    # def write_output_map(self, file):
-    #     file.write(f'\toutput_map = {{\n')
-    #     properties = self.definition['properties']
-    #     for key in properties:
-    #         name = strutils.snake_case(key)
-    #         file.write(f"\t\t'{name}': '{key}',\n")
-    #     file.write(f'\t\t}}')
-
-    #     # def write_model(self, file_name, name, definition):
-    #     #     with open(file_name, 'w') as file:
-    #     #         self.write_header(file, name, definition)
-    #     #         self.write_attribute_map(file,  definition)
-    #     #         self.write_constructor(file, definition)
-
-    #     # def write_header(self, file, name, definition):
-    #     #     file.write(f'from .base_models import BaseModel\n')
-    #     #     file.write(f'\n\n')
-    #     #     descr = 'no description available'
-    #     #     if 'description' in definition:
-    #     #         descr = definition['description']
-    #     #     file.write(f'class {name}(BaseModel):\n')
-    #     #     file.write(f'\t"""\n')
-    #     #     for x in textwrap.wrap(descr):
-    #     #         file.write(f'\t{x}\n')
-    #     #     file.write(f'\n')
-    #     #     if 'properties' in definition:
-    #     #         file.write(f'\tAttributes:\n')
-    #     #         properties = definition['properties']
-    #     #         for pkey in properties:
-    #     #             pname = strutils.snake_case(pkey)
-    #     #             pdescr = 'no description available'
-    #     #             if 'description' in properties[pkey]:
-    #     #                 pdescr = properties[pkey]['description']
-    #     #             file.write(f'\n\t\t{pname}\n')
-    #     #             for x in textwrap.wrap(pdescr):
-    #     #                 file.write(f'\t\t{x}\n')
-    #     #     file.write(f'\t"""\n')
-
-    #     # def write_attribute_map(self, file, definition):
-    #     #     file.write('\tattribute_map = {\n')
-    #     #     if 'properties' in definition:
-    #     #         properties = definition['properties']
-    #     #         for pkey in properties:
-    #     #             pname = strutils.snake_case(pkey)
-    #     #             file.write(f'\t\t\'{pname}\': \'{pkey}\',\n')
-    #     #     file.write('\t}\n')

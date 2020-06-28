@@ -10,13 +10,13 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	/**
 	 * The ID of the client whose membership was requested.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The ID of the location where the requested membership was created.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
@@ -32,7 +32,7 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	 * populated in the `ClientServices` response when `CrossRegionalLookup`
 	 * is set to `true`.  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalLookup;
 	/**
@@ -55,19 +55,19 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	 * `ClientAssociatedSitesOffset` to 20 to return the client pricing
 	 * options from sites 21-25
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $clientAssociatedSitesOffset;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 	/**
@@ -81,24 +81,24 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'LocationId' => 'locationId',
-			'CrossRegionalLookup' => 'crossRegionalLookup',
-			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'CrossRegionalLookup' => ['crossRegionalLookup', 'boolean', null],
+			'ClientAssociatedSitesOffset' => ['clientAssociatedSitesOffset', 'integer', 'int32'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'locationId' => 'LocationId',
-			'crossRegionalLookup' => 'CrossRegionalLookup',
-			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'crossRegionalLookup' => ['CrossRegionalLookup', 'boolean', null],
+			'clientAssociatedSitesOffset' => ['ClientAssociatedSitesOffset', 'integer', 'int32'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

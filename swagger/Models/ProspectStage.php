@@ -13,37 +13,37 @@ class ProspectStage extends BaseModel
 	 * `false`, indicates that the client has already purchased at least one
 	 * pricing option from the business.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $active;
 	/**
 	 * A description of the prospect stage.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $description;
 	/**
 	 * The ID of the prospect stage assigned to the client.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 
 	protected function getInputMap()
 	{
 		return [
-			'Active' => 'active',
-			'Description' => 'description',
-			'Id' => 'id',
+			'Active' => ['active', 'boolean', null],
+			'Description' => ['description', 'string', null],
+			'Id' => ['id', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'active' => 'Active',
-			'description' => 'Description',
-			'id' => 'Id',
+			'active' => ['Active', 'boolean', null],
+			'description' => ['Description', 'string', null],
+			'id' => ['Id', 'integer', 'int32'],
 			];
 	}
 }

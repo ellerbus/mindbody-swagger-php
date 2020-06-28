@@ -10,13 +10,13 @@ class RemoveClientFromClassRequest extends BaseModel
 	/**
 	 * The RSSID of the client to remove from the specified class.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The ID of the class that you want to remove the client from.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classId;
 	/**
@@ -24,7 +24,7 @@ class RemoveClientFromClassRequest extends BaseModel
 	 * affecting real data.<br />  When `false`, the request performs as
 	 * intended and may affect live client data.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
@@ -32,7 +32,7 @@ class RemoveClientFromClassRequest extends BaseModel
 	 * Depending on the site and client settings, an email may or may not be
 	 * sent.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendEmail;
 	/**
@@ -40,7 +40,7 @@ class RemoveClientFromClassRequest extends BaseModel
 	 * the class.<br />  When `false`, indicates that the client is to be
 	 * early cancelled from the class.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $lateCancel;
 	/**
@@ -55,22 +55,22 @@ class RemoveClientFromClassRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'ClassId' => 'classId',
-			'Test' => 'test',
-			'SendEmail' => 'sendEmail',
-			'LateCancel' => 'lateCancel',
+			'ClientId' => ['clientId', 'string', null],
+			'ClassId' => ['classId', 'integer', 'int32'],
+			'Test' => ['test', 'boolean', null],
+			'SendEmail' => ['sendEmail', 'boolean', null],
+			'LateCancel' => ['lateCancel', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'classId' => 'ClassId',
-			'test' => 'Test',
-			'sendEmail' => 'SendEmail',
-			'lateCancel' => 'LateCancel',
+			'clientId' => ['ClientId', 'string', null],
+			'classId' => ['ClassId', 'integer', 'int32'],
+			'test' => ['Test', 'boolean', null],
+			'sendEmail' => ['SendEmail', 'boolean', null],
+			'lateCancel' => ['LateCancel', 'boolean', null],
 			];
 	}
 }

@@ -10,21 +10,21 @@ class GetClientReferralTypesResponse extends BaseModel
 	/**
 	 * The list of available referral types.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $referralTypes;
 
 	protected function getInputMap()
 	{
 		return [
-			'ReferralTypes' => 'referralTypes',
+			'ReferralTypes' => ['referralTypes', 'array', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'referralTypes' => 'ReferralTypes',
+			'referralTypes' => ['ReferralTypes', 'array', null],
 			];
 	}
 }

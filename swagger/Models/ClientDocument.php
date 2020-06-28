@@ -11,7 +11,7 @@ class ClientDocument extends BaseModel
 	 * The name of the file to be used on the client’s documents page when
 	 * it is uploaded.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $fileName;
 	/**
@@ -19,13 +19,13 @@ class ClientDocument extends BaseModel
 	 * * jpeg  * tif  * tiff  * png  * doc  * docx  * bmp  * txt  * rtf  *
 	 * xlsx  * xls  * gif  * zip  * ppt  * pptx  * mov
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $mediaType;
 	/**
 	 * A Base64-encoded string representation of the file’s byte array.
 	 * 
-	 * @var string
+	 * @var string format:byte
 	 */
 	public $buffer;
 	/**
@@ -41,18 +41,18 @@ class ClientDocument extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'FileName' => 'fileName',
-			'MediaType' => 'mediaType',
-			'Buffer' => 'buffer',
+			'FileName' => ['fileName', 'string', null],
+			'MediaType' => ['mediaType', 'string', null],
+			'Buffer' => ['buffer', 'string', 'byte'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'fileName' => 'FileName',
-			'mediaType' => 'MediaType',
-			'buffer' => 'Buffer',
+			'fileName' => ['FileName', 'string', null],
+			'mediaType' => ['MediaType', 'string', null],
+			'buffer' => ['Buffer', 'string', 'byte'],
 			];
 	}
 }

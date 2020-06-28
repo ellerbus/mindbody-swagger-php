@@ -10,19 +10,19 @@ class UpdateClientServiceRequest extends BaseModel
 	/**
 	 * The ID of the service to update.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $serviceId;
 	/**
 	 * The date that the service became active.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $activeDate;
 	/**
 	 * The date that the service is to expire.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $expirationDate;
 	/**
@@ -30,7 +30,7 @@ class UpdateClientServiceRequest extends BaseModel
 	 * not committed.<br />  When `false` or omitted, the database is
 	 * affected.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
@@ -44,20 +44,20 @@ class UpdateClientServiceRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ServiceId' => 'serviceId',
-			'ActiveDate' => 'activeDate',
-			'ExpirationDate' => 'expirationDate',
-			'Test' => 'test',
+			'ServiceId' => ['serviceId', 'integer', 'int32'],
+			'ActiveDate' => ['activeDate', 'string', 'date-time'],
+			'ExpirationDate' => ['expirationDate', 'string', 'date-time'],
+			'Test' => ['test', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'serviceId' => 'ServiceId',
-			'activeDate' => 'ActiveDate',
-			'expirationDate' => 'ExpirationDate',
-			'test' => 'Test',
+			'serviceId' => ['ServiceId', 'integer', 'int32'],
+			'activeDate' => ['ActiveDate', 'string', 'date-time'],
+			'expirationDate' => ['ExpirationDate', 'string', 'date-time'],
+			'test' => ['Test', 'boolean', null],
 			];
 	}
 }

@@ -10,29 +10,29 @@ class GetProgramsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the programs.
 	 * 
-	 * @var Program[]
+	 * @var Program[] 
 	 */
 	public $programs;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Programs' => ['programs', Program::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Programs' => ['programs', 'array', Program::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'programs' => 'Programs',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'programs' => ['Programs', 'array', Program::class],
 			];
 	}
 }

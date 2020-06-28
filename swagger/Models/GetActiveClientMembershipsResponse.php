@@ -10,29 +10,29 @@ class GetActiveClientMembershipsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Details about the requested memberships.
 	 * 
-	 * @var ClientMembership[]
+	 * @var ClientMembership[] 
 	 */
 	public $clientMemberships;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'ClientMemberships' => ['clientMemberships', ClientMembership::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'ClientMemberships' => ['clientMemberships', 'array', ClientMembership::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'clientMemberships' => 'ClientMemberships',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'clientMemberships' => ['ClientMemberships', 'array', ClientMembership::class],
 			];
 	}
 }

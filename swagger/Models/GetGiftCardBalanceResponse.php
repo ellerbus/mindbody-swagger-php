@@ -10,29 +10,29 @@ class GetGiftCardBalanceResponse extends BaseModel
 	/**
 	 * The gift card's barcode ID.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $barcodeId;
 	/**
 	 * The gift card's remaining balance.
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $remainingBalance;
 
 	protected function getInputMap()
 	{
 		return [
-			'BarcodeId' => 'barcodeId',
-			'RemainingBalance' => 'remainingBalance',
+			'BarcodeId' => ['barcodeId', 'string', null],
+			'RemainingBalance' => ['remainingBalance', 'number', 'double'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'barcodeId' => 'BarcodeId',
-			'remainingBalance' => 'RemainingBalance',
+			'barcodeId' => ['BarcodeId', 'string', null],
+			'remainingBalance' => ['RemainingBalance', 'number', 'double'],
 			];
 	}
 }

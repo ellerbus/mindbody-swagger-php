@@ -10,29 +10,29 @@ class GetClientContractsResponse extends BaseModel
 	/**
 	 * Contains the details of the client’s contract.
 	 * 
-	 * @var ClientContract[]
+	 * @var ClientContract[] 
 	 */
 	public $contracts;
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 
 	protected function getInputMap()
 	{
 		return [
-			'Contracts' => ['contracts', ClientContract::class],
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Contracts' => ['contracts', 'array', ClientContract::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'contracts' => 'Contracts',
-			'paginationResponse' => 'PaginationResponse',
+			'contracts' => ['Contracts', 'array', ClientContract::class],
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
 			];
 	}
 }

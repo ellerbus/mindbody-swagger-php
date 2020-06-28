@@ -67,7 +67,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get clients.
 	 */
-	public function GetClients($request)
+	public function getClients($request)
 	{
 		$url = $this->getFullPath('clients');
 
@@ -77,7 +77,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get a client's formula notes.
 	 */
-	public function GetClientFormulaNotes($request)
+	public function getClientFormulaNotes($request)
 	{
 		$url = $this->getFullPath('clientformulanotes');
 
@@ -89,7 +89,7 @@ class ClientApi extends BaseApi
 	 * document size is 1MB.    The maximum size file that can be uploaded is
 	 * 4 MB.
 	 */
-	public function UploadClientDocument($request)
+	public function uploadClientDocument($request)
 	{
 		$url = $this->getFullPath('uploadclientdocument');
 
@@ -100,7 +100,7 @@ class ClientApi extends BaseApi
 	 * The maximum file size is 4 MB and acceptable file types are:  * bmp  *
 	 * jpeg  * gif  * tiff  * png
 	 */
-	public function UploadClientPhoto($request)
+	public function uploadClientPhoto($request)
 	{
 		$url = $this->getFullPath('uploadclientphoto');
 
@@ -110,7 +110,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get contracts that a client has purchased.
 	 */
-	public function GetClientContracts($request)
+	public function getClientContracts($request)
 	{
 		$url = $this->getFullPath('clientcontracts');
 
@@ -120,7 +120,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get pricing options that a client has purchased.
 	 */
-	public function GetClientServices($request)
+	public function getClientServices($request)
 	{
 		$url = $this->getFullPath('clientservices');
 
@@ -130,7 +130,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get a client's visit history.
 	 */
-	public function GetClientVisits($request)
+	public function getClientVisits($request)
 	{
 		$url = $this->getFullPath('clientvisits');
 
@@ -140,7 +140,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get a client's active memberships.
 	 */
-	public function GetActiveClientMemberships($request)
+	public function getActiveClientMemberships($request)
 	{
 		$url = $this->getFullPath('activeclientmemberships');
 
@@ -153,7 +153,7 @@ class ClientApi extends BaseApi
 	 * `UpdateClient` validate against these fields.    This endpoint has no
 	 * query parameters.
 	 */
-	public function GetRequiredClientFields()
+	public function getRequiredClientFields()
 	{
 		$url = $this->getFullPath('requiredclientfields');
 
@@ -165,7 +165,7 @@ class ClientApi extends BaseApi
 	 * clients can choose to identify how they learned about the business.
 	 * Referral types are typically used for the sign-up process.
 	 */
-	public function GetClientReferralTypes($request)
+	public function getClientReferralTypes($request)
 	{
 		$url = $this->getFullPath('clientreferraltypes');
 
@@ -175,7 +175,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get account balance information for one or more client(s).
 	 */
-	public function GetClientAccountBalances($request)
+	public function getClientAccountBalances($request)
 	{
 		$url = $this->getFullPath('clientaccountbalances');
 
@@ -185,7 +185,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get a client's purchase history.
 	 */
-	public function GetClientPurchases($request)
+	public function getClientPurchases($request)
 	{
 		$url = $this->getFullPath('clientpurchases');
 
@@ -202,7 +202,7 @@ class ClientApi extends BaseApi
 	 * dbodyonline.com/s/article/203261653-Client-indexes-and-client-index-
 	 * values-video-tutorial?language=en_USclient).
 	 */
-	public function GetClientIndexes($request)
+	public function getClientIndexes($request)
 	{
 		$url = $this->getFullPath('clientindexes');
 
@@ -212,7 +212,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get a site's configured custom client fields.
 	 */
-	public function GetCustomClientFields($request)
+	public function getCustomClientFields($request)
 	{
 		$url = $this->getFullPath('customclientfields');
 
@@ -222,7 +222,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Add a contact log to a client's account.
 	 */
-	public function AddContactLog($request)
+	public function addContactLog($request)
 	{
 		$url = $this->getFullPath('addcontactlog');
 
@@ -232,7 +232,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Update a contact log on a client's account.
 	 */
-	public function UpdateContactLog($request)
+	public function updateContactLog($request)
 	{
 		$url = $this->getFullPath('updatecontactlog');
 
@@ -251,7 +251,7 @@ class ClientApi extends BaseApi
 	 * work on the Developer Sandbox site, as it is not set up for cross-
 	 * regional use cases.
 	 */
-	public function GetCrossRegionalClientAssociations($request)
+	public function getCrossRegionalClientAssociations($request)
 	{
 		$url = $this->getFullPath('crossregionalclientassociations');
 
@@ -266,7 +266,7 @@ class ClientApi extends BaseApi
 	 * after calling the `GetRequiredClientFields` endpoint to make sure you
 	 * are collecting all required pieces of information.
 	 */
-	public function AddClient($request)
+	public function addClient($request)
 	{
 		$url = $this->getFullPath('addclient');
 
@@ -295,7 +295,7 @@ class ClientApi extends BaseApi
 	 * `SendPromotionalEmails`  * `SendPromotionalTexts`  *
 	 * `SendScheduleEmails`  * `SendScheduleTexts`
 	 */
-	public function UpdateClient($request)
+	public function updateClient($request)
 	{
 		$url = $this->getFullPath('updateclient');
 
@@ -305,7 +305,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Update a client's visit.
 	 */
-	public function UpdateClientVisit($request)
+	public function updateClientVisit($request)
 	{
 		$url = $this->getFullPath('updateclientvisit');
 
@@ -315,7 +315,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Add an arrival for a client.
 	 */
-	public function AddArrival($request)
+	public function addArrival($request)
 	{
 		$url = $this->getFullPath('addarrival');
 
@@ -325,7 +325,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Send a password reset email to a client.
 	 */
-	public function SendPasswordResetEmail($request)
+	public function sendPasswordResetEmail($request)
 	{
 		$url = $this->getFullPath('sendpasswordresetemail');
 
@@ -338,7 +338,7 @@ class ClientApi extends BaseApi
 	 * assigned to specific staff members, and contact logs of specific types
 	 * or subtypes.
 	 */
-	public function GetContactLogs($request)
+	public function getContactLogs($request)
 	{
 		$url = $this->getFullPath('contactlogs');
 
@@ -351,7 +351,7 @@ class ClientApi extends BaseApi
 	 * date is modified, the expiration date is also modified accordingly. If
 	 * the expiration date is modified, the active date is unchanged.
 	 */
-	public function UpdateClientService($request)
+	public function updateClientService($request)
 	{
 		$url = $this->getFullPath('updateclientservice');
 
@@ -361,7 +361,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Get direct debit info for a client.
 	 */
-	public function GetDirectDebitInfo($request)
+	public function getDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('clientdirectdebitinfo');
 
@@ -371,7 +371,7 @@ class ClientApi extends BaseApi
 	/**
 	 * Delete direct debit info for a client.
 	 */
-	public function DeleteDirectDebitInfo($request)
+	public function deleteDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('clientdirectdebitinfo');
 
@@ -381,7 +381,7 @@ class ClientApi extends BaseApi
 	/**
 	 * no description available
 	 */
-	public function AddClientDirectDebitInfo($request)
+	public function addClientDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('addclientdirectdebitinfo');
 

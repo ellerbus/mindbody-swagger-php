@@ -12,7 +12,7 @@ class GetCrossRegionalClientAssociationsRequest extends BaseModel
 	 * `ClientId` or `Email` must be provided. If both are provided, the
 	 * `ClientId` is used by default.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
@@ -20,39 +20,39 @@ class GetCrossRegionalClientAssociationsRequest extends BaseModel
 	 * address. Either `ClientId` or `Email` must be provided. If both are
 	 * provided, the `ClientId` is used by default.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $email;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'Email' => 'email',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'Email' => ['email', 'string', null],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'email' => 'Email',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'email' => ['Email', 'string', null],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

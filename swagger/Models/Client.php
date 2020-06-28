@@ -11,19 +11,19 @@ class Client extends BaseModel
 	 * The gender of staff member with whom the client prefers to book
 	 * appointments.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $appointmentGenderPreference;
 	/**
 	 * The client’s date of birth.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $birthDate;
 	/**
 	 * The client’s country.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $country;
 	/**
@@ -31,45 +31,45 @@ class Client extends BaseModel
 	 * either by the client from the online store, or by a staff member. This
 	 * value always returns in the format `yyyy-mm-ddThh:mm:ss:ms`.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $creationDate;
 	/**
 	 * Contains information about the custom client fields assigned to the
 	 * client.
 	 * 
-	 * @var CustomClientFieldValue[]
+	 * @var CustomClientFieldValue[] 
 	 */
 	public $customClientFields;
 	/**
 	 * Contains information about the client’s credit card.
 	 * 
-	 * @var ClientCreditCard
+	 * @var ClientCreditCard 
 	 */
 	public $clientCreditCard;
 	/**
 	 * Contains the IDs of the client’s assigned ClientIndexes and
 	 * ClientIndexValues.
 	 * 
-	 * @var AssignedClientIndex[]
+	 * @var AssignedClientIndex[] 
 	 */
 	public $clientIndexes;
 	/**
 	 * Contains information about the relationship between two clients.
 	 * 
-	 * @var ClientRelationship[]
+	 * @var ClientRelationship[] 
 	 */
 	public $clientRelationships;
 	/**
 	 * The date of the client’s first booked appointment at the business.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $firstAppointmentDate;
 	/**
 	 * The client’s first name.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $firstName;
 	/**
@@ -79,7 +79,7 @@ class Client extends BaseModel
 	 * Public API calls. When used in a POST `UpdateClient` request, the `Id`
 	 * is used to identify the client for the update.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $id;
 	/**
@@ -87,7 +87,7 @@ class Client extends BaseModel
 	 * at the business.<br />  When `false`, indicates the client is an
 	 * individual and does not represent a company.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $isCompany;
 	/**
@@ -96,20 +96,20 @@ class Client extends BaseModel
 	 * marked as a prospect for the business.<br />  When `false`, indicates
 	 * that the client should not be marked as a prospect for the business.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $isProspect;
 	/**
 	 * The client’s last name.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $lastName;
 	/**
 	 * Contains the client’s liability agreement information for the
 	 * business.
 	 * 
-	 * @var Liability
+	 * @var Liability 
 	 */
 	public $liability;
 	/**
@@ -122,7 +122,7 @@ class Client extends BaseModel
 	 * liability information as follows:  * `IsReleased` is set to `false`.
 	 * * `AgreementDate` is set to `null`.  * `ReleasedBy` is set to `null`.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $liabilityRelease;
 	/**
@@ -131,13 +131,13 @@ class Client extends BaseModel
 	 * next to the client’s name, if the client has a membership on their
 	 * account.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $membershipIcon;
 	/**
 	 * The client’s mobile provider.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $mobileProvider;
 	/**
@@ -145,13 +145,13 @@ class Client extends BaseModel
 	 * value should never be shown to clients unless the business owner has a
 	 * specific reason for showing them.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $notes;
 	/**
 	 * The client’s state.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $state;
 	/**
@@ -160,34 +160,34 @@ class Client extends BaseModel
 	 * at the business. This ID is not widely used in the Public API, but can
 	 * be used by your application to uniquely identify clients.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $uniqueId;
 	/**
 	 * The UTC date and time when the client’s information was last
 	 * modified.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $lastModifiedDateTime;
 	/**
 	 * Contains any red alert information entered by the business owner for
 	 * the client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $redAlert;
 	/**
 	 * Contains any yellow alert information entered by the business owner
 	 * for the client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $yellowAlert;
 	/**
 	 * The client’s middle name.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $middleName;
 	/**
@@ -195,31 +195,31 @@ class Client extends BaseModel
 	 * .mindbodyonline.com/s/article/206176457-Prospect-
 	 * Stages?language=en_US).
 	 * 
-	 * @var ProspectStage
+	 * @var ProspectStage 
 	 */
 	public $prospectStage;
 	/**
 	 * The client’s email address.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $email;
 	/**
 	 * The client’s mobile phone number.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $mobilePhone;
 	/**
 	 * The client’s home phone number.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $homePhone;
 	/**
 	 * The client’s work phone number.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $workPhone;
 	/**
@@ -227,80 +227,80 @@ class Client extends BaseModel
 	 * support.force.com/support/s/article/203262013-Adding-account-payments-
 	 * video-tutorial?language=en_US).
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $accountBalance;
 	/**
 	 * The first line of the client’s street address.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $addressLine1;
 	/**
 	 * The second line of the client’s street address, if needed.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $addressLine2;
 	/**
 	 * The client’s city.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $city;
 	/**
 	 * The client’s postal code.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $postalCode;
 	/**
 	 * The client’s work phone extension number.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $workExtension;
 	/**
 	 * Specifies how the client was referred to the business. You can get a
 	 * list of possible strings using the `GetClientReferralTypes` endpoint.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $referredBy;
 	/**
 	 * The URL of the client’s photo for the client profile.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $photoUrl;
 	/**
 	 * The name of the client’s emergency contact.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $emergencyContactInfoName;
 	/**
 	 * The email address of the client’s emergency contact.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $emergencyContactInfoEmail;
 	/**
 	 * The phone number of the client’s emergency contact.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $emergencyContactInfoPhone;
 	/**
 	 * The client’s relationship with the emergency contact.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $emergencyContactInfoRelationship;
 	/**
 	 * The gender of the client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $gender;
 	/**
@@ -308,33 +308,33 @@ class Client extends BaseModel
 	 * 03259903-Appointments-Formula-notes?language=en_US) entered for the
 	 * client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $lastFormulaNotes;
 	/**
 	 * When `true`, indicates that the client’s profile is marked as active
 	 * on the site.<br />  When `false`, the client’s profile is inactive.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $active;
 	/**
 	 * A list of sales representatives.
 	 * 
-	 * @var SalesRep[]
+	 * @var SalesRep[] 
 	 */
 	public $salesReps;
 	/**
 	 * The status of the client in the business. Possible values are:  *
 	 * Declined  * Non-Member  * Active  * Expired  * Suspended  * Terminated
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $status;
 	/**
 	 * The action taken.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $action;
 	/**
@@ -342,7 +342,7 @@ class Client extends BaseModel
 	 * account notifications by email. This property is editable.   <br
 	 * />Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendAccountEmails;
 	/**
@@ -350,7 +350,7 @@ class Client extends BaseModel
 	 * account notifications by text message. This parameter cannot be
 	 * updated by developers. If included in a request, it is ignored.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendAccountTexts;
 	/**
@@ -358,7 +358,7 @@ class Client extends BaseModel
 	 * promotional notifications by email. This property is editable.   <br
 	 * />Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendPromotionalEmails;
 	/**
@@ -366,7 +366,7 @@ class Client extends BaseModel
 	 * promotional notifications by text message. This parameter cannot be
 	 * updated by developers. If included in a request, it is ignored.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendPromotionalTexts;
 	/**
@@ -374,7 +374,7 @@ class Client extends BaseModel
 	 * notifications by email. This property is editable.   <br />Default:
 	 * **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendScheduleEmails;
 	/**
@@ -382,127 +382,127 @@ class Client extends BaseModel
 	 * notifications by text message. This parameter cannot be updated by
 	 * developers. If included in a request, it is ignored.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendScheduleTexts;
 
 	protected function getInputMap()
 	{
 		return [
-			'AppointmentGenderPreference' => 'appointmentGenderPreference',
-			'BirthDate' => 'birthDate',
-			'Country' => 'country',
-			'CreationDate' => 'creationDate',
-			'CustomClientFields' => ['customClientFields', CustomClientFieldValue::class],
-			'ClientCreditCard' => ['clientCreditCard', ClientCreditCard::class],
-			'ClientIndexes' => ['clientIndexes', AssignedClientIndex::class],
-			'ClientRelationships' => ['clientRelationships', ClientRelationship::class],
-			'FirstAppointmentDate' => 'firstAppointmentDate',
-			'FirstName' => 'firstName',
-			'Id' => 'id',
-			'IsCompany' => 'isCompany',
-			'IsProspect' => 'isProspect',
-			'LastName' => 'lastName',
-			'Liability' => ['liability', Liability::class],
-			'LiabilityRelease' => 'liabilityRelease',
-			'MembershipIcon' => 'membershipIcon',
-			'MobileProvider' => 'mobileProvider',
-			'Notes' => 'notes',
-			'State' => 'state',
-			'UniqueId' => 'uniqueId',
-			'LastModifiedDateTime' => 'lastModifiedDateTime',
-			'RedAlert' => 'redAlert',
-			'YellowAlert' => 'yellowAlert',
-			'MiddleName' => 'middleName',
-			'ProspectStage' => ['prospectStage', ProspectStage::class],
-			'Email' => 'email',
-			'MobilePhone' => 'mobilePhone',
-			'HomePhone' => 'homePhone',
-			'WorkPhone' => 'workPhone',
-			'AccountBalance' => 'accountBalance',
-			'AddressLine1' => 'addressLine1',
-			'AddressLine2' => 'addressLine2',
-			'City' => 'city',
-			'PostalCode' => 'postalCode',
-			'WorkExtension' => 'workExtension',
-			'ReferredBy' => 'referredBy',
-			'PhotoUrl' => 'photoUrl',
-			'EmergencyContactInfoName' => 'emergencyContactInfoName',
-			'EmergencyContactInfoEmail' => 'emergencyContactInfoEmail',
-			'EmergencyContactInfoPhone' => 'emergencyContactInfoPhone',
-			'EmergencyContactInfoRelationship' => 'emergencyContactInfoRelationship',
-			'Gender' => 'gender',
-			'LastFormulaNotes' => 'lastFormulaNotes',
-			'Active' => 'active',
-			'SalesReps' => ['salesReps', SalesRep::class],
-			'Status' => 'status',
-			'Action' => 'action',
-			'SendAccountEmails' => 'sendAccountEmails',
-			'SendAccountTexts' => 'sendAccountTexts',
-			'SendPromotionalEmails' => 'sendPromotionalEmails',
-			'SendPromotionalTexts' => 'sendPromotionalTexts',
-			'SendScheduleEmails' => 'sendScheduleEmails',
-			'SendScheduleTexts' => 'sendScheduleTexts',
+			'AppointmentGenderPreference' => ['appointmentGenderPreference', 'string', null],
+			'BirthDate' => ['birthDate', 'string', 'date-time'],
+			'Country' => ['country', 'string', null],
+			'CreationDate' => ['creationDate', 'string', 'date-time'],
+			'CustomClientFields' => ['customClientFields', 'array', CustomClientFieldValue::class],
+			'ClientCreditCard' => ['clientCreditCard', ClientCreditCard::class, null],
+			'ClientIndexes' => ['clientIndexes', 'array', AssignedClientIndex::class],
+			'ClientRelationships' => ['clientRelationships', 'array', ClientRelationship::class],
+			'FirstAppointmentDate' => ['firstAppointmentDate', 'string', 'date-time'],
+			'FirstName' => ['firstName', 'string', null],
+			'Id' => ['id', 'string', null],
+			'IsCompany' => ['isCompany', 'boolean', null],
+			'IsProspect' => ['isProspect', 'boolean', null],
+			'LastName' => ['lastName', 'string', null],
+			'Liability' => ['liability', Liability::class, null],
+			'LiabilityRelease' => ['liabilityRelease', 'boolean', null],
+			'MembershipIcon' => ['membershipIcon', 'integer', 'int32'],
+			'MobileProvider' => ['mobileProvider', 'integer', 'int32'],
+			'Notes' => ['notes', 'string', null],
+			'State' => ['state', 'string', null],
+			'UniqueId' => ['uniqueId', 'integer', 'int64'],
+			'LastModifiedDateTime' => ['lastModifiedDateTime', 'string', 'date-time'],
+			'RedAlert' => ['redAlert', 'string', null],
+			'YellowAlert' => ['yellowAlert', 'string', null],
+			'MiddleName' => ['middleName', 'string', null],
+			'ProspectStage' => ['prospectStage', ProspectStage::class, null],
+			'Email' => ['email', 'string', null],
+			'MobilePhone' => ['mobilePhone', 'string', null],
+			'HomePhone' => ['homePhone', 'string', null],
+			'WorkPhone' => ['workPhone', 'string', null],
+			'AccountBalance' => ['accountBalance', 'number', 'double'],
+			'AddressLine1' => ['addressLine1', 'string', null],
+			'AddressLine2' => ['addressLine2', 'string', null],
+			'City' => ['city', 'string', null],
+			'PostalCode' => ['postalCode', 'string', null],
+			'WorkExtension' => ['workExtension', 'string', null],
+			'ReferredBy' => ['referredBy', 'string', null],
+			'PhotoUrl' => ['photoUrl', 'string', null],
+			'EmergencyContactInfoName' => ['emergencyContactInfoName', 'string', null],
+			'EmergencyContactInfoEmail' => ['emergencyContactInfoEmail', 'string', null],
+			'EmergencyContactInfoPhone' => ['emergencyContactInfoPhone', 'string', null],
+			'EmergencyContactInfoRelationship' => ['emergencyContactInfoRelationship', 'string', null],
+			'Gender' => ['gender', 'string', null],
+			'LastFormulaNotes' => ['lastFormulaNotes', 'string', null],
+			'Active' => ['active', 'boolean', null],
+			'SalesReps' => ['salesReps', 'array', SalesRep::class],
+			'Status' => ['status', 'string', null],
+			'Action' => ['action', 'string', null],
+			'SendAccountEmails' => ['sendAccountEmails', 'boolean', null],
+			'SendAccountTexts' => ['sendAccountTexts', 'boolean', null],
+			'SendPromotionalEmails' => ['sendPromotionalEmails', 'boolean', null],
+			'SendPromotionalTexts' => ['sendPromotionalTexts', 'boolean', null],
+			'SendScheduleEmails' => ['sendScheduleEmails', 'boolean', null],
+			'SendScheduleTexts' => ['sendScheduleTexts', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'appointmentGenderPreference' => 'AppointmentGenderPreference',
-			'birthDate' => 'BirthDate',
-			'country' => 'Country',
-			'creationDate' => 'CreationDate',
-			'customClientFields' => 'CustomClientFields',
-			'clientCreditCard' => 'ClientCreditCard',
-			'clientIndexes' => 'ClientIndexes',
-			'clientRelationships' => 'ClientRelationships',
-			'firstAppointmentDate' => 'FirstAppointmentDate',
-			'firstName' => 'FirstName',
-			'id' => 'Id',
-			'isCompany' => 'IsCompany',
-			'isProspect' => 'IsProspect',
-			'lastName' => 'LastName',
-			'liability' => 'Liability',
-			'liabilityRelease' => 'LiabilityRelease',
-			'membershipIcon' => 'MembershipIcon',
-			'mobileProvider' => 'MobileProvider',
-			'notes' => 'Notes',
-			'state' => 'State',
-			'uniqueId' => 'UniqueId',
-			'lastModifiedDateTime' => 'LastModifiedDateTime',
-			'redAlert' => 'RedAlert',
-			'yellowAlert' => 'YellowAlert',
-			'middleName' => 'MiddleName',
-			'prospectStage' => 'ProspectStage',
-			'email' => 'Email',
-			'mobilePhone' => 'MobilePhone',
-			'homePhone' => 'HomePhone',
-			'workPhone' => 'WorkPhone',
-			'accountBalance' => 'AccountBalance',
-			'addressLine1' => 'AddressLine1',
-			'addressLine2' => 'AddressLine2',
-			'city' => 'City',
-			'postalCode' => 'PostalCode',
-			'workExtension' => 'WorkExtension',
-			'referredBy' => 'ReferredBy',
-			'photoUrl' => 'PhotoUrl',
-			'emergencyContactInfoName' => 'EmergencyContactInfoName',
-			'emergencyContactInfoEmail' => 'EmergencyContactInfoEmail',
-			'emergencyContactInfoPhone' => 'EmergencyContactInfoPhone',
-			'emergencyContactInfoRelationship' => 'EmergencyContactInfoRelationship',
-			'gender' => 'Gender',
-			'lastFormulaNotes' => 'LastFormulaNotes',
-			'active' => 'Active',
-			'salesReps' => 'SalesReps',
-			'status' => 'Status',
-			'action' => 'Action',
-			'sendAccountEmails' => 'SendAccountEmails',
-			'sendAccountTexts' => 'SendAccountTexts',
-			'sendPromotionalEmails' => 'SendPromotionalEmails',
-			'sendPromotionalTexts' => 'SendPromotionalTexts',
-			'sendScheduleEmails' => 'SendScheduleEmails',
-			'sendScheduleTexts' => 'SendScheduleTexts',
+			'appointmentGenderPreference' => ['AppointmentGenderPreference', 'string', null],
+			'birthDate' => ['BirthDate', 'string', 'date-time'],
+			'country' => ['Country', 'string', null],
+			'creationDate' => ['CreationDate', 'string', 'date-time'],
+			'customClientFields' => ['CustomClientFields', 'array', CustomClientFieldValue::class],
+			'clientCreditCard' => ['ClientCreditCard', ClientCreditCard::class, null],
+			'clientIndexes' => ['ClientIndexes', 'array', AssignedClientIndex::class],
+			'clientRelationships' => ['ClientRelationships', 'array', ClientRelationship::class],
+			'firstAppointmentDate' => ['FirstAppointmentDate', 'string', 'date-time'],
+			'firstName' => ['FirstName', 'string', null],
+			'id' => ['Id', 'string', null],
+			'isCompany' => ['IsCompany', 'boolean', null],
+			'isProspect' => ['IsProspect', 'boolean', null],
+			'lastName' => ['LastName', 'string', null],
+			'liability' => ['Liability', Liability::class, null],
+			'liabilityRelease' => ['LiabilityRelease', 'boolean', null],
+			'membershipIcon' => ['MembershipIcon', 'integer', 'int32'],
+			'mobileProvider' => ['MobileProvider', 'integer', 'int32'],
+			'notes' => ['Notes', 'string', null],
+			'state' => ['State', 'string', null],
+			'uniqueId' => ['UniqueId', 'integer', 'int64'],
+			'lastModifiedDateTime' => ['LastModifiedDateTime', 'string', 'date-time'],
+			'redAlert' => ['RedAlert', 'string', null],
+			'yellowAlert' => ['YellowAlert', 'string', null],
+			'middleName' => ['MiddleName', 'string', null],
+			'prospectStage' => ['ProspectStage', ProspectStage::class, null],
+			'email' => ['Email', 'string', null],
+			'mobilePhone' => ['MobilePhone', 'string', null],
+			'homePhone' => ['HomePhone', 'string', null],
+			'workPhone' => ['WorkPhone', 'string', null],
+			'accountBalance' => ['AccountBalance', 'number', 'double'],
+			'addressLine1' => ['AddressLine1', 'string', null],
+			'addressLine2' => ['AddressLine2', 'string', null],
+			'city' => ['City', 'string', null],
+			'postalCode' => ['PostalCode', 'string', null],
+			'workExtension' => ['WorkExtension', 'string', null],
+			'referredBy' => ['ReferredBy', 'string', null],
+			'photoUrl' => ['PhotoUrl', 'string', null],
+			'emergencyContactInfoName' => ['EmergencyContactInfoName', 'string', null],
+			'emergencyContactInfoEmail' => ['EmergencyContactInfoEmail', 'string', null],
+			'emergencyContactInfoPhone' => ['EmergencyContactInfoPhone', 'string', null],
+			'emergencyContactInfoRelationship' => ['EmergencyContactInfoRelationship', 'string', null],
+			'gender' => ['Gender', 'string', null],
+			'lastFormulaNotes' => ['LastFormulaNotes', 'string', null],
+			'active' => ['Active', 'boolean', null],
+			'salesReps' => ['SalesReps', 'array', SalesRep::class],
+			'status' => ['Status', 'string', null],
+			'action' => ['Action', 'string', null],
+			'sendAccountEmails' => ['SendAccountEmails', 'boolean', null],
+			'sendAccountTexts' => ['SendAccountTexts', 'boolean', null],
+			'sendPromotionalEmails' => ['SendPromotionalEmails', 'boolean', null],
+			'sendPromotionalTexts' => ['SendPromotionalTexts', 'boolean', null],
+			'sendScheduleEmails' => ['SendScheduleEmails', 'boolean', null],
+			'sendScheduleTexts' => ['SendScheduleTexts', 'boolean', null],
 			];
 	}
 }

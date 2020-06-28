@@ -10,29 +10,29 @@ class GetContractsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about each contract.
 	 * 
-	 * @var Contract[]
+	 * @var Contract[] 
 	 */
 	public $contracts;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Contracts' => ['contracts', Contract::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Contracts' => ['contracts', 'array', Contract::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'contracts' => 'Contracts',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'contracts' => ['Contracts', 'array', Contract::class],
 			];
 	}
 }

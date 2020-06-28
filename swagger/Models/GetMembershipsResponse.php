@@ -10,21 +10,21 @@ class GetMembershipsResponse extends BaseModel
 	/**
 	 * Details about the memberships.
 	 * 
-	 * @var Membership[]
+	 * @var Membership[] 
 	 */
 	public $memberships;
 
 	protected function getInputMap()
 	{
 		return [
-			'Memberships' => ['memberships', Membership::class],
+			'Memberships' => ['memberships', 'array', Membership::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'memberships' => 'Memberships',
+			'memberships' => ['Memberships', 'array', Membership::class],
 			];
 	}
 }

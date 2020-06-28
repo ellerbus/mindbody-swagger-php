@@ -12,21 +12,21 @@ class GetClientIndexesRequest extends BaseModel
 	 * creation.<br />  When `false` or omitted, returns all of the client
 	 * indexes.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $requiredOnly;
 
 	protected function getInputMap()
 	{
 		return [
-			'RequiredOnly' => 'requiredOnly',
+			'RequiredOnly' => ['requiredOnly', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'requiredOnly' => 'RequiredOnly',
+			'requiredOnly' => ['RequiredOnly', 'boolean', null],
 			];
 	}
 }

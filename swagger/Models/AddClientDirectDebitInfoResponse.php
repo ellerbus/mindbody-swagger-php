@@ -10,53 +10,53 @@ class AddClientDirectDebitInfoResponse extends BaseModel
 	/**
 	 * The ID of the client being updated
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The name on the bank account being added
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $nameOnAccount;
 	/**
 	 * The routing number of the bank account being added
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $routingNumber;
 	/**
 	 * The account number of the bank account being added
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $accountNumber;
 	/**
 	 * Either "Checking" or "Savings"
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $accountType;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'NameOnAccount' => 'nameOnAccount',
-			'RoutingNumber' => 'routingNumber',
-			'AccountNumber' => 'accountNumber',
-			'AccountType' => 'accountType',
+			'ClientId' => ['clientId', 'string', null],
+			'NameOnAccount' => ['nameOnAccount', 'string', null],
+			'RoutingNumber' => ['routingNumber', 'string', null],
+			'AccountNumber' => ['accountNumber', 'string', null],
+			'AccountType' => ['accountType', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'nameOnAccount' => 'NameOnAccount',
-			'routingNumber' => 'RoutingNumber',
-			'accountNumber' => 'AccountNumber',
-			'accountType' => 'AccountType',
+			'clientId' => ['ClientId', 'string', null],
+			'nameOnAccount' => ['NameOnAccount', 'string', null],
+			'routingNumber' => ['RoutingNumber', 'string', null],
+			'accountNumber' => ['AccountNumber', 'string', null],
+			'accountType' => ['AccountType', 'string', null],
 			];
 	}
 }

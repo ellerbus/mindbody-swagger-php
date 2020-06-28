@@ -10,13 +10,13 @@ class UploadClientPhotoRequest extends BaseModel
 	/**
 	 * A Base64-encoded string representation of the image’s byte array.
 	 * 
-	 * @var string
+	 * @var string format:byte
 	 */
 	public $bytes;
 	/**
 	 * The RSSID of the client for whom the photo is to be uploaded.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
@@ -31,16 +31,16 @@ class UploadClientPhotoRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'Bytes' => 'bytes',
-			'ClientId' => 'clientId',
+			'Bytes' => ['bytes', 'string', 'byte'],
+			'ClientId' => ['clientId', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'bytes' => 'Bytes',
-			'clientId' => 'ClientId',
+			'bytes' => ['Bytes', 'string', 'byte'],
+			'clientId' => ['ClientId', 'string', null],
 			];
 	}
 }

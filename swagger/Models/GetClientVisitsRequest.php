@@ -10,14 +10,14 @@ class GetClientVisitsRequest extends BaseModel
 	/**
 	 * The ID of the requested client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The number of sites to skip when returning the site associated with a
 	 * client.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $clientAssociatedSitesOffset;
 	/**
@@ -25,21 +25,21 @@ class GetClientVisitsRequest extends BaseModel
 	 * all sites in the region are returned.<br />  When `false`, indicates
 	 * that only visits at the current site are returned.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalLookup;
 	/**
 	 * The date past which class visits are not returned.  Default:
 	 * **today’s date**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $endDate;
 	/**
 	 * The date before which class visits are not returned.  Default: **the
 	 * end date**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startDate;
 	/**
@@ -48,19 +48,19 @@ class GetClientVisitsRequest extends BaseModel
 	 * returned, regardless of whether they have been paid for.<br />
 	 * Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $unpaidsOnly;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 	/**
@@ -74,28 +74,28 @@ class GetClientVisitsRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
-			'CrossRegionalLookup' => 'crossRegionalLookup',
-			'EndDate' => 'endDate',
-			'StartDate' => 'startDate',
-			'UnpaidsOnly' => 'unpaidsOnly',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'ClientAssociatedSitesOffset' => ['clientAssociatedSitesOffset', 'integer', 'int32'],
+			'CrossRegionalLookup' => ['crossRegionalLookup', 'boolean', null],
+			'EndDate' => ['endDate', 'string', 'date-time'],
+			'StartDate' => ['startDate', 'string', 'date-time'],
+			'UnpaidsOnly' => ['unpaidsOnly', 'boolean', null],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
-			'crossRegionalLookup' => 'CrossRegionalLookup',
-			'endDate' => 'EndDate',
-			'startDate' => 'StartDate',
-			'unpaidsOnly' => 'UnpaidsOnly',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'clientAssociatedSitesOffset' => ['ClientAssociatedSitesOffset', 'integer', 'int32'],
+			'crossRegionalLookup' => ['CrossRegionalLookup', 'boolean', null],
+			'endDate' => ['EndDate', 'string', 'date-time'],
+			'startDate' => ['StartDate', 'string', 'date-time'],
+			'unpaidsOnly' => ['UnpaidsOnly', 'boolean', null],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

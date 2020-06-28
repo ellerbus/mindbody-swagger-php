@@ -11,30 +11,30 @@ class GetTipsResponse extends BaseModel
 	 * Contains information about the pagination used. See Pagination for a
 	 * description of the Pagination information.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about tips given to staff members within the
 	 * given date range. Results are ordered by StaffId.
 	 * 
-	 * @var Tip[]
+	 * @var Tip[] 
 	 */
 	public $tips;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Tips' => ['tips', Tip::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Tips' => ['tips', 'array', Tip::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'tips' => 'Tips',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'tips' => ['Tips', 'array', Tip::class],
 			];
 	}
 }

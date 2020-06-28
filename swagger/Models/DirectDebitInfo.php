@@ -10,45 +10,45 @@ class DirectDebitInfo extends BaseModel
 	/**
 	 * The name on the bank account.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $nameOnAccount;
 	/**
 	 * The routing number for the bank.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $routingNumber;
 	/**
 	 * The bank account number.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $accountNumber;
 	/**
 	 * The account type. Either Checking or Savings.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $accountType;
 
 	protected function getInputMap()
 	{
 		return [
-			'NameOnAccount' => 'nameOnAccount',
-			'RoutingNumber' => 'routingNumber',
-			'AccountNumber' => 'accountNumber',
-			'AccountType' => 'accountType',
+			'NameOnAccount' => ['nameOnAccount', 'string', null],
+			'RoutingNumber' => ['routingNumber', 'string', null],
+			'AccountNumber' => ['accountNumber', 'string', null],
+			'AccountType' => ['accountType', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'nameOnAccount' => 'NameOnAccount',
-			'routingNumber' => 'RoutingNumber',
-			'accountNumber' => 'AccountNumber',
-			'accountType' => 'AccountType',
+			'nameOnAccount' => ['NameOnAccount', 'string', null],
+			'routingNumber' => ['RoutingNumber', 'string', null],
+			'accountNumber' => ['AccountNumber', 'string', null],
+			'accountType' => ['AccountType', 'string', null],
 			];
 	}
 }

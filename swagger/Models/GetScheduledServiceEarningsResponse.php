@@ -10,29 +10,29 @@ class GetScheduledServiceEarningsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains the class payroll events.
 	 * 
-	 * @var ScheduledServiceEarningsEvent[]
+	 * @var ScheduledServiceEarningsEvent[] 
 	 */
 	public $scheduledServiceEarnings;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'ScheduledServiceEarnings' => ['scheduledServiceEarnings', ScheduledServiceEarningsEvent::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'ScheduledServiceEarnings' => ['scheduledServiceEarnings', 'array', ScheduledServiceEarningsEvent::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'scheduledServiceEarnings' => 'ScheduledServiceEarnings',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'scheduledServiceEarnings' => ['ScheduledServiceEarnings', 'array', ScheduledServiceEarningsEvent::class],
 			];
 	}
 }

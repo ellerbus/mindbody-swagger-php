@@ -10,29 +10,29 @@ class IssueRequest extends BaseModel
 	/**
 	 * The staff member’s username.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $username;
 	/**
 	 * The staff member’s password.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $password;
 
 	protected function getInputMap()
 	{
 		return [
-			'Username' => 'username',
-			'Password' => 'password',
+			'Username' => ['username', 'string', null],
+			'Password' => ['password', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'username' => 'Username',
-			'password' => 'Password',
+			'username' => ['Username', 'string', null],
+			'password' => ['Password', 'string', null],
 			];
 	}
 }

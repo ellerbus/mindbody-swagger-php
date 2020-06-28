@@ -10,29 +10,29 @@ class GetClientFormulaNotesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains details about the client’s formula.
 	 * 
-	 * @var FormulaNote[]
+	 * @var FormulaNote[] 
 	 */
 	public $formulaNotes;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'FormulaNotes' => ['formulaNotes', FormulaNote::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'FormulaNotes' => ['formulaNotes', 'array', FormulaNote::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'formulaNotes' => 'FormulaNotes',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'formulaNotes' => ['FormulaNotes', 'array', FormulaNote::class],
 			];
 	}
 }

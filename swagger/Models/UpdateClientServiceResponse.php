@@ -10,21 +10,21 @@ class UpdateClientServiceResponse extends BaseModel
 	/**
 	 * Contains information about the updated service.
 	 * 
-	 * @var ClientService
+	 * @var ClientService 
 	 */
 	public $clientService;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClientService' => ['clientService', ClientService::class],
+			'ClientService' => ['clientService', ClientService::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientService' => 'ClientService',
+			'clientService' => ['ClientService', ClientService::class, null],
 			];
 	}
 }

@@ -12,31 +12,31 @@ class PurchaseGiftCardRequest extends BaseModel
 	 * database.<br />  When `false`, the request is carried out and the
 	 * database is affected.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
 	 * The ID of the location where the gift card is being sold.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
 	 * The ID of the layout used for the gift card’s image.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $layoutId;
 	/**
 	 * The RSSID of the client who is purchasing the gift card.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $purchaserClientId;
 	/**
 	 * The product ID of the gift card being purchased.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $giftCardId;
 	/**
@@ -44,21 +44,21 @@ class PurchaseGiftCardRequest extends BaseModel
 	 * the purchasing client, if all settings are correctly configured.<br />
 	 * When `false`, no email is sent to the purchaser.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendEmailReceipt;
 	/**
 	 * The email address to send the gift card image to. This parameter is
 	 * required if the `LayoutId` is not 0.<br />  Maximum length: **100**
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $recipientEmail;
 	/**
 	 * The name of the person who is to receive the gift card. This parameter
 	 * is required if the `LayoutId` is not 0.<br />  Maximum length: **20**
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $recipientName;
 	/**
@@ -66,14 +66,14 @@ class PurchaseGiftCardRequest extends BaseModel
 	 * Birthday, Maria! This parameter is required if the `LayoutId` is not
 	 * 0.<br />  Maximum length: **20**
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $title;
 	/**
 	 * A personal message to include in the gift card.<br />  Maximum length:
 	 * **300**
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $giftMessage;
 	/**
@@ -82,20 +82,20 @@ class PurchaseGiftCardRequest extends BaseModel
 	 * parameter is required if the `LayoutId` is not 0.  Default: **today**
 	 * Minimum: **today**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $deliveryDate;
 	/**
 	 * Contains information about the payment.
 	 * 
-	 * @var CheckoutPaymentInfo
+	 * @var CheckoutPaymentInfo 
 	 */
 	public $paymentInfo;
 	/**
 	 * The ID of the staff member who is to be marked as the sales rep for
 	 * this gift card purchase.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $salesRepId;
 	/**
@@ -111,38 +111,38 @@ class PurchaseGiftCardRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'Test' => 'test',
-			'LocationId' => 'locationId',
-			'LayoutId' => 'layoutId',
-			'PurchaserClientId' => 'purchaserClientId',
-			'GiftCardId' => 'giftCardId',
-			'SendEmailReceipt' => 'sendEmailReceipt',
-			'RecipientEmail' => 'recipientEmail',
-			'RecipientName' => 'recipientName',
-			'Title' => 'title',
-			'GiftMessage' => 'giftMessage',
-			'DeliveryDate' => 'deliveryDate',
-			'PaymentInfo' => ['paymentInfo', CheckoutPaymentInfo::class],
-			'SalesRepId' => 'salesRepId',
+			'Test' => ['test', 'boolean', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'LayoutId' => ['layoutId', 'integer', 'int32'],
+			'PurchaserClientId' => ['purchaserClientId', 'string', null],
+			'GiftCardId' => ['giftCardId', 'integer', 'int32'],
+			'SendEmailReceipt' => ['sendEmailReceipt', 'boolean', null],
+			'RecipientEmail' => ['recipientEmail', 'string', null],
+			'RecipientName' => ['recipientName', 'string', null],
+			'Title' => ['title', 'string', null],
+			'GiftMessage' => ['giftMessage', 'string', null],
+			'DeliveryDate' => ['deliveryDate', 'string', 'date-time'],
+			'PaymentInfo' => ['paymentInfo', CheckoutPaymentInfo::class, null],
+			'SalesRepId' => ['salesRepId', 'integer', 'int64'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'test' => 'Test',
-			'locationId' => 'LocationId',
-			'layoutId' => 'LayoutId',
-			'purchaserClientId' => 'PurchaserClientId',
-			'giftCardId' => 'GiftCardId',
-			'sendEmailReceipt' => 'SendEmailReceipt',
-			'recipientEmail' => 'RecipientEmail',
-			'recipientName' => 'RecipientName',
-			'title' => 'Title',
-			'giftMessage' => 'GiftMessage',
-			'deliveryDate' => 'DeliveryDate',
-			'paymentInfo' => 'PaymentInfo',
-			'salesRepId' => 'SalesRepId',
+			'test' => ['Test', 'boolean', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'layoutId' => ['LayoutId', 'integer', 'int32'],
+			'purchaserClientId' => ['PurchaserClientId', 'string', null],
+			'giftCardId' => ['GiftCardId', 'integer', 'int32'],
+			'sendEmailReceipt' => ['SendEmailReceipt', 'boolean', null],
+			'recipientEmail' => ['RecipientEmail', 'string', null],
+			'recipientName' => ['RecipientName', 'string', null],
+			'title' => ['Title', 'string', null],
+			'giftMessage' => ['GiftMessage', 'string', null],
+			'deliveryDate' => ['DeliveryDate', 'string', 'date-time'],
+			'paymentInfo' => ['PaymentInfo', CheckoutPaymentInfo::class, null],
+			'salesRepId' => ['SalesRepId', 'integer', 'int64'],
 			];
 	}
 }

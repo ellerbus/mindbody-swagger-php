@@ -13,7 +13,7 @@ class CheckoutItem extends BaseModel
 	 * is a retail product.  * Package - Indicates that this item is a
 	 * package.  * Tip - Indicates that this item is a tip.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $type;
 	/**
@@ -21,23 +21,23 @@ class CheckoutItem extends BaseModel
 	 * tadata](https://developers.mindbodyonline.com/PublicDocumentation/V6#c
 	 * art-item-metadata) for more information.
 	 * 
-	 * @var object
+	 * @var object 
 	 */
 	public $metadata;
 
 	protected function getInputMap()
 	{
 		return [
-			'Type' => 'type',
-			'Metadata' => 'metadata',
+			'Type' => ['type', 'string', null],
+			'Metadata' => ['metadata', 'object', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'type' => 'Type',
-			'metadata' => 'Metadata',
+			'type' => ['Type', 'string', null],
+			'metadata' => ['Metadata', 'object', null],
 			];
 	}
 }

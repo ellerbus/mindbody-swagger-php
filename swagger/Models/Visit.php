@@ -10,38 +10,38 @@ class Visit extends BaseModel
 	/**
 	 * The appointment’s ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $appointmentId;
 	/**
 	 * The gender of staff member with whom the client prefers to book
 	 * appointments.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $appointmentGenderPreference;
 	/**
 	 * The status of the appointment.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $appointmentStatus;
 	/**
 	 * The class ID that was used to retrieve the visits.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classId;
 	/**
 	 * The ID of the client associated with the visit.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The time this class is scheduled to start.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startDateTime;
 	/**
@@ -50,13 +50,13 @@ class Visit extends BaseModel
 	 * (EST) appears as 2018-06-25T19:15:00Z because EST is five hours behind
 	 * UTC. Date time pairs always return in the format YYYY-MM-DDTHH:mm:ssZ.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $endDateTime;
 	/**
 	 * The ID of the visit.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $id;
 	/**
@@ -67,26 +67,26 @@ class Visit extends BaseModel
 	 * because EST is five hours behind UTC. Date time pairs always return in
 	 * the format YYYY-MM-DDTHH:mm:ssZ.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $lastModifiedDateTime;
 	/**
 	 * When `true`, indicates that the class has been `LateCancelled`.<br />
 	 * When `false`, indicates that the class has not been `LateCancelled`.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $lateCancelled;
 	/**
 	 * The ID of the site the visit occurred
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $siteId;
 	/**
 	 * The ID of the location where the visit took place or is to take place.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
@@ -100,112 +100,112 @@ class Visit extends BaseModel
 	 * m/s/article/203259433-Enrollments-Make-ups?language=en_US) for more
 	 * information.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $makeUp;
 	/**
 	 * The name of the class.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 	/**
 	 * The ID of the client's pricing option applied to the class visit.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $serviceId;
 	/**
 	 * The name of the pricing option applied to the class visit.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $serviceName;
 	/**
 	 * The business' ID of the type of pricing option used to pay for the
 	 * class visit.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $productId;
 	/**
 	 * When `true`, indicates that the client has been signed in.<br />  When
 	 * `false`, indicates that the client has not been signed in.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $signedIn;
 	/**
 	 * The ID of the staff member who is teaching the class.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $staffId;
 	/**
 	 * When `true`, indicates that the client signed up online.<br />  When
 	 * `false`, indicates that the client was signed up by a staff member.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $webSignup;
 	/**
 	 * The action taken.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $action;
 
 	protected function getInputMap()
 	{
 		return [
-			'AppointmentId' => 'appointmentId',
-			'AppointmentGenderPreference' => 'appointmentGenderPreference',
-			'AppointmentStatus' => 'appointmentStatus',
-			'ClassId' => 'classId',
-			'ClientId' => 'clientId',
-			'StartDateTime' => 'startDateTime',
-			'EndDateTime' => 'endDateTime',
-			'Id' => 'id',
-			'LastModifiedDateTime' => 'lastModifiedDateTime',
-			'LateCancelled' => 'lateCancelled',
-			'SiteId' => 'siteId',
-			'LocationId' => 'locationId',
-			'MakeUp' => 'makeUp',
-			'Name' => 'name',
-			'ServiceId' => 'serviceId',
-			'ServiceName' => 'serviceName',
-			'ProductId' => 'productId',
-			'SignedIn' => 'signedIn',
-			'StaffId' => 'staffId',
-			'WebSignup' => 'webSignup',
-			'Action' => 'action',
+			'AppointmentId' => ['appointmentId', 'integer', 'int32'],
+			'AppointmentGenderPreference' => ['appointmentGenderPreference', 'string', null],
+			'AppointmentStatus' => ['appointmentStatus', 'string', null],
+			'ClassId' => ['classId', 'integer', 'int32'],
+			'ClientId' => ['clientId', 'string', null],
+			'StartDateTime' => ['startDateTime', 'string', 'date-time'],
+			'EndDateTime' => ['endDateTime', 'string', 'date-time'],
+			'Id' => ['id', 'integer', 'int64'],
+			'LastModifiedDateTime' => ['lastModifiedDateTime', 'string', 'date-time'],
+			'LateCancelled' => ['lateCancelled', 'boolean', null],
+			'SiteId' => ['siteId', 'integer', 'int32'],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'MakeUp' => ['makeUp', 'boolean', null],
+			'Name' => ['name', 'string', null],
+			'ServiceId' => ['serviceId', 'integer', 'int64'],
+			'ServiceName' => ['serviceName', 'string', null],
+			'ProductId' => ['productId', 'integer', 'int64'],
+			'SignedIn' => ['signedIn', 'boolean', null],
+			'StaffId' => ['staffId', 'integer', 'int64'],
+			'WebSignup' => ['webSignup', 'boolean', null],
+			'Action' => ['action', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'appointmentId' => 'AppointmentId',
-			'appointmentGenderPreference' => 'AppointmentGenderPreference',
-			'appointmentStatus' => 'AppointmentStatus',
-			'classId' => 'ClassId',
-			'clientId' => 'ClientId',
-			'startDateTime' => 'StartDateTime',
-			'endDateTime' => 'EndDateTime',
-			'id' => 'Id',
-			'lastModifiedDateTime' => 'LastModifiedDateTime',
-			'lateCancelled' => 'LateCancelled',
-			'siteId' => 'SiteId',
-			'locationId' => 'LocationId',
-			'makeUp' => 'MakeUp',
-			'name' => 'Name',
-			'serviceId' => 'ServiceId',
-			'serviceName' => 'ServiceName',
-			'productId' => 'ProductId',
-			'signedIn' => 'SignedIn',
-			'staffId' => 'StaffId',
-			'webSignup' => 'WebSignup',
-			'action' => 'Action',
+			'appointmentId' => ['AppointmentId', 'integer', 'int32'],
+			'appointmentGenderPreference' => ['AppointmentGenderPreference', 'string', null],
+			'appointmentStatus' => ['AppointmentStatus', 'string', null],
+			'classId' => ['ClassId', 'integer', 'int32'],
+			'clientId' => ['ClientId', 'string', null],
+			'startDateTime' => ['StartDateTime', 'string', 'date-time'],
+			'endDateTime' => ['EndDateTime', 'string', 'date-time'],
+			'id' => ['Id', 'integer', 'int64'],
+			'lastModifiedDateTime' => ['LastModifiedDateTime', 'string', 'date-time'],
+			'lateCancelled' => ['LateCancelled', 'boolean', null],
+			'siteId' => ['SiteId', 'integer', 'int32'],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'makeUp' => ['MakeUp', 'boolean', null],
+			'name' => ['Name', 'string', null],
+			'serviceId' => ['ServiceId', 'integer', 'int64'],
+			'serviceName' => ['ServiceName', 'string', null],
+			'productId' => ['ProductId', 'integer', 'int64'],
+			'signedIn' => ['SignedIn', 'boolean', null],
+			'staffId' => ['StaffId', 'integer', 'int64'],
+			'webSignup' => ['WebSignup', 'boolean', null],
+			'action' => ['Action', 'string', null],
 			];
 	}
 }

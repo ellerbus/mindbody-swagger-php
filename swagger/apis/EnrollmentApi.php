@@ -20,7 +20,7 @@ class EnrollmentApi extends BaseApi
 	/**
 	 * Book a client into an enrollment.
 	 */
-	public function AddClientToEnrollment($request)
+	public function addClientToEnrollment($request)
 	{
 		$url = $this->getFullPath('addclienttoenrollment');
 
@@ -33,7 +33,7 @@ class EnrollmentApi extends BaseApi
 	 * who commit to coming to all or most of the scheduled sessions.
 	 * Enrollments typically run for a limited time only.
 	 */
-	public function GetEnrollments($request)
+	public function getEnrollments($request)
 	{
 		$url = $this->getFullPath('enrollments');
 

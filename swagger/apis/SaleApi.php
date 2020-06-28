@@ -37,7 +37,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get sales completed at a site.
 	 */
-	public function GetSales($request)
+	public function getSales($request)
 	{
 		$url = $this->getFullPath('sales');
 
@@ -55,7 +55,7 @@ class SaleApi extends BaseApi
 	 * owner’s policies before you give clients a choice of the two payment
 	 * types.
 	 */
-	public function PurchaseContract($request)
+	public function purchaseContract($request)
 	{
 		$url = $this->getFullPath('purchasecontract');
 
@@ -80,7 +80,7 @@ class SaleApi extends BaseApi
 	 * body and response, as well as the cart item metadata, payment item
 	 * metadata, and purchased cart items.
 	 */
-	public function CheckoutShoppingCart($request)
+	public function checkoutShoppingCart($request)
 	{
 		$url = $this->getFullPath('checkoutshoppingcart');
 
@@ -90,7 +90,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get gift cards available for purchase at a site.
 	 */
-	public function GetGiftCards($request)
+	public function getGiftCards($request)
 	{
 		$url = $this->getFullPath('giftcards');
 
@@ -100,7 +100,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get pricing options available for purchase at a site
 	 */
-	public function GetServices($request)
+	public function getServices($request)
 	{
 		$url = $this->getFullPath('services');
 
@@ -110,7 +110,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get retail products available for purchase at a site.
 	 */
-	public function GetProducts($request)
+	public function getProducts($request)
 	{
 		$url = $this->getFullPath('products');
 
@@ -124,7 +124,7 @@ class SaleApi extends BaseApi
 	 * parameters.The response returns a list of strings. Possible values
 	 * are:  * Visa  * MasterCard  * Discover  * AMEX
 	 */
-	public function GetAcceptedCardTypes()
+	public function getAcceptedCardTypes()
 	{
 		$url = $this->getFullPath('acceptedcardtypes');
 
@@ -134,7 +134,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get contracts available for purchase at a site.
 	 */
-	public function GetContracts($request)
+	public function getContracts($request)
 	{
 		$url = $this->getFullPath('contracts');
 
@@ -144,7 +144,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get payment methods that can be used to pay for sales at a site.
 	 */
-	public function GetCustomPaymentMethods($request)
+	public function getCustomPaymentMethods($request)
 	{
 		$url = $this->getFullPath('custompaymentmethods');
 
@@ -156,7 +156,7 @@ class SaleApi extends BaseApi
 	 * of designs. The card can be emailed to the recipient on a specific
 	 * day, and a card title and a personal message can be added.
 	 */
-	public function PurchaseGiftCard($request)
+	public function purchaseGiftCard($request)
 	{
 		$url = $this->getFullPath('purchasegiftcard');
 
@@ -170,7 +170,7 @@ class SaleApi extends BaseApi
 	 * included. For example, a spa might bundle a massage, a pedicure, a
 	 * manicure, a facial, and a few selected beauty products into a package.
 	 */
-	public function GetPackages($request)
+	public function getPackages($request)
 	{
 		$url = $this->getFullPath('packages');
 
@@ -180,7 +180,7 @@ class SaleApi extends BaseApi
 	/**
 	 * Get a gift card's remaining balance.
 	 */
-	public function GetGiftCardBalance($request)
+	public function getGiftCardBalance($request)
 	{
 		$url = $this->getFullPath('giftcardbalance');
 

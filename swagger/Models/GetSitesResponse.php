@@ -10,29 +10,29 @@ class GetSitesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the sites.
 	 * 
-	 * @var Site[]
+	 * @var Site[] 
 	 */
 	public $sites;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Sites' => ['sites', Site::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Sites' => ['sites', 'array', Site::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'sites' => 'Sites',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'sites' => ['Sites', 'array', Site::class],
 			];
 	}
 }

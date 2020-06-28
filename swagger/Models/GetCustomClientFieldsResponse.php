@@ -10,29 +10,29 @@ class GetCustomClientFieldsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the available custom client fields.
 	 * 
-	 * @var CustomClientField[]
+	 * @var CustomClientField[] 
 	 */
 	public $customClientFields;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'CustomClientFields' => ['customClientFields', CustomClientField::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'CustomClientFields' => ['customClientFields', 'array', CustomClientField::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'customClientFields' => 'CustomClientFields',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'customClientFields' => ['CustomClientFields', 'array', CustomClientField::class],
 			];
 	}
 }

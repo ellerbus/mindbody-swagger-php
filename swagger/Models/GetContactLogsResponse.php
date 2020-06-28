@@ -10,29 +10,29 @@ class GetContactLogsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains the information about the contact logs.
 	 * 
-	 * @var ContactLog[]
+	 * @var ContactLog[] 
 	 */
 	public $contactLogs;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'ContactLogs' => ['contactLogs', ContactLog::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'ContactLogs' => ['contactLogs', 'array', ContactLog::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'contactLogs' => 'ContactLogs',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'contactLogs' => ['ContactLogs', 'array', ContactLog::class],
 			];
 	}
 }

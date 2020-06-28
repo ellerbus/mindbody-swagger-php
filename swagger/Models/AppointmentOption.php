@@ -10,45 +10,45 @@ class AppointmentOption extends BaseModel
 	/**
 	 * The name displayed for this appointment option.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $displayName;
 	/**
 	 * The name given to this option.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 	/**
 	 * The value of the option.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $value;
 	/**
 	 * The data type of the option value.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $type;
 
 	protected function getInputMap()
 	{
 		return [
-			'DisplayName' => 'displayName',
-			'Name' => 'name',
-			'Value' => 'value',
-			'Type' => 'type',
+			'DisplayName' => ['displayName', 'string', null],
+			'Name' => ['name', 'string', null],
+			'Value' => ['value', 'string', null],
+			'Type' => ['type', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'displayName' => 'DisplayName',
-			'name' => 'Name',
-			'value' => 'Value',
-			'type' => 'Type',
+			'displayName' => ['DisplayName', 'string', null],
+			'name' => ['Name', 'string', null],
+			'value' => ['Value', 'string', null],
+			'type' => ['Type', 'string', null],
 			];
 	}
 }

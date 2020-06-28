@@ -10,13 +10,13 @@ class UploadClientDocumentRequest extends BaseModel
 	/**
 	 * The RSSID of the client for whom the document is to be uploaded.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * Contains information about the file to be uploaded.
 	 * 
-	 * @var ClientDocument
+	 * @var ClientDocument 
 	 */
 	public $file;
 	/**
@@ -31,16 +31,16 @@ class UploadClientDocumentRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'File' => ['file', ClientDocument::class],
+			'ClientId' => ['clientId', 'string', null],
+			'File' => ['file', ClientDocument::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'file' => 'File',
+			'clientId' => ['ClientId', 'string', null],
+			'file' => ['File', ClientDocument::class, null],
 			];
 	}
 }

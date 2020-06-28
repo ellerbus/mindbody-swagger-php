@@ -10,29 +10,29 @@ class GetClassesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * A list of the requested classes.
 	 * 
-	 * @var Class[]
+	 * @var Class[] 
 	 */
 	public $classes;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Classes' => ['classes', Class::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Classes' => ['classes', 'array', Class::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'classes' => 'Classes',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'classes' => ['Classes', 'array', Class::class],
 			];
 	}
 }

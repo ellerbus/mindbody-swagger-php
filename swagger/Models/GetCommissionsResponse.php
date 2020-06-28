@@ -10,7 +10,7 @@ class GetCommissionsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
@@ -18,23 +18,23 @@ class GetCommissionsResponse extends BaseModel
 	 * within the given date range. Results are ordered by `SaleId`, then by
 	 * `StaffId`.
 	 * 
-	 * @var CommissionPayrollEvent[]
+	 * @var CommissionPayrollEvent[] 
 	 */
 	public $commissions;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Commissions' => ['commissions', CommissionPayrollEvent::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Commissions' => ['commissions', 'array', CommissionPayrollEvent::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'commissions' => 'Commissions',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'commissions' => ['Commissions', 'array', CommissionPayrollEvent::class],
 			];
 	}
 }

@@ -10,21 +10,21 @@ class GetAppointmentOptionsResponse extends BaseModel
 	/**
 	 * Contains information about the appointment options.
 	 * 
-	 * @var AppointmentOption[]
+	 * @var AppointmentOption[] 
 	 */
 	public $options;
 
 	protected function getInputMap()
 	{
 		return [
-			'Options' => ['options', AppointmentOption::class],
+			'Options' => ['options', 'array', AppointmentOption::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'options' => 'Options',
+			'options' => ['Options', 'array', AppointmentOption::class],
 			];
 	}
 }

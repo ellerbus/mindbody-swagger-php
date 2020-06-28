@@ -12,7 +12,7 @@ class UpdateClientRequest extends BaseModel
 	 * used to look up the existing client to update and any specified values
 	 * are updated.
 	 * 
-	 * @var Client
+	 * @var Client 
 	 */
 	public $client;
 	/**
@@ -20,7 +20,7 @@ class UpdateClientRequest extends BaseModel
 	 * validated, but no client data is added or updated.<br />  Default:
 	 * **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
@@ -28,7 +28,7 @@ class UpdateClientRequest extends BaseModel
 	 * region’s sites where the client has a profile.<br />  When `false`,
 	 * only the local client is updated.<br />  Default: **true**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalUpdate;
 	/**
@@ -39,7 +39,7 @@ class UpdateClientRequest extends BaseModel
 	 * must be unique across the region. If the requested number is already
 	 * in use, an error is returned.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $newId;
 	/**
@@ -53,20 +53,20 @@ class UpdateClientRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'Client' => ['client', Client::class],
-			'Test' => 'test',
-			'CrossRegionalUpdate' => 'crossRegionalUpdate',
-			'NewId' => 'newId',
+			'Client' => ['client', Client::class, null],
+			'Test' => ['test', 'boolean', null],
+			'CrossRegionalUpdate' => ['crossRegionalUpdate', 'boolean', null],
+			'NewId' => ['newId', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'client' => 'Client',
-			'test' => 'Test',
-			'crossRegionalUpdate' => 'CrossRegionalUpdate',
-			'newId' => 'NewId',
+			'client' => ['Client', Client::class, null],
+			'test' => ['Test', 'boolean', null],
+			'crossRegionalUpdate' => ['CrossRegionalUpdate', 'boolean', null],
+			'newId' => ['NewId', 'string', null],
 			];
 	}
 }

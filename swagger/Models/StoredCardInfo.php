@@ -10,21 +10,21 @@ class StoredCardInfo extends BaseModel
 	/**
 	 * no description available
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $lastFour;
 
 	protected function getInputMap()
 	{
 		return [
-			'LastFour' => 'lastFour',
+			'LastFour' => ['lastFour', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'lastFour' => 'LastFour',
+			'lastFour' => ['LastFour', 'string', null],
 			];
 	}
 }

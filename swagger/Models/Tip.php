@@ -10,45 +10,45 @@ class Tip extends BaseModel
 	/**
 	 * The ID of the staff member the tip is for.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $staffId;
 	/**
 	 * The sale’s ID associated with the tip.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $saleId;
 	/**
 	 * The date and time when the tip was given.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $saleDateTime;
 	/**
 	 * The amount tipped to the staff member.
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $earnings;
 
 	protected function getInputMap()
 	{
 		return [
-			'StaffId' => 'staffId',
-			'SaleId' => 'saleId',
-			'SaleDateTime' => 'saleDateTime',
-			'Earnings' => 'earnings',
+			'StaffId' => ['staffId', 'integer', 'int64'],
+			'SaleId' => ['saleId', 'integer', 'int64'],
+			'SaleDateTime' => ['saleDateTime', 'string', 'date-time'],
+			'Earnings' => ['earnings', 'number', 'double'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'staffId' => 'StaffId',
-			'saleId' => 'SaleId',
-			'saleDateTime' => 'SaleDateTime',
-			'earnings' => 'Earnings',
+			'staffId' => ['StaffId', 'integer', 'int64'],
+			'saleId' => ['SaleId', 'integer', 'int64'],
+			'saleDateTime' => ['SaleDateTime', 'string', 'date-time'],
+			'earnings' => ['Earnings', 'number', 'double'],
 			];
 	}
 }

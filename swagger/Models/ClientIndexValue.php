@@ -12,37 +12,37 @@ class ClientIndexValue extends BaseModel
 	 * parent index.<br />  When `false`, indicates that the index value has
 	 * been deactivated and cannot be assigned to its parent index.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $active;
 	/**
 	 * The index value’s ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The name of the client index value.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 
 	protected function getInputMap()
 	{
 		return [
-			'Active' => 'active',
-			'Id' => 'id',
-			'Name' => 'name',
+			'Active' => ['active', 'boolean', null],
+			'Id' => ['id', 'integer', 'int32'],
+			'Name' => ['name', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'active' => 'Active',
-			'id' => 'Id',
-			'name' => 'Name',
+			'active' => ['Active', 'boolean', null],
+			'id' => ['Id', 'integer', 'int32'],
+			'name' => ['Name', 'string', null],
 			];
 	}
 }

@@ -18,7 +18,7 @@ class UsertokenApi extends BaseApi
 	/**
 	 * Get a staff user token.
 	 */
-	public function Issue($request)
+	public function issue($request)
 	{
 		$url = $this->getFullPath('issue');
 
@@ -28,7 +28,7 @@ class UsertokenApi extends BaseApi
 	/**
 	 * Revokes the user token in the Authorization header.
 	 */
-	public function Revoke()
+	public function revoke()
 	{
 		$url = $this->getFullPath('revoke');
 

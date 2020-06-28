@@ -10,111 +10,111 @@ class GiftCard extends BaseModel
 	/**
 	 * The gift card's `ProductID`.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The IDs of the locations where the gift card is sold.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $locationIds;
 	/**
 	 * A description of the gift card.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $description;
 	/**
 	 * When `true`, indicates that the gift card can be edited by the client.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $editableByConsumer;
 	/**
 	 * The value of the gift card.
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $cardValue;
 	/**
 	 * The sale price of the gift card, if applicable.
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $salePrice;
 	/**
 	 * When `true`, indicates that the gift card is sold online.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $soldOnline;
 	/**
 	 * A list of IDs for membership restrictions, if this card is restricted
 	 * to members with certain types of memberships.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $membershipRestrictionIds;
 	/**
 	 * The terms of the gift card.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $giftCardTerms;
 	/**
 	 * Contact information for the gift card.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $contactInfo;
 	/**
 	 * When `true`, indicates that the logo should be displayed on the gift
 	 * card.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $displayLogo;
 	/**
 	 * A list of layouts available for the gift card.
 	 * 
-	 * @var GiftCardLayout[]
+	 * @var GiftCardLayout[] 
 	 */
 	public $layouts;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'LocationIds' => 'locationIds',
-			'Description' => 'description',
-			'EditableByConsumer' => 'editableByConsumer',
-			'CardValue' => 'cardValue',
-			'SalePrice' => 'salePrice',
-			'SoldOnline' => 'soldOnline',
-			'MembershipRestrictionIds' => 'membershipRestrictionIds',
-			'GiftCardTerms' => 'giftCardTerms',
-			'ContactInfo' => 'contactInfo',
-			'DisplayLogo' => 'displayLogo',
-			'Layouts' => ['layouts', GiftCardLayout::class],
+			'Id' => ['id', 'integer', 'int32'],
+			'LocationIds' => ['locationIds', 'array', null],
+			'Description' => ['description', 'string', null],
+			'EditableByConsumer' => ['editableByConsumer', 'boolean', null],
+			'CardValue' => ['cardValue', 'number', 'double'],
+			'SalePrice' => ['salePrice', 'number', 'double'],
+			'SoldOnline' => ['soldOnline', 'boolean', null],
+			'MembershipRestrictionIds' => ['membershipRestrictionIds', 'array', null],
+			'GiftCardTerms' => ['giftCardTerms', 'string', null],
+			'ContactInfo' => ['contactInfo', 'string', null],
+			'DisplayLogo' => ['displayLogo', 'boolean', null],
+			'Layouts' => ['layouts', 'array', GiftCardLayout::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'locationIds' => 'LocationIds',
-			'description' => 'Description',
-			'editableByConsumer' => 'EditableByConsumer',
-			'cardValue' => 'CardValue',
-			'salePrice' => 'SalePrice',
-			'soldOnline' => 'SoldOnline',
-			'membershipRestrictionIds' => 'MembershipRestrictionIds',
-			'giftCardTerms' => 'GiftCardTerms',
-			'contactInfo' => 'ContactInfo',
-			'displayLogo' => 'DisplayLogo',
-			'layouts' => 'Layouts',
+			'id' => ['Id', 'integer', 'int32'],
+			'locationIds' => ['LocationIds', 'array', null],
+			'description' => ['Description', 'string', null],
+			'editableByConsumer' => ['EditableByConsumer', 'boolean', null],
+			'cardValue' => ['CardValue', 'number', 'double'],
+			'salePrice' => ['SalePrice', 'number', 'double'],
+			'soldOnline' => ['SoldOnline', 'boolean', null],
+			'membershipRestrictionIds' => ['MembershipRestrictionIds', 'array', null],
+			'giftCardTerms' => ['GiftCardTerms', 'string', null],
+			'contactInfo' => ['ContactInfo', 'string', null],
+			'displayLogo' => ['DisplayLogo', 'boolean', null],
+			'layouts' => ['Layouts', 'array', GiftCardLayout::class],
 			];
 	}
 }

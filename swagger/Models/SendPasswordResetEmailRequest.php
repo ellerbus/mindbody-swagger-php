@@ -11,21 +11,21 @@ class SendPasswordResetEmailRequest extends BaseModel
 	 * The user’s email address. The software uses this parameter as the
 	 * username.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $userEmail;
 	/**
 	 * The user’s first name. The software uses this parameter to verify
 	 * the user.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $userFirstName;
 	/**
 	 * The user’s last name. The software uses this parameter to verify the
 	 * user.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $userLastName;
 	/**
@@ -41,18 +41,18 @@ class SendPasswordResetEmailRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'UserEmail' => 'userEmail',
-			'UserFirstName' => 'userFirstName',
-			'UserLastName' => 'userLastName',
+			'UserEmail' => ['userEmail', 'string', null],
+			'UserFirstName' => ['userFirstName', 'string', null],
+			'UserLastName' => ['userLastName', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'userEmail' => 'UserEmail',
-			'userFirstName' => 'UserFirstName',
-			'userLastName' => 'UserLastName',
+			'userEmail' => ['UserEmail', 'string', null],
+			'userFirstName' => ['UserFirstName', 'string', null],
+			'userLastName' => ['UserLastName', 'string', null],
 			];
 	}
 }

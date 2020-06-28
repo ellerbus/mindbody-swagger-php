@@ -12,7 +12,7 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * value to maintain a persistent cart. If you do not specify a cart ID,
 	 * the MINDBODY software generates one.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $cartId;
 	/**
@@ -20,7 +20,7 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * without a client ID, but a client ID must be specified to complete a
 	 * sale.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
@@ -30,13 +30,13 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * the cart.<br />  When `false`, the transaction takes place and the
 	 * database is affected.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $test;
 	/**
 	 * A list of the items in the cart.
 	 * 
-	 * @var CheckoutItemWrapper[]
+	 * @var CheckoutItemWrapper[] 
 	 */
 	public $items;
 	/**
@@ -46,20 +46,20 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * completed by a client from the business’ online store.<br />
 	 * Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $inStore;
 	/**
 	 * Promotion code to be applied to the cart.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $promotionCode;
 	/**
 	 * A list of payment information objects to be applied to payment against
 	 * the items in the cart.
 	 * 
-	 * @var CheckoutPaymentInfo[]
+	 * @var CheckoutPaymentInfo[] 
 	 */
 	public $payments;
 	/**
@@ -67,7 +67,7 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * all appropriate permissions and settings must be enabled for the
 	 * client to receive an email.<br />  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $sendEmail;
 	/**
@@ -75,19 +75,19 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 * If no location ID is supplied, it defaults to the online store,
 	 * represented by a null value.   Default: **null** (the online store)
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
 	 * The byte array data of the signature image.
 	 * 
-	 * @var string
+	 * @var string format:byte
 	 */
 	public $image;
 	/**
 	 * The name of the signature image being uploaded.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $imageFileName;
 	/**
@@ -103,34 +103,34 @@ class CheckoutShoppingCartRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'CartId' => 'cartId',
-			'ClientId' => 'clientId',
-			'Test' => 'test',
-			'Items' => ['items', CheckoutItemWrapper::class],
-			'InStore' => 'inStore',
-			'PromotionCode' => 'promotionCode',
-			'Payments' => ['payments', CheckoutPaymentInfo::class],
-			'SendEmail' => 'sendEmail',
-			'LocationId' => 'locationId',
-			'Image' => 'image',
-			'ImageFileName' => 'imageFileName',
+			'CartId' => ['cartId', 'string', null],
+			'ClientId' => ['clientId', 'string', null],
+			'Test' => ['test', 'boolean', null],
+			'Items' => ['items', 'array', CheckoutItemWrapper::class],
+			'InStore' => ['inStore', 'boolean', null],
+			'PromotionCode' => ['promotionCode', 'string', null],
+			'Payments' => ['payments', 'array', CheckoutPaymentInfo::class],
+			'SendEmail' => ['sendEmail', 'boolean', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
+			'Image' => ['image', 'string', 'byte'],
+			'ImageFileName' => ['imageFileName', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'cartId' => 'CartId',
-			'clientId' => 'ClientId',
-			'test' => 'Test',
-			'items' => 'Items',
-			'inStore' => 'InStore',
-			'promotionCode' => 'PromotionCode',
-			'payments' => 'Payments',
-			'sendEmail' => 'SendEmail',
-			'locationId' => 'LocationId',
-			'image' => 'Image',
-			'imageFileName' => 'ImageFileName',
+			'cartId' => ['CartId', 'string', null],
+			'clientId' => ['ClientId', 'string', null],
+			'test' => ['Test', 'boolean', null],
+			'items' => ['Items', 'array', CheckoutItemWrapper::class],
+			'inStore' => ['InStore', 'boolean', null],
+			'promotionCode' => ['PromotionCode', 'string', null],
+			'payments' => ['Payments', 'array', CheckoutPaymentInfo::class],
+			'sendEmail' => ['SendEmail', 'boolean', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
+			'image' => ['Image', 'string', 'byte'],
+			'imageFileName' => ['ImageFileName', 'string', null],
 			];
 	}
 }

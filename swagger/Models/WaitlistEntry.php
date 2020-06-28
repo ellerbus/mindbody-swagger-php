@@ -10,27 +10,27 @@ class WaitlistEntry extends BaseModel
 	/**
 	 * The date of the class or enrollment.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $classDate;
 	/**
 	 * The ID of the class or enrollment.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $classId;
 	/**
 	 * Contains information about the class schedule for this waiting list
 	 * entry.
 	 * 
-	 * @var ClassSchedule
+	 * @var ClassSchedule 
 	 */
 	public $classSchedule;
 	/**
 	 * Contains information about the requested client who is on the waiting
 	 * list.
 	 * 
-	 * @var Client
+	 * @var Client 
 	 */
 	public $client;
 	/**
@@ -38,25 +38,25 @@ class WaitlistEntry extends BaseModel
 	 * date on or after which the client can be added to the enrollment from
 	 * the waitlist.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $enrollmentDateForward;
 	/**
 	 * The ID of the waiting list entry.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The date and time that the request to be on the waiting list was made.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $requestDateTime;
 	/**
 	 * The ID of the visit that is associated with the waiting list entry.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $visitRefNo;
 	/**
@@ -64,37 +64,37 @@ class WaitlistEntry extends BaseModel
 	 * If `false`, the entry on the waiting list was requested off-line, for
 	 * example in person or by phone.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $web;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClassDate' => 'classDate',
-			'ClassId' => 'classId',
-			'ClassSchedule' => ['classSchedule', ClassSchedule::class],
-			'Client' => ['client', Client::class],
-			'EnrollmentDateForward' => 'enrollmentDateForward',
-			'Id' => 'id',
-			'RequestDateTime' => 'requestDateTime',
-			'VisitRefNo' => 'visitRefNo',
-			'Web' => 'web',
+			'ClassDate' => ['classDate', 'string', 'date-time'],
+			'ClassId' => ['classId', 'integer', 'int64'],
+			'ClassSchedule' => ['classSchedule', ClassSchedule::class, null],
+			'Client' => ['client', Client::class, null],
+			'EnrollmentDateForward' => ['enrollmentDateForward', 'string', 'date-time'],
+			'Id' => ['id', 'integer', 'int32'],
+			'RequestDateTime' => ['requestDateTime', 'string', 'date-time'],
+			'VisitRefNo' => ['visitRefNo', 'integer', 'int32'],
+			'Web' => ['web', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'classDate' => 'ClassDate',
-			'classId' => 'ClassId',
-			'classSchedule' => 'ClassSchedule',
-			'client' => 'Client',
-			'enrollmentDateForward' => 'EnrollmentDateForward',
-			'id' => 'Id',
-			'requestDateTime' => 'RequestDateTime',
-			'visitRefNo' => 'VisitRefNo',
-			'web' => 'Web',
+			'classDate' => ['ClassDate', 'string', 'date-time'],
+			'classId' => ['ClassId', 'integer', 'int64'],
+			'classSchedule' => ['ClassSchedule', ClassSchedule::class, null],
+			'client' => ['Client', Client::class, null],
+			'enrollmentDateForward' => ['EnrollmentDateForward', 'string', 'date-time'],
+			'id' => ['Id', 'integer', 'int32'],
+			'requestDateTime' => ['RequestDateTime', 'string', 'date-time'],
+			'visitRefNo' => ['VisitRefNo', 'integer', 'int32'],
+			'web' => ['Web', 'boolean', null],
 			];
 	}
 }

@@ -11,37 +11,37 @@ class Relationship extends BaseModel
 	/**
 	 * The ID of the relationship.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The name of the first relationship.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $relationshipName1;
 	/**
 	 * The name of the second relationship.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $relationshipName2;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'RelationshipName1' => 'relationshipName1',
-			'RelationshipName2' => 'relationshipName2',
+			'Id' => ['id', 'integer', 'int32'],
+			'RelationshipName1' => ['relationshipName1', 'string', null],
+			'RelationshipName2' => ['relationshipName2', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'relationshipName1' => 'RelationshipName1',
-			'relationshipName2' => 'RelationshipName2',
+			'id' => ['Id', 'integer', 'int32'],
+			'relationshipName1' => ['RelationshipName1', 'string', null],
+			'relationshipName2' => ['RelationshipName2', 'string', null],
 			];
 	}
 }

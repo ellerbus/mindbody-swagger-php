@@ -14,29 +14,29 @@ class CommissionDetail extends BaseModel
 	 * * StaffStandardPercentageCommission  * StaffStandardFlatCommission  *
 	 * StaffPromotionalPercentageCommission  * StaffPromotionalFlatCommission
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $commissionType;
 	/**
 	 * The portion of `Earnings` earned by this `CommissionType`.
 	 * 
-	 * @var number
+	 * @var number format:double
 	 */
 	public $commissionEarnings;
 
 	protected function getInputMap()
 	{
 		return [
-			'CommissionType' => 'commissionType',
-			'CommissionEarnings' => 'commissionEarnings',
+			'CommissionType' => ['commissionType', 'string', null],
+			'CommissionEarnings' => ['commissionEarnings', 'number', 'double'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'commissionType' => 'CommissionType',
-			'commissionEarnings' => 'CommissionEarnings',
+			'commissionType' => ['CommissionType', 'string', null],
+			'commissionEarnings' => ['CommissionEarnings', 'number', 'double'],
 			];
 	}
 }

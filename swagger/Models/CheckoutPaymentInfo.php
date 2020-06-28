@@ -21,7 +21,7 @@ class CheckoutPaymentInfo extends BaseModel
 	 * item is cash.  * Check - Indicates that this payment item is a check.
 	 * * GiftCard - Indicates that this payment item is a gift card.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $type;
 	/**
@@ -29,23 +29,23 @@ class CheckoutPaymentInfo extends BaseModel
 	 * tadata](https://developers.mindbodyonline.com/PublicDocumentation/V6#p
 	 * ayment-item-metadata) for more information.
 	 * 
-	 * @var object
+	 * @var object 
 	 */
 	public $metadata;
 
 	protected function getInputMap()
 	{
 		return [
-			'Type' => 'type',
-			'Metadata' => 'metadata',
+			'Type' => ['type', 'string', null],
+			'Metadata' => ['metadata', 'object', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'type' => 'Type',
-			'metadata' => 'Metadata',
+			'type' => ['Type', 'string', null],
+			'metadata' => ['Metadata', 'object', null],
 			];
 	}
 }

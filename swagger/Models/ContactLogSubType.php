@@ -10,21 +10,21 @@ class ContactLogSubType extends BaseModel
 	/**
 	 * The contact log subtype’s ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
+			'Id' => ['id', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
+			'id' => ['Id', 'integer', 'int32'],
 			];
 	}
 }

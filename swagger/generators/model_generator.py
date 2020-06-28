@@ -56,8 +56,11 @@ class ModelGenerator(object):
                 name = strutils.camel_case(key)
                 descr = 'no description available'
                 typename = 'unknown'
+                format = ''
                 if 'description' in properties[key]:
                     descr = properties[key]['description']
+                if 'format' in properties[key]:
+                    format = 'format:'+properties[key]['format']
                 if 'type' in properties[key]:
                     typename = properties[key]['type']
                 elif '$ref' in properties[key]:
@@ -74,7 +77,7 @@ class ModelGenerator(object):
                 for x in textwrap.wrap(descr):
                     file.write(f'\t * {x}\n')
                 file.write(f'\t * \n')
-                file.write(f'\t * @var {typename}\n')
+                file.write(f'\t * @var {typename} {format}\n')
                 file.write(f'\t */\n')
                 file.write(f'\tpublic ${name};\n')
 
@@ -139,16 +142,8 @@ class ModelGenerator(object):
         for key in properties:
             prop = properties[key]
             name = strutils.camel_case(key)
-            if '$ref' in prop:
-                parts = prop['$ref'].split('/')
-                object_name = parts[-1]+'::class'
-                file.write(f"\t\t\t\'{key}' => ['{name}', {object_name}],\n")
-            elif prop['type'] == 'array' and '$ref' in prop['items']:
-                parts = prop['items']['$ref'].split('/')
-                object_name = parts[-1]+'::class'
-                file.write(f"\t\t\t\'{key}' => ['{name}', {object_name}],\n")
-            else:
-                file.write(f"\t\t\t'{key}' => '{name}',\n")
+            tname, fname = self.get_types(key, prop)
+            file.write(f"\t\t\t'{key}' => ['{name}', {tname}, {fname}],\n")
         file.write(f'\t\t\t];\n')
         file.write(f'\t}}\n')
 
@@ -158,11 +153,39 @@ class ModelGenerator(object):
         file.write(f'\t\treturn [\n')
         properties = self.definition['properties']
         for key in properties:
+            prop = properties[key]
             name = strutils.camel_case(key)
-            file.write(f"\t\t\t'{name}' => '{key}',\n")
+            tname, fname = self.get_types(key, prop)
+            file.write(f"\t\t\t'{name}' => ['{key}', {tname}, {fname}],\n")
         file.write(f'\t\t\t];\n')
         file.write(f'\t}}\n')
 
+    def get_types(self, key, prop):
+        tname = 'null'
+        fname = 'null'
+
+        if '$ref' in prop:
+            parts = prop['$ref'].split('/')
+            tname = parts[-1]+'::class'
+        elif prop['type'] == 'array' and '$ref' in prop['items']:
+            parts = prop['items']['$ref'].split('/')
+            tname = 'array'
+            fname = parts[-1]+'::class'
+        else:
+            tname = prop['type']
+
+        if 'format' in prop:
+            fname = prop['format']
+
+        if tname != 'null':
+            if '::class' not in tname:
+                tname = f"'{tname}'"
+
+        if fname != 'null':
+            if '::class' not in fname:
+                fname = f"'{fname}'"
+
+        return (tname, fname)
     # def write_attributes(self, file):
     #     file.write(f'\n\n')
     #     properties = self.definition['properties']

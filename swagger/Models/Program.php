@@ -10,45 +10,45 @@ class Program extends BaseModel
 	/**
 	 * The service category’s ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The name of this service category.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 	/**
 	 * The service category’s schedule type.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $scheduleType;
 	/**
 	 * The offset to use for the service category.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $cancelOffset;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'Name' => 'name',
-			'ScheduleType' => 'scheduleType',
-			'CancelOffset' => 'cancelOffset',
+			'Id' => ['id', 'integer', 'int32'],
+			'Name' => ['name', 'string', null],
+			'ScheduleType' => ['scheduleType', 'string', null],
+			'CancelOffset' => ['cancelOffset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'name' => 'Name',
-			'scheduleType' => 'ScheduleType',
-			'cancelOffset' => 'CancelOffset',
+			'id' => ['Id', 'integer', 'int32'],
+			'name' => ['Name', 'string', null],
+			'scheduleType' => ['ScheduleType', 'string', null],
+			'cancelOffset' => ['CancelOffset', 'integer', 'int32'],
 			];
 	}
 }

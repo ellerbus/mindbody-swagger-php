@@ -10,37 +10,37 @@ class Level extends BaseModel
 	/**
 	 * The level's ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * The level's name.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 	/**
 	 * The level's description.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $description;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'Name' => 'name',
-			'Description' => 'description',
+			'Id' => ['id', 'integer', 'int32'],
+			'Name' => ['name', 'string', null],
+			'Description' => ['description', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'name' => 'Name',
-			'description' => 'Description',
+			'id' => ['Id', 'integer', 'int32'],
+			'name' => ['Name', 'string', null],
+			'description' => ['Description', 'string', null],
 			];
 	}
 }

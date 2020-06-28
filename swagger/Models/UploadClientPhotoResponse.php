@@ -10,29 +10,29 @@ class UploadClientPhotoResponse extends BaseModel
 	/**
 	 * The RSSID of the client for whom the photo was uploaded.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The URL of the uploaded photo.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $photoUrl;
 
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'PhotoUrl' => 'photoUrl',
+			'ClientId' => ['clientId', 'string', null],
+			'PhotoUrl' => ['photoUrl', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'photoUrl' => 'PhotoUrl',
+			'clientId' => ['ClientId', 'string', null],
+			'photoUrl' => ['PhotoUrl', 'string', null],
 			];
 	}
 }

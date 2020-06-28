@@ -11,21 +11,21 @@ class RemoveClientFromClassResponse extends BaseModel
 	 * Contains information about the class from which the client was
 	 * removed.
 	 * 
-	 * @var Class
+	 * @var Class 
 	 */
 	public $class;
 
 	protected function getInputMap()
 	{
 		return [
-			'Class' => ['class', Class::class],
+			'Class' => ['class', Class::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'class' => 'Class',
+			'class' => ['Class', Class::class, null],
 			];
 	}
 }

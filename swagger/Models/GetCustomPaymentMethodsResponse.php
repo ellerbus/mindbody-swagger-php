@@ -10,29 +10,29 @@ class GetCustomPaymentMethodsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the custom payment methods.
 	 * 
-	 * @var CustomPaymentMethod[]
+	 * @var CustomPaymentMethod[] 
 	 */
 	public $paymentMethods;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'PaymentMethods' => ['paymentMethods', CustomPaymentMethod::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'PaymentMethods' => ['paymentMethods', 'array', CustomPaymentMethod::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'paymentMethods' => 'PaymentMethods',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'paymentMethods' => ['PaymentMethods', 'array', CustomPaymentMethod::class],
 			];
 	}
 }

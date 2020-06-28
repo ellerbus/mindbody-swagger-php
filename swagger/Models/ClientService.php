@@ -11,14 +11,14 @@ class ClientService extends BaseModel
 	 * The date that this pricing option became active and could be used to
 	 * pay for services.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $activeDate;
 	/**
 	 * The number of service sessions this pricing option contained when
 	 * first purchased.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $count;
 	/**
@@ -27,7 +27,7 @@ class ClientService extends BaseModel
 	 * `false`, the client cannot use this pricing option to pay for other
 	 * services.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $current;
 	/**
@@ -35,95 +35,95 @@ class ClientService extends BaseModel
 	 * pay for services, even if unused service sessions remain on the
 	 * option; expressed as UTC.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $expirationDate;
 	/**
 	 * The unique ID assigned to this pricing option, specific to when it was
 	 * purchased by the client.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $id;
 	/**
 	 * The unique ID of this pricing option, not specific to any client's
 	 * purchase of it.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $productId;
 	/**
 	 * The name of this pricing option.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $name;
 	/**
 	 * The date on which the client paid for this pricing option.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $paymentDate;
 	/**
 	 * Contains information about the service category this service falls
 	 * under.
 	 * 
-	 * @var Program
+	 * @var Program 
 	 */
 	public $program;
 	/**
 	 * The number of service sessions remaining in the pricing option that
 	 * can still be used.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $remaining;
 	/**
 	 * The ID of the subscriber site associated with this pricing option.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $siteId;
 	/**
 	 * The action taken.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $action;
 
 	protected function getInputMap()
 	{
 		return [
-			'ActiveDate' => 'activeDate',
-			'Count' => 'count',
-			'Current' => 'current',
-			'ExpirationDate' => 'expirationDate',
-			'Id' => 'id',
-			'ProductId' => 'productId',
-			'Name' => 'name',
-			'PaymentDate' => 'paymentDate',
-			'Program' => ['program', Program::class],
-			'Remaining' => 'remaining',
-			'SiteId' => 'siteId',
-			'Action' => 'action',
+			'ActiveDate' => ['activeDate', 'string', 'date-time'],
+			'Count' => ['count', 'integer', 'int32'],
+			'Current' => ['current', 'boolean', null],
+			'ExpirationDate' => ['expirationDate', 'string', 'date-time'],
+			'Id' => ['id', 'integer', 'int64'],
+			'ProductId' => ['productId', 'integer', 'int32'],
+			'Name' => ['name', 'string', null],
+			'PaymentDate' => ['paymentDate', 'string', 'date-time'],
+			'Program' => ['program', Program::class, null],
+			'Remaining' => ['remaining', 'integer', 'int32'],
+			'SiteId' => ['siteId', 'integer', 'int32'],
+			'Action' => ['action', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'activeDate' => 'ActiveDate',
-			'count' => 'Count',
-			'current' => 'Current',
-			'expirationDate' => 'ExpirationDate',
-			'id' => 'Id',
-			'productId' => 'ProductId',
-			'name' => 'Name',
-			'paymentDate' => 'PaymentDate',
-			'program' => 'Program',
-			'remaining' => 'Remaining',
-			'siteId' => 'SiteId',
-			'action' => 'Action',
+			'activeDate' => ['ActiveDate', 'string', 'date-time'],
+			'count' => ['Count', 'integer', 'int32'],
+			'current' => ['Current', 'boolean', null],
+			'expirationDate' => ['ExpirationDate', 'string', 'date-time'],
+			'id' => ['Id', 'integer', 'int64'],
+			'productId' => ['ProductId', 'integer', 'int32'],
+			'name' => ['Name', 'string', null],
+			'paymentDate' => ['PaymentDate', 'string', 'date-time'],
+			'program' => ['Program', Program::class, null],
+			'remaining' => ['Remaining', 'integer', 'int32'],
+			'siteId' => ['SiteId', 'integer', 'int32'],
+			'action' => ['Action', 'string', null],
 			];
 	}
 }

@@ -10,13 +10,13 @@ class AddArrivalRequest extends BaseModel
 	/**
 	 * The ID of the requested client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * The ID of the location for the requested arrival.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $locationId;
 	/**
@@ -31,16 +31,16 @@ class AddArrivalRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'LocationId' => 'locationId',
+			'ClientId' => ['clientId', 'string', null],
+			'LocationId' => ['locationId', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'locationId' => 'LocationId',
+			'clientId' => ['ClientId', 'string', null],
+			'locationId' => ['LocationId', 'integer', 'int32'],
 			];
 	}
 }

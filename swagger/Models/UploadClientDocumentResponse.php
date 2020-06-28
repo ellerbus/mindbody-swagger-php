@@ -10,29 +10,29 @@ class UploadClientDocumentResponse extends BaseModel
 	/**
 	 * The size of the uploaded file.
 	 * 
-	 * @var integer
+	 * @var integer format:int64
 	 */
 	public $fileSize;
 	/**
 	 * The name of the uploaded file.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $fileName;
 
 	protected function getInputMap()
 	{
 		return [
-			'FileSize' => 'fileSize',
-			'FileName' => 'fileName',
+			'FileSize' => ['fileSize', 'integer', 'int64'],
+			'FileName' => ['fileName', 'string', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'fileSize' => 'FileSize',
-			'fileName' => 'FileName',
+			'fileSize' => ['FileSize', 'integer', 'int64'],
+			'fileName' => ['FileName', 'string', null],
 			];
 	}
 }

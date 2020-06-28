@@ -10,29 +10,29 @@ class GetCrossRegionalClientAssociationsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the client’s cross regional associations.
 	 * 
-	 * @var CrossRegionalClientAssociation[]
+	 * @var CrossRegionalClientAssociation[] 
 	 */
 	public $crossRegionalClientAssociations;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'CrossRegionalClientAssociations' => ['crossRegionalClientAssociations', CrossRegionalClientAssociation::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'CrossRegionalClientAssociations' => ['crossRegionalClientAssociations', 'array', CrossRegionalClientAssociation::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'crossRegionalClientAssociations' => 'CrossRegionalClientAssociations',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'crossRegionalClientAssociations' => ['CrossRegionalClientAssociations', 'array', CrossRegionalClientAssociation::class],
 			];
 	}
 }

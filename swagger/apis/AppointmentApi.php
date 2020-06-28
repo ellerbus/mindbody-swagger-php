@@ -31,7 +31,7 @@ class AppointmentApi extends BaseApi
 	 * ID, session type ID, and the `StartDateTime` of the appointment. You
 	 * can get most of this information using `GET BookableItems`.
 	 */
-	public function AddApppointment($request)
+	public function addApppointment($request)
 	{
 		$url = $this->getFullPath('addappointment');
 
@@ -44,7 +44,7 @@ class AppointmentApi extends BaseApi
 	 * update the appointment’s `StartDateTime`, `EndDateTime`, `StaffId`,
 	 * `Notes`, and `SessionTypeId`.
 	 */
-	public function UpdateApppointment($request)
+	public function updateApppointment($request)
 	{
 		$url = $this->getFullPath('updateappointment');
 
@@ -56,7 +56,7 @@ class AppointmentApi extends BaseApi
 	 * appointments. Availabilities include information such as the location
 	 * and its amenities, staff members, programs, and session types.
 	 */
-	public function GetBookableItems($request)
+	public function getBookableItems($request)
 	{
 		$url = $this->getFullPath('bookableitems');
 
@@ -69,7 +69,7 @@ class AppointmentApi extends BaseApi
 	 * increments that can be booked during the active business hours for
 	 * services.
 	 */
-	public function GetActiveSessionTimes($request)
+	public function getActiveSessionTimes($request)
 	{
 		$url = $this->getFullPath('activesessiontimes');
 
@@ -82,7 +82,7 @@ class AppointmentApi extends BaseApi
 	 * at which appointments cannot be booked, for example, on holidays or
 	 * after hours when the business is closed.
 	 */
-	public function GetScheduleItems($request)
+	public function getScheduleItems($request)
 	{
 		$url = $this->getFullPath('scheduleitems');
 
@@ -92,7 +92,7 @@ class AppointmentApi extends BaseApi
 	/**
 	 * This endpoint has no query parameters.
 	 */
-	public function GetAppointmentOptions()
+	public function getAppointmentOptions()
 	{
 		$url = $this->getFullPath('appointmentoptions');
 
@@ -102,7 +102,7 @@ class AppointmentApi extends BaseApi
 	/**
 	 * Returns a list of appointments by staff member.
 	 */
-	public function GetStaffAppointments($request)
+	public function getStaffAppointments($request)
 	{
 		$url = $this->getFullPath('staffappointments');
 

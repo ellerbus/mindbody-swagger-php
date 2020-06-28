@@ -10,29 +10,29 @@ class GetClientsResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * The requested clients.
 	 * 
-	 * @var Client[]
+	 * @var Client[] 
 	 */
 	public $clients;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'Clients' => ['clients', Client::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'Clients' => ['clients', 'array', Client::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'clients' => 'Clients',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'clients' => ['Clients', 'array', Client::class],
 			];
 	}
 }

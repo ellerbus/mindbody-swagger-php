@@ -10,29 +10,29 @@ class AddContactLogType extends BaseModel
 	/**
 	 * The contact log type’s ID.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $id;
 	/**
 	 * A list of the subtype IDs used to tag this contact log type.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $subTypes;
 
 	protected function getInputMap()
 	{
 		return [
-			'Id' => 'id',
-			'SubTypes' => 'subTypes',
+			'Id' => ['id', 'integer', 'int32'],
+			'SubTypes' => ['subTypes', 'array', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'id' => 'Id',
-			'subTypes' => 'SubTypes',
+			'id' => ['Id', 'integer', 'int32'],
+			'subTypes' => ['SubTypes', 'array', null],
 			];
 	}
 }

@@ -10,7 +10,7 @@ class GetActiveSessionTimesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
@@ -22,23 +22,23 @@ class GetActiveSessionTimesResponse extends BaseModel
 	 * schedule type, but when you supply `SessionTypeIds`, they may map to
 	 * one or more of the schedule types.
 	 * 
-	 * @var string[]
+	 * @var string[] 
 	 */
 	public $activeSessionTimes;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'ActiveSessionTimes' => 'activeSessionTimes',
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'ActiveSessionTimes' => ['activeSessionTimes', 'array', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'activeSessionTimes' => 'ActiveSessionTimes',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'activeSessionTimes' => ['ActiveSessionTimes', 'array', null],
 			];
 	}
 }

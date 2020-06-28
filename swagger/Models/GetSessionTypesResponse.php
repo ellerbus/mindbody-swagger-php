@@ -10,29 +10,29 @@ class GetSessionTypesResponse extends BaseModel
 	/**
 	 * Contains information about the pagination properties used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about sessions.
 	 * 
-	 * @var SessionType[]
+	 * @var SessionType[] 
 	 */
 	public $sessionTypes;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'SessionTypes' => ['sessionTypes', SessionType::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'SessionTypes' => ['sessionTypes', 'array', SessionType::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'sessionTypes' => 'SessionTypes',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'sessionTypes' => ['SessionTypes', 'array', SessionType::class],
 			];
 	}
 }

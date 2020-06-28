@@ -20,7 +20,7 @@ class StaffApi extends BaseApi
 	/**
 	 * Get staff members at a site.
 	 */
-	public function GetStaff($request)
+	public function getStaff($request)
 	{
 		$url = $this->getFullPath('staff');
 
@@ -30,7 +30,7 @@ class StaffApi extends BaseApi
 	/**
 	 * Get configured staff permissions for a staff member.
 	 */
-	public function GetStaffPermissions($request)
+	public function getStaffPermissions($request)
 	{
 		$url = $this->getFullPath('staffpermissions');
 

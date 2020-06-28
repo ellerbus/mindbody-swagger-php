@@ -10,7 +10,7 @@ class GetClientContractsRequest extends BaseModel
 	/**
 	 * The ID of the client.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
@@ -18,7 +18,7 @@ class GetClientContractsRequest extends BaseModel
 	 * contracts are returned, if any.<br />  When `false`, indicates that
 	 * cross regional contracts are not returned.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalLookup;
 	/**
@@ -29,19 +29,19 @@ class GetClientContractsRequest extends BaseModel
 	 * is set to `true`. To change which sites are queried, change this
 	 * offset value.  Default: **0**
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $clientAssociatedSitesOffset;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 	/**
@@ -55,22 +55,22 @@ class GetClientContractsRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'CrossRegionalLookup' => 'crossRegionalLookup',
-			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'CrossRegionalLookup' => ['crossRegionalLookup', 'boolean', null],
+			'ClientAssociatedSitesOffset' => ['clientAssociatedSitesOffset', 'integer', 'int32'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'crossRegionalLookup' => 'CrossRegionalLookup',
-			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'crossRegionalLookup' => ['CrossRegionalLookup', 'boolean', null],
+			'clientAssociatedSitesOffset' => ['ClientAssociatedSitesOffset', 'integer', 'int32'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

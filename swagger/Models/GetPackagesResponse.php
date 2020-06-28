@@ -10,29 +10,29 @@ class GetPackagesResponse extends BaseModel
 	/**
 	 * Contains information about the resulting packages.
 	 * 
-	 * @var Package[]
+	 * @var Package[] 
 	 */
 	public $packages;
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 
 	protected function getInputMap()
 	{
 		return [
-			'Packages' => ['packages', Package::class],
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Packages' => ['packages', 'array', Package::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'packages' => 'Packages',
-			'paginationResponse' => 'PaginationResponse',
+			'packages' => ['Packages', 'array', Package::class],
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
 			];
 	}
 }

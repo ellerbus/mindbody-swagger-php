@@ -12,21 +12,21 @@ class GetClientReferralTypesRequest extends BaseModel
 	 * referral types.<br />  When `false`, includes no subtypes and only
 	 * active types.
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $includeInactive;
 
 	protected function getInputMap()
 	{
 		return [
-			'IncludeInactive' => 'includeInactive',
+			'IncludeInactive' => ['includeInactive', 'boolean', null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'includeInactive' => 'IncludeInactive',
+			'includeInactive' => ['IncludeInactive', 'boolean', null],
 			];
 	}
 }

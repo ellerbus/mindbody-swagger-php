@@ -10,21 +10,21 @@ class AddClientToClassResponse extends BaseModel
 	/**
 	 * Contains information about the created visit.
 	 * 
-	 * @var AddClientToClassVisit
+	 * @var AddClientToClassVisit 
 	 */
 	public $visit;
 
 	protected function getInputMap()
 	{
 		return [
-			'Visit' => ['visit', AddClientToClassVisit::class],
+			'Visit' => ['visit', AddClientToClassVisit::class, null],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'visit' => 'Visit',
+			'visit' => ['Visit', AddClientToClassVisit::class, null],
 			];
 	}
 }

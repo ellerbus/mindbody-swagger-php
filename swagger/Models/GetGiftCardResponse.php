@@ -10,29 +10,29 @@ class GetGiftCardResponse extends BaseModel
 	/**
 	 * Contains information about the pagination used.
 	 * 
-	 * @var PaginationResponse
+	 * @var PaginationResponse 
 	 */
 	public $paginationResponse;
 	/**
 	 * Contains information about the gift cards.
 	 * 
-	 * @var GiftCard[]
+	 * @var GiftCard[] 
 	 */
 	public $giftCards;
 
 	protected function getInputMap()
 	{
 		return [
-			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
-			'GiftCards' => ['giftCards', GiftCard::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class, null],
+			'GiftCards' => ['giftCards', 'array', GiftCard::class],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'paginationResponse' => 'PaginationResponse',
-			'giftCards' => 'GiftCards',
+			'paginationResponse' => ['PaginationResponse', PaginationResponse::class, null],
+			'giftCards' => ['GiftCards', 'array', GiftCard::class],
 			];
 	}
 }

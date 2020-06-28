@@ -12,21 +12,21 @@ class GetClientServicesRequest extends BaseModel
 	 * options that the client has purchased. Note that service and pricing
 	 * option are synonymous in this section of the documentation.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $clientId;
 	/**
 	 * Filters results to only those pricing options that can be used to pay
 	 * for this class.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $classId;
 	/**
 	 * Filters results to pricing options that belong to one of the given
 	 * program IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $programIds;
 	/**
@@ -34,40 +34,40 @@ class GetClientServicesRequest extends BaseModel
 	 * type ID. Use this to find pricing options that will pay for a specific
 	 * appointment type.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $sessionTypeId;
 	/**
 	 * Filters results to pricing options that can be used at the listed
 	 * location IDs.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $locationIds;
 	/**
 	 * A filter on the minimum number of visits a service can pay for.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $visitCount;
 	/**
 	 * Filters results to pricing options that are valid on or after this
 	 * date.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startDate;
 	/**
 	 * Filters results to pricing options that are valid on or before this
 	 * date.
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $endDate;
 	/**
 	 * When `true`, includes active services only.  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $showActiveOnly;
 	/**
@@ -83,7 +83,7 @@ class GetClientServicesRequest extends BaseModel
 	 * populated in the `ClientServices` response when `CrossRegionalLookup`
 	 * is set to `true`.  Default: **false**
 	 * 
-	 * @var boolean
+	 * @var boolean 
 	 */
 	public $crossRegionalLookup;
 	/**
@@ -106,19 +106,19 @@ class GetClientServicesRequest extends BaseModel
 	 * `ClientAssociatedSitesOffset` to 20 to return the client pricing
 	 * options from sites 21-25
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $clientAssociatedSitesOffset;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 	/**
@@ -132,38 +132,38 @@ class GetClientServicesRequest extends BaseModel
 	protected function getInputMap()
 	{
 		return [
-			'ClientId' => 'clientId',
-			'ClassId' => 'classId',
-			'ProgramIds' => 'programIds',
-			'SessionTypeId' => 'sessionTypeId',
-			'LocationIds' => 'locationIds',
-			'VisitCount' => 'visitCount',
-			'StartDate' => 'startDate',
-			'EndDate' => 'endDate',
-			'ShowActiveOnly' => 'showActiveOnly',
-			'CrossRegionalLookup' => 'crossRegionalLookup',
-			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ClientId' => ['clientId', 'string', null],
+			'ClassId' => ['classId', 'integer', 'int32'],
+			'ProgramIds' => ['programIds', 'array', null],
+			'SessionTypeId' => ['sessionTypeId', 'integer', 'int32'],
+			'LocationIds' => ['locationIds', 'array', null],
+			'VisitCount' => ['visitCount', 'integer', 'int32'],
+			'StartDate' => ['startDate', 'string', 'date-time'],
+			'EndDate' => ['endDate', 'string', 'date-time'],
+			'ShowActiveOnly' => ['showActiveOnly', 'boolean', null],
+			'CrossRegionalLookup' => ['crossRegionalLookup', 'boolean', null],
+			'ClientAssociatedSitesOffset' => ['clientAssociatedSitesOffset', 'integer', 'int32'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'clientId' => 'ClientId',
-			'classId' => 'ClassId',
-			'programIds' => 'ProgramIds',
-			'sessionTypeId' => 'SessionTypeId',
-			'locationIds' => 'LocationIds',
-			'visitCount' => 'VisitCount',
-			'startDate' => 'StartDate',
-			'endDate' => 'EndDate',
-			'showActiveOnly' => 'ShowActiveOnly',
-			'crossRegionalLookup' => 'CrossRegionalLookup',
-			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'clientId' => ['ClientId', 'string', null],
+			'classId' => ['ClassId', 'integer', 'int32'],
+			'programIds' => ['ProgramIds', 'array', null],
+			'sessionTypeId' => ['SessionTypeId', 'integer', 'int32'],
+			'locationIds' => ['LocationIds', 'array', null],
+			'visitCount' => ['VisitCount', 'integer', 'int32'],
+			'startDate' => ['StartDate', 'string', 'date-time'],
+			'endDate' => ['EndDate', 'string', 'date-time'],
+			'showActiveOnly' => ['ShowActiveOnly', 'boolean', null],
+			'crossRegionalLookup' => ['CrossRegionalLookup', 'boolean', null],
+			'clientAssociatedSitesOffset' => ['ClientAssociatedSitesOffset', 'integer', 'int32'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }

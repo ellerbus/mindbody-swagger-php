@@ -11,14 +11,14 @@ class GetActiveSessionTimesRequest extends BaseModel
 	 * Filters on the provided the schedule type. Either `SessionTypeIds` or
 	 * `ScheduleType` must be provided.
 	 * 
-	 * @var string
+	 * @var string 
 	 */
 	public $scheduleType;
 	/**
 	 * Filters on the provided session type IDs. Either `SessionTypeIds` or
 	 * `ScheduleType` must be provided.
 	 * 
-	 * @var integer[]
+	 * @var integer[] 
 	 */
 	public $sessionTypeIds;
 	/**
@@ -26,7 +26,7 @@ class GetActiveSessionTimesRequest extends BaseModel
 	 * current date. Any date provided is ignored.  <br />Default:
 	 * **00:00:00**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $startTime;
 	/**
@@ -34,43 +34,43 @@ class GetActiveSessionTimesRequest extends BaseModel
 	 * current date. Any date provided is ignored..  <br />Default:
 	 * **23:59:59**
 	 * 
-	 * @var string
+	 * @var string format:date-time
 	 */
 	public $endTime;
 	/**
 	 * Number of results to include, defaults to 100
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $limit;
 	/**
 	 * Page offset, defaults to 0.
 	 * 
-	 * @var integer
+	 * @var integer format:int32
 	 */
 	public $offset;
 
 	protected function getInputMap()
 	{
 		return [
-			'ScheduleType' => 'scheduleType',
-			'SessionTypeIds' => 'sessionTypeIds',
-			'StartTime' => 'startTime',
-			'EndTime' => 'endTime',
-			'Limit' => 'limit',
-			'Offset' => 'offset',
+			'ScheduleType' => ['scheduleType', 'string', null],
+			'SessionTypeIds' => ['sessionTypeIds', 'array', null],
+			'StartTime' => ['startTime', 'string', 'date-time'],
+			'EndTime' => ['endTime', 'string', 'date-time'],
+			'Limit' => ['limit', 'integer', 'int32'],
+			'Offset' => ['offset', 'integer', 'int32'],
 			];
 	}
 
 	protected function getOutputMap()
 	{
 		return [
-			'scheduleType' => 'ScheduleType',
-			'sessionTypeIds' => 'SessionTypeIds',
-			'startTime' => 'StartTime',
-			'endTime' => 'EndTime',
-			'limit' => 'Limit',
-			'offset' => 'Offset',
+			'scheduleType' => ['ScheduleType', 'string', null],
+			'sessionTypeIds' => ['SessionTypeIds', 'array', null],
+			'startTime' => ['StartTime', 'string', 'date-time'],
+			'endTime' => ['EndTime', 'string', 'date-time'],
+			'limit' => ['Limit', 'integer', 'int32'],
+			'offset' => ['Offset', 'integer', 'int32'],
 			];
 	}
 }
