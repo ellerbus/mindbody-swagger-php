@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetSalesRequest;
 use App\MindBody\Models\GetSalesResponse;
@@ -26,7 +26,7 @@ use App\MindBody\Models\GetGiftCardBalanceResponse;
 
 class SaleApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -34,7 +34,7 @@ class SaleApi extends BaseApi
 		parent::__construct('sale', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * Get sales completed at a site.
 	 */
 	public function GetSales($request)
@@ -46,7 +46,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetSalesResponse::class);
 	}
 
-	/*
+	/**
 	 * Allows a client to sign up for a contract or autopay using the
 	 * information returned from the `GET Contracts` endpoint. The client can
 	 * pay with a new credit card or with a stored credit card. The client
@@ -66,7 +66,7 @@ class SaleApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, PurchaseContractResponse::class);
 	}
 
-	/*
+	/**
 	 * This endpoint provides a wide range of functionality. For example, you
 	 * can use it when a client purchases new pricing options, retail
 	 * products, packages, and tips. You can also combine purchasing a new
@@ -93,7 +93,7 @@ class SaleApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, null);
 	}
 
-	/*
+	/**
 	 * Get gift cards available for purchase at a site.
 	 */
 	public function GetGiftCards($request)
@@ -105,7 +105,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetGiftCardResponse::class);
 	}
 
-	/*
+	/**
 	 * Get pricing options available for purchase at a site
 	 */
 	public function GetServices($request)
@@ -117,7 +117,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetServicesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get retail products available for purchase at a site.
 	 */
 	public function GetProducts($request)
@@ -129,7 +129,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetProductsResponse::class);
 	}
 
-	/*
+	/**
 	 * Gets a list of card types that the site accepts. You can also use `GET
 	 * Sites` to return the Site object, which contains individual accepted
 	 * card types for requested sites.    This endpoint has no query
@@ -145,7 +145,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, null, null);
 	}
 
-	/*
+	/**
 	 * Get contracts available for purchase at a site.
 	 */
 	public function GetContracts($request)
@@ -157,7 +157,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetContractsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get payment methods that can be used to pay for sales at a site.
 	 */
 	public function GetCustomPaymentMethods($request)
@@ -169,7 +169,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetCustomPaymentMethodsResponse::class);
 	}
 
-	/*
+	/**
 	 * Allows a client to purchase a gift card from a business in a variety
 	 * of designs. The card can be emailed to the recipient on a specific
 	 * day, and a card title and a personal message can be added.
@@ -183,7 +183,7 @@ class SaleApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, PurchaseGiftCardResponse::class);
 	}
 
-	/*
+	/**
 	 * A package is typically used to combine multiple services and/or
 	 * products into a single offering. Staff members can check out multiple
 	 * appointments while selling the package, and can discount the items
@@ -199,7 +199,7 @@ class SaleApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetPackagesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a gift card's remaining balance.
 	 */
 	public function GetGiftCardBalance($request)

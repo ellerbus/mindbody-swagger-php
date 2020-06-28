@@ -2,12 +2,12 @@
 
 namespace App\MindBody\Models;
 
-/*
+/**
  * no description available
  */
 class CheckoutPaymentInfo extends BaseModel
 {
-	/*
+	/**
 	 * The type of payment. Possible values are:  * CreditCard - Indicates
 	 * that this payment item is a credit card.  * StoredCard - Indicates
 	 * that this payment item is a credit card stored on the client’s
@@ -24,7 +24,7 @@ class CheckoutPaymentInfo extends BaseModel
 	 * @var string
 	 */
 	public $type;
-	/*
+	/**
 	 * Contains information about the cart’s payments. See [Payment Item Me
 	 * tadata](https://developers.mindbodyonline.com/PublicDocumentation/V6#p
 	 * ayment-item-metadata) for more information.

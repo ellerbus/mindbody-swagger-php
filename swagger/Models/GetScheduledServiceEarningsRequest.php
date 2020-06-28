@@ -2,25 +2,25 @@
 
 namespace App\MindBody\Models;
 
-/*
+/**
  * no description available
  */
 class GetScheduledServiceEarningsRequest extends BaseModel
 {
-	/*
+	/**
 	 * Defines a payroll filter for the type of service offered, either
 	 * "Class", "Appointment", or "Enrollment".
 	 * 
 	 * @var string
 	 */
 	public $scheduledServiceType;
-	/*
+	/**
 	 * The ID for the instance of the service offered
 	 * 
 	 * @var integer
 	 */
 	public $scheduledServiceId;
-	/*
+	/**
 	 * A list of staff IDs that you want to retrieve payroll information for.
 	 * If you do not supply a `StaffId`, all active staff members return,
 	 * ordered by staff ID.
@@ -28,7 +28,7 @@ class GetScheduledServiceEarningsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $staffId;
-	/*
+	/**
 	 * The beginning of the date range for the payroll information to be
 	 * returned. The maximum allowed date range is 14 days.  * If you do not
 	 * supply a `StartDateTime`, data returns for the seven days prior to the
@@ -39,7 +39,7 @@ class GetScheduledServiceEarningsRequest extends BaseModel
 	 * @var string
 	 */
 	public $startDateTime;
-	/*
+	/**
 	 * The end of the date range for the payroll information to be returned.
 	 * The maximum allowed date range is 14 days.<br />  Default: **Today’s
 	 * date**  * If you do not supply an `EndDateTime`, the data returns for
@@ -50,13 +50,13 @@ class GetScheduledServiceEarningsRequest extends BaseModel
 	 * @var string
 	 */
 	public $endDateTime;
-	/*
+	/**
 	 * Number of results to include, defaults to 100
 	 * 
 	 * @var integer
 	 */
 	public $limit;
-	/*
+	/**
 	 * Page offset, defaults to 0.
 	 * 
 	 * @var integer

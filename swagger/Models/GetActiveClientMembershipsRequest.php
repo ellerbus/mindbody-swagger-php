@@ -2,24 +2,24 @@
 
 namespace App\MindBody\Models;
 
-/*
+/**
  * no description available
  */
 class GetActiveClientMembershipsRequest extends BaseModel
 {
-	/*
+	/**
 	 * The ID of the client whose membership was requested.
 	 * 
 	 * @var string
 	 */
 	public $clientId;
-	/*
+	/**
 	 * The ID of the location where the requested membership was created.
 	 * 
 	 * @var integer
 	 */
 	public $locationId;
-	/*
+	/**
 	 * Used to retrieve a client’s memberships from multiple sites within
 	 * an organization. When included and set to `true`, it searches a
 	 * maximum of ten sites with which this client is associated. When a
@@ -35,7 +35,7 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $crossRegionalLookup;
-	/*
+	/**
 	 * Used to retrieve a client’s memberships from multiple sites within
 	 * an organization when the client is associated with more than ten
 	 * sites. To change which ten sites are searched, change this offset
@@ -58,19 +58,19 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $clientAssociatedSitesOffset;
-	/*
+	/**
 	 * Number of results to include, defaults to 100
 	 * 
 	 * @var integer
 	 */
 	public $limit;
-	/*
+	/**
 	 * Page offset, defaults to 0.
 	 * 
 	 * @var integer
 	 */
 	public $offset;
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($clientId)

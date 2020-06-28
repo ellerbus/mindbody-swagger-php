@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\AddAppointmentRequest;
 use App\MindBody\Models\AddAppointmentResponse;
@@ -18,7 +18,7 @@ use App\MindBody\Models\GetStaffAppointmentsResponse;
 
 class AppointmentApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -26,7 +26,7 @@ class AppointmentApi extends BaseApi
 		parent::__construct('appointment', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * To book an appointment, you must use a location ID, staff ID, client
 	 * ID, session type ID, and the `StartDateTime` of the appointment. You
 	 * can get most of this information using `GET BookableItems`.
@@ -40,7 +40,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, AddAppointmentResponse::class);
 	}
 
-	/*
+	/**
 	 * To update the information for a specific appointment, you must have a
 	 * staff user token with the proper permissions. Note that you can only
 	 * update the appointment’s `StartDateTime`, `EndDateTime`, `StaffId`,
@@ -55,7 +55,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UpdateAppointmentResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of availabilities with the information needed to book
 	 * appointments. Availabilities include information such as the location
 	 * and its amenities, staff members, programs, and session types.
@@ -69,7 +69,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetBookableItemsResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of the times that can be booked for a given program
 	 * schedule type. `ActiveSessionTimes` represent the scheduling
 	 * increments that can be booked during the active business hours for
@@ -84,7 +84,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetActiveSessionTimesResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of schedule items, including appointments,
 	 * availabilities, and unavailabilities. Unavailabilities are the times
 	 * at which appointments cannot be booked, for example, on holidays or
@@ -99,7 +99,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetScheduleItemsResponse::class);
 	}
 
-	/*
+	/**
 	 * This endpoint has no query parameters.
 	 */
 	public function GetAppointmentOptions()
@@ -111,7 +111,7 @@ class AppointmentApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, null, GetAppointmentOptionsResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of appointments by staff member.
 	 */
 	public function GetStaffAppointments($request)

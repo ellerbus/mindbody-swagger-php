@@ -38,7 +38,7 @@ class ModelGenerator(object):
 
     def write_class_description(self, file):
         descr = self.get_description()
-        file.write(f'/*\n')
+        file.write(f'/**\n')
         for x in textwrap.wrap(descr):
             file.write(f' * {x}\n')
         file.write(f' */\n')
@@ -70,7 +70,7 @@ class ModelGenerator(object):
                     elif 'type' in properties[key]['items']:
                         ref = properties[key]['items']['type']
                         typename = ref.split('/')[-1] + '[]'
-                file.write(f'\t/*\n')
+                file.write(f'\t/**\n')
                 for x in textwrap.wrap(descr):
                     file.write(f'\t * {x}\n')
                 file.write(f'\t * \n')
@@ -106,7 +106,7 @@ class ModelGenerator(object):
             names = list(map(lambda x: strutils.camel_case(x), required))
             parms = list(map(lambda x: '$' + strutils.camel_case(x), names))
             parameters = ', '.join(parms)
-            file.write(f'\t/*\n')
+            file.write(f'\t/**\n')
             file.write(f'\t * Constructor\n')
             file.write(f'\t */\n')
             file.write(f'\tpublic function __construct({parameters})\n')

@@ -2,12 +2,12 @@
 
 namespace App\MindBody\Models;
 
-/*
+/**
  * no description available
  */
 class GetClientServicesRequest extends BaseModel
 {
-	/*
+	/**
 	 * The ID of the client to query. The results are a list of pricing
 	 * options that the client has purchased. Note that service and pricing
 	 * option are synonymous in this section of the documentation.
@@ -15,21 +15,21 @@ class GetClientServicesRequest extends BaseModel
 	 * @var string
 	 */
 	public $clientId;
-	/*
+	/**
 	 * Filters results to only those pricing options that can be used to pay
 	 * for this class.
 	 * 
 	 * @var integer
 	 */
 	public $classId;
-	/*
+	/**
 	 * Filters results to pricing options that belong to one of the given
 	 * program IDs.
 	 * 
 	 * @var integer[]
 	 */
 	public $programIds;
-	/*
+	/**
 	 * Filters results to pricing options that will pay for the given session
 	 * type ID. Use this to find pricing options that will pay for a specific
 	 * appointment type.
@@ -37,40 +37,40 @@ class GetClientServicesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $sessionTypeId;
-	/*
+	/**
 	 * Filters results to pricing options that can be used at the listed
 	 * location IDs.
 	 * 
 	 * @var integer[]
 	 */
 	public $locationIds;
-	/*
+	/**
 	 * A filter on the minimum number of visits a service can pay for.
 	 * 
 	 * @var integer
 	 */
 	public $visitCount;
-	/*
+	/**
 	 * Filters results to pricing options that are valid on or after this
 	 * date.
 	 * 
 	 * @var string
 	 */
 	public $startDate;
-	/*
+	/**
 	 * Filters results to pricing options that are valid on or before this
 	 * date.
 	 * 
 	 * @var string
 	 */
 	public $endDate;
-	/*
+	/**
 	 * When `true`, includes active services only.  Default: **false**
 	 * 
 	 * @var boolean
 	 */
 	public $showActiveOnly;
-	/*
+	/**
 	 * Used to retrieve a client’s pricing options from multiple sites
 	 * within an organization. When included and set to `true`, it searches a
 	 * maximum of ten sites with which this client is associated. When a
@@ -86,7 +86,7 @@ class GetClientServicesRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $crossRegionalLookup;
-	/*
+	/**
 	 * Used to retrieve a client’s pricing options from multiple sites
 	 * within an organization when the client is associated with more than
 	 * ten sites. To change which ten sites are searched, change this offset
@@ -109,19 +109,19 @@ class GetClientServicesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $clientAssociatedSitesOffset;
-	/*
+	/**
 	 * Number of results to include, defaults to 100
 	 * 
 	 * @var integer
 	 */
 	public $limit;
-	/*
+	/**
 	 * Page offset, defaults to 0.
 	 * 
 	 * @var integer
 	 */
 	public $offset;
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($clientId)

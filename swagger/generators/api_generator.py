@@ -43,7 +43,7 @@ class MethodGenerator(object):
 
     def write_method(self, file):
         descr = self.get_description()
-        file.write(f'\t/*\n')
+        file.write(f'\t/**\n')
         for x in textwrap.wrap(descr):
             file.write(f'\t * {x}\n')
         file.write(f'\t */\n')
@@ -130,7 +130,7 @@ class ApiGenerator(object):
 
     def write_header(self, file):
         file.write(f'<?php\n\n')
-        file.write(f'namespace App\\MindBody\\Clients;\n\n')
+        file.write(f'namespace App\\MindBody\\Apis;\n\n')
         for m in self.methods:
             m.write_references(file)
         file.write('\n')
@@ -145,7 +145,7 @@ class ApiGenerator(object):
 
     def write_constructor(self, file):
         api_segment = self.segments[-2]
-        file.write(f'\t/*\n')
+        file.write(f'\t/**\n')
         file.write(f'\t * Constructor\n')
         file.write(f'\t */\n')
         file.write(f'\tpublic function __construct($siteId, $authorization)\n')

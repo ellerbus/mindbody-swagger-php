@@ -2,12 +2,12 @@
 
 namespace App\MindBody\Models;
 
-/*
+/**
  * no description available
  */
 class UpdateClientRequest extends BaseModel
 {
-	/*
+	/**
 	 * Contains information about the client to be updated. The client ID is
 	 * used to look up the existing client to update and any specified values
 	 * are updated.
@@ -15,7 +15,7 @@ class UpdateClientRequest extends BaseModel
 	 * @var Client
 	 */
 	public $client;
-	/*
+	/**
 	 * When `true`, indicates that test mode is enabled. The method is
 	 * validated, but no client data is added or updated.<br />  Default:
 	 * **false**
@@ -23,7 +23,7 @@ class UpdateClientRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $test;
-	/*
+	/**
 	 * When `true`, the updated information is propagated to all of the
 	 * region’s sites where the client has a profile.<br />  When `false`,
 	 * only the local client is updated.<br />  Default: **true**
@@ -31,7 +31,7 @@ class UpdateClientRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $crossRegionalUpdate;
-	/*
+	/**
 	 * The new RSSID to be used for the client. Use `NewId` to assign a
 	 * specific number to be a client’s ID. If that number is not
 	 * available, the call returns an error. This RSSID must be unique within
@@ -42,7 +42,7 @@ class UpdateClientRequest extends BaseModel
 	 * @var string
 	 */
 	public $newId;
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($client)

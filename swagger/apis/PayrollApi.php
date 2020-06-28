@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetScheduledServiceEarningsRequest;
 use App\MindBody\Models\GetScheduledServiceEarningsResponse;
@@ -13,7 +13,7 @@ use App\MindBody\Models\GetTipsResponse;
 
 class PayrollApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -21,7 +21,7 @@ class PayrollApi extends BaseApi
 		parent::__construct('payroll', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * A staff authorization token is not required for this endpoint, but if
 	 * one is passed, its permissions are honored. Depending on the access
 	 * permissions configured for the staff member whose token is passed, the
@@ -45,7 +45,7 @@ class PayrollApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetScheduledServiceEarningsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get time card payroll for staff members.
 	 */
 	public function GetTimeCards($request)
@@ -57,7 +57,7 @@ class PayrollApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetTimeCardsResponse::class);
 	}
 
-	/*
+	/**
 	 * A staff authorization token is not required for this endpoint, but if
 	 * one is passed, its permissions are honored. Depending on the access
 	 * permissions configured for the staff member whose token is passed, the
@@ -73,7 +73,7 @@ class PayrollApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetCommissionsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get tips for staff members.
 	 */
 	public function GetTips($request)

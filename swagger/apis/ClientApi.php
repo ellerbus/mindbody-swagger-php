@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetClientsRequest;
 use App\MindBody\Models\GetClientsResponse;
@@ -56,7 +56,7 @@ use App\MindBody\Models\AddClientDirectDebitInfoResponse;
 
 class ClientApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -64,7 +64,7 @@ class ClientApi extends BaseApi
 		parent::__construct('client', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * Get clients.
 	 */
 	public function GetClients($request)
@@ -76,7 +76,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a client's formula notes.
 	 */
 	public function GetClientFormulaNotes($request)
@@ -88,7 +88,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientFormulaNotesResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a string representation of the image byte array. The maximum
 	 * document size is 1MB.    The maximum size file that can be uploaded is
 	 * 4 MB.
@@ -102,7 +102,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UploadClientDocumentResponse::class);
 	}
 
-	/*
+	/**
 	 * The maximum file size is 4 MB and acceptable file types are:  * bmp  *
 	 * jpeg  * gif  * tiff  * png
 	 */
@@ -115,7 +115,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UploadClientPhotoResponse::class);
 	}
 
-	/*
+	/**
 	 * Get contracts that a client has purchased.
 	 */
 	public function GetClientContracts($request)
@@ -127,7 +127,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientContractsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get pricing options that a client has purchased.
 	 */
 	public function GetClientServices($request)
@@ -139,7 +139,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientServicesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a client's visit history.
 	 */
 	public function GetClientVisits($request)
@@ -151,7 +151,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientVisitsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a client's active memberships.
 	 */
 	public function GetActiveClientMemberships($request)
@@ -163,7 +163,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetActiveClientMembershipsResponse::class);
 	}
 
-	/*
+	/**
 	 * Gets the list of fields that a new client has to fill out in business
 	 * mode, specifically for the sign-up process. `AddClient` and
 	 * `UpdateClient` validate against these fields.    This endpoint has no
@@ -178,7 +178,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, null, GetRequiredClientFieldsResponse::class);
 	}
 
-	/*
+	/**
 	 * Gets a list of referral types. Referral types are options that new
 	 * clients can choose to identify how they learned about the business.
 	 * Referral types are typically used for the sign-up process.
@@ -192,7 +192,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientReferralTypesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get account balance information for one or more client(s).
 	 */
 	public function GetClientAccountBalances($request)
@@ -204,7 +204,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientAccountBalancesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a client's purchase history.
 	 */
 	public function GetClientPurchases($request)
@@ -216,7 +216,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientPurchasesResponse::class);
 	}
 
-	/*
+	/**
 	 * Client indexes are used to analyze client demographics. A business
 	 * owner can set up different categories with sets of values which they
 	 * can assign to each client. Client indexes are used in client searches,
@@ -235,7 +235,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClientIndexesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get a site's configured custom client fields.
 	 */
 	public function GetCustomClientFields($request)
@@ -247,7 +247,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetCustomClientFieldsResponse::class);
 	}
 
-	/*
+	/**
 	 * Add a contact log to a client's account.
 	 */
 	public function AddContactLog($request)
@@ -259,7 +259,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, ContactLog::class);
 	}
 
-	/*
+	/**
 	 * Update a contact log on a client's account.
 	 */
 	public function UpdateContactLog($request)
@@ -271,7 +271,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, ContactLog::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of sites that a particular client ID (also referred to
 	 * as an RSSID) or a client email address is associated with in a cross-
 	 * regional organization. Either the `ClientID` or `Email` parameter is
@@ -292,7 +292,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetCrossRegionalClientAssociationsResponse::class);
 	}
 
-	/*
+	/**
 	 * The `FirstName` and `LastName` parameters are always required in this
 	 * request. All other parameters are optional, but note that any of the
 	 * optional parameters could be required by a particular business,
@@ -309,7 +309,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, AddClientResponse::class);
 	}
 
-	/*
+	/**
 	 * Updates an existing client for a specific subscriber. Use this
 	 * endpoint as follows:  * If you need to update the `ReferredBy`
 	 * parameter, use this endpoint after calling `GET ClientReferralTypes`.
@@ -340,7 +340,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UpdateClientResponse::class);
 	}
 
-	/*
+	/**
 	 * Update a client's visit.
 	 */
 	public function UpdateClientVisit($request)
@@ -352,7 +352,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UpdateClientVisitResponse::class);
 	}
 
-	/*
+	/**
 	 * Add an arrival for a client.
 	 */
 	public function AddArrival($request)
@@ -364,7 +364,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, AddArrivalResponse::class);
 	}
 
-	/*
+	/**
 	 * Send a password reset email to a client.
 	 */
 	public function SendPasswordResetEmail($request)
@@ -376,7 +376,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, null);
 	}
 
-	/*
+	/**
 	 * This endpoint contains a variety of filters that can return not just
 	 * all contact logs, but also system-generated contact logs, contact logs
 	 * assigned to specific staff members, and contact logs of specific types
@@ -391,7 +391,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetContactLogsResponse::class);
 	}
 
-	/*
+	/**
 	 * Updates the active date and/or expiration date of a client pricing
 	 * option. This request requires staff user credentials. If the active
 	 * date is modified, the expiration date is also modified accordingly. If
@@ -406,7 +406,7 @@ class ClientApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, UpdateClientServiceResponse::class);
 	}
 
-	/*
+	/**
 	 * Get direct debit info for a client.
 	 */
 	public function GetDirectDebitInfo($request)
@@ -418,7 +418,7 @@ class ClientApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, DirectDebitInfo::class);
 	}
 
-	/*
+	/**
 	 * Delete direct debit info for a client.
 	 */
 	public function DeleteDirectDebitInfo($request)
@@ -430,7 +430,7 @@ class ClientApi extends BaseApi
 		return $this->client->delete($url, $siteId, $auth, $request, null);
 	}
 
-	/*
+	/**
 	 * no description available
 	 */
 	public function AddClientDirectDebitInfo($request)

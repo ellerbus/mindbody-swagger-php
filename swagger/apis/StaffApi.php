@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetStaffRequest;
 use App\MindBody\Models\GetStaffResponse;
@@ -9,7 +9,7 @@ use App\MindBody\Models\GetStaffPermissionsResponse;
 
 class StaffApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -17,7 +17,7 @@ class StaffApi extends BaseApi
 		parent::__construct('staff', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * Get staff members at a site.
 	 */
 	public function GetStaff($request)
@@ -29,7 +29,7 @@ class StaffApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetStaffResponse::class);
 	}
 
-	/*
+	/**
 	 * Get configured staff permissions for a staff member.
 	 */
 	public function GetStaffPermissions($request)

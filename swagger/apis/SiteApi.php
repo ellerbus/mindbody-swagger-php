@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetSitesRequest;
 use App\MindBody\Models\GetSitesResponse;
@@ -18,7 +18,7 @@ use App\MindBody\Models\GetMembershipsResponse;
 
 class SiteApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -26,7 +26,7 @@ class SiteApi extends BaseApi
 		parent::__construct('site', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * Gets a list of sites that the developer has permission to view.  *
 	 * Passing in no `SiteIds` returns all sites that the developer has
 	 * access to.  * Passing in one `SiteIds` returns more detailed
@@ -41,7 +41,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetSitesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get the session types used at a site.
 	 */
 	public function GetSessionTypes($request)
@@ -53,7 +53,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetSessionTypesResponse::class);
 	}
 
-	/*
+	/**
 	 * Get locations for a site.
 	 */
 	public function GetLocations($request)
@@ -65,7 +65,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetLocationsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get service categories offered at a site.
 	 */
 	public function GetPrograms($request)
@@ -77,7 +77,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetProgramsResponse::class);
 	}
 
-	/*
+	/**
 	 * Get resources used at a site.
 	 */
 	public function GetResources($request)
@@ -89,7 +89,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetResourcesResponse::class);
 	}
 
-	/*
+	/**
 	 * Before you can use this endpoint, MINDBODY must approve your developer
 	 * account for live access. If you have finished testing in the sandbox
 	 * and are ready to begin working with MINDBODY customers, log into your
@@ -109,7 +109,7 @@ class SiteApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, null, GetActivationCodeResponse::class);
 	}
 
-	/*
+	/**
 	 * Get the memberships at a site.
 	 */
 	public function GetMemberships($request)

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Clients;
+namespace App\MindBody\Apis;
 
 use App\MindBody\Models\GetClassesRequest;
 use App\MindBody\Models\GetClassesResponse;
@@ -23,7 +23,7 @@ use App\MindBody\Models\SubstituteClassTeacherResponse;
 
 class ClassApi extends BaseApi
 {
-	/*
+	/**
 	 * Constructor
 	 */
 	public function __construct($siteId, $authorization)
@@ -31,7 +31,7 @@ class ClassApi extends BaseApi
 		parent::__construct('class', $siteId, $authorization);
 	}
 
-	/*
+	/**
 	 * Get scheduled classes.
 	 */
 	public function GetClasses($request)
@@ -43,7 +43,7 @@ class ClassApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClassesResponse::class);
 	}
 
-	/*
+	/**
 	 * To find class descriptions associated with **scheduled classes**, pass
 	 * `StaffId`, `StartClassDateTime`, `EndClassDateTime`, or `LocationId`
 	 * in the request.
@@ -57,7 +57,7 @@ class ClassApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClassDescriptionsResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of visits that contain information for a specified
 	 * class. On success, this request returns the class object in the
 	 * response with a list of visits.
@@ -71,7 +71,7 @@ class ClassApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClassVisitsResponse::class);
 	}
 
-	/*
+	/**
 	 * Remove a client from a class.
 	 */
 	public function RemoveClientFromClass($request)
@@ -83,7 +83,7 @@ class ClassApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, RemoveClientFromClassResponse::class);
 	}
 
-	/*
+	/**
 	 * This endpoint adds a client to a class or to a class waiting list. It
 	 * is helpful to use this endpoint in the following situations:  * Use
 	 * after calling `GET Clients` and `GET Classes` so that you are sure
@@ -127,7 +127,7 @@ class ClassApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, AddClientToClassResponse::class);
 	}
 
-	/*
+	/**
 	 * Get class schedules.
 	 */
 	public function GetClassSchedules($request)
@@ -139,7 +139,7 @@ class ClassApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetClassSchedulesResponse::class);
 	}
 
-	/*
+	/**
 	 * Returns a list of waiting list entries for a specified class schedule
 	 * or class. The request requires staff credentials and either a class
 	 * schedule ID or class ID.
@@ -153,7 +153,7 @@ class ClassApi extends BaseApi
 		return $this->client->get($url, $siteId, $auth, $request, GetWaitlistEntriesResponse::class);
 	}
 
-	/*
+	/**
 	 * This endpoint does not return a response. If a call to this endpoint
 	 * results in a 200 OK HTTP status code, then the call was successful.
 	 */
@@ -166,7 +166,7 @@ class ClassApi extends BaseApi
 		return $this->client->post($url, $siteId, $auth, $request, RemoveFromWaitlistResponse::class);
 	}
 
-	/*
+	/**
 	 * Substitute a class teacher.
 	 */
 	public function SubstituteClassTeacher($request)
