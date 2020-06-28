@@ -113,7 +113,7 @@ class AddAppointmentRequest extends BaseModel
 	 */
 	public $test;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $locationId, $sessionTypeId, $staffId, $startDateTime)
 	{

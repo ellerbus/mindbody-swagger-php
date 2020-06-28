@@ -109,7 +109,7 @@ class PurchaseContractRequest extends BaseModel
 	 */
 	public $useDirectDebit;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $contractId)
 	{

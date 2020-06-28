@@ -83,7 +83,7 @@ class AddClientToClassRequest extends BaseModel
 	 */
 	public $crossRegionalBookingClientServiceSiteId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $classId)
 	{

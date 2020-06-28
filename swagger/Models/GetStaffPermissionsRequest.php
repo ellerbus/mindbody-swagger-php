@@ -14,7 +14,7 @@ class GetStaffPermissionsRequest extends BaseModel
 	 */
 	public $staffId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($staffId)
 	{

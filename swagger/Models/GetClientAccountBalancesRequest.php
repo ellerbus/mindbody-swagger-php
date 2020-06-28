@@ -39,7 +39,7 @@ class GetClientAccountBalancesRequest extends BaseModel
 	 */
 	public $offset;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientIds)
 	{

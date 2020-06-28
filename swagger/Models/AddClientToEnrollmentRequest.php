@@ -63,7 +63,7 @@ class AddClientToEnrollmentRequest extends BaseModel
 	 */
 	public $waitlistEntryId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $classScheduleId)
 	{

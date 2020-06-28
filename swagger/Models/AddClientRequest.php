@@ -388,7 +388,7 @@ class AddClientRequest extends BaseModel
 	 */
 	public $sendPromotionalEmails;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($firstName, $lastName)
 	{

@@ -50,7 +50,7 @@ class UpdateClientVisitRequest extends BaseModel
 	 */
 	public $sendEmail;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($visitId)
 	{

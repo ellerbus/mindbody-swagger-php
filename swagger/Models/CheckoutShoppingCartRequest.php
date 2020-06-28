@@ -91,7 +91,7 @@ class CheckoutShoppingCartRequest extends BaseModel
 	 */
 	public $imageFileName;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $items, $payments)
 	{

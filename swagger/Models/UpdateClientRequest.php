@@ -43,7 +43,7 @@ class UpdateClientRequest extends BaseModel
 	 */
 	public $newId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($client)
 	{

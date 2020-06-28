@@ -20,7 +20,7 @@ class AddArrivalRequest extends BaseModel
 	 */
 	public $locationId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $locationId)
 	{

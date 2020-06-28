@@ -46,7 +46,7 @@ class GetClientPurchasesRequest extends BaseModel
 	 */
 	public $offset;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId)
 	{

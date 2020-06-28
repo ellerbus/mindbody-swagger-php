@@ -67,7 +67,7 @@ class GetBookableItemsRequest extends BaseModel
 	 */
 	public $offset;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($sessionTypeIds)
 	{

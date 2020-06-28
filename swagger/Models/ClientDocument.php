@@ -29,7 +29,7 @@ class ClientDocument extends BaseModel
 	 */
 	public $buffer;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($fileName, $mediaType, $buffer)
 	{

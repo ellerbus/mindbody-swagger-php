@@ -29,7 +29,7 @@ class SendPasswordResetEmailRequest extends BaseModel
 	 */
 	public $userLastName;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($userEmail, $userFirstName, $userLastName)
 	{

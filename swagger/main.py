@@ -1,9 +1,9 @@
 from generators import ApisGenerator
 from generators import ModelsGenerator
 
-# apis = ApisGenerator()
+apis = ApisGenerator()
 
-# apis.generate()
+apis.generate()
 
 models = ModelsGenerator()
 

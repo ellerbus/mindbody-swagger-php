@@ -20,7 +20,7 @@ class UploadClientPhotoRequest extends BaseModel
 	 */
 	public $clientId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($bytes, $clientId)
 	{

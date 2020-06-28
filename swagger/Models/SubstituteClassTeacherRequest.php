@@ -48,7 +48,7 @@ class SubstituteClassTeacherRequest extends BaseModel
 	 */
 	public $sendSubstituteTeacherEmail;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($classId, $staffId)
 	{

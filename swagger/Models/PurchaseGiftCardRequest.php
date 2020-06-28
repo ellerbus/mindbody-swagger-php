@@ -99,7 +99,7 @@ class PurchaseGiftCardRequest extends BaseModel
 	 */
 	public $salesRepId;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($locationId, $purchaserClientId, $giftCardId)
 	{

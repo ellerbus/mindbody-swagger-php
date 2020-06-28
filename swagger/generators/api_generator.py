@@ -11,7 +11,7 @@ class MethodGenerator(object):
         self.path = path
         self.method = method
         self.name = name
-        self.method_name = f'{self.method}_{self.name}'
+        self.method_name = self.path[self.method]['operationId'].split('_')[-1]
         self.parameters = self.path[self.method]['parameters']
         self.responses = self.path[self.method]['responses']
         self.has_request = False
@@ -23,8 +23,7 @@ class MethodGenerator(object):
                     self.has_request = True
                     request = self.method_name + '_request'
                     name = strutils.pascal_case(request)
-                    file_name = strutils.snake_case(request)
-                    file.write(f'from ..models.{file_name} import {name}\n')
+                    file.write(f'use App\\MindBody\\Models\\{name};\n')
                     break
 
         for parm in self.parameters:
@@ -32,8 +31,7 @@ class MethodGenerator(object):
                 self.has_request = True
                 parts = parm['schema']['$ref'].split('/')
                 name = parts[-1]
-                file_name = strutils.snake_case(name)
-                file.write(f'from ..models.{file_name} import {name}\n')
+                file.write(f'use App\\MindBody\\Models\\{name};\n')
 
         if '200' in self.responses:
             if 'schema' in self.responses['200']:
@@ -41,20 +39,32 @@ class MethodGenerator(object):
                 if '$ref' in resp:
                     parts = resp['$ref'].split('/')
                     name = parts[-1]
-                    file_name = strutils.snake_case(name)
-                    file.write(f'from ..models.{file_name} import {name}\n')
+                    file.write(f'use App\\MindBody\\Models\\{name};\n')
 
     def write_method(self, file):
-        self.write_method_definition(file)
+        descr = self.get_description()
+        file.write(f'\t/*\n')
+        for x in textwrap.wrap(descr):
+            file.write(f'\t * {x}\n')
+        file.write(f'\t */\n')
+        names = []
+        for parm in self.parameters:
+            if parm['in'] == 'body' or parm['in'] == 'query':
+                names.append('$request')
+                break
+        parms = ', '.join(names)
+        file.write(f'\tpublic function {self.method_name}({parms})\n')
+        file.write(f'\t{{\n')
         self.write_method_body(file)
-        if self.method == 'get':
-            self.write_get_method(file)
-        elif self.method == 'delete':
-            self.write_delete_method(file)
-        elif self.method == 'post':
-            self.write_post_method(file)
-        elif self.method == 'put':
-            self.write_put_method(file)
+        file.write(f'\t}}\n\n')
+        # if self.method == 'get':
+        #     self.write_get_method(file)
+        # elif self.method == 'delete':
+        #     self.write_delete_method(file)
+        # elif self.method == 'post':
+        #     self.write_post_method(file)
+        # elif self.method == 'put':
+        #     self.write_put_method(file)
 
     def write_get_method(self, file):
         pass
@@ -68,21 +78,6 @@ class MethodGenerator(object):
     def write_put_method(self, file):
         pass
 
-    def write_method_definition(self, file):
-        names = ['self']
-        for parm in self.parameters:
-            if parm['in'] == 'body' or parm['in'] == 'query':
-                names.append('request')
-                break
-        parms = ', '.join(names)
-        file.write(f'\n\tdef {self.method_name}({parms}):\n')
-        descr = self.get_description()
-        file.write(f'\t\t"""\n')
-        for x in textwrap.wrap(descr):
-            file.write(f'\t\t{x}\n')
-        file.write(f'\t\t"""\n')
-        file.write(f'\n')
-
     def get_description(self):
         descr = 'no description available'
         if 'summary' in self.path[self.method]:
@@ -92,28 +87,21 @@ class MethodGenerator(object):
         return descr
 
     def write_method_body(self, file):
-        file.write(f"\t\turl = self.get_fullpath('{self.name}')\n")
-        names = ['url', 'self.site_id']
-        names.append(self.get_authorization_parm())
+        file.write(f"\t\t$url = $this->getFullPath('{self.name}');\n")
+        file.write(f"\t\t$siteId = $this->siteId;\n")
+        file.write(f"\t\t$auth = $this->authorization;\n")
+        names = ['$url', '$siteId', '$auth']
         names.append(self.get_request_parm())
         names.append(self.get_response_parm())
         parms = ', '.join(names)
-        file.write(f'\t\treturn self.client.{self.method}({parms})\n')
-
-        # return self.client.get(url, site_id, token, None, GetSiteResponse)
-
-    def get_authorization_parm(self):
-        for parm in self.parameters:
-            if 'in' in parm and parm['in'] == 'header':
-                if parm['name'] == 'authorization':
-                    return 'self.authorization'
-        return 'None'
+        file.write(f'\n')
+        file.write(f'\t\treturn $this->client->{self.method}({parms});\n')
 
     def get_request_parm(self):
         for parm in self.parameters:
             if parm['in'] == 'body' or parm['in'] == 'query':
-                return 'request'
-        return 'None'
+                return '$request'
+        return 'null'
 
     def get_response_parm(self):
         if '200' in self.responses:
@@ -122,17 +110,16 @@ class MethodGenerator(object):
                 if '$ref' in resp:
                     parts = resp['$ref'].split('/')
                     name = parts[-1]
-                    return name
-        return 'None'
+                    return name + '::class'
+        return 'null'
 
 
 class ApiGenerator(object):
     def __init__(self, path, segments):
         self.methods = []
         self.segments = segments
-        self.api_name = strutils.snake_case(segments[-2]) + '_api'
         self.class_name = strutils.pascal_case(segments[-2]) + 'Api'
-        self.file_name = os.path.join(path, self.api_name + '.py')
+        self.file_name = os.path.join(path, self.class_name + '.php')
         if os.path.exists(self.file_name):
             os.remove(self.file_name)
 
@@ -140,22 +127,32 @@ class ApiGenerator(object):
         with open(self.file_name, 'w') as file:
             self.write_header(file)
             self.write_class_definition(file)
-            for m in self.methods:
-                m.write_method(file)
-            file.write('\n')
 
     def write_header(self, file):
-        file.write(f'from .base_api import BaseApi\n\n')
+        file.write(f'<?php\n\n')
+        file.write(f'namespace App\\MindBody\\Clients;\n\n')
         for m in self.methods:
             m.write_references(file)
         file.write('\n')
 
     def write_class_definition(self, file):
-        file.write(f'class {self.class_name}(BaseApi):\n')
+        file.write(f'class {self.class_name} extends BaseApi\n')
+        file.write(f'{{\n')
+        self.write_constructor(file)
+        for m in self.methods:
+            m.write_method(file)
+        file.write(f'}}\n')
+
+    def write_constructor(self, file):
         api_segment = self.segments[-2]
-        file.write(f'\tdef __init__(self, site_id, authorization):\n')
-        file.write(f"\t\tsuper()")
-        file.write(f".__init__('{api_segment}', site_id, authorization)\n")
+        file.write(f'\t/*\n')
+        file.write(f'\t * Constructor\n')
+        file.write(f'\t */\n')
+        file.write(f'\tpublic function __construct($siteId, $authorization)\n')
+        file.write(f'\t{{\n')
+        file.write(f"\t\tparent::__construct")
+        file.write(f"('{api_segment}', $siteId, $authorization);\n")
+        file.write(f'\t}}\n\n')
 
     # def write_attribute_maps(self, file):
     #     # "properties": {

@@ -44,7 +44,7 @@ class RemoveClientFromClassRequest extends BaseModel
 	 */
 	public $lateCancel;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $classId)
 	{

@@ -16,7 +16,7 @@ class ApisGenerator(object):
         '''
         self.apis = {}
         self.paths = settings.SWAGGER_OBJECT['paths']
-        self.path = os.path.join(settings.BASE_PATH, 'apis')
+        self.path = os.path.join(settings.BASE_PATH, 'Apis')
         if not os.path.exists(self.path):
             os.makedirs(self.path)
 
@@ -26,25 +26,18 @@ class ApisGenerator(object):
             api.generate()
 
     def generate_package(self):
-        package = os.path.join(self.path, '__init__.py')
-        with open(package, 'w') as file:
-            for key in self.paths:
-                api = self.get_api(key, file)
-                path = self.paths[key]
-                name = key.split('/')[-1]
-                for method in path:
-                    api.methods.append(MethodGenerator(path, method, name))
+        for key in self.paths:
+            api = self.get_api(key)
+            path = self.paths[key]
+            name = key.split('/')[-1]
+            for method in path:
+                api.methods.append(MethodGenerator(path, method, name))
 
-    def get_api(self, key, file):
+    def get_api(self, key):
         segments = key.split('/')
         name = segments[-2]
         if name in self.apis:
             return self.apis[name]
-
-        #   update __init__
         api = ApiGenerator(self.path, segments)
-        fnm = api.api_name
-        cnm = api.class_name
-        file.write(f'from .{fnm} import {cnm}\n')
         self.apis[name] = api
         return api

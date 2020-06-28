@@ -86,7 +86,7 @@ class UpdateAppointmentRequest extends BaseModel
 	 */
 	public $test;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($appointmentId)
 	{

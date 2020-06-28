@@ -20,7 +20,7 @@ class UploadClientDocumentRequest extends BaseModel
 	 */
 	public $file;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $file)
 	{

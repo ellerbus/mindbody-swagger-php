@@ -34,7 +34,7 @@ class UpdateClientServiceRequest extends BaseModel
 	 */
 	public $test;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($serviceId)
 	{

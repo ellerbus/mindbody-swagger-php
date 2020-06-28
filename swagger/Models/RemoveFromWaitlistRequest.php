@@ -14,7 +14,7 @@ class RemoveFromWaitlistRequest extends BaseModel
 	 */
 	public $waitlistEntryIds;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($waitlistEntryIds)
 	{

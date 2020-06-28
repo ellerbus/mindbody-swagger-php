@@ -65,7 +65,7 @@ class AddContactLogRequest extends BaseModel
 	 */
 	public $test;
 	/*
-	 *
+	 * Constructor
 	 */
 	public function __construct($clientId, $contactMethod)
 	{
