@@ -75,4 +75,38 @@ class Product extends BaseModel
 	 * @var Size
 	 */
 	public $size;
+
+	protected function getInputMap()
+	{
+		return [
+			'Price' => 'price',
+			'TaxIncluded' => 'taxIncluded',
+			'TaxRate' => 'taxRate',
+			'Id' => 'id',
+			'GroupId' => 'groupId',
+			'Name' => 'name',
+			'OnlinePrice' => 'onlinePrice',
+			'ShortDescription' => 'shortDescription',
+			'LongDescription' => 'longDescription',
+			'Color' => ['color', Color::class],
+			'Size' => ['size', Size::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'price' => 'Price',
+			'taxIncluded' => 'TaxIncluded',
+			'taxRate' => 'TaxRate',
+			'id' => 'Id',
+			'groupId' => 'GroupId',
+			'name' => 'Name',
+			'onlinePrice' => 'OnlinePrice',
+			'shortDescription' => 'ShortDescription',
+			'longDescription' => 'LongDescription',
+			'color' => 'Color',
+			'size' => 'Size',
+			];
+	}
 }

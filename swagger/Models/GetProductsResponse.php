@@ -19,4 +19,20 @@ class GetProductsResponse extends BaseModel
 	 * @var Product[]
 	 */
 	public $products;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Products' => ['products', Product::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'products' => 'Products',
+			];
+	}
 }

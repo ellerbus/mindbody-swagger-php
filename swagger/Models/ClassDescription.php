@@ -102,4 +102,46 @@ class ClassDescription extends BaseModel
 	 * @var integer
 	 */
 	public $subcategoryId;
+
+	protected function getInputMap()
+	{
+		return [
+			'Active' => 'active',
+			'Description' => 'description',
+			'Id' => 'id',
+			'ImageURL' => 'imageUrl',
+			'LastUpdated' => 'lastUpdated',
+			'Level' => ['level', Level::class],
+			'Name' => 'name',
+			'Notes' => 'notes',
+			'Prereq' => 'prereq',
+			'Program' => ['program', Program::class],
+			'SessionType' => ['sessionType', SessionType::class],
+			'Category' => 'category',
+			'CategoryId' => 'categoryId',
+			'Subcategory' => 'subcategory',
+			'SubcategoryId' => 'subcategoryId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'active' => 'Active',
+			'description' => 'Description',
+			'id' => 'Id',
+			'imageUrl' => 'ImageURL',
+			'lastUpdated' => 'LastUpdated',
+			'level' => 'Level',
+			'name' => 'Name',
+			'notes' => 'Notes',
+			'prereq' => 'Prereq',
+			'program' => 'Program',
+			'sessionType' => 'SessionType',
+			'category' => 'Category',
+			'categoryId' => 'CategoryId',
+			'subcategory' => 'Subcategory',
+			'subcategoryId' => 'SubcategoryId',
+			];
+	}
 }

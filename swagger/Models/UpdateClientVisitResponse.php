@@ -13,4 +13,18 @@ class UpdateClientVisitResponse extends BaseModel
 	 * @var Visit
 	 */
 	public $visit;
+
+	protected function getInputMap()
+	{
+		return [
+			'Visit' => ['visit', Visit::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'visit' => 'Visit',
+			];
+	}
 }

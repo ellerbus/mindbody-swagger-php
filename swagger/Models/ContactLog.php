@@ -75,4 +75,38 @@ class ContactLog extends BaseModel
 	 * @var ContactLogType[]
 	 */
 	public $types;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Text' => 'text',
+			'CreatedDateTime' => 'createdDateTime',
+			'FollowupByDate' => 'followupByDate',
+			'ContactMethod' => 'contactMethod',
+			'ContactName' => 'contactName',
+			'Client' => ['client', Client::class],
+			'CreatedBy' => ['createdBy', Staff::class],
+			'AssignedTo' => ['assignedTo', Staff::class],
+			'Comments' => ['comments', ContactLogComment::class],
+			'Types' => ['types', ContactLogType::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'text' => 'Text',
+			'createdDateTime' => 'CreatedDateTime',
+			'followupByDate' => 'FollowupByDate',
+			'contactMethod' => 'ContactMethod',
+			'contactName' => 'ContactName',
+			'client' => 'Client',
+			'createdBy' => 'CreatedBy',
+			'assignedTo' => 'AssignedTo',
+			'comments' => 'Comments',
+			'types' => 'Types',
+			];
+	}
 }

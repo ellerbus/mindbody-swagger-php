@@ -62,4 +62,30 @@ class GetScheduledServiceEarningsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ScheduledServiceType' => 'scheduledServiceType',
+			'ScheduledServiceId' => 'scheduledServiceId',
+			'StaffId' => 'staffId',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'scheduledServiceType' => 'ScheduledServiceType',
+			'scheduledServiceId' => 'ScheduledServiceId',
+			'staffId' => 'StaffId',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

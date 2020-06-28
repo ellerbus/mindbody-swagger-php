@@ -19,4 +19,20 @@ class GetActiveClientMembershipsResponse extends BaseModel
 	 * @var ClientMembership[]
 	 */
 	public $clientMemberships;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ClientMemberships' => ['clientMemberships', ClientMembership::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'clientMemberships' => 'ClientMemberships',
+			];
+	}
 }

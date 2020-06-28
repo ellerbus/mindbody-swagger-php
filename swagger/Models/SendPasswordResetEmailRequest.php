@@ -37,4 +37,22 @@ class SendPasswordResetEmailRequest extends BaseModel
 		$this->userFirstName = $userFirstName;
 		$this->userLastName = $userLastName;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'UserEmail' => 'userEmail',
+			'UserFirstName' => 'userFirstName',
+			'UserLastName' => 'userLastName',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'userEmail' => 'UserEmail',
+			'userFirstName' => 'UserFirstName',
+			'userLastName' => 'UserLastName',
+			];
+	}
 }

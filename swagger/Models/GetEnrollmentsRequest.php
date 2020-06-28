@@ -69,4 +69,34 @@ class GetEnrollmentsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassScheduleIds' => 'classScheduleIds',
+			'EndDate' => 'endDate',
+			'LocationIds' => 'locationIds',
+			'ProgramIds' => 'programIds',
+			'SessionTypeIds' => 'sessionTypeIds',
+			'StaffIds' => 'staffIds',
+			'StartDate' => 'startDate',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classScheduleIds' => 'ClassScheduleIds',
+			'endDate' => 'EndDate',
+			'locationIds' => 'LocationIds',
+			'programIds' => 'ProgramIds',
+			'sessionTypeIds' => 'SessionTypeIds',
+			'staffIds' => 'StaffIds',
+			'startDate' => 'StartDate',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

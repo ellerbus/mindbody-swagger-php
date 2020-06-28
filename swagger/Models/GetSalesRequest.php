@@ -43,4 +43,28 @@ class GetSalesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'SaleId' => 'saleId',
+			'StartSaleDateTime' => 'startSaleDateTime',
+			'EndSaleDateTime' => 'endSaleDateTime',
+			'PaymentMethodId' => 'paymentMethodId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'saleId' => 'SaleId',
+			'startSaleDateTime' => 'StartSaleDateTime',
+			'endSaleDateTime' => 'EndSaleDateTime',
+			'paymentMethodId' => 'PaymentMethodId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

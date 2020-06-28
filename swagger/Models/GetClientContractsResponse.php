@@ -19,4 +19,20 @@ class GetClientContractsResponse extends BaseModel
 	 * @var PaginationResponse
 	 */
 	public $paginationResponse;
+
+	protected function getInputMap()
+	{
+		return [
+			'Contracts' => ['contracts', ClientContract::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'contracts' => 'Contracts',
+			'paginationResponse' => 'PaginationResponse',
+			];
+	}
 }

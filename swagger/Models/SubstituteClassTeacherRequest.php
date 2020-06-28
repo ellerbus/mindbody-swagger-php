@@ -55,4 +55,28 @@ class SubstituteClassTeacherRequest extends BaseModel
 		$this->classId = $classId;
 		$this->staffId = $staffId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassId' => 'classId',
+			'StaffId' => 'staffId',
+			'OverrideConflicts' => 'overrideConflicts',
+			'SendClientEmail' => 'sendClientEmail',
+			'SendOriginalTeacherEmail' => 'sendOriginalTeacherEmail',
+			'SendSubstituteTeacherEmail' => 'sendSubstituteTeacherEmail',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classId' => 'ClassId',
+			'staffId' => 'StaffId',
+			'overrideConflicts' => 'OverrideConflicts',
+			'sendClientEmail' => 'SendClientEmail',
+			'sendOriginalTeacherEmail' => 'SendOriginalTeacherEmail',
+			'sendSubstituteTeacherEmail' => 'SendSubstituteTeacherEmail',
+			];
+	}
 }

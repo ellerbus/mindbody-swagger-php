@@ -41,4 +41,26 @@ class SalesRep extends BaseModel
 	 * @var integer[]
 	 */
 	public $salesRepNumbers;
+
+	protected function getInputMap()
+	{
+		return [
+			'FirstName' => 'firstName',
+			'Id' => 'id',
+			'LastName' => 'lastName',
+			'SalesRepNumber' => 'salesRepNumber',
+			'SalesRepNumbers' => 'salesRepNumbers',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'firstName' => 'FirstName',
+			'id' => 'Id',
+			'lastName' => 'LastName',
+			'salesRepNumber' => 'SalesRepNumber',
+			'salesRepNumbers' => 'SalesRepNumbers',
+			];
+	}
 }

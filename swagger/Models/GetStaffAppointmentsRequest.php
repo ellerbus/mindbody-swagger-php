@@ -58,4 +58,32 @@ class GetStaffAppointmentsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'AppointmentIds' => 'appointmentIds',
+			'LocationIds' => 'locationIds',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'StaffIds' => 'staffIds',
+			'ClientId' => 'clientId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'appointmentIds' => 'AppointmentIds',
+			'locationIds' => 'LocationIds',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'staffIds' => 'StaffIds',
+			'clientId' => 'ClientId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

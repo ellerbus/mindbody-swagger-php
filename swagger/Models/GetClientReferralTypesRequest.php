@@ -15,4 +15,18 @@ class GetClientReferralTypesRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $includeInactive;
+
+	protected function getInputMap()
+	{
+		return [
+			'IncludeInactive' => 'includeInactive',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'includeInactive' => 'IncludeInactive',
+			];
+	}
 }

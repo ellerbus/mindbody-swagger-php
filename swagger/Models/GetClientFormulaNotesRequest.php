@@ -32,4 +32,24 @@ class GetClientFormulaNotesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'AppointmentId' => 'appointmentId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'appointmentId' => 'AppointmentId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

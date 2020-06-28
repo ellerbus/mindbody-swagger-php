@@ -20,4 +20,20 @@ class GetActivationCodeResponse extends BaseModel
 	 * @var string
 	 */
 	public $activationLink;
+
+	protected function getInputMap()
+	{
+		return [
+			'ActivationCode' => 'activationCode',
+			'ActivationLink' => 'activationLink',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'activationCode' => 'ActivationCode',
+			'activationLink' => 'ActivationLink',
+			];
+	}
 }

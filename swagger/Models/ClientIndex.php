@@ -45,4 +45,28 @@ class ClientIndex extends BaseModel
 	 * @var string
 	 */
 	public $action;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'RequiredBusinessMode' => 'requiredBusinessMode',
+			'RequiredConsumerMode' => 'requiredConsumerMode',
+			'Values' => ['values', ClientIndexValue::class],
+			'Action' => 'action',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'requiredBusinessMode' => 'RequiredBusinessMode',
+			'requiredConsumerMode' => 'RequiredConsumerMode',
+			'values' => 'Values',
+			'action' => 'Action',
+			];
+	}
 }

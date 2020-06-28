@@ -19,4 +19,20 @@ class GetClientServicesResponse extends BaseModel
 	 * @var ClientService[]
 	 */
 	public $clientServices;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ClientServices' => ['clientServices', ClientService::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'clientServices' => 'ClientServices',
+			];
+	}
 }

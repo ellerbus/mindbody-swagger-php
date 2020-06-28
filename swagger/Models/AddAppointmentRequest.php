@@ -123,4 +123,48 @@ class AddAppointmentRequest extends BaseModel
 		$this->staffId = $staffId;
 		$this->startDateTime = $startDateTime;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ApplyPayment' => 'applyPayment',
+			'ClientId' => 'clientId',
+			'Duration' => 'duration',
+			'Execute' => 'execute',
+			'EndDateTime' => 'endDateTime',
+			'GenderPreference' => 'genderPreference',
+			'LocationId' => 'locationId',
+			'Notes' => 'notes',
+			'ProviderId' => 'providerId',
+			'ResourceIds' => 'resourceIds',
+			'SendEmail' => 'sendEmail',
+			'SessionTypeId' => 'sessionTypeId',
+			'StaffId' => 'staffId',
+			'StaffRequested' => 'staffRequested',
+			'StartDateTime' => 'startDateTime',
+			'Test' => 'test',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'applyPayment' => 'ApplyPayment',
+			'clientId' => 'ClientId',
+			'duration' => 'Duration',
+			'execute' => 'Execute',
+			'endDateTime' => 'EndDateTime',
+			'genderPreference' => 'GenderPreference',
+			'locationId' => 'LocationId',
+			'notes' => 'Notes',
+			'providerId' => 'ProviderId',
+			'resourceIds' => 'ResourceIds',
+			'sendEmail' => 'SendEmail',
+			'sessionTypeId' => 'SessionTypeId',
+			'staffId' => 'StaffId',
+			'staffRequested' => 'StaffRequested',
+			'startDateTime' => 'StartDateTime',
+			'test' => 'Test',
+			];
+	}
 }

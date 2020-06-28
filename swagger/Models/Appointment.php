@@ -113,4 +113,50 @@ class Appointment extends BaseModel
 	 * @var Resource[]
 	 */
 	public $resources;
+
+	protected function getInputMap()
+	{
+		return [
+			'GenderPreference' => 'genderPreference',
+			'Duration' => 'duration',
+			'ProviderId' => 'providerId',
+			'Id' => 'id',
+			'Status' => 'status',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Notes' => 'notes',
+			'StaffRequested' => 'staffRequested',
+			'ProgramId' => 'programId',
+			'SessionTypeId' => 'sessionTypeId',
+			'LocationId' => 'locationId',
+			'StaffId' => 'staffId',
+			'ClientId' => 'clientId',
+			'FirstAppointment' => 'firstAppointment',
+			'ClientServiceId' => 'clientServiceId',
+			'Resources' => ['resources', Resource::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'genderPreference' => 'GenderPreference',
+			'duration' => 'Duration',
+			'providerId' => 'ProviderId',
+			'id' => 'Id',
+			'status' => 'Status',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'notes' => 'Notes',
+			'staffRequested' => 'StaffRequested',
+			'programId' => 'ProgramId',
+			'sessionTypeId' => 'SessionTypeId',
+			'locationId' => 'LocationId',
+			'staffId' => 'StaffId',
+			'clientId' => 'ClientId',
+			'firstAppointment' => 'FirstAppointment',
+			'clientServiceId' => 'ClientServiceId',
+			'resources' => 'Resources',
+			];
+	}
 }

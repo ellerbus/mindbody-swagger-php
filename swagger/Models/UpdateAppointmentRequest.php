@@ -92,4 +92,40 @@ class UpdateAppointmentRequest extends BaseModel
 	{
 		$this->appointmentId = $appointmentId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'AppointmentId' => 'appointmentId',
+			'EndDateTime' => 'endDateTime',
+			'Execute' => 'execute',
+			'GenderPreference' => 'genderPreference',
+			'Notes' => 'notes',
+			'ProviderId' => 'providerId',
+			'ResourceIds' => 'resourceIds',
+			'SendEmail' => 'sendEmail',
+			'SessionTypeId' => 'sessionTypeId',
+			'StaffId' => 'staffId',
+			'StartDateTime' => 'startDateTime',
+			'Test' => 'test',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'appointmentId' => 'AppointmentId',
+			'endDateTime' => 'EndDateTime',
+			'execute' => 'Execute',
+			'genderPreference' => 'GenderPreference',
+			'notes' => 'Notes',
+			'providerId' => 'ProviderId',
+			'resourceIds' => 'ResourceIds',
+			'sendEmail' => 'SendEmail',
+			'sessionTypeId' => 'SessionTypeId',
+			'staffId' => 'StaffId',
+			'startDateTime' => 'StartDateTime',
+			'test' => 'Test',
+			];
+	}
 }

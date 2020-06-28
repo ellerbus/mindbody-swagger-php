@@ -88,9 +88,7 @@ class MethodGenerator(object):
 
     def write_method_body(self, file):
         file.write(f"\t\t$url = $this->getFullPath('{self.name}');\n")
-        file.write(f"\t\t$siteId = $this->siteId;\n")
-        file.write(f"\t\t$auth = $this->authorization;\n")
-        names = ['$url', '$siteId', '$auth']
+        names = ['$url']
         names.append(self.get_request_parm())
         names.append(self.get_response_parm())
         parms = ', '.join(names)

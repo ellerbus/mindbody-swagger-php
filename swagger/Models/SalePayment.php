@@ -37,4 +37,26 @@ class SalePayment extends BaseModel
 	 * @var string
 	 */
 	public $notes;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Amount' => 'amount',
+			'Method' => 'method',
+			'Type' => 'type',
+			'Notes' => 'notes',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'amount' => 'Amount',
+			'method' => 'Method',
+			'type' => 'Type',
+			'notes' => 'Notes',
+			];
+	}
 }

@@ -19,4 +19,20 @@ class GetLocationsResponse extends BaseModel
 	 * @var Location[]
 	 */
 	public $locations;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Locations' => ['locations', Location::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'locations' => 'Locations',
+			];
+	}
 }

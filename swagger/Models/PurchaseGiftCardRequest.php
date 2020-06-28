@@ -107,4 +107,42 @@ class PurchaseGiftCardRequest extends BaseModel
 		$this->purchaserClientId = $purchaserClientId;
 		$this->giftCardId = $giftCardId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'Test' => 'test',
+			'LocationId' => 'locationId',
+			'LayoutId' => 'layoutId',
+			'PurchaserClientId' => 'purchaserClientId',
+			'GiftCardId' => 'giftCardId',
+			'SendEmailReceipt' => 'sendEmailReceipt',
+			'RecipientEmail' => 'recipientEmail',
+			'RecipientName' => 'recipientName',
+			'Title' => 'title',
+			'GiftMessage' => 'giftMessage',
+			'DeliveryDate' => 'deliveryDate',
+			'PaymentInfo' => ['paymentInfo', CheckoutPaymentInfo::class],
+			'SalesRepId' => 'salesRepId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'test' => 'Test',
+			'locationId' => 'LocationId',
+			'layoutId' => 'LayoutId',
+			'purchaserClientId' => 'PurchaserClientId',
+			'giftCardId' => 'GiftCardId',
+			'sendEmailReceipt' => 'SendEmailReceipt',
+			'recipientEmail' => 'RecipientEmail',
+			'recipientName' => 'RecipientName',
+			'title' => 'Title',
+			'giftMessage' => 'GiftMessage',
+			'deliveryDate' => 'DeliveryDate',
+			'paymentInfo' => 'PaymentInfo',
+			'salesRepId' => 'SalesRepId',
+			];
+	}
 }

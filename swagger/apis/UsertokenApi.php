@@ -21,10 +21,8 @@ class UsertokenApi extends BaseApi
 	public function Issue($request)
 	{
 		$url = $this->getFullPath('issue');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, IssueResponse::class);
+		return $this->client->post($url, $request, IssueResponse::class);
 	}
 
 	/**
@@ -33,10 +31,8 @@ class UsertokenApi extends BaseApi
 	public function Revoke()
 	{
 		$url = $this->getFullPath('revoke');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->delete($url, $siteId, $auth, null, null);
+		return $this->client->delete($url, null, null);
 	}
 
 }

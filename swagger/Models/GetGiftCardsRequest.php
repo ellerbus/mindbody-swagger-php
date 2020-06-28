@@ -40,4 +40,26 @@ class GetGiftCardsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'LocationId' => 'locationId',
+			'SoldOnline' => 'soldOnline',
+			'Ids' => 'ids',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'locationId' => 'LocationId',
+			'soldOnline' => 'SoldOnline',
+			'ids' => 'Ids',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

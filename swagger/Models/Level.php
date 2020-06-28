@@ -25,4 +25,22 @@ class Level extends BaseModel
 	 * @var string
 	 */
 	public $description;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'Description' => 'description',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'description' => 'Description',
+			];
+	}
 }

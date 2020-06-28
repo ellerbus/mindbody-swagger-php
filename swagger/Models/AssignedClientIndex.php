@@ -19,4 +19,20 @@ class AssignedClientIndex extends BaseModel
 	 * @var integer
 	 */
 	public $valueId;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'ValueId' => 'valueId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'valueId' => 'ValueId',
+			];
+	}
 }

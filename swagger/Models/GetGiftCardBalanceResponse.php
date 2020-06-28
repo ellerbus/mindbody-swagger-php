@@ -19,4 +19,20 @@ class GetGiftCardBalanceResponse extends BaseModel
 	 * @var number
 	 */
 	public $remainingBalance;
+
+	protected function getInputMap()
+	{
+		return [
+			'BarcodeId' => 'barcodeId',
+			'RemainingBalance' => 'remainingBalance',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'barcodeId' => 'BarcodeId',
+			'remainingBalance' => 'RemainingBalance',
+			];
+	}
 }

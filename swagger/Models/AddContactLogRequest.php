@@ -72,4 +72,34 @@ class AddContactLogRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->contactMethod = $contactMethod;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'AssignedToStaffId' => 'assignedToStaffId',
+			'Text' => 'text',
+			'FollowupByDate' => 'followupByDate',
+			'ContactMethod' => 'contactMethod',
+			'ContactName' => 'contactName',
+			'Comments' => 'comments',
+			'Types' => ['types', AddContactLogType::class],
+			'Test' => 'test',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'assignedToStaffId' => 'AssignedToStaffId',
+			'text' => 'Text',
+			'followupByDate' => 'FollowupByDate',
+			'contactMethod' => 'ContactMethod',
+			'contactName' => 'ContactName',
+			'comments' => 'Comments',
+			'types' => 'Types',
+			'test' => 'Test',
+			];
+	}
 }

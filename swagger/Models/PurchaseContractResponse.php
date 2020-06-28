@@ -33,4 +33,24 @@ class PurchaseContractResponse extends BaseModel
 	 * @var integer
 	 */
 	public $clientContractId;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'LocationId' => 'locationId',
+			'ContractId' => 'contractId',
+			'ClientContractId' => 'clientContractId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'locationId' => 'LocationId',
+			'contractId' => 'ContractId',
+			'clientContractId' => 'ClientContractId',
+			];
+	}
 }

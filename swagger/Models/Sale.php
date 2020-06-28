@@ -56,4 +56,32 @@ class Sale extends BaseModel
 	 * @var SalePayment[]
 	 */
 	public $payments;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'SaleDate' => 'saleDate',
+			'SaleTime' => 'saleTime',
+			'SaleDateTime' => 'saleDateTime',
+			'ClientId' => 'clientId',
+			'PurchasedItems' => ['purchasedItems', PurchasedItem::class],
+			'LocationId' => 'locationId',
+			'Payments' => ['payments', SalePayment::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'saleDate' => 'SaleDate',
+			'saleTime' => 'SaleTime',
+			'saleDateTime' => 'SaleDateTime',
+			'clientId' => 'ClientId',
+			'purchasedItems' => 'PurchasedItems',
+			'locationId' => 'LocationId',
+			'payments' => 'Payments',
+			];
+	}
 }

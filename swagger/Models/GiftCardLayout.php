@@ -19,4 +19,20 @@ class GiftCardLayout extends BaseModel
 	 * @var string
 	 */
 	public $layoutName;
+
+	protected function getInputMap()
+	{
+		return [
+			'LayoutId' => 'layoutId',
+			'LayoutName' => 'layoutName',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'layoutId' => 'LayoutId',
+			'layoutName' => 'LayoutName',
+			];
+	}
 }

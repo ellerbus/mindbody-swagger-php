@@ -27,4 +27,20 @@ class UploadClientPhotoRequest extends BaseModel
 		$this->bytes = $bytes;
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'Bytes' => 'bytes',
+			'ClientId' => 'clientId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'bytes' => 'Bytes',
+			'clientId' => 'ClientId',
+			];
+	}
 }

@@ -29,4 +29,22 @@ class AutopaySchedule extends BaseModel
 	 * @var string
 	 */
 	public $frequencyTimeUnit;
+
+	protected function getInputMap()
+	{
+		return [
+			'FrequencyType' => 'frequencyType',
+			'FrequencyValue' => 'frequencyValue',
+			'FrequencyTimeUnit' => 'frequencyTimeUnit',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'frequencyType' => 'FrequencyType',
+			'frequencyValue' => 'FrequencyValue',
+			'frequencyTimeUnit' => 'FrequencyTimeUnit',
+			];
+	}
 }

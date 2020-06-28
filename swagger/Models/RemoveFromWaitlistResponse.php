@@ -7,4 +7,16 @@ namespace App\MindBody\Models;
  */
 class RemoveFromWaitlistResponse extends BaseModel
 {
+
+	protected function getInputMap()
+	{
+		return [
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			];
+	}
 }

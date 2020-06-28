@@ -90,4 +90,36 @@ class AddClientToClassRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->classId = $classId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'ClassId' => 'classId',
+			'Test' => 'test',
+			'RequirePayment' => 'requirePayment',
+			'Waitlist' => 'waitlist',
+			'SendEmail' => 'sendEmail',
+			'WaitlistEntryId' => 'waitlistEntryId',
+			'ClientServiceId' => 'clientServiceId',
+			'CrossRegionalBooking' => 'crossRegionalBooking',
+			'CrossRegionalBookingClientServiceSiteId' => 'crossRegionalBookingClientServiceSiteId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'classId' => 'ClassId',
+			'test' => 'Test',
+			'requirePayment' => 'RequirePayment',
+			'waitlist' => 'Waitlist',
+			'sendEmail' => 'SendEmail',
+			'waitlistEntryId' => 'WaitlistEntryId',
+			'clientServiceId' => 'ClientServiceId',
+			'crossRegionalBooking' => 'CrossRegionalBooking',
+			'crossRegionalBookingClientServiceSiteId' => 'CrossRegionalBookingClientServiceSiteId',
+			];
+	}
 }

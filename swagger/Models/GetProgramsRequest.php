@@ -33,4 +33,24 @@ class GetProgramsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ScheduleType' => 'scheduleType',
+			'OnlineOnly' => 'onlineOnly',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'scheduleType' => 'ScheduleType',
+			'onlineOnly' => 'OnlineOnly',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

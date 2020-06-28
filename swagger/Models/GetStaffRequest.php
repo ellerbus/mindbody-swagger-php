@@ -56,4 +56,30 @@ class GetStaffRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffIds' => 'staffIds',
+			'Filters' => 'filters',
+			'SessionTypeId' => 'sessionTypeId',
+			'StartDateTime' => 'startDateTime',
+			'LocationId' => 'locationId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffIds' => 'StaffIds',
+			'filters' => 'Filters',
+			'sessionTypeId' => 'SessionTypeId',
+			'startDateTime' => 'StartDateTime',
+			'locationId' => 'LocationId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

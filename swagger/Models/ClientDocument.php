@@ -37,4 +37,22 @@ class ClientDocument extends BaseModel
 		$this->mediaType = $mediaType;
 		$this->buffer = $buffer;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'FileName' => 'fileName',
+			'MediaType' => 'mediaType',
+			'Buffer' => 'buffer',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'fileName' => 'FileName',
+			'mediaType' => 'MediaType',
+			'buffer' => 'Buffer',
+			];
+	}
 }

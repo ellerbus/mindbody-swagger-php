@@ -61,4 +61,34 @@ class ClientContract extends BaseModel
 	 * @var UpcomingAutopayEvent[]
 	 */
 	public $upcomingAutopayEvents;
+
+	protected function getInputMap()
+	{
+		return [
+			'AgreementDate' => 'agreementDate',
+			'AutopayStatus' => 'autopayStatus',
+			'ContractName' => 'contractName',
+			'EndDate' => 'endDate',
+			'Id' => 'id',
+			'OriginationLocationId' => 'originationLocationId',
+			'StartDate' => 'startDate',
+			'SiteId' => 'siteId',
+			'UpcomingAutopayEvents' => ['upcomingAutopayEvents', UpcomingAutopayEvent::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'agreementDate' => 'AgreementDate',
+			'autopayStatus' => 'AutopayStatus',
+			'contractName' => 'ContractName',
+			'endDate' => 'EndDate',
+			'id' => 'Id',
+			'originationLocationId' => 'OriginationLocationId',
+			'startDate' => 'StartDate',
+			'siteId' => 'SiteId',
+			'upcomingAutopayEvents' => 'UpcomingAutopayEvents',
+			];
+	}
 }

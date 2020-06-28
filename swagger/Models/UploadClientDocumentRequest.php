@@ -27,4 +27,20 @@ class UploadClientDocumentRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->file = $file;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'File' => ['file', ClientDocument::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'file' => 'File',
+			];
+	}
 }

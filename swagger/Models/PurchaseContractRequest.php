@@ -116,4 +116,42 @@ class PurchaseContractRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->contractId = $contractId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'Test' => 'test',
+			'LocationId' => 'locationId',
+			'ClientId' => 'clientId',
+			'ContractId' => 'contractId',
+			'StartDate' => 'startDate',
+			'FirstPaymentOccurs' => 'firstPaymentOccurs',
+			'ClientSignature' => 'clientSignature',
+			'PromotionCode' => 'promotionCode',
+			'CreditCardInfo' => ['creditCardInfo', CreditCardInfo::class],
+			'StoredCardInfo' => ['storedCardInfo', StoredCardInfo::class],
+			'SendNotifications' => 'sendNotifications',
+			'SalesRepId' => 'salesRepId',
+			'UseDirectDebit' => 'useDirectDebit',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'test' => 'Test',
+			'locationId' => 'LocationId',
+			'clientId' => 'ClientId',
+			'contractId' => 'ContractId',
+			'startDate' => 'StartDate',
+			'firstPaymentOccurs' => 'FirstPaymentOccurs',
+			'clientSignature' => 'ClientSignature',
+			'promotionCode' => 'PromotionCode',
+			'creditCardInfo' => 'CreditCardInfo',
+			'storedCardInfo' => 'StoredCardInfo',
+			'sendNotifications' => 'SendNotifications',
+			'salesRepId' => 'SalesRepId',
+			'useDirectDebit' => 'UseDirectDebit',
+			];
+	}
 }

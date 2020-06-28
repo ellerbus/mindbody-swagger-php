@@ -99,4 +99,38 @@ class CheckoutShoppingCartRequest extends BaseModel
 		$this->items = $items;
 		$this->payments = $payments;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'CartId' => 'cartId',
+			'ClientId' => 'clientId',
+			'Test' => 'test',
+			'Items' => ['items', CheckoutItemWrapper::class],
+			'InStore' => 'inStore',
+			'PromotionCode' => 'promotionCode',
+			'Payments' => ['payments', CheckoutPaymentInfo::class],
+			'SendEmail' => 'sendEmail',
+			'LocationId' => 'locationId',
+			'Image' => 'image',
+			'ImageFileName' => 'imageFileName',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'cartId' => 'CartId',
+			'clientId' => 'ClientId',
+			'test' => 'Test',
+			'items' => 'Items',
+			'inStore' => 'InStore',
+			'promotionCode' => 'PromotionCode',
+			'payments' => 'Payments',
+			'sendEmail' => 'SendEmail',
+			'locationId' => 'LocationId',
+			'image' => 'Image',
+			'imageFileName' => 'ImageFileName',
+			];
+	}
 }

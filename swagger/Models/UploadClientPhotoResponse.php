@@ -19,4 +19,20 @@ class UploadClientPhotoResponse extends BaseModel
 	 * @var string
 	 */
 	public $photoUrl;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'PhotoUrl' => 'photoUrl',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'photoUrl' => 'PhotoUrl',
+			];
+	}
 }

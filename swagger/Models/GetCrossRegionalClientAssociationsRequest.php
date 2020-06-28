@@ -35,4 +35,24 @@ class GetCrossRegionalClientAssociationsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'Email' => 'email',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'email' => 'Email',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -35,10 +35,8 @@ class SiteApi extends BaseApi
 	public function GetSites($request)
 	{
 		$url = $this->getFullPath('sites');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetSitesResponse::class);
+		return $this->client->get($url, $request, GetSitesResponse::class);
 	}
 
 	/**
@@ -47,10 +45,8 @@ class SiteApi extends BaseApi
 	public function GetSessionTypes($request)
 	{
 		$url = $this->getFullPath('sessiontypes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetSessionTypesResponse::class);
+		return $this->client->get($url, $request, GetSessionTypesResponse::class);
 	}
 
 	/**
@@ -59,10 +55,8 @@ class SiteApi extends BaseApi
 	public function GetLocations($request)
 	{
 		$url = $this->getFullPath('locations');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetLocationsResponse::class);
+		return $this->client->get($url, $request, GetLocationsResponse::class);
 	}
 
 	/**
@@ -71,10 +65,8 @@ class SiteApi extends BaseApi
 	public function GetPrograms($request)
 	{
 		$url = $this->getFullPath('programs');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetProgramsResponse::class);
+		return $this->client->get($url, $request, GetProgramsResponse::class);
 	}
 
 	/**
@@ -83,10 +75,8 @@ class SiteApi extends BaseApi
 	public function GetResources($request)
 	{
 		$url = $this->getFullPath('resources');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetResourcesResponse::class);
+		return $this->client->get($url, $request, GetResourcesResponse::class);
 	}
 
 	/**
@@ -103,10 +93,8 @@ class SiteApi extends BaseApi
 	public function GetActivationCode()
 	{
 		$url = $this->getFullPath('activationcode');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, null, GetActivationCodeResponse::class);
+		return $this->client->get($url, null, GetActivationCodeResponse::class);
 	}
 
 	/**
@@ -115,10 +103,8 @@ class SiteApi extends BaseApi
 	public function GetMemberships($request)
 	{
 		$url = $this->getFullPath('memberships');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetMembershipsResponse::class);
+		return $this->client->get($url, $request, GetMembershipsResponse::class);
 	}
 
 }

@@ -20,4 +20,20 @@ class GetClassVisitsRequest extends BaseModel
 	 * @var string
 	 */
 	public $lastModifiedDate;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassID' => 'classId',
+			'LastModifiedDate' => 'lastModifiedDate',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classId' => 'ClassID',
+			'lastModifiedDate' => 'LastModifiedDate',
+			];
+	}
 }

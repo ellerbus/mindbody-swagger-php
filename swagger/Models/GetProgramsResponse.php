@@ -19,4 +19,20 @@ class GetProgramsResponse extends BaseModel
 	 * @var Program[]
 	 */
 	public $programs;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Programs' => ['programs', Program::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'programs' => 'Programs',
+			];
+	}
 }

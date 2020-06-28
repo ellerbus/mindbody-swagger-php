@@ -19,4 +19,20 @@ class GetCustomPaymentMethodsResponse extends BaseModel
 	 * @var CustomPaymentMethod[]
 	 */
 	public $paymentMethods;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'PaymentMethods' => ['paymentMethods', CustomPaymentMethod::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'paymentMethods' => 'PaymentMethods',
+			];
+	}
 }

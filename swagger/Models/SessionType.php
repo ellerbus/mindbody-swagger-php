@@ -69,4 +69,36 @@ class SessionType extends BaseModel
 	 * @var integer
 	 */
 	public $subcategoryId;
+
+	protected function getInputMap()
+	{
+		return [
+			'Type' => 'type',
+			'DefaultTimeLength' => 'defaultTimeLength',
+			'Id' => 'id',
+			'Name' => 'name',
+			'NumDeducted' => 'numDeducted',
+			'ProgramId' => 'programId',
+			'Category' => 'category',
+			'CategoryId' => 'categoryId',
+			'Subcategory' => 'subcategory',
+			'SubcategoryId' => 'subcategoryId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'type' => 'Type',
+			'defaultTimeLength' => 'DefaultTimeLength',
+			'id' => 'Id',
+			'name' => 'Name',
+			'numDeducted' => 'NumDeducted',
+			'programId' => 'ProgramId',
+			'category' => 'Category',
+			'categoryId' => 'CategoryId',
+			'subcategory' => 'Subcategory',
+			'subcategoryId' => 'SubcategoryId',
+			];
+	}
 }

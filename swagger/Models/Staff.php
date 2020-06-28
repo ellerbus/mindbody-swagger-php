@@ -162,4 +162,64 @@ class Staff extends BaseModel
 	 * @var Availability[]
 	 */
 	public $availabilities;
+
+	protected function getInputMap()
+	{
+		return [
+			'Address' => 'address',
+			'AppointmentInstructor' => 'appointmentInstructor',
+			'AlwaysAllowDoubleBooking' => 'alwaysAllowDoubleBooking',
+			'Bio' => 'bio',
+			'City' => 'city',
+			'Country' => 'country',
+			'Email' => 'email',
+			'FirstName' => 'firstName',
+			'HomePhone' => 'homePhone',
+			'Id' => 'id',
+			'IndependentContractor' => 'independentContractor',
+			'IsMale' => 'isMale',
+			'LastName' => 'lastName',
+			'MobilePhone' => 'mobilePhone',
+			'Name' => 'name',
+			'PostalCode' => 'postalCode',
+			'ClassTeacher' => 'classTeacher',
+			'SortOrder' => 'sortOrder',
+			'State' => 'state',
+			'WorkPhone' => 'workPhone',
+			'ImageUrl' => 'imageUrl',
+			'Appointments' => ['appointments', Appointment::class],
+			'Unavailabilities' => ['unavailabilities', Unavailability::class],
+			'Availabilities' => ['availabilities', Availability::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'address' => 'Address',
+			'appointmentInstructor' => 'AppointmentInstructor',
+			'alwaysAllowDoubleBooking' => 'AlwaysAllowDoubleBooking',
+			'bio' => 'Bio',
+			'city' => 'City',
+			'country' => 'Country',
+			'email' => 'Email',
+			'firstName' => 'FirstName',
+			'homePhone' => 'HomePhone',
+			'id' => 'Id',
+			'independentContractor' => 'IndependentContractor',
+			'isMale' => 'IsMale',
+			'lastName' => 'LastName',
+			'mobilePhone' => 'MobilePhone',
+			'name' => 'Name',
+			'postalCode' => 'PostalCode',
+			'classTeacher' => 'ClassTeacher',
+			'sortOrder' => 'SortOrder',
+			'state' => 'State',
+			'workPhone' => 'WorkPhone',
+			'imageUrl' => 'ImageUrl',
+			'appointments' => 'Appointments',
+			'unavailabilities' => 'Unavailabilities',
+			'availabilities' => 'Availabilities',
+			];
+	}
 }

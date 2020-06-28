@@ -44,4 +44,28 @@ class Package extends BaseModel
 	 * @var Product[]
 	 */
 	public $products;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'DiscountPercentage' => 'discountPercentage',
+			'SellOnline' => 'sellOnline',
+			'Services' => ['services', Service::class],
+			'Products' => ['products', Product::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'discountPercentage' => 'DiscountPercentage',
+			'sellOnline' => 'SellOnline',
+			'services' => 'Services',
+			'products' => 'Products',
+			];
+	}
 }

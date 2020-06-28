@@ -19,4 +19,20 @@ class GetClientFormulaNotesResponse extends BaseModel
 	 * @var FormulaNote[]
 	 */
 	public $formulaNotes;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'FormulaNotes' => ['formulaNotes', FormulaNote::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'formulaNotes' => 'FormulaNotes',
+			];
+	}
 }

@@ -77,4 +77,28 @@ class GetActiveClientMembershipsRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'LocationId' => 'locationId',
+			'CrossRegionalLookup' => 'crossRegionalLookup',
+			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'locationId' => 'LocationId',
+			'crossRegionalLookup' => 'CrossRegionalLookup',
+			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

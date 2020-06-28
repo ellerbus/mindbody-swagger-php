@@ -67,4 +67,36 @@ class ClientCreditCard extends BaseModel
 	 * @var string
 	 */
 	public $state;
+
+	protected function getInputMap()
+	{
+		return [
+			'Address' => 'address',
+			'CardHolder' => 'cardHolder',
+			'CardNumber' => 'cardNumber',
+			'CardType' => 'cardType',
+			'City' => 'city',
+			'ExpMonth' => 'expMonth',
+			'ExpYear' => 'expYear',
+			'LastFour' => 'lastFour',
+			'PostalCode' => 'postalCode',
+			'State' => 'state',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'address' => 'Address',
+			'cardHolder' => 'CardHolder',
+			'cardNumber' => 'CardNumber',
+			'cardType' => 'CardType',
+			'city' => 'City',
+			'expMonth' => 'ExpMonth',
+			'expYear' => 'ExpYear',
+			'lastFour' => 'LastFour',
+			'postalCode' => 'PostalCode',
+			'state' => 'State',
+			];
+	}
 }

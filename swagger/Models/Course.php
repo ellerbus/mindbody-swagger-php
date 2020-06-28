@@ -69,4 +69,36 @@ class Course extends BaseModel
 	 * @var string
 	 */
 	public $imageUrl;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'Description' => 'description',
+			'Notes' => 'notes',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'Location' => ['location', Location::class],
+			'Organizer' => ['organizer', Staff::class],
+			'Program' => ['program', Program::class],
+			'ImageUrl' => 'imageUrl',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'description' => 'Description',
+			'notes' => 'Notes',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'location' => 'Location',
+			'organizer' => 'Organizer',
+			'program' => 'Program',
+			'imageUrl' => 'ImageUrl',
+			];
+	}
 }

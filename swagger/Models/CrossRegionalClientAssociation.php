@@ -25,4 +25,22 @@ class CrossRegionalClientAssociation extends BaseModel
 	 * @var integer
 	 */
 	public $uniqueId;
+
+	protected function getInputMap()
+	{
+		return [
+			'SiteId' => 'siteId',
+			'ClientId' => 'clientId',
+			'UniqueId' => 'uniqueId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'siteId' => 'SiteId',
+			'clientId' => 'ClientId',
+			'uniqueId' => 'UniqueId',
+			];
+	}
 }

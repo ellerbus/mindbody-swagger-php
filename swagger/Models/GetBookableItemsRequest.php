@@ -73,4 +73,34 @@ class GetBookableItemsRequest extends BaseModel
 	{
 		$this->sessionTypeIds = $sessionTypeIds;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'SessionTypeIds' => 'sessionTypeIds',
+			'LocationIds' => 'locationIds',
+			'StaffIds' => 'staffIds',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'AppointmentId' => 'appointmentId',
+			'IgnoreDefaultSessionLength' => 'ignoreDefaultSessionLength',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'sessionTypeIds' => 'SessionTypeIds',
+			'locationIds' => 'LocationIds',
+			'staffIds' => 'StaffIds',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'appointmentId' => 'AppointmentId',
+			'ignoreDefaultSessionLength' => 'IgnoreDefaultSessionLength',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

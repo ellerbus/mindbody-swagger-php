@@ -31,4 +31,24 @@ class PaginationResponse extends BaseModel
 	 * @var integer
 	 */
 	public $totalResults;
+
+	protected function getInputMap()
+	{
+		return [
+			'RequestedLimit' => 'requestedLimit',
+			'RequestedOffset' => 'requestedOffset',
+			'PageSize' => 'pageSize',
+			'TotalResults' => 'totalResults',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'requestedLimit' => 'RequestedLimit',
+			'requestedOffset' => 'RequestedOffset',
+			'pageSize' => 'PageSize',
+			'totalResults' => 'TotalResults',
+			];
+	}
 }

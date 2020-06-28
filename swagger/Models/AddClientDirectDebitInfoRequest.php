@@ -43,4 +43,28 @@ class AddClientDirectDebitInfoRequest extends BaseModel
 	 * @var string
 	 */
 	public $accountType;
+
+	protected function getInputMap()
+	{
+		return [
+			'Test' => 'test',
+			'ClientId' => 'clientId',
+			'NameOnAccount' => 'nameOnAccount',
+			'RoutingNumber' => 'routingNumber',
+			'AccountNumber' => 'accountNumber',
+			'AccountType' => 'accountType',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'test' => 'Test',
+			'clientId' => 'ClientId',
+			'nameOnAccount' => 'NameOnAccount',
+			'routingNumber' => 'RoutingNumber',
+			'accountNumber' => 'AccountNumber',
+			'accountType' => 'AccountType',
+			];
+	}
 }

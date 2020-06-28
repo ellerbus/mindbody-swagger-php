@@ -19,4 +19,20 @@ class GetResourcesResponse extends BaseModel
 	 * @var Resource[]
 	 */
 	public $resources;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Resources' => ['resources', Resource::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'resources' => 'Resources',
+			];
+	}
 }

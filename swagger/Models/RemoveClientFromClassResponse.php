@@ -14,4 +14,18 @@ class RemoveClientFromClassResponse extends BaseModel
 	 * @var Class
 	 */
 	public $class;
+
+	protected function getInputMap()
+	{
+		return [
+			'Class' => ['class', Class::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'class' => 'Class',
+			];
+	}
 }

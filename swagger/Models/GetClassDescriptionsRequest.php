@@ -59,4 +59,32 @@ class GetClassDescriptionsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassDescriptionId' => 'classDescriptionId',
+			'ProgramIds' => 'programIds',
+			'StartClassDateTime' => 'startClassDateTime',
+			'EndClassDateTime' => 'endClassDateTime',
+			'StaffId' => 'staffId',
+			'LocationId' => 'locationId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classDescriptionId' => 'ClassDescriptionId',
+			'programIds' => 'ProgramIds',
+			'startClassDateTime' => 'StartClassDateTime',
+			'endClassDateTime' => 'EndClassDateTime',
+			'staffId' => 'StaffId',
+			'locationId' => 'LocationId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

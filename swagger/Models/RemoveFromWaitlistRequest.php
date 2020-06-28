@@ -20,4 +20,18 @@ class RemoveFromWaitlistRequest extends BaseModel
 	{
 		$this->waitlistEntryIds = $waitlistEntryIds;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'WaitlistEntryIds' => 'waitlistEntryIds',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'waitlistEntryIds' => 'WaitlistEntryIds',
+			];
+	}
 }

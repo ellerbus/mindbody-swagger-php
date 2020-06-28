@@ -32,4 +32,24 @@ class User extends BaseModel
 	 * @var string
 	 */
 	public $type;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'FirstName' => 'firstName',
+			'LastName' => 'lastName',
+			'Type' => 'type',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'firstName' => 'FirstName',
+			'lastName' => 'LastName',
+			'type' => 'Type',
+			];
+	}
 }

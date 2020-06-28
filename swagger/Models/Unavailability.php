@@ -31,4 +31,24 @@ class Unavailability extends BaseModel
 	 * @var string
 	 */
 	public $description;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Description' => 'description',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'description' => 'Description',
+			];
+	}
 }

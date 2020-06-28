@@ -70,4 +70,32 @@ class AddClientToEnrollmentRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->classScheduleId = $classScheduleId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'ClassScheduleId' => 'classScheduleId',
+			'EnrollDateForward' => 'enrollDateForward',
+			'EnrollOpen' => 'enrollOpen',
+			'Test' => 'test',
+			'SendEmail' => 'sendEmail',
+			'Waitlist' => 'waitlist',
+			'WaitlistEntryId' => 'waitlistEntryId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'classScheduleId' => 'ClassScheduleId',
+			'enrollDateForward' => 'EnrollDateForward',
+			'enrollOpen' => 'EnrollOpen',
+			'test' => 'Test',
+			'sendEmail' => 'SendEmail',
+			'waitlist' => 'Waitlist',
+			'waitlistEntryId' => 'WaitlistEntryId',
+			];
+	}
 }

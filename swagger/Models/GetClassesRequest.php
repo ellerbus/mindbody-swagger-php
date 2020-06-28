@@ -106,4 +106,46 @@ class GetClassesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassDescriptionIds' => 'classDescriptionIds',
+			'ClassIds' => 'classIds',
+			'StaffIds' => 'staffIds',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'ClientId' => 'clientId',
+			'ProgramIds' => 'programIds',
+			'SessionTypeIds' => 'sessionTypeIds',
+			'LocationIds' => 'locationIds',
+			'SemesterIds' => 'semesterIds',
+			'HideCanceledClasses' => 'hideCanceledClasses',
+			'SchedulingWindow' => 'schedulingWindow',
+			'LastModifiedDate' => 'lastModifiedDate',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classDescriptionIds' => 'ClassDescriptionIds',
+			'classIds' => 'ClassIds',
+			'staffIds' => 'StaffIds',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'clientId' => 'ClientId',
+			'programIds' => 'ProgramIds',
+			'sessionTypeIds' => 'SessionTypeIds',
+			'locationIds' => 'LocationIds',
+			'semesterIds' => 'SemesterIds',
+			'hideCanceledClasses' => 'HideCanceledClasses',
+			'schedulingWindow' => 'SchedulingWindow',
+			'lastModifiedDate' => 'LastModifiedDate',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

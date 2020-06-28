@@ -19,4 +19,20 @@ class GetClassDescriptionsResponse extends BaseModel
 	 * @var ClassDescription[]
 	 */
 	public $classDescriptions;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ClassDescriptions' => ['classDescriptions', ClassDescription::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'classDescriptions' => 'ClassDescriptions',
+			];
+	}
 }

@@ -34,10 +34,8 @@ class AppointmentApi extends BaseApi
 	public function AddApppointment($request)
 	{
 		$url = $this->getFullPath('addappointment');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, AddAppointmentResponse::class);
+		return $this->client->post($url, $request, AddAppointmentResponse::class);
 	}
 
 	/**
@@ -49,10 +47,8 @@ class AppointmentApi extends BaseApi
 	public function UpdateApppointment($request)
 	{
 		$url = $this->getFullPath('updateappointment');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UpdateAppointmentResponse::class);
+		return $this->client->post($url, $request, UpdateAppointmentResponse::class);
 	}
 
 	/**
@@ -63,10 +59,8 @@ class AppointmentApi extends BaseApi
 	public function GetBookableItems($request)
 	{
 		$url = $this->getFullPath('bookableitems');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetBookableItemsResponse::class);
+		return $this->client->get($url, $request, GetBookableItemsResponse::class);
 	}
 
 	/**
@@ -78,10 +72,8 @@ class AppointmentApi extends BaseApi
 	public function GetActiveSessionTimes($request)
 	{
 		$url = $this->getFullPath('activesessiontimes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetActiveSessionTimesResponse::class);
+		return $this->client->get($url, $request, GetActiveSessionTimesResponse::class);
 	}
 
 	/**
@@ -93,10 +85,8 @@ class AppointmentApi extends BaseApi
 	public function GetScheduleItems($request)
 	{
 		$url = $this->getFullPath('scheduleitems');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetScheduleItemsResponse::class);
+		return $this->client->get($url, $request, GetScheduleItemsResponse::class);
 	}
 
 	/**
@@ -105,10 +95,8 @@ class AppointmentApi extends BaseApi
 	public function GetAppointmentOptions()
 	{
 		$url = $this->getFullPath('appointmentoptions');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, null, GetAppointmentOptionsResponse::class);
+		return $this->client->get($url, null, GetAppointmentOptionsResponse::class);
 	}
 
 	/**
@@ -117,10 +105,8 @@ class AppointmentApi extends BaseApi
 	public function GetStaffAppointments($request)
 	{
 		$url = $this->getFullPath('staffappointments');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetStaffAppointmentsResponse::class);
+		return $this->client->get($url, $request, GetStaffAppointmentsResponse::class);
 	}
 
 }

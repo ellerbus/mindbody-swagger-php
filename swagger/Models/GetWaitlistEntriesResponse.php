@@ -19,4 +19,20 @@ class GetWaitlistEntriesResponse extends BaseModel
 	 * @var WaitlistEntry[]
 	 */
 	public $waitlistEntries;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'WaitlistEntries' => ['waitlistEntries', WaitlistEntry::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'waitlistEntries' => 'WaitlistEntries',
+			];
+	}
 }

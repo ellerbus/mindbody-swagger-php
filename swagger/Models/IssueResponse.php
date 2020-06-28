@@ -25,4 +25,22 @@ class IssueResponse extends BaseModel
 	 * @var User
 	 */
 	public $user;
+
+	protected function getInputMap()
+	{
+		return [
+			'TokenType' => 'tokenType',
+			'AccessToken' => 'accessToken',
+			'User' => ['user', User::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'tokenType' => 'TokenType',
+			'accessToken' => 'AccessToken',
+			'user' => 'User',
+			];
+	}
 }

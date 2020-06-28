@@ -70,4 +70,32 @@ class GetClientVisitsRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
+			'CrossRegionalLookup' => 'crossRegionalLookup',
+			'EndDate' => 'endDate',
+			'StartDate' => 'startDate',
+			'UnpaidsOnly' => 'unpaidsOnly',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
+			'crossRegionalLookup' => 'CrossRegionalLookup',
+			'endDate' => 'EndDate',
+			'startDate' => 'StartDate',
+			'unpaidsOnly' => 'UnpaidsOnly',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

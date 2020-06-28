@@ -19,4 +19,20 @@ class GetCustomClientFieldsResponse extends BaseModel
 	 * @var CustomClientField[]
 	 */
 	public $customClientFields;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'CustomClientFields' => ['customClientFields', CustomClientField::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'customClientFields' => 'CustomClientFields',
+			];
+	}
 }

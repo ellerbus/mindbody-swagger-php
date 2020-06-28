@@ -19,4 +19,20 @@ class GetSessionTypesResponse extends BaseModel
 	 * @var SessionType[]
 	 */
 	public $sessionTypes;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'SessionTypes' => ['sessionTypes', SessionType::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'sessionTypes' => 'SessionTypes',
+			];
+	}
 }

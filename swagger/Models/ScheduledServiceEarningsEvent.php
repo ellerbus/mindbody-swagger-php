@@ -38,4 +38,26 @@ class ScheduledServiceEarningsEvent extends BaseModel
 	 * @var string
 	 */
 	public $dateTime;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			'ScheduledServiceId' => 'scheduledServiceId',
+			'ScheduledServiceType' => 'scheduledServiceType',
+			'Earnings' => 'earnings',
+			'DateTime' => 'dateTime',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			'scheduledServiceId' => 'ScheduledServiceId',
+			'scheduledServiceType' => 'ScheduledServiceType',
+			'earnings' => 'Earnings',
+			'dateTime' => 'DateTime',
+			];
+	}
 }

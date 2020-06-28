@@ -55,4 +55,28 @@ class GetContractsRequest extends BaseModel
 	{
 		$this->locationId = $locationId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ContractIds' => 'contractIds',
+			'SoldOnline' => 'soldOnline',
+			'LocationId' => 'locationId',
+			'ConsumerId' => 'consumerId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'contractIds' => 'ContractIds',
+			'soldOnline' => 'SoldOnline',
+			'locationId' => 'LocationId',
+			'consumerId' => 'ConsumerId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

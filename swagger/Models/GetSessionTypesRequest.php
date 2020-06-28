@@ -33,4 +33,24 @@ class GetSessionTypesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ProgramIDs' => 'programIDs',
+			'OnlineOnly' => 'onlineOnly',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'programIDs' => 'ProgramIDs',
+			'onlineOnly' => 'OnlineOnly',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -23,10 +23,8 @@ class StaffApi extends BaseApi
 	public function GetStaff($request)
 	{
 		$url = $this->getFullPath('staff');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetStaffResponse::class);
+		return $this->client->get($url, $request, GetStaffResponse::class);
 	}
 
 	/**
@@ -35,10 +33,8 @@ class StaffApi extends BaseApi
 	public function GetStaffPermissions($request)
 	{
 		$url = $this->getFullPath('staffpermissions');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetStaffPermissionsResponse::class);
+		return $this->client->get($url, $request, GetStaffPermissionsResponse::class);
 	}
 
 }

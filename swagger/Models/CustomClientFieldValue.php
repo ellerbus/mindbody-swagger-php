@@ -31,4 +31,24 @@ class CustomClientFieldValue extends BaseModel
 	 * @var string
 	 */
 	public $name;
+
+	protected function getInputMap()
+	{
+		return [
+			'Value' => 'value',
+			'Id' => 'id',
+			'DataType' => 'dataType',
+			'Name' => 'name',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'value' => 'Value',
+			'id' => 'Id',
+			'dataType' => 'DataType',
+			'name' => 'Name',
+			];
+	}
 }

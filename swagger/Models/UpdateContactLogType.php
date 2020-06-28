@@ -19,4 +19,20 @@ class UpdateContactLogType extends BaseModel
 	 * @var integer[]
 	 */
 	public $subTypes;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'SubTypes' => 'subTypes',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'subTypes' => 'SubTypes',
+			];
+	}
 }

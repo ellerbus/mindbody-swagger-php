@@ -31,4 +31,24 @@ class Program extends BaseModel
 	 * @var integer
 	 */
 	public $cancelOffset;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'ScheduleType' => 'scheduleType',
+			'CancelOffset' => 'cancelOffset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'scheduleType' => 'ScheduleType',
+			'cancelOffset' => 'CancelOffset',
+			];
+	}
 }

@@ -169,4 +169,66 @@ class Location extends BaseModel
 	 * @var integer
 	 */
 	public $totalNumberOfDeals;
+
+	protected function getInputMap()
+	{
+		return [
+			'AdditionalImageURLs' => 'additionalImageUrLs',
+			'Address' => 'address',
+			'Address2' => 'address2',
+			'Amenities' => ['amenities', Amenity::class],
+			'BusinessDescription' => 'businessDescription',
+			'City' => 'city',
+			'Description' => 'description',
+			'HasClasses' => 'hasClasses',
+			'Id' => 'id',
+			'Latitude' => 'latitude',
+			'Longitude' => 'longitude',
+			'Name' => 'name',
+			'Phone' => 'phone',
+			'PhoneExtension' => 'phoneExtension',
+			'PostalCode' => 'postalCode',
+			'SiteID' => 'siteId',
+			'StateProvCode' => 'stateProvCode',
+			'Tax1' => 'tax1',
+			'Tax2' => 'tax2',
+			'Tax3' => 'tax3',
+			'Tax4' => 'tax4',
+			'Tax5' => 'tax5',
+			'TotalNumberOfRatings' => 'totalNumberOfRatings',
+			'AverageRating' => 'averageRating',
+			'TotalNumberOfDeals' => 'totalNumberOfDeals',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'additionalImageUrLs' => 'AdditionalImageURLs',
+			'address' => 'Address',
+			'address2' => 'Address2',
+			'amenities' => 'Amenities',
+			'businessDescription' => 'BusinessDescription',
+			'city' => 'City',
+			'description' => 'Description',
+			'hasClasses' => 'HasClasses',
+			'id' => 'Id',
+			'latitude' => 'Latitude',
+			'longitude' => 'Longitude',
+			'name' => 'Name',
+			'phone' => 'Phone',
+			'phoneExtension' => 'PhoneExtension',
+			'postalCode' => 'PostalCode',
+			'siteId' => 'SiteID',
+			'stateProvCode' => 'StateProvCode',
+			'tax1' => 'Tax1',
+			'tax2' => 'Tax2',
+			'tax3' => 'Tax3',
+			'tax4' => 'Tax4',
+			'tax5' => 'Tax5',
+			'totalNumberOfRatings' => 'TotalNumberOfRatings',
+			'averageRating' => 'AverageRating',
+			'totalNumberOfDeals' => 'TotalNumberOfDeals',
+			];
+	}
 }

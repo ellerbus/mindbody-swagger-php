@@ -19,4 +19,20 @@ class GetCrossRegionalClientAssociationsResponse extends BaseModel
 	 * @var CrossRegionalClientAssociation[]
 	 */
 	public $crossRegionalClientAssociations;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'CrossRegionalClientAssociations' => ['crossRegionalClientAssociations', CrossRegionalClientAssociation::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'crossRegionalClientAssociations' => 'CrossRegionalClientAssociations',
+			];
+	}
 }

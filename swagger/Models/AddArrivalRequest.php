@@ -27,4 +27,20 @@ class AddArrivalRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->locationId = $locationId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'LocationId' => 'locationId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'locationId' => 'LocationId',
+			];
+	}
 }

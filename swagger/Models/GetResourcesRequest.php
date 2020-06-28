@@ -46,4 +46,28 @@ class GetResourcesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'SessionTypeIds' => 'sessionTypeIds',
+			'LocationId' => 'locationId',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'sessionTypeIds' => 'SessionTypeIds',
+			'locationId' => 'LocationId',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -19,4 +19,20 @@ class IssueRequest extends BaseModel
 	 * @var string
 	 */
 	public $password;
+
+	protected function getInputMap()
+	{
+		return [
+			'Username' => 'username',
+			'Password' => 'password',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'username' => 'Username',
+			'password' => 'Password',
+			];
+	}
 }

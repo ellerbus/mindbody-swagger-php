@@ -20,4 +20,20 @@ class UpdateContactLogComment extends BaseModel
 	 * @var string
 	 */
 	public $text;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Text' => 'text',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'text' => 'Text',
+			];
+	}
 }

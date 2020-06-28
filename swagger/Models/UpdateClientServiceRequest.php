@@ -40,4 +40,24 @@ class UpdateClientServiceRequest extends BaseModel
 	{
 		$this->serviceId = $serviceId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ServiceId' => 'serviceId',
+			'ActiveDate' => 'activeDate',
+			'ExpirationDate' => 'expirationDate',
+			'Test' => 'test',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'serviceId' => 'ServiceId',
+			'activeDate' => 'ActiveDate',
+			'expirationDate' => 'ExpirationDate',
+			'test' => 'Test',
+			];
+	}
 }

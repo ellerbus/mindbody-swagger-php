@@ -31,4 +31,24 @@ class Tip extends BaseModel
 	 * @var number
 	 */
 	public $earnings;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			'SaleId' => 'saleId',
+			'SaleDateTime' => 'saleDateTime',
+			'Earnings' => 'earnings',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			'saleId' => 'SaleId',
+			'saleDateTime' => 'SaleDateTime',
+			'earnings' => 'Earnings',
+			];
+	}
 }

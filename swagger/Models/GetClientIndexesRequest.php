@@ -15,4 +15,18 @@ class GetClientIndexesRequest extends BaseModel
 	 * @var boolean
 	 */
 	public $requiredOnly;
+
+	protected function getInputMap()
+	{
+		return [
+			'RequiredOnly' => 'requiredOnly',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'requiredOnly' => 'RequiredOnly',
+			];
+	}
 }

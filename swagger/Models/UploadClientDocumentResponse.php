@@ -19,4 +19,20 @@ class UploadClientDocumentResponse extends BaseModel
 	 * @var string
 	 */
 	public $fileName;
+
+	protected function getInputMap()
+	{
+		return [
+			'FileSize' => 'fileSize',
+			'FileName' => 'fileName',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'fileSize' => 'FileSize',
+			'fileName' => 'FileName',
+			];
+	}
 }

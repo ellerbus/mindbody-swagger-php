@@ -70,10 +70,8 @@ class ClientApi extends BaseApi
 	public function GetClients($request)
 	{
 		$url = $this->getFullPath('clients');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientsResponse::class);
+		return $this->client->get($url, $request, GetClientsResponse::class);
 	}
 
 	/**
@@ -82,10 +80,8 @@ class ClientApi extends BaseApi
 	public function GetClientFormulaNotes($request)
 	{
 		$url = $this->getFullPath('clientformulanotes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientFormulaNotesResponse::class);
+		return $this->client->get($url, $request, GetClientFormulaNotesResponse::class);
 	}
 
 	/**
@@ -96,10 +92,8 @@ class ClientApi extends BaseApi
 	public function UploadClientDocument($request)
 	{
 		$url = $this->getFullPath('uploadclientdocument');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UploadClientDocumentResponse::class);
+		return $this->client->post($url, $request, UploadClientDocumentResponse::class);
 	}
 
 	/**
@@ -109,10 +103,8 @@ class ClientApi extends BaseApi
 	public function UploadClientPhoto($request)
 	{
 		$url = $this->getFullPath('uploadclientphoto');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UploadClientPhotoResponse::class);
+		return $this->client->post($url, $request, UploadClientPhotoResponse::class);
 	}
 
 	/**
@@ -121,10 +113,8 @@ class ClientApi extends BaseApi
 	public function GetClientContracts($request)
 	{
 		$url = $this->getFullPath('clientcontracts');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientContractsResponse::class);
+		return $this->client->get($url, $request, GetClientContractsResponse::class);
 	}
 
 	/**
@@ -133,10 +123,8 @@ class ClientApi extends BaseApi
 	public function GetClientServices($request)
 	{
 		$url = $this->getFullPath('clientservices');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientServicesResponse::class);
+		return $this->client->get($url, $request, GetClientServicesResponse::class);
 	}
 
 	/**
@@ -145,10 +133,8 @@ class ClientApi extends BaseApi
 	public function GetClientVisits($request)
 	{
 		$url = $this->getFullPath('clientvisits');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientVisitsResponse::class);
+		return $this->client->get($url, $request, GetClientVisitsResponse::class);
 	}
 
 	/**
@@ -157,10 +143,8 @@ class ClientApi extends BaseApi
 	public function GetActiveClientMemberships($request)
 	{
 		$url = $this->getFullPath('activeclientmemberships');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetActiveClientMembershipsResponse::class);
+		return $this->client->get($url, $request, GetActiveClientMembershipsResponse::class);
 	}
 
 	/**
@@ -172,10 +156,8 @@ class ClientApi extends BaseApi
 	public function GetRequiredClientFields()
 	{
 		$url = $this->getFullPath('requiredclientfields');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, null, GetRequiredClientFieldsResponse::class);
+		return $this->client->get($url, null, GetRequiredClientFieldsResponse::class);
 	}
 
 	/**
@@ -186,10 +168,8 @@ class ClientApi extends BaseApi
 	public function GetClientReferralTypes($request)
 	{
 		$url = $this->getFullPath('clientreferraltypes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientReferralTypesResponse::class);
+		return $this->client->get($url, $request, GetClientReferralTypesResponse::class);
 	}
 
 	/**
@@ -198,10 +178,8 @@ class ClientApi extends BaseApi
 	public function GetClientAccountBalances($request)
 	{
 		$url = $this->getFullPath('clientaccountbalances');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientAccountBalancesResponse::class);
+		return $this->client->get($url, $request, GetClientAccountBalancesResponse::class);
 	}
 
 	/**
@@ -210,10 +188,8 @@ class ClientApi extends BaseApi
 	public function GetClientPurchases($request)
 	{
 		$url = $this->getFullPath('clientpurchases');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientPurchasesResponse::class);
+		return $this->client->get($url, $request, GetClientPurchasesResponse::class);
 	}
 
 	/**
@@ -229,10 +205,8 @@ class ClientApi extends BaseApi
 	public function GetClientIndexes($request)
 	{
 		$url = $this->getFullPath('clientindexes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClientIndexesResponse::class);
+		return $this->client->get($url, $request, GetClientIndexesResponse::class);
 	}
 
 	/**
@@ -241,10 +215,8 @@ class ClientApi extends BaseApi
 	public function GetCustomClientFields($request)
 	{
 		$url = $this->getFullPath('customclientfields');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetCustomClientFieldsResponse::class);
+		return $this->client->get($url, $request, GetCustomClientFieldsResponse::class);
 	}
 
 	/**
@@ -253,10 +225,8 @@ class ClientApi extends BaseApi
 	public function AddContactLog($request)
 	{
 		$url = $this->getFullPath('addcontactlog');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, ContactLog::class);
+		return $this->client->post($url, $request, ContactLog::class);
 	}
 
 	/**
@@ -265,10 +235,8 @@ class ClientApi extends BaseApi
 	public function UpdateContactLog($request)
 	{
 		$url = $this->getFullPath('updatecontactlog');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, ContactLog::class);
+		return $this->client->post($url, $request, ContactLog::class);
 	}
 
 	/**
@@ -286,10 +254,8 @@ class ClientApi extends BaseApi
 	public function GetCrossRegionalClientAssociations($request)
 	{
 		$url = $this->getFullPath('crossregionalclientassociations');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetCrossRegionalClientAssociationsResponse::class);
+		return $this->client->get($url, $request, GetCrossRegionalClientAssociationsResponse::class);
 	}
 
 	/**
@@ -303,10 +269,8 @@ class ClientApi extends BaseApi
 	public function AddClient($request)
 	{
 		$url = $this->getFullPath('addclient');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, AddClientResponse::class);
+		return $this->client->post($url, $request, AddClientResponse::class);
 	}
 
 	/**
@@ -334,10 +298,8 @@ class ClientApi extends BaseApi
 	public function UpdateClient($request)
 	{
 		$url = $this->getFullPath('updateclient');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UpdateClientResponse::class);
+		return $this->client->post($url, $request, UpdateClientResponse::class);
 	}
 
 	/**
@@ -346,10 +308,8 @@ class ClientApi extends BaseApi
 	public function UpdateClientVisit($request)
 	{
 		$url = $this->getFullPath('updateclientvisit');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UpdateClientVisitResponse::class);
+		return $this->client->post($url, $request, UpdateClientVisitResponse::class);
 	}
 
 	/**
@@ -358,10 +318,8 @@ class ClientApi extends BaseApi
 	public function AddArrival($request)
 	{
 		$url = $this->getFullPath('addarrival');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, AddArrivalResponse::class);
+		return $this->client->post($url, $request, AddArrivalResponse::class);
 	}
 
 	/**
@@ -370,10 +328,8 @@ class ClientApi extends BaseApi
 	public function SendPasswordResetEmail($request)
 	{
 		$url = $this->getFullPath('sendpasswordresetemail');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, null);
+		return $this->client->post($url, $request, null);
 	}
 
 	/**
@@ -385,10 +341,8 @@ class ClientApi extends BaseApi
 	public function GetContactLogs($request)
 	{
 		$url = $this->getFullPath('contactlogs');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetContactLogsResponse::class);
+		return $this->client->get($url, $request, GetContactLogsResponse::class);
 	}
 
 	/**
@@ -400,10 +354,8 @@ class ClientApi extends BaseApi
 	public function UpdateClientService($request)
 	{
 		$url = $this->getFullPath('updateclientservice');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, UpdateClientServiceResponse::class);
+		return $this->client->post($url, $request, UpdateClientServiceResponse::class);
 	}
 
 	/**
@@ -412,10 +364,8 @@ class ClientApi extends BaseApi
 	public function GetDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('clientdirectdebitinfo');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, DirectDebitInfo::class);
+		return $this->client->get($url, $request, DirectDebitInfo::class);
 	}
 
 	/**
@@ -424,10 +374,8 @@ class ClientApi extends BaseApi
 	public function DeleteDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('clientdirectdebitinfo');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->delete($url, $siteId, $auth, $request, null);
+		return $this->client->delete($url, $request, null);
 	}
 
 	/**
@@ -436,10 +384,8 @@ class ClientApi extends BaseApi
 	public function AddClientDirectDebitInfo($request)
 	{
 		$url = $this->getFullPath('addclientdirectdebitinfo');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, AddClientDirectDebitInfoResponse::class);
+		return $this->client->post($url, $request, AddClientDirectDebitInfoResponse::class);
 	}
 
 }

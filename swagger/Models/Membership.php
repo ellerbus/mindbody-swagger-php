@@ -87,4 +87,42 @@ class Membership extends BaseModel
 	 * @var boolean
 	 */
 	public $isActive;
+
+	protected function getInputMap()
+	{
+		return [
+			'MembershipId' => 'membershipId',
+			'MembershipName' => 'membershipName',
+			'Priority' => 'priority',
+			'MemberRetailDiscount' => 'memberRetailDiscount',
+			'MemberServiceDiscount' => 'memberServiceDiscount',
+			'AllowClientsToScheduleUnpaid' => 'allowClientsToScheduleUnpaid',
+			'OnlineBookingRestrictedToMembersOnly' => ['onlineBookingRestrictedToMembersOnly', ProgramMembership::class],
+			'DayOfMonthSchedulingOpensForNextMonth' => 'dayOfMonthSchedulingOpensForNextMonth',
+			'RestrictSelfSignInToMembersOnly' => 'restrictSelfSignInToMembersOnly',
+			'AllowMembersToBookAppointmentsWithoutPaying' => 'allowMembersToBookAppointmentsWithoutPaying',
+			'AllowMembersToPurchaseNonMembersServices' => 'allowMembersToPurchaseNonMembersServices',
+			'AllowMembersToPurchaseNonMembersProducts' => 'allowMembersToPurchaseNonMembersProducts',
+			'IsActive' => 'isActive',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'membershipId' => 'MembershipId',
+			'membershipName' => 'MembershipName',
+			'priority' => 'Priority',
+			'memberRetailDiscount' => 'MemberRetailDiscount',
+			'memberServiceDiscount' => 'MemberServiceDiscount',
+			'allowClientsToScheduleUnpaid' => 'AllowClientsToScheduleUnpaid',
+			'onlineBookingRestrictedToMembersOnly' => 'OnlineBookingRestrictedToMembersOnly',
+			'dayOfMonthSchedulingOpensForNextMonth' => 'DayOfMonthSchedulingOpensForNextMonth',
+			'restrictSelfSignInToMembersOnly' => 'RestrictSelfSignInToMembersOnly',
+			'allowMembersToBookAppointmentsWithoutPaying' => 'AllowMembersToBookAppointmentsWithoutPaying',
+			'allowMembersToPurchaseNonMembersServices' => 'AllowMembersToPurchaseNonMembersServices',
+			'allowMembersToPurchaseNonMembersProducts' => 'AllowMembersToPurchaseNonMembersProducts',
+			'isActive' => 'IsActive',
+			];
+	}
 }

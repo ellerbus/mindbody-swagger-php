@@ -38,4 +38,24 @@ class StaffPermissionGroup extends BaseModel
 	 * @var string[]
 	 */
 	public $deniedPermissions;
+
+	protected function getInputMap()
+	{
+		return [
+			'PermissionGroupName' => 'permissionGroupName',
+			'IpRestricted' => 'ipRestricted',
+			'AllowedPermissions' => 'allowedPermissions',
+			'DeniedPermissions' => 'deniedPermissions',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'permissionGroupName' => 'PermissionGroupName',
+			'ipRestricted' => 'IpRestricted',
+			'allowedPermissions' => 'AllowedPermissions',
+			'deniedPermissions' => 'DeniedPermissions',
+			];
+	}
 }

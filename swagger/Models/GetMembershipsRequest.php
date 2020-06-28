@@ -14,4 +14,18 @@ class GetMembershipsRequest extends BaseModel
 	 * @var integer[]
 	 */
 	public $membershipIds;
+
+	protected function getInputMap()
+	{
+		return [
+			'MembershipIds' => 'membershipIds',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'membershipIds' => 'MembershipIds',
+			];
+	}
 }

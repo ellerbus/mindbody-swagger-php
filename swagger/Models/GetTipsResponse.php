@@ -21,4 +21,20 @@ class GetTipsResponse extends BaseModel
 	 * @var Tip[]
 	 */
 	public $tips;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Tips' => ['tips', Tip::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'tips' => 'Tips',
+			];
+	}
 }

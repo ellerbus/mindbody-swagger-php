@@ -21,4 +21,20 @@ class GetCommissionsResponse extends BaseModel
 	 * @var CommissionPayrollEvent[]
 	 */
 	public $commissions;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Commissions' => ['commissions', CommissionPayrollEvent::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'commissions' => 'Commissions',
+			];
+	}
 }

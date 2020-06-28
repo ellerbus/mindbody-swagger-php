@@ -13,4 +13,18 @@ class AddClientToClassResponse extends BaseModel
 	 * @var AddClientToClassVisit
 	 */
 	public $visit;
+
+	protected function getInputMap()
+	{
+		return [
+			'Visit' => ['visit', AddClientToClassVisit::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'visit' => 'Visit',
+			];
+	}
 }

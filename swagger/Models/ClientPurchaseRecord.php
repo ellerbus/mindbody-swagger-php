@@ -61,4 +61,34 @@ class ClientPurchaseRecord extends BaseModel
 	 * @var integer
 	 */
 	public $quantity;
+
+	protected function getInputMap()
+	{
+		return [
+			'Sale' => ['sale', Sale::class],
+			'Description' => 'description',
+			'AccountPayment' => 'accountPayment',
+			'Price' => 'price',
+			'AmountPaid' => 'amountPaid',
+			'Discount' => 'discount',
+			'Tax' => 'tax',
+			'Returned' => 'returned',
+			'Quantity' => 'quantity',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'sale' => 'Sale',
+			'description' => 'Description',
+			'accountPayment' => 'AccountPayment',
+			'price' => 'Price',
+			'amountPaid' => 'AmountPaid',
+			'discount' => 'Discount',
+			'tax' => 'Tax',
+			'returned' => 'Returned',
+			'quantity' => 'Quantity',
+			];
+	}
 }

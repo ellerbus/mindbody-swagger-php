@@ -26,4 +26,22 @@ class GetSitesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'SiteIds' => 'siteIds',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'siteIds' => 'SiteIds',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

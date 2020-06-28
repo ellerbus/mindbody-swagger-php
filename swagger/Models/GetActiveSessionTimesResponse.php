@@ -25,4 +25,20 @@ class GetActiveSessionTimesResponse extends BaseModel
 	 * @var string[]
 	 */
 	public $activeSessionTimes;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ActiveSessionTimes' => 'activeSessionTimes',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'activeSessionTimes' => 'ActiveSessionTimes',
+			];
+	}
 }

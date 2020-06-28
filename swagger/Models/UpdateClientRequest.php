@@ -49,4 +49,24 @@ class UpdateClientRequest extends BaseModel
 	{
 		$this->client = $client;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'Client' => ['client', Client::class],
+			'Test' => 'test',
+			'CrossRegionalUpdate' => 'crossRegionalUpdate',
+			'NewId' => 'newId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'client' => 'Client',
+			'test' => 'Test',
+			'crossRegionalUpdate' => 'CrossRegionalUpdate',
+			'newId' => 'NewId',
+			];
+	}
 }

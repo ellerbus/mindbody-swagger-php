@@ -19,4 +19,20 @@ class GetScheduledServiceEarningsResponse extends BaseModel
 	 * @var ScheduledServiceEarningsEvent[]
 	 */
 	public $scheduledServiceEarnings;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ScheduledServiceEarnings' => ['scheduledServiceEarnings', ScheduledServiceEarningsEvent::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'scheduledServiceEarnings' => 'ScheduledServiceEarnings',
+			];
+	}
 }

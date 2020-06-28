@@ -20,4 +20,20 @@ class GetSalesResponse extends BaseModel
 	 * @var Sale[]
 	 */
 	public $sales;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Sales' => ['sales', Sale::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'sales' => 'Sales',
+			];
+	}
 }

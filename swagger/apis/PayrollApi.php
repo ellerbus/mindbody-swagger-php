@@ -39,10 +39,8 @@ class PayrollApi extends BaseApi
 	public function GetScheduledServiceEarnings($request)
 	{
 		$url = $this->getFullPath('scheduledserviceearnings');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetScheduledServiceEarningsResponse::class);
+		return $this->client->get($url, $request, GetScheduledServiceEarningsResponse::class);
 	}
 
 	/**
@@ -51,10 +49,8 @@ class PayrollApi extends BaseApi
 	public function GetTimeCards($request)
 	{
 		$url = $this->getFullPath('timecards');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetTimeCardsResponse::class);
+		return $this->client->get($url, $request, GetTimeCardsResponse::class);
 	}
 
 	/**
@@ -67,10 +63,8 @@ class PayrollApi extends BaseApi
 	public function GetCommissions($request)
 	{
 		$url = $this->getFullPath('commissions');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetCommissionsResponse::class);
+		return $this->client->get($url, $request, GetCommissionsResponse::class);
 	}
 
 	/**
@@ -79,10 +73,8 @@ class PayrollApi extends BaseApi
 	public function GetTips($request)
 	{
 		$url = $this->getFullPath('tips');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetTipsResponse::class);
+		return $this->client->get($url, $request, GetTipsResponse::class);
 	}
 
 }

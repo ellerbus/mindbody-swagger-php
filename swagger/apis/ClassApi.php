@@ -37,10 +37,8 @@ class ClassApi extends BaseApi
 	public function GetClasses($request)
 	{
 		$url = $this->getFullPath('classes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClassesResponse::class);
+		return $this->client->get($url, $request, GetClassesResponse::class);
 	}
 
 	/**
@@ -51,10 +49,8 @@ class ClassApi extends BaseApi
 	public function GetClassDescriptions($request)
 	{
 		$url = $this->getFullPath('classdescriptions');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClassDescriptionsResponse::class);
+		return $this->client->get($url, $request, GetClassDescriptionsResponse::class);
 	}
 
 	/**
@@ -65,10 +61,8 @@ class ClassApi extends BaseApi
 	public function GetClassVisits($request)
 	{
 		$url = $this->getFullPath('classvisits');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClassVisitsResponse::class);
+		return $this->client->get($url, $request, GetClassVisitsResponse::class);
 	}
 
 	/**
@@ -77,10 +71,8 @@ class ClassApi extends BaseApi
 	public function RemoveClientFromClass($request)
 	{
 		$url = $this->getFullPath('removeclientfromclass');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, RemoveClientFromClassResponse::class);
+		return $this->client->post($url, $request, RemoveClientFromClassResponse::class);
 	}
 
 	/**
@@ -121,10 +113,8 @@ class ClassApi extends BaseApi
 	public function AddClientToClass($request)
 	{
 		$url = $this->getFullPath('addclienttoclass');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, AddClientToClassResponse::class);
+		return $this->client->post($url, $request, AddClientToClassResponse::class);
 	}
 
 	/**
@@ -133,10 +123,8 @@ class ClassApi extends BaseApi
 	public function GetClassSchedules($request)
 	{
 		$url = $this->getFullPath('classschedules');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetClassSchedulesResponse::class);
+		return $this->client->get($url, $request, GetClassSchedulesResponse::class);
 	}
 
 	/**
@@ -147,10 +135,8 @@ class ClassApi extends BaseApi
 	public function GetWaitlistEntries($request)
 	{
 		$url = $this->getFullPath('waitlistentries');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetWaitlistEntriesResponse::class);
+		return $this->client->get($url, $request, GetWaitlistEntriesResponse::class);
 	}
 
 	/**
@@ -160,10 +146,8 @@ class ClassApi extends BaseApi
 	public function RemoveFromWaitlist($request)
 	{
 		$url = $this->getFullPath('removefromwaitlist');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, RemoveFromWaitlistResponse::class);
+		return $this->client->post($url, $request, RemoveFromWaitlistResponse::class);
 	}
 
 	/**
@@ -172,10 +156,8 @@ class ClassApi extends BaseApi
 	public function SubstituteClassTeacher($request)
 	{
 		$url = $this->getFullPath('substituteclassteacher');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, SubstituteClassTeacherResponse::class);
+		return $this->client->post($url, $request, SubstituteClassTeacherResponse::class);
 	}
 
 }

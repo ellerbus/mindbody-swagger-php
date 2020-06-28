@@ -13,4 +13,18 @@ class AddAppointmentResponse extends BaseModel
 	 * @var Appointment
 	 */
 	public $appointment;
+
+	protected function getInputMap()
+	{
+		return [
+			'Appointment' => ['appointment', Appointment::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'appointment' => 'Appointment',
+			];
+	}
 }

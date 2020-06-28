@@ -81,4 +81,38 @@ class GetServicesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ProgramIds' => 'programIds',
+			'SessionTypeIds' => 'sessionTypeIds',
+			'ServiceIds' => 'serviceIds',
+			'ClassId' => 'classId',
+			'ClassScheduleId' => 'classScheduleId',
+			'SellOnline' => 'sellOnline',
+			'LocationId' => 'locationId',
+			'HideRelatedPrograms' => 'hideRelatedPrograms',
+			'StaffId' => 'staffId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'programIds' => 'ProgramIds',
+			'sessionTypeIds' => 'SessionTypeIds',
+			'serviceIds' => 'ServiceIds',
+			'classId' => 'ClassId',
+			'classScheduleId' => 'ClassScheduleId',
+			'sellOnline' => 'SellOnline',
+			'locationId' => 'LocationId',
+			'hideRelatedPrograms' => 'HideRelatedPrograms',
+			'staffId' => 'StaffId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

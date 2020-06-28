@@ -31,4 +31,24 @@ class ClientRelationship extends BaseModel
 	 * @var boolean
 	 */
 	public $delete;
+
+	protected function getInputMap()
+	{
+		return [
+			'RelatedClientId' => 'relatedClientId',
+			'Relationship' => ['relationship', Relationship::class],
+			'RelationshipName' => 'relationshipName',
+			'Delete' => 'delete',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'relatedClientId' => 'RelatedClientId',
+			'relationship' => 'Relationship',
+			'relationshipName' => 'RelationshipName',
+			'delete' => 'Delete',
+			];
+	}
 }

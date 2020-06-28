@@ -44,4 +44,28 @@ class CommissionPayrollEvent extends BaseModel
 	 * @var number
 	 */
 	public $earnings;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			'SaleDateTime' => 'saleDateTime',
+			'SaleId' => 'saleId',
+			'ProductId' => 'productId',
+			'EarningsDetails' => ['earningsDetails', CommissionDetail::class],
+			'Earnings' => 'earnings',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			'saleDateTime' => 'SaleDateTime',
+			'saleId' => 'SaleId',
+			'productId' => 'ProductId',
+			'earningsDetails' => 'EarningsDetails',
+			'earnings' => 'Earnings',
+			];
+	}
 }

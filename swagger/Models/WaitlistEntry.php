@@ -67,4 +67,34 @@ class WaitlistEntry extends BaseModel
 	 * @var boolean
 	 */
 	public $web;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassDate' => 'classDate',
+			'ClassId' => 'classId',
+			'ClassSchedule' => ['classSchedule', ClassSchedule::class],
+			'Client' => ['client', Client::class],
+			'EnrollmentDateForward' => 'enrollmentDateForward',
+			'Id' => 'id',
+			'RequestDateTime' => 'requestDateTime',
+			'VisitRefNo' => 'visitRefNo',
+			'Web' => 'web',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classDate' => 'ClassDate',
+			'classId' => 'ClassId',
+			'classSchedule' => 'ClassSchedule',
+			'client' => 'Client',
+			'enrollmentDateForward' => 'EnrollmentDateForward',
+			'id' => 'Id',
+			'requestDateTime' => 'RequestDateTime',
+			'visitRefNo' => 'VisitRefNo',
+			'web' => 'Web',
+			];
+	}
 }

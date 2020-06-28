@@ -161,4 +161,58 @@ class Site extends BaseModel
 	 * @var boolean
 	 */
 	public $acceptsDirectDebit;
+
+	protected function getInputMap()
+	{
+		return [
+			'AcceptsAmericanExpress' => 'acceptsAmericanExpress',
+			'AcceptsDiscover' => 'acceptsDiscover',
+			'AcceptsMasterCard' => 'acceptsMasterCard',
+			'AcceptsVisa' => 'acceptsVisa',
+			'AllowsDashboardAccess' => 'allowsDashboardAccess',
+			'ContactEmail' => 'contactEmail',
+			'Description' => 'description',
+			'Id' => 'id',
+			'LogoUrl' => 'logoUrl',
+			'Name' => 'name',
+			'PageColor1' => 'pageColor1',
+			'PageColor2' => 'pageColor2',
+			'PageColor3' => 'pageColor3',
+			'PageColor4' => 'pageColor4',
+			'PricingLevel' => 'pricingLevel',
+			'SmsPackageEnabled' => 'smsPackageEnabled',
+			'TaxInclusivePrices' => 'taxInclusivePrices',
+			'CurrencyIsoCode' => 'currencyIsoCode',
+			'CountryCode' => 'countryCode',
+			'TimeZone' => 'timeZone',
+			'AcceptsDirectDebit' => 'acceptsDirectDebit',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'acceptsAmericanExpress' => 'AcceptsAmericanExpress',
+			'acceptsDiscover' => 'AcceptsDiscover',
+			'acceptsMasterCard' => 'AcceptsMasterCard',
+			'acceptsVisa' => 'AcceptsVisa',
+			'allowsDashboardAccess' => 'AllowsDashboardAccess',
+			'contactEmail' => 'ContactEmail',
+			'description' => 'Description',
+			'id' => 'Id',
+			'logoUrl' => 'LogoUrl',
+			'name' => 'Name',
+			'pageColor1' => 'PageColor1',
+			'pageColor2' => 'PageColor2',
+			'pageColor3' => 'PageColor3',
+			'pageColor4' => 'PageColor4',
+			'pricingLevel' => 'PricingLevel',
+			'smsPackageEnabled' => 'SmsPackageEnabled',
+			'taxInclusivePrices' => 'TaxInclusivePrices',
+			'currencyIsoCode' => 'CurrencyIsoCode',
+			'countryCode' => 'CountryCode',
+			'timeZone' => 'TimeZone',
+			'acceptsDirectDebit' => 'AcceptsDirectDebit',
+			];
+	}
 }

@@ -19,4 +19,20 @@ class GetClientPurchasesResponse extends BaseModel
 	 * @var ClientPurchaseRecord[]
 	 */
 	public $purchases;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Purchases' => ['purchases', ClientPurchaseRecord::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'purchases' => 'Purchases',
+			];
+	}
 }

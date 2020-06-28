@@ -45,4 +45,26 @@ class GetClientAccountBalancesRequest extends BaseModel
 	{
 		$this->clientIds = $clientIds;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'BalanceDate' => 'balanceDate',
+			'ClassId' => 'classId',
+			'ClientIds' => 'clientIds',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'balanceDate' => 'BalanceDate',
+			'classId' => 'ClassId',
+			'clientIds' => 'ClientIds',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

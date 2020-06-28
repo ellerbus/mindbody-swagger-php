@@ -19,4 +19,20 @@ class GetPackagesResponse extends BaseModel
 	 * @var PaginationResponse
 	 */
 	public $paginationResponse;
+
+	protected function getInputMap()
+	{
+		return [
+			'Packages' => ['packages', Package::class],
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'packages' => 'Packages',
+			'paginationResponse' => 'PaginationResponse',
+			];
+	}
 }

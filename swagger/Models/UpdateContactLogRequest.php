@@ -70,4 +70,34 @@ class UpdateContactLogRequest extends BaseModel
 	 * @var UpdateContactLogType[]
 	 */
 	public $types;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Test' => 'test',
+			'AssignedToStaffId' => 'assignedToStaffId',
+			'Text' => 'text',
+			'ContactName' => 'contactName',
+			'FollowupByDate' => 'followupByDate',
+			'ContactMethod' => 'contactMethod',
+			'Comments' => ['comments', UpdateContactLogComment::class],
+			'Types' => ['types', UpdateContactLogType::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'test' => 'Test',
+			'assignedToStaffId' => 'AssignedToStaffId',
+			'text' => 'Text',
+			'contactName' => 'ContactName',
+			'followupByDate' => 'FollowupByDate',
+			'contactMethod' => 'ContactMethod',
+			'comments' => 'Comments',
+			'types' => 'Types',
+			];
+	}
 }

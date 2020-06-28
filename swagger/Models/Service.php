@@ -63,4 +63,34 @@ class Service extends BaseModel
 	 * @var integer
 	 */
 	public $count;
+
+	protected function getInputMap()
+	{
+		return [
+			'Price' => 'price',
+			'OnlinePrice' => 'onlinePrice',
+			'TaxIncluded' => 'taxIncluded',
+			'ProgramId' => 'programId',
+			'TaxRate' => 'taxRate',
+			'ProductId' => 'productId',
+			'Id' => 'id',
+			'Name' => 'name',
+			'Count' => 'count',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'price' => 'Price',
+			'onlinePrice' => 'OnlinePrice',
+			'taxIncluded' => 'TaxIncluded',
+			'programId' => 'ProgramId',
+			'taxRate' => 'TaxRate',
+			'productId' => 'ProductId',
+			'id' => 'Id',
+			'name' => 'Name',
+			'count' => 'Count',
+			];
+	}
 }

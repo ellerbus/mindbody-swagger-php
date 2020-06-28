@@ -73,4 +73,36 @@ class CheckoutItemWrapper extends BaseModel
 	 * @var integer
 	 */
 	public $quantity;
+
+	protected function getInputMap()
+	{
+		return [
+			'Item' => ['item', CheckoutItem::class],
+			'DiscountAmount' => 'discountAmount',
+			'AppointmentBookingRequests' => ['appointmentBookingRequests', CheckoutAppointmentBookingRequest::class],
+			'EnrollmentIds' => 'enrollmentIds',
+			'ClassIds' => 'classIds',
+			'CourseIds' => 'courseIds',
+			'VisitIds' => 'visitIds',
+			'AppointmentIds' => 'appointmentIds',
+			'Id' => 'id',
+			'Quantity' => 'quantity',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'item' => 'Item',
+			'discountAmount' => 'DiscountAmount',
+			'appointmentBookingRequests' => 'AppointmentBookingRequests',
+			'enrollmentIds' => 'EnrollmentIds',
+			'classIds' => 'ClassIds',
+			'courseIds' => 'CourseIds',
+			'visitIds' => 'VisitIds',
+			'appointmentIds' => 'AppointmentIds',
+			'id' => 'Id',
+			'quantity' => 'Quantity',
+			];
+	}
 }

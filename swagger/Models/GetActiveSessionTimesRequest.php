@@ -49,4 +49,28 @@ class GetActiveSessionTimesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ScheduleType' => 'scheduleType',
+			'SessionTypeIds' => 'sessionTypeIds',
+			'StartTime' => 'startTime',
+			'EndTime' => 'endTime',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'scheduleType' => 'ScheduleType',
+			'sessionTypeIds' => 'SessionTypeIds',
+			'startTime' => 'StartTime',
+			'endTime' => 'EndTime',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

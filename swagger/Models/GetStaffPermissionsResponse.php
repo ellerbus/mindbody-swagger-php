@@ -14,4 +14,18 @@ class GetStaffPermissionsResponse extends BaseModel
 	 * @var StaffPermissionGroup
 	 */
 	public $userGroup;
+
+	protected function getInputMap()
+	{
+		return [
+			'UserGroup' => ['userGroup', StaffPermissionGroup::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'userGroup' => 'UserGroup',
+			];
+	}
 }

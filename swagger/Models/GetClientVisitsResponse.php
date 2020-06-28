@@ -19,4 +19,20 @@ class GetClientVisitsResponse extends BaseModel
 	 * @var Visit[]
 	 */
 	public $visits;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Visits' => ['visits', Visit::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'visits' => 'Visits',
+			];
+	}
 }

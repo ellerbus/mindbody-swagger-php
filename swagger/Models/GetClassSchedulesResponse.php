@@ -19,4 +19,20 @@ class GetClassSchedulesResponse extends BaseModel
 	 * @var ClassSchedule[]
 	 */
 	public $classSchedules;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ClassSchedules' => ['classSchedules', ClassSchedule::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'classSchedules' => 'ClassSchedules',
+			];
+	}
 }

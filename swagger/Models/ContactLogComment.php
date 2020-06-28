@@ -31,4 +31,24 @@ class ContactLogComment extends BaseModel
 	 * @var Staff
 	 */
 	public $createdBy;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Text' => 'text',
+			'CreatedDateTime' => 'createdDateTime',
+			'CreatedBy' => ['createdBy', Staff::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'text' => 'Text',
+			'createdDateTime' => 'CreatedDateTime',
+			'createdBy' => 'CreatedBy',
+			];
+	}
 }

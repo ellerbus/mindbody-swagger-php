@@ -32,4 +32,24 @@ class GetPackagesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'PackageIds' => 'packageIds',
+			'SellOnline' => 'sellOnline',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'packageIds' => 'PackageIds',
+			'sellOnline' => 'SellOnline',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

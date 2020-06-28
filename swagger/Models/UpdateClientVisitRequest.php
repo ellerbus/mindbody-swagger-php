@@ -56,4 +56,28 @@ class UpdateClientVisitRequest extends BaseModel
 	{
 		$this->visitId = $visitId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'VisitId' => 'visitId',
+			'Makeup' => 'makeup',
+			'SignedIn' => 'signedIn',
+			'Execute' => 'execute',
+			'Test' => 'test',
+			'SendEmail' => 'sendEmail',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'visitId' => 'VisitId',
+			'makeup' => 'Makeup',
+			'signedIn' => 'SignedIn',
+			'execute' => 'Execute',
+			'test' => 'Test',
+			'sendEmail' => 'SendEmail',
+			];
+	}
 }

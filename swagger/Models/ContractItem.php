@@ -50,4 +50,30 @@ class ContractItem extends BaseModel
 	 * @var boolean
 	 */
 	public $oneTimeItem;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'Description' => 'description',
+			'Type' => 'type',
+			'Price' => 'price',
+			'Quantity' => 'quantity',
+			'OneTimeItem' => 'oneTimeItem',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'description' => 'Description',
+			'type' => 'Type',
+			'price' => 'Price',
+			'quantity' => 'Quantity',
+			'oneTimeItem' => 'OneTimeItem',
+			];
+	}
 }

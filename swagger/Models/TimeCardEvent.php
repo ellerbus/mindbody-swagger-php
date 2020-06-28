@@ -50,4 +50,30 @@ class TimeCardEvent extends BaseModel
 	 * @var number
 	 */
 	public $earnings;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			'Task' => 'task',
+			'TimeIn' => 'timeIn',
+			'TimeOut' => 'timeOut',
+			'Hours' => 'hours',
+			'HourlyRate' => 'hourlyRate',
+			'Earnings' => 'earnings',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			'task' => 'Task',
+			'timeIn' => 'TimeIn',
+			'timeOut' => 'TimeOut',
+			'hours' => 'Hours',
+			'hourlyRate' => 'HourlyRate',
+			'earnings' => 'Earnings',
+			];
+	}
 }

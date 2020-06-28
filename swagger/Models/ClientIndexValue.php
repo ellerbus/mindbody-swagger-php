@@ -27,4 +27,22 @@ class ClientIndexValue extends BaseModel
 	 * @var string
 	 */
 	public $name;
+
+	protected function getInputMap()
+	{
+		return [
+			'Active' => 'active',
+			'Id' => 'id',
+			'Name' => 'name',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'active' => 'Active',
+			'id' => 'Id',
+			'name' => 'Name',
+			];
+	}
 }

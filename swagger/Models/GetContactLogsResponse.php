@@ -19,4 +19,20 @@ class GetContactLogsResponse extends BaseModel
 	 * @var ContactLog[]
 	 */
 	public $contactLogs;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'ContactLogs' => ['contactLogs', ContactLog::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'contactLogs' => 'ContactLogs',
+			];
+	}
 }

@@ -128,4 +128,42 @@ class GetClientServicesRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'ClassId' => 'classId',
+			'ProgramIds' => 'programIds',
+			'SessionTypeId' => 'sessionTypeId',
+			'LocationIds' => 'locationIds',
+			'VisitCount' => 'visitCount',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'ShowActiveOnly' => 'showActiveOnly',
+			'CrossRegionalLookup' => 'crossRegionalLookup',
+			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'classId' => 'ClassId',
+			'programIds' => 'ProgramIds',
+			'sessionTypeId' => 'SessionTypeId',
+			'locationIds' => 'LocationIds',
+			'visitCount' => 'VisitCount',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'showActiveOnly' => 'ShowActiveOnly',
+			'crossRegionalLookup' => 'CrossRegionalLookup',
+			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -51,4 +51,26 @@ class GetClientContractsRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'CrossRegionalLookup' => 'crossRegionalLookup',
+			'ClientAssociatedSitesOffset' => 'clientAssociatedSitesOffset',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'crossRegionalLookup' => 'CrossRegionalLookup',
+			'clientAssociatedSitesOffset' => 'ClientAssociatedSitesOffset',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

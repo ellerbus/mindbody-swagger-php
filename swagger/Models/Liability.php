@@ -34,4 +34,22 @@ class Liability extends BaseModel
 	 * @var integer
 	 */
 	public $releasedBy;
+
+	protected function getInputMap()
+	{
+		return [
+			'AgreementDate' => 'agreementDate',
+			'IsReleased' => 'isReleased',
+			'ReleasedBy' => 'releasedBy',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'agreementDate' => 'AgreementDate',
+			'isReleased' => 'IsReleased',
+			'releasedBy' => 'ReleasedBy',
+			];
+	}
 }

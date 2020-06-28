@@ -31,4 +31,24 @@ class DirectDebitInfo extends BaseModel
 	 * @var string
 	 */
 	public $accountType;
+
+	protected function getInputMap()
+	{
+		return [
+			'NameOnAccount' => 'nameOnAccount',
+			'RoutingNumber' => 'routingNumber',
+			'AccountNumber' => 'accountNumber',
+			'AccountType' => 'accountType',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'nameOnAccount' => 'NameOnAccount',
+			'routingNumber' => 'RoutingNumber',
+			'accountNumber' => 'AccountNumber',
+			'accountType' => 'AccountType',
+			];
+	}
 }

@@ -19,4 +19,20 @@ class GetSitesResponse extends BaseModel
 	 * @var Site[]
 	 */
 	public $sites;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Sites' => ['sites', Site::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'sites' => 'Sites',
+			];
+	}
 }

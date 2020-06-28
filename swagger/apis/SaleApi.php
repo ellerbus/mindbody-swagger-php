@@ -40,10 +40,8 @@ class SaleApi extends BaseApi
 	public function GetSales($request)
 	{
 		$url = $this->getFullPath('sales');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetSalesResponse::class);
+		return $this->client->get($url, $request, GetSalesResponse::class);
 	}
 
 	/**
@@ -60,10 +58,8 @@ class SaleApi extends BaseApi
 	public function PurchaseContract($request)
 	{
 		$url = $this->getFullPath('purchasecontract');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, PurchaseContractResponse::class);
+		return $this->client->post($url, $request, PurchaseContractResponse::class);
 	}
 
 	/**
@@ -87,10 +83,8 @@ class SaleApi extends BaseApi
 	public function CheckoutShoppingCart($request)
 	{
 		$url = $this->getFullPath('checkoutshoppingcart');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, null);
+		return $this->client->post($url, $request, null);
 	}
 
 	/**
@@ -99,10 +93,8 @@ class SaleApi extends BaseApi
 	public function GetGiftCards($request)
 	{
 		$url = $this->getFullPath('giftcards');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetGiftCardResponse::class);
+		return $this->client->get($url, $request, GetGiftCardResponse::class);
 	}
 
 	/**
@@ -111,10 +103,8 @@ class SaleApi extends BaseApi
 	public function GetServices($request)
 	{
 		$url = $this->getFullPath('services');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetServicesResponse::class);
+		return $this->client->get($url, $request, GetServicesResponse::class);
 	}
 
 	/**
@@ -123,10 +113,8 @@ class SaleApi extends BaseApi
 	public function GetProducts($request)
 	{
 		$url = $this->getFullPath('products');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetProductsResponse::class);
+		return $this->client->get($url, $request, GetProductsResponse::class);
 	}
 
 	/**
@@ -139,10 +127,8 @@ class SaleApi extends BaseApi
 	public function GetAcceptedCardTypes()
 	{
 		$url = $this->getFullPath('acceptedcardtypes');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, null, null);
+		return $this->client->get($url, null, null);
 	}
 
 	/**
@@ -151,10 +137,8 @@ class SaleApi extends BaseApi
 	public function GetContracts($request)
 	{
 		$url = $this->getFullPath('contracts');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetContractsResponse::class);
+		return $this->client->get($url, $request, GetContractsResponse::class);
 	}
 
 	/**
@@ -163,10 +147,8 @@ class SaleApi extends BaseApi
 	public function GetCustomPaymentMethods($request)
 	{
 		$url = $this->getFullPath('custompaymentmethods');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetCustomPaymentMethodsResponse::class);
+		return $this->client->get($url, $request, GetCustomPaymentMethodsResponse::class);
 	}
 
 	/**
@@ -177,10 +159,8 @@ class SaleApi extends BaseApi
 	public function PurchaseGiftCard($request)
 	{
 		$url = $this->getFullPath('purchasegiftcard');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, PurchaseGiftCardResponse::class);
+		return $this->client->post($url, $request, PurchaseGiftCardResponse::class);
 	}
 
 	/**
@@ -193,10 +173,8 @@ class SaleApi extends BaseApi
 	public function GetPackages($request)
 	{
 		$url = $this->getFullPath('packages');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetPackagesResponse::class);
+		return $this->client->get($url, $request, GetPackagesResponse::class);
 	}
 
 	/**
@@ -205,10 +183,8 @@ class SaleApi extends BaseApi
 	public function GetGiftCardBalance($request)
 	{
 		$url = $this->getFullPath('giftcardbalance');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetGiftCardBalanceResponse::class);
+		return $this->client->get($url, $request, GetGiftCardBalanceResponse::class);
 	}
 
 }

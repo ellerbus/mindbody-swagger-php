@@ -19,4 +19,20 @@ class GetEnrollmentsResponse extends BaseModel
 	 * @var ClassSchedule[]
 	 */
 	public $enrollments;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Enrollments' => ['enrollments', ClassSchedule::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'enrollments' => 'Enrollments',
+			];
+	}
 }

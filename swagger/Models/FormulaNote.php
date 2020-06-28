@@ -37,4 +37,26 @@ class FormulaNote extends BaseModel
 	 * @var integer
 	 */
 	public $appointmentId;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'ClientId' => 'clientId',
+			'Note' => 'note',
+			'EntryDateTime' => 'entryDateTime',
+			'AppointmentId' => 'appointmentId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'clientId' => 'ClientId',
+			'note' => 'Note',
+			'entryDateTime' => 'EntryDateTime',
+			'appointmentId' => 'AppointmentId',
+			];
+	}
 }

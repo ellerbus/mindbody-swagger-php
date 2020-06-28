@@ -20,4 +20,18 @@ class GetStaffPermissionsRequest extends BaseModel
 	{
 		$this->staffId = $staffId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			];
+	}
 }

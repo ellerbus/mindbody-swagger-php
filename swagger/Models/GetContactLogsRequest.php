@@ -74,4 +74,34 @@ class GetContactLogsRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'StaffIds' => 'staffIds',
+			'ShowSystemGenerated' => 'showSystemGenerated',
+			'TypeIds' => 'typeIds',
+			'SubtypeIds' => 'subtypeIds',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'staffIds' => 'StaffIds',
+			'showSystemGenerated' => 'ShowSystemGenerated',
+			'typeIds' => 'TypeIds',
+			'subtypeIds' => 'SubtypeIds',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

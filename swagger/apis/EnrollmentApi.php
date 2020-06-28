@@ -23,10 +23,8 @@ class EnrollmentApi extends BaseApi
 	public function AddClientToEnrollment($request)
 	{
 		$url = $this->getFullPath('addclienttoenrollment');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->post($url, $siteId, $auth, $request, ClassSchedule::class);
+		return $this->client->post($url, $request, ClassSchedule::class);
 	}
 
 	/**
@@ -38,10 +36,8 @@ class EnrollmentApi extends BaseApi
 	public function GetEnrollments($request)
 	{
 		$url = $this->getFullPath('enrollments');
-		$siteId = $this->siteId;
-		$auth = $this->authorization;
 
-		return $this->client->get($url, $siteId, $auth, $request, GetEnrollmentsResponse::class);
+		return $this->client->get($url, $request, GetEnrollmentsResponse::class);
 	}
 
 }

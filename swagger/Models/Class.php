@@ -177,4 +177,68 @@ class Class extends BaseModel
 	 * @var string
 	 */
 	public $bookingStatus;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassScheduleId' => 'classScheduleId',
+			'Visits' => ['visits', Visit::class],
+			'Clients' => ['clients', Client::class],
+			'Location' => ['location', Location::class],
+			'Resource' => ['resource', Resource::class],
+			'MaxCapacity' => 'maxCapacity',
+			'WebCapacity' => 'webCapacity',
+			'TotalBooked' => 'totalBooked',
+			'TotalBookedWaitlist' => 'totalBookedWaitlist',
+			'WebBooked' => 'webBooked',
+			'SemesterId' => 'semesterId',
+			'IsCanceled' => 'isCanceled',
+			'Substitute' => 'substitute',
+			'Active' => 'active',
+			'IsWaitlistAvailable' => 'isWaitlistAvailable',
+			'IsEnrolled' => 'isEnrolled',
+			'HideCancel' => 'hideCancel',
+			'Id' => 'id',
+			'IsAvailable' => 'isAvailable',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'LastModifiedDateTime' => 'lastModifiedDateTime',
+			'ClassDescription' => ['classDescription', ClassDescription::class],
+			'Staff' => ['staff', Staff::class],
+			'BookingWindow' => ['bookingWindow', BookingWindow::class],
+			'BookingStatus' => 'bookingStatus',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classScheduleId' => 'ClassScheduleId',
+			'visits' => 'Visits',
+			'clients' => 'Clients',
+			'location' => 'Location',
+			'resource' => 'Resource',
+			'maxCapacity' => 'MaxCapacity',
+			'webCapacity' => 'WebCapacity',
+			'totalBooked' => 'TotalBooked',
+			'totalBookedWaitlist' => 'TotalBookedWaitlist',
+			'webBooked' => 'WebBooked',
+			'semesterId' => 'SemesterId',
+			'isCanceled' => 'IsCanceled',
+			'substitute' => 'Substitute',
+			'active' => 'Active',
+			'isWaitlistAvailable' => 'IsWaitlistAvailable',
+			'isEnrolled' => 'IsEnrolled',
+			'hideCancel' => 'HideCancel',
+			'id' => 'Id',
+			'isAvailable' => 'IsAvailable',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'lastModifiedDateTime' => 'LastModifiedDateTime',
+			'classDescription' => 'ClassDescription',
+			'staff' => 'Staff',
+			'bookingWindow' => 'BookingWindow',
+			'bookingStatus' => 'BookingStatus',
+			];
+	}
 }

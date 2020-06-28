@@ -19,4 +19,20 @@ class Color extends BaseModel
 	 * @var string
 	 */
 	public $name;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			];
+	}
 }

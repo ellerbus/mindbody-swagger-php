@@ -108,4 +108,46 @@ class ClientMembership extends BaseModel
 	 * @var string
 	 */
 	public $action;
+
+	protected function getInputMap()
+	{
+		return [
+			'RestrictedLocations' => ['restrictedLocations', Location::class],
+			'IconCode' => 'iconCode',
+			'MembershipId' => 'membershipId',
+			'ActiveDate' => 'activeDate',
+			'Count' => 'count',
+			'Current' => 'current',
+			'ExpirationDate' => 'expirationDate',
+			'Id' => 'id',
+			'ProductId' => 'productId',
+			'Name' => 'name',
+			'PaymentDate' => 'paymentDate',
+			'Program' => ['program', Program::class],
+			'Remaining' => 'remaining',
+			'SiteId' => 'siteId',
+			'Action' => 'action',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'restrictedLocations' => 'RestrictedLocations',
+			'iconCode' => 'IconCode',
+			'membershipId' => 'MembershipId',
+			'activeDate' => 'ActiveDate',
+			'count' => 'Count',
+			'current' => 'Current',
+			'expirationDate' => 'ExpirationDate',
+			'id' => 'Id',
+			'productId' => 'ProductId',
+			'name' => 'Name',
+			'paymentDate' => 'PaymentDate',
+			'program' => 'Program',
+			'remaining' => 'Remaining',
+			'siteId' => 'SiteId',
+			'action' => 'Action',
+			];
+	}
 }

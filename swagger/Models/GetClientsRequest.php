@@ -48,4 +48,28 @@ class GetClientsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientIDs' => 'clientIDs',
+			'SearchText' => 'searchText',
+			'IsProspect' => 'isProspect',
+			'LastModifiedDate' => 'lastModifiedDate',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientIDs' => 'ClientIDs',
+			'searchText' => 'SearchText',
+			'isProspect' => 'IsProspect',
+			'lastModifiedDate' => 'LastModifiedDate',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -31,4 +31,24 @@ class AppointmentOption extends BaseModel
 	 * @var string
 	 */
 	public $type;
+
+	protected function getInputMap()
+	{
+		return [
+			'DisplayName' => 'displayName',
+			'Name' => 'name',
+			'Value' => 'value',
+			'Type' => 'type',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'displayName' => 'DisplayName',
+			'name' => 'Name',
+			'value' => 'Value',
+			'type' => 'Type',
+			];
+	}
 }

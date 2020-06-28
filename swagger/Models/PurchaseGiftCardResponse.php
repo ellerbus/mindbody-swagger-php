@@ -68,4 +68,36 @@ class PurchaseGiftCardResponse extends BaseModel
 	 * @var integer
 	 */
 	public $saleId;
+
+	protected function getInputMap()
+	{
+		return [
+			'BarcodeId' => 'barcodeId',
+			'Value' => 'value',
+			'AmountPaid' => 'amountPaid',
+			'FromName' => 'fromName',
+			'LayoutId' => 'layoutId',
+			'EmailReceipt' => 'emailReceipt',
+			'PurchaserClientId' => 'purchaserClientId',
+			'PurchaserEmail' => 'purchaserEmail',
+			'RecipientEmail' => 'recipientEmail',
+			'SaleId' => 'saleId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'barcodeId' => 'BarcodeId',
+			'value' => 'Value',
+			'amountPaid' => 'AmountPaid',
+			'fromName' => 'FromName',
+			'layoutId' => 'LayoutId',
+			'emailReceipt' => 'EmailReceipt',
+			'purchaserClientId' => 'PurchaserClientId',
+			'purchaserEmail' => 'PurchaserEmail',
+			'recipientEmail' => 'RecipientEmail',
+			'saleId' => 'SaleId',
+			];
+	}
 }

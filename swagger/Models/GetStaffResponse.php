@@ -19,4 +19,20 @@ class GetStaffResponse extends BaseModel
 	 * @var Staff[]
 	 */
 	public $staffMembers;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'StaffMembers' => ['staffMembers', Staff::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'staffMembers' => 'StaffMembers',
+			];
+	}
 }

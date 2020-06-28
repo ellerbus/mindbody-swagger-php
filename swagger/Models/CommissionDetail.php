@@ -23,4 +23,20 @@ class CommissionDetail extends BaseModel
 	 * @var number
 	 */
 	public $commissionEarnings;
+
+	protected function getInputMap()
+	{
+		return [
+			'CommissionType' => 'commissionType',
+			'CommissionEarnings' => 'commissionEarnings',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'commissionType' => 'CommissionType',
+			'commissionEarnings' => 'CommissionEarnings',
+			];
+	}
 }

@@ -150,4 +150,60 @@ class ClassSchedule extends BaseModel
 	 * @var Location
 	 */
 	public $location;
+
+	protected function getInputMap()
+	{
+		return [
+			'Classes' => ['classes', Class::class],
+			'Clients' => ['clients', Client::class],
+			'Course' => ['course', Course::class],
+			'SemesterId' => 'semesterId',
+			'IsAvailable' => 'isAvailable',
+			'Id' => 'id',
+			'ClassDescription' => ['classDescription', ClassDescription::class],
+			'DaySunday' => 'daySunday',
+			'DayMonday' => 'dayMonday',
+			'DayTuesday' => 'dayTuesday',
+			'DayWednesday' => 'dayWednesday',
+			'DayThursday' => 'dayThursday',
+			'DayFriday' => 'dayFriday',
+			'DaySaturday' => 'daySaturday',
+			'AllowOpenEnrollment' => 'allowOpenEnrollment',
+			'AllowDateForwardEnrollment' => 'allowDateForwardEnrollment',
+			'StartTime' => 'startTime',
+			'EndTime' => 'endTime',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'Staff' => ['staff', Staff::class],
+			'Location' => ['location', Location::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classes' => 'Classes',
+			'clients' => 'Clients',
+			'course' => 'Course',
+			'semesterId' => 'SemesterId',
+			'isAvailable' => 'IsAvailable',
+			'id' => 'Id',
+			'classDescription' => 'ClassDescription',
+			'daySunday' => 'DaySunday',
+			'dayMonday' => 'DayMonday',
+			'dayTuesday' => 'DayTuesday',
+			'dayWednesday' => 'DayWednesday',
+			'dayThursday' => 'DayThursday',
+			'dayFriday' => 'DayFriday',
+			'daySaturday' => 'DaySaturday',
+			'allowOpenEnrollment' => 'AllowOpenEnrollment',
+			'allowDateForwardEnrollment' => 'AllowDateForwardEnrollment',
+			'startTime' => 'StartTime',
+			'endTime' => 'EndTime',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'staff' => 'Staff',
+			'location' => 'Location',
+			];
+	}
 }

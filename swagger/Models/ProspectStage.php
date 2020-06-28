@@ -28,4 +28,22 @@ class ProspectStage extends BaseModel
 	 * @var integer
 	 */
 	public $id;
+
+	protected function getInputMap()
+	{
+		return [
+			'Active' => 'active',
+			'Description' => 'description',
+			'Id' => 'id',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'active' => 'Active',
+			'description' => 'Description',
+			'id' => 'Id',
+			];
+	}
 }

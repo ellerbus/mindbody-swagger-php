@@ -14,4 +14,18 @@ class GetRequiredClientFieldsResponse extends BaseModel
 	 * @var string[]
 	 */
 	public $requiredClientFields;
+
+	protected function getInputMap()
+	{
+		return [
+			'RequiredClientFields' => 'requiredClientFields',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'requiredClientFields' => 'RequiredClientFields',
+			];
+	}
 }

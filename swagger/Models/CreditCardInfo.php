@@ -61,4 +61,34 @@ class CreditCardInfo extends BaseModel
 	 * @var boolean
 	 */
 	public $saveInfo;
+
+	protected function getInputMap()
+	{
+		return [
+			'CreditCardNumber' => 'creditCardNumber',
+			'ExpMonth' => 'expMonth',
+			'ExpYear' => 'expYear',
+			'BillingName' => 'billingName',
+			'BillingAddress' => 'billingAddress',
+			'BillingCity' => 'billingCity',
+			'BillingState' => 'billingState',
+			'BillingPostalCode' => 'billingPostalCode',
+			'SaveInfo' => 'saveInfo',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'creditCardNumber' => 'CreditCardNumber',
+			'expMonth' => 'ExpMonth',
+			'expYear' => 'ExpYear',
+			'billingName' => 'BillingName',
+			'billingAddress' => 'BillingAddress',
+			'billingCity' => 'BillingCity',
+			'billingState' => 'BillingState',
+			'billingPostalCode' => 'BillingPostalCode',
+			'saveInfo' => 'SaveInfo',
+			];
+	}
 }

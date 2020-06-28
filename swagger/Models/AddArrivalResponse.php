@@ -20,4 +20,20 @@ class AddArrivalResponse extends BaseModel
 	 * @var ClientService
 	 */
 	public $clientService;
+
+	protected function getInputMap()
+	{
+		return [
+			'ArrivalAdded' => 'arrivalAdded',
+			'ClientService' => ['clientService', ClientService::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'arrivalAdded' => 'ArrivalAdded',
+			'clientService' => 'ClientService',
+			];
+	}
 }

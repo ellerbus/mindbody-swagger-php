@@ -32,4 +32,20 @@ class CheckoutPaymentInfo extends BaseModel
 	 * @var object
 	 */
 	public $metadata;
+
+	protected function getInputMap()
+	{
+		return [
+			'Type' => 'type',
+			'Metadata' => 'metadata',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'type' => 'Type',
+			'metadata' => 'Metadata',
+			];
+	}
 }

@@ -13,4 +13,18 @@ class UpdateClientServiceResponse extends BaseModel
 	 * @var ClientService
 	 */
 	public $clientService;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientService' => ['clientService', ClientService::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientService' => 'ClientService',
+			];
+	}
 }

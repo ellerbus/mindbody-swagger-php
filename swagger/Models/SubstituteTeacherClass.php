@@ -145,4 +145,56 @@ class SubstituteTeacherClass extends BaseModel
 	 * @var Staff
 	 */
 	public $staff;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassScheduleId' => 'classScheduleId',
+			'Location' => ['location', Location::class],
+			'MaxCapacity' => 'maxCapacity',
+			'WebCapacity' => 'webCapacity',
+			'TotalBooked' => 'totalBooked',
+			'TotalBookedWaitlist' => 'totalBookedWaitlist',
+			'WebBooked' => 'webBooked',
+			'SemesterId' => 'semesterId',
+			'IsCanceled' => 'isCanceled',
+			'Substitute' => 'substitute',
+			'Active' => 'active',
+			'IsWaitlistAvailable' => 'isWaitlistAvailable',
+			'HideCancel' => 'hideCancel',
+			'Id' => 'id',
+			'IsAvailable' => 'isAvailable',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'LastModifiedDateTime' => 'lastModifiedDateTime',
+			'ClassDescription' => ['classDescription', ClassDescription::class],
+			'Staff' => ['staff', Staff::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classScheduleId' => 'ClassScheduleId',
+			'location' => 'Location',
+			'maxCapacity' => 'MaxCapacity',
+			'webCapacity' => 'WebCapacity',
+			'totalBooked' => 'TotalBooked',
+			'totalBookedWaitlist' => 'TotalBookedWaitlist',
+			'webBooked' => 'WebBooked',
+			'semesterId' => 'SemesterId',
+			'isCanceled' => 'IsCanceled',
+			'substitute' => 'Substitute',
+			'active' => 'Active',
+			'isWaitlistAvailable' => 'IsWaitlistAvailable',
+			'hideCancel' => 'HideCancel',
+			'id' => 'Id',
+			'isAvailable' => 'IsAvailable',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'lastModifiedDateTime' => 'LastModifiedDateTime',
+			'classDescription' => 'ClassDescription',
+			'staff' => 'Staff',
+			];
+	}
 }

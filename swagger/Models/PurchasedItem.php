@@ -28,4 +28,22 @@ class PurchasedItem extends BaseModel
 	 * @var string
 	 */
 	public $barcodeId;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'IsService' => 'isService',
+			'BarcodeId' => 'barcodeId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'isService' => 'IsService',
+			'barcodeId' => 'BarcodeId',
+			];
+	}
 }

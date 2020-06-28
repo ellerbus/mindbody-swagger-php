@@ -171,4 +171,62 @@ class AddClientToClassVisit extends BaseModel
 	 * @var integer
 	 */
 	public $waitlistEntryId;
+
+	protected function getInputMap()
+	{
+		return [
+			'AppointmentId' => 'appointmentId',
+			'AppointmentGenderPreference' => 'appointmentGenderPreference',
+			'AppointmentStatus' => 'appointmentStatus',
+			'ClassId' => 'classId',
+			'ClientId' => 'clientId',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Id' => 'id',
+			'LastModifiedDateTime' => 'lastModifiedDateTime',
+			'LateCancelled' => 'lateCancelled',
+			'LocationId' => 'locationId',
+			'MakeUp' => 'makeUp',
+			'Name' => 'name',
+			'ServiceId' => 'serviceId',
+			'ServiceName' => 'serviceName',
+			'ProductId' => 'productId',
+			'SignedIn' => 'signedIn',
+			'StaffId' => 'staffId',
+			'WebSignup' => 'webSignup',
+			'Action' => 'action',
+			'CrossRegionalBookingPerformed' => 'crossRegionalBookingPerformed',
+			'SiteId' => 'siteId',
+			'WaitlistEntryId' => 'waitlistEntryId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'appointmentId' => 'AppointmentId',
+			'appointmentGenderPreference' => 'AppointmentGenderPreference',
+			'appointmentStatus' => 'AppointmentStatus',
+			'classId' => 'ClassId',
+			'clientId' => 'ClientId',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'id' => 'Id',
+			'lastModifiedDateTime' => 'LastModifiedDateTime',
+			'lateCancelled' => 'LateCancelled',
+			'locationId' => 'LocationId',
+			'makeUp' => 'MakeUp',
+			'name' => 'Name',
+			'serviceId' => 'ServiceId',
+			'serviceName' => 'ServiceName',
+			'productId' => 'ProductId',
+			'signedIn' => 'SignedIn',
+			'staffId' => 'StaffId',
+			'webSignup' => 'WebSignup',
+			'action' => 'Action',
+			'crossRegionalBookingPerformed' => 'CrossRegionalBookingPerformed',
+			'siteId' => 'SiteId',
+			'waitlistEntryId' => 'WaitlistEntryId',
+			];
+	}
 }

@@ -51,4 +51,26 @@ class RemoveClientFromClassRequest extends BaseModel
 		$this->clientId = $clientId;
 		$this->classId = $classId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'ClassId' => 'classId',
+			'Test' => 'test',
+			'SendEmail' => 'sendEmail',
+			'LateCancel' => 'lateCancel',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'classId' => 'ClassId',
+			'test' => 'Test',
+			'sendEmail' => 'SendEmail',
+			'lateCancel' => 'LateCancel',
+			];
+	}
 }

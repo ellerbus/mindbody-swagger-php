@@ -19,4 +19,20 @@ class ContactLogType extends BaseModel
 	 * @var ContactLogSubType[]
 	 */
 	public $subTypes;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'SubTypes' => ['subTypes', ContactLogSubType::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'subTypes' => 'SubTypes',
+			];
+	}
 }

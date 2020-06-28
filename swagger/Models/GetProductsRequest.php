@@ -57,4 +57,32 @@ class GetProductsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ProductIds' => 'productIds',
+			'SearchText' => 'searchText',
+			'CategoryIds' => 'categoryIds',
+			'SubCategoryIds' => 'subCategoryIds',
+			'SellOnline' => 'sellOnline',
+			'LocationId' => 'locationId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'productIds' => 'ProductIds',
+			'searchText' => 'SearchText',
+			'categoryIds' => 'CategoryIds',
+			'subCategoryIds' => 'SubCategoryIds',
+			'sellOnline' => 'SellOnline',
+			'locationId' => 'LocationId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

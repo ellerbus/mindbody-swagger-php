@@ -19,4 +19,20 @@ class GetCustomPaymentMethodsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

@@ -64,4 +64,30 @@ class GetWaitlistEntriesRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClassIds' => 'classIds',
+			'ClassScheduleIds' => 'classScheduleIds',
+			'ClientIds' => 'clientIds',
+			'HidePastEntries' => 'hidePastEntries',
+			'WaitlistEntryIds' => 'waitlistEntryIds',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'classIds' => 'ClassIds',
+			'classScheduleIds' => 'ClassScheduleIds',
+			'clientIds' => 'ClientIds',
+			'hidePastEntries' => 'HidePastEntries',
+			'waitlistEntryIds' => 'WaitlistEntryIds',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

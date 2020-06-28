@@ -55,4 +55,30 @@ class CheckoutAppointmentBookingRequest extends BaseModel
 	 * @var string
 	 */
 	public $providerId;
+
+	protected function getInputMap()
+	{
+		return [
+			'StaffId' => 'staffId',
+			'LocationId' => 'locationId',
+			'SessionTypeId' => 'sessionTypeId',
+			'Resources' => ['resources', Resource::class],
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'ProviderId' => 'providerId',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'staffId' => 'StaffId',
+			'locationId' => 'LocationId',
+			'sessionTypeId' => 'SessionTypeId',
+			'resources' => 'Resources',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'providerId' => 'ProviderId',
+			];
+	}
 }

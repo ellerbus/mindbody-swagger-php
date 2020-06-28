@@ -19,4 +19,20 @@ class GetStaffAppointmentsResponse extends BaseModel
 	 * @var Appointment[]
 	 */
 	public $appointments;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Appointments' => ['appointments', Appointment::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'appointments' => 'Appointments',
+			];
+	}
 }

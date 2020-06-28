@@ -35,4 +35,24 @@ class BookingWindow extends BaseModel
 	 * @var string
 	 */
 	public $dailyEndTime;
+
+	protected function getInputMap()
+	{
+		return [
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'DailyStartTime' => 'dailyStartTime',
+			'DailyEndTime' => 'dailyEndTime',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'dailyStartTime' => 'DailyStartTime',
+			'dailyEndTime' => 'DailyEndTime',
+			];
+	}
 }

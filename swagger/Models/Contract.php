@@ -242,4 +242,84 @@ class Contract extends BaseModel
 	 * @var number
 	 */
 	public $totalContractAmountTotal;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Name' => 'name',
+			'Description' => 'description',
+			'AssignsMembershipId' => 'assignsMembershipId',
+			'AssignsMembershipName' => 'assignsMembershipName',
+			'SoldOnline' => 'soldOnline',
+			'ContractItems' => ['contractItems', ContractItem::class],
+			'IntroOffer' => 'introOffer',
+			'AutopaySchedule' => ['autopaySchedule', AutopaySchedule::class],
+			'NumberOfAutopays' => 'numberOfAutopays',
+			'AutopayTriggerType' => 'autopayTriggerType',
+			'ActionUponCompletionOfAutopays' => 'actionUponCompletionOfAutopays',
+			'ClientsChargedOn' => 'clientsChargedOn',
+			'ClientsChargedOnSpecificDate' => 'clientsChargedOnSpecificDate',
+			'DiscountAmount' => 'discountAmount',
+			'DepositAmount' => 'depositAmount',
+			'FirstAutopayFree' => 'firstAutopayFree',
+			'LastAutopayFree' => 'lastAutopayFree',
+			'ClientTerminateOnline' => 'clientTerminateOnline',
+			'MembershipTypeRestrictions' => ['membershipTypeRestrictions', MembershipTypeRestriction::class],
+			'LocationPurchaseRestrictionIds' => 'locationPurchaseRestrictionIds',
+			'LocationPurchaseRestrictionNames' => 'locationPurchaseRestrictionNames',
+			'AgreementTerms' => 'agreementTerms',
+			'RequiresElectronicConfirmation' => 'requiresElectronicConfirmation',
+			'AutopayEnabled' => 'autopayEnabled',
+			'FirstPaymentAmountSubtotal' => 'firstPaymentAmountSubtotal',
+			'FirstPaymentAmountTax' => 'firstPaymentAmountTax',
+			'FirstPaymentAmountTotal' => 'firstPaymentAmountTotal',
+			'RecurringPaymentAmountSubtotal' => 'recurringPaymentAmountSubtotal',
+			'RecurringPaymentAmountTax' => 'recurringPaymentAmountTax',
+			'RecurringPaymentAmountTotal' => 'recurringPaymentAmountTotal',
+			'TotalContractAmountSubtotal' => 'totalContractAmountSubtotal',
+			'TotalContractAmountTax' => 'totalContractAmountTax',
+			'TotalContractAmountTotal' => 'totalContractAmountTotal',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'name' => 'Name',
+			'description' => 'Description',
+			'assignsMembershipId' => 'AssignsMembershipId',
+			'assignsMembershipName' => 'AssignsMembershipName',
+			'soldOnline' => 'SoldOnline',
+			'contractItems' => 'ContractItems',
+			'introOffer' => 'IntroOffer',
+			'autopaySchedule' => 'AutopaySchedule',
+			'numberOfAutopays' => 'NumberOfAutopays',
+			'autopayTriggerType' => 'AutopayTriggerType',
+			'actionUponCompletionOfAutopays' => 'ActionUponCompletionOfAutopays',
+			'clientsChargedOn' => 'ClientsChargedOn',
+			'clientsChargedOnSpecificDate' => 'ClientsChargedOnSpecificDate',
+			'discountAmount' => 'DiscountAmount',
+			'depositAmount' => 'DepositAmount',
+			'firstAutopayFree' => 'FirstAutopayFree',
+			'lastAutopayFree' => 'LastAutopayFree',
+			'clientTerminateOnline' => 'ClientTerminateOnline',
+			'membershipTypeRestrictions' => 'MembershipTypeRestrictions',
+			'locationPurchaseRestrictionIds' => 'LocationPurchaseRestrictionIds',
+			'locationPurchaseRestrictionNames' => 'LocationPurchaseRestrictionNames',
+			'agreementTerms' => 'AgreementTerms',
+			'requiresElectronicConfirmation' => 'RequiresElectronicConfirmation',
+			'autopayEnabled' => 'AutopayEnabled',
+			'firstPaymentAmountSubtotal' => 'FirstPaymentAmountSubtotal',
+			'firstPaymentAmountTax' => 'FirstPaymentAmountTax',
+			'firstPaymentAmountTotal' => 'FirstPaymentAmountTotal',
+			'recurringPaymentAmountSubtotal' => 'RecurringPaymentAmountSubtotal',
+			'recurringPaymentAmountTax' => 'RecurringPaymentAmountTax',
+			'recurringPaymentAmountTotal' => 'RecurringPaymentAmountTotal',
+			'totalContractAmountSubtotal' => 'TotalContractAmountSubtotal',
+			'totalContractAmountTax' => 'TotalContractAmountTax',
+			'totalContractAmountTotal' => 'TotalContractAmountTotal',
+			];
+	}
 }

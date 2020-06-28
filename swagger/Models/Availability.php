@@ -55,4 +55,32 @@ class Availability extends BaseModel
 	 * @var Location
 	 */
 	public $location;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'Staff' => ['staff', Staff::class],
+			'SessionType' => ['sessionType', SessionType::class],
+			'Programs' => ['programs', Program::class],
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'BookableEndDateTime' => 'bookableEndDateTime',
+			'Location' => ['location', Location::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'staff' => 'Staff',
+			'sessionType' => 'SessionType',
+			'programs' => 'Programs',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'bookableEndDateTime' => 'BookableEndDateTime',
+			'location' => 'Location',
+			];
+	}
 }

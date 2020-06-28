@@ -154,4 +154,58 @@ class Visit extends BaseModel
 	 * @var string
 	 */
 	public $action;
+
+	protected function getInputMap()
+	{
+		return [
+			'AppointmentId' => 'appointmentId',
+			'AppointmentGenderPreference' => 'appointmentGenderPreference',
+			'AppointmentStatus' => 'appointmentStatus',
+			'ClassId' => 'classId',
+			'ClientId' => 'clientId',
+			'StartDateTime' => 'startDateTime',
+			'EndDateTime' => 'endDateTime',
+			'Id' => 'id',
+			'LastModifiedDateTime' => 'lastModifiedDateTime',
+			'LateCancelled' => 'lateCancelled',
+			'SiteId' => 'siteId',
+			'LocationId' => 'locationId',
+			'MakeUp' => 'makeUp',
+			'Name' => 'name',
+			'ServiceId' => 'serviceId',
+			'ServiceName' => 'serviceName',
+			'ProductId' => 'productId',
+			'SignedIn' => 'signedIn',
+			'StaffId' => 'staffId',
+			'WebSignup' => 'webSignup',
+			'Action' => 'action',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'appointmentId' => 'AppointmentId',
+			'appointmentGenderPreference' => 'AppointmentGenderPreference',
+			'appointmentStatus' => 'AppointmentStatus',
+			'classId' => 'ClassId',
+			'clientId' => 'ClientId',
+			'startDateTime' => 'StartDateTime',
+			'endDateTime' => 'EndDateTime',
+			'id' => 'Id',
+			'lastModifiedDateTime' => 'LastModifiedDateTime',
+			'lateCancelled' => 'LateCancelled',
+			'siteId' => 'SiteId',
+			'locationId' => 'LocationId',
+			'makeUp' => 'MakeUp',
+			'name' => 'Name',
+			'serviceId' => 'ServiceId',
+			'serviceName' => 'ServiceName',
+			'productId' => 'ProductId',
+			'signedIn' => 'SignedIn',
+			'staffId' => 'StaffId',
+			'webSignup' => 'WebSignup',
+			'action' => 'Action',
+			];
+	}
 }

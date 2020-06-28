@@ -19,4 +19,20 @@ class GetTimeCardsResponse extends BaseModel
 	 * @var TimeCardEvent[]
 	 */
 	public $timeCards;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'TimeCards' => ['timeCards', TimeCardEvent::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'timeCards' => 'TimeCards',
+			];
+	}
 }

@@ -52,4 +52,30 @@ class GetScheduleItemsRequest extends BaseModel
 	 * @var integer
 	 */
 	public $offset;
+
+	protected function getInputMap()
+	{
+		return [
+			'LocationIds' => 'locationIds',
+			'StaffIds' => 'staffIds',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'IgnorePrepFinishTimes' => 'ignorePrepFinishTimes',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'locationIds' => 'LocationIds',
+			'staffIds' => 'StaffIds',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'ignorePrepFinishTimes' => 'IgnorePrepFinishTimes',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }

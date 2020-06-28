@@ -19,4 +19,20 @@ class GetGiftCardResponse extends BaseModel
 	 * @var GiftCard[]
 	 */
 	public $giftCards;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'GiftCards' => ['giftCards', GiftCard::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'giftCards' => 'GiftCards',
+			];
+	}
 }

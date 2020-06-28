@@ -31,4 +31,24 @@ class UpcomingAutopayEvent extends BaseModel
 	 * @var string
 	 */
 	public $scheduleDate;
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientContractId' => 'clientContractId',
+			'ChargeAmount' => 'chargeAmount',
+			'PaymentMethod' => 'paymentMethod',
+			'ScheduleDate' => 'scheduleDate',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientContractId' => 'ClientContractId',
+			'chargeAmount' => 'ChargeAmount',
+			'paymentMethod' => 'PaymentMethod',
+			'scheduleDate' => 'ScheduleDate',
+			];
+	}
 }

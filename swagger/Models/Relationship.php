@@ -26,4 +26,22 @@ class Relationship extends BaseModel
 	 * @var string
 	 */
 	public $relationshipName2;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'RelationshipName1' => 'relationshipName1',
+			'RelationshipName2' => 'relationshipName2',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'relationshipName1' => 'RelationshipName1',
+			'relationshipName2' => 'RelationshipName2',
+			];
+	}
 }

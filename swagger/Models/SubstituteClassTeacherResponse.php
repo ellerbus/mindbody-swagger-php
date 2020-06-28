@@ -14,4 +14,18 @@ class SubstituteClassTeacherResponse extends BaseModel
 	 * @var SubstituteTeacherClass
 	 */
 	public $class;
+
+	protected function getInputMap()
+	{
+		return [
+			'Class' => ['class', SubstituteTeacherClass::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'class' => 'Class',
+			];
+	}
 }

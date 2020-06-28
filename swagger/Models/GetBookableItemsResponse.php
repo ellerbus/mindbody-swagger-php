@@ -19,4 +19,20 @@ class GetBookableItemsResponse extends BaseModel
 	 * @var Availability[]
 	 */
 	public $availabilities;
+
+	protected function getInputMap()
+	{
+		return [
+			'PaginationResponse' => ['paginationResponse', PaginationResponse::class],
+			'Availabilities' => ['availabilities', Availability::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'paginationResponse' => 'PaginationResponse',
+			'availabilities' => 'Availabilities',
+			];
+	}
 }

@@ -81,4 +81,40 @@ class GiftCard extends BaseModel
 	 * @var GiftCardLayout[]
 	 */
 	public $layouts;
+
+	protected function getInputMap()
+	{
+		return [
+			'Id' => 'id',
+			'LocationIds' => 'locationIds',
+			'Description' => 'description',
+			'EditableByConsumer' => 'editableByConsumer',
+			'CardValue' => 'cardValue',
+			'SalePrice' => 'salePrice',
+			'SoldOnline' => 'soldOnline',
+			'MembershipRestrictionIds' => 'membershipRestrictionIds',
+			'GiftCardTerms' => 'giftCardTerms',
+			'ContactInfo' => 'contactInfo',
+			'DisplayLogo' => 'displayLogo',
+			'Layouts' => ['layouts', GiftCardLayout::class],
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'id' => 'Id',
+			'locationIds' => 'LocationIds',
+			'description' => 'Description',
+			'editableByConsumer' => 'EditableByConsumer',
+			'cardValue' => 'CardValue',
+			'salePrice' => 'SalePrice',
+			'soldOnline' => 'SoldOnline',
+			'membershipRestrictionIds' => 'MembershipRestrictionIds',
+			'giftCardTerms' => 'GiftCardTerms',
+			'contactInfo' => 'ContactInfo',
+			'displayLogo' => 'DisplayLogo',
+			'layouts' => 'Layouts',
+			];
+	}
 }

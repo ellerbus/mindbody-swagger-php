@@ -52,4 +52,28 @@ class GetClientPurchasesRequest extends BaseModel
 	{
 		$this->clientId = $clientId;
 	}
+
+	protected function getInputMap()
+	{
+		return [
+			'ClientId' => 'clientId',
+			'StartDate' => 'startDate',
+			'EndDate' => 'endDate',
+			'SaleId' => 'saleId',
+			'Limit' => 'limit',
+			'Offset' => 'offset',
+			];
+	}
+
+	protected function getOutputMap()
+	{
+		return [
+			'clientId' => 'ClientId',
+			'startDate' => 'StartDate',
+			'endDate' => 'EndDate',
+			'saleId' => 'SaleId',
+			'limit' => 'Limit',
+			'offset' => 'Offset',
+			];
+	}
 }
