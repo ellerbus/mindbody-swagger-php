@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Models;
+namespace App\Mindbody\Models;
 
 /**
  * Represents a client index value assigned to a client

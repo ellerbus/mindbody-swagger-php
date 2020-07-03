@@ -1,20 +1,20 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\GetSitesRequest;
-use App\MindBody\Models\GetSitesResponse;
-use App\MindBody\Models\GetSessionTypesRequest;
-use App\MindBody\Models\GetSessionTypesResponse;
-use App\MindBody\Models\GetLocationsRequest;
-use App\MindBody\Models\GetLocationsResponse;
-use App\MindBody\Models\GetProgramsRequest;
-use App\MindBody\Models\GetProgramsResponse;
-use App\MindBody\Models\GetResourcesRequest;
-use App\MindBody\Models\GetResourcesResponse;
-use App\MindBody\Models\GetActivationCodeResponse;
-use App\MindBody\Models\GetMembershipsRequest;
-use App\MindBody\Models\GetMembershipsResponse;
+use App\Mindbody\Models\GetSitesRequest;
+use App\Mindbody\Models\GetSitesResponse;
+use App\Mindbody\Models\GetSessionTypesRequest;
+use App\Mindbody\Models\GetSessionTypesResponse;
+use App\Mindbody\Models\GetLocationsRequest;
+use App\Mindbody\Models\GetLocationsResponse;
+use App\Mindbody\Models\GetProgramsRequest;
+use App\Mindbody\Models\GetProgramsResponse;
+use App\Mindbody\Models\GetResourcesRequest;
+use App\Mindbody\Models\GetResourcesResponse;
+use App\Mindbody\Models\GetActivationCodeResponse;
+use App\Mindbody\Models\GetMembershipsRequest;
+use App\Mindbody\Models\GetMembershipsResponse;
 
 class SiteApi extends BaseApi
 {

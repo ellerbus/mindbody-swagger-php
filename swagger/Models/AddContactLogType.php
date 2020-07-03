@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Models;
+namespace App\Mindbody\Models;
 
 /**
  * Defines what sort of subtypes we want to add to this contact log type

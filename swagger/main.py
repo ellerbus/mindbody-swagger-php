@@ -1,10 +1,15 @@
 from generators import ApisGenerator
 from generators import ModelsGenerator
+from generators import MigrationsGenerator
 
-apis = ApisGenerator()
+# apis = ApisGenerator()
 
-apis.generate()
+# apis.generate()
 
-models = ModelsGenerator()
+# models = ModelsGenerator()
 
-models.generate()
+# models.generate()
+
+migrations = MigrationsGenerator()
+
+migrations.generate()

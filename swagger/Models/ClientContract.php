@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Models;
+namespace App\Mindbody\Models;
 
 /**
  * A client contract

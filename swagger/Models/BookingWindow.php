@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Models;
+namespace App\Mindbody\Models;
 
 /**
  * The booking window for registration

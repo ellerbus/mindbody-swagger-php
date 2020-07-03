@@ -1,9 +1,9 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\IssueRequest;
-use App\MindBody\Models\IssueResponse;
+use App\Mindbody\Models\IssueRequest;
+use App\Mindbody\Models\IssueResponse;
 
 class UsertokenApi extends BaseApi
 {

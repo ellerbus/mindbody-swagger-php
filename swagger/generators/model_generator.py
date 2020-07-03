@@ -24,7 +24,7 @@ class ModelGenerator(object):
 
     def write_header(self, file):
         file.write(f'<?php\n\n')
-        file.write(f'namespace App\\MindBody\\Models;\n\n')
+        file.write(f'namespace App\\Mindbody\\Models;\n\n')
         # self.write_references(file)
 
     def write_class_definition(self, file):

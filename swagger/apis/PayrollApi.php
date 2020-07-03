@@ -1,15 +1,15 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\GetScheduledServiceEarningsRequest;
-use App\MindBody\Models\GetScheduledServiceEarningsResponse;
-use App\MindBody\Models\GetTimeCardsRequest;
-use App\MindBody\Models\GetTimeCardsResponse;
-use App\MindBody\Models\GetCommissionsRequest;
-use App\MindBody\Models\GetCommissionsResponse;
-use App\MindBody\Models\GetTipsRequest;
-use App\MindBody\Models\GetTipsResponse;
+use App\Mindbody\Models\GetScheduledServiceEarningsRequest;
+use App\Mindbody\Models\GetScheduledServiceEarningsResponse;
+use App\Mindbody\Models\GetTimeCardsRequest;
+use App\Mindbody\Models\GetTimeCardsResponse;
+use App\Mindbody\Models\GetCommissionsRequest;
+use App\Mindbody\Models\GetCommissionsResponse;
+use App\Mindbody\Models\GetTipsRequest;
+use App\Mindbody\Models\GetTipsResponse;
 
 class PayrollApi extends BaseApi
 {

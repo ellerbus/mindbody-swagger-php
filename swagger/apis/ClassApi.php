@@ -1,25 +1,25 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\GetClassesRequest;
-use App\MindBody\Models\GetClassesResponse;
-use App\MindBody\Models\GetClassDescriptionsRequest;
-use App\MindBody\Models\GetClassDescriptionsResponse;
-use App\MindBody\Models\GetClassVisitsRequest;
-use App\MindBody\Models\GetClassVisitsResponse;
-use App\MindBody\Models\RemoveClientFromClassRequest;
-use App\MindBody\Models\RemoveClientFromClassResponse;
-use App\MindBody\Models\AddClientToClassRequest;
-use App\MindBody\Models\AddClientToClassResponse;
-use App\MindBody\Models\GetClassSchedulesRequest;
-use App\MindBody\Models\GetClassSchedulesResponse;
-use App\MindBody\Models\GetWaitlistEntriesRequest;
-use App\MindBody\Models\GetWaitlistEntriesResponse;
-use App\MindBody\Models\RemoveFromWaitlistRequest;
-use App\MindBody\Models\RemoveFromWaitlistResponse;
-use App\MindBody\Models\SubstituteClassTeacherRequest;
-use App\MindBody\Models\SubstituteClassTeacherResponse;
+use App\Mindbody\Models\GetClassesRequest;
+use App\Mindbody\Models\GetClassesResponse;
+use App\Mindbody\Models\GetClassDescriptionsRequest;
+use App\Mindbody\Models\GetClassDescriptionsResponse;
+use App\Mindbody\Models\GetClassVisitsRequest;
+use App\Mindbody\Models\GetClassVisitsResponse;
+use App\Mindbody\Models\RemoveClientFromClassRequest;
+use App\Mindbody\Models\RemoveClientFromClassResponse;
+use App\Mindbody\Models\AddClientToClassRequest;
+use App\Mindbody\Models\AddClientToClassResponse;
+use App\Mindbody\Models\GetClassSchedulesRequest;
+use App\Mindbody\Models\GetClassSchedulesResponse;
+use App\Mindbody\Models\GetWaitlistEntriesRequest;
+use App\Mindbody\Models\GetWaitlistEntriesResponse;
+use App\Mindbody\Models\RemoveFromWaitlistRequest;
+use App\Mindbody\Models\RemoveFromWaitlistResponse;
+use App\Mindbody\Models\SubstituteClassTeacherRequest;
+use App\Mindbody\Models\SubstituteClassTeacherResponse;
 
 class ClassApi extends BaseApi
 {

@@ -24,7 +24,7 @@ class MethodGenerator(object):
                     self.has_request = True
                     request = self.method_name + '_request'
                     name = strutils.pascal_case(request)
-                    file.write(f'use App\\MindBody\\Models\\{name};\n')
+                    file.write(f'use App\\Mindbody\\Models\\{name};\n')
                     break
 
         for parm in self.parameters:
@@ -32,7 +32,7 @@ class MethodGenerator(object):
                 self.has_request = True
                 parts = parm['schema']['$ref'].split('/')
                 name = parts[-1]
-                file.write(f'use App\\MindBody\\Models\\{name};\n')
+                file.write(f'use App\\Mindbody\\Models\\{name};\n')
 
         if '200' in self.responses:
             if 'schema' in self.responses['200']:
@@ -40,7 +40,7 @@ class MethodGenerator(object):
                 if '$ref' in resp:
                     parts = resp['$ref'].split('/')
                     name = parts[-1]
-                    file.write(f'use App\\MindBody\\Models\\{name};\n')
+                    file.write(f'use App\\Mindbody\\Models\\{name};\n')
 
     def write_method(self, file):
         descr = self.get_description()
@@ -109,7 +109,7 @@ class ApiGenerator(object):
 
     def write_header(self, file):
         file.write(f'<?php\n\n')
-        file.write(f'namespace App\\MindBody\\Apis;\n\n')
+        file.write(f'namespace App\\Mindbody\\Apis;\n\n')
         for m in self.methods:
             m.write_references(file)
         file.write('\n')

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MindBody\Models;
+namespace App\Mindbody\Models;
 
 /**
  * Jim is a RelationshipName1 of John. John is a RelationshipName2 of

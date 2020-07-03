@@ -1,11 +1,11 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\GetStaffRequest;
-use App\MindBody\Models\GetStaffResponse;
-use App\MindBody\Models\GetStaffPermissionsRequest;
-use App\MindBody\Models\GetStaffPermissionsResponse;
+use App\Mindbody\Models\GetStaffRequest;
+use App\Mindbody\Models\GetStaffResponse;
+use App\Mindbody\Models\GetStaffPermissionsRequest;
+use App\Mindbody\Models\GetStaffPermissionsResponse;
 
 class StaffApi extends BaseApi
 {

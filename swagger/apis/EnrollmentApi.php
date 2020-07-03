@@ -1,11 +1,11 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\AddClientToEnrollmentRequest;
-use App\MindBody\Models\ClassSchedule;
-use App\MindBody\Models\GetEnrollmentsRequest;
-use App\MindBody\Models\GetEnrollmentsResponse;
+use App\Mindbody\Models\AddClientToEnrollmentRequest;
+use App\Mindbody\Models\ClassSchedule;
+use App\Mindbody\Models\GetEnrollmentsRequest;
+use App\Mindbody\Models\GetEnrollmentsResponse;
 
 class EnrollmentApi extends BaseApi
 {

@@ -1,28 +1,28 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\GetSalesRequest;
-use App\MindBody\Models\GetSalesResponse;
-use App\MindBody\Models\PurchaseContractRequest;
-use App\MindBody\Models\PurchaseContractResponse;
-use App\MindBody\Models\CheckoutShoppingCartRequest;
-use App\MindBody\Models\GetGiftCardsRequest;
-use App\MindBody\Models\GetGiftCardResponse;
-use App\MindBody\Models\GetServicesRequest;
-use App\MindBody\Models\GetServicesResponse;
-use App\MindBody\Models\GetProductsRequest;
-use App\MindBody\Models\GetProductsResponse;
-use App\MindBody\Models\GetContractsRequest;
-use App\MindBody\Models\GetContractsResponse;
-use App\MindBody\Models\GetCustomPaymentMethodsRequest;
-use App\MindBody\Models\GetCustomPaymentMethodsResponse;
-use App\MindBody\Models\PurchaseGiftCardRequest;
-use App\MindBody\Models\PurchaseGiftCardResponse;
-use App\MindBody\Models\GetPackagesRequest;
-use App\MindBody\Models\GetPackagesResponse;
-use App\MindBody\Models\GetGiftCardBalanceRequest;
-use App\MindBody\Models\GetGiftCardBalanceResponse;
+use App\Mindbody\Models\GetSalesRequest;
+use App\Mindbody\Models\GetSalesResponse;
+use App\Mindbody\Models\PurchaseContractRequest;
+use App\Mindbody\Models\PurchaseContractResponse;
+use App\Mindbody\Models\CheckoutShoppingCartRequest;
+use App\Mindbody\Models\GetGiftCardsRequest;
+use App\Mindbody\Models\GetGiftCardResponse;
+use App\Mindbody\Models\GetServicesRequest;
+use App\Mindbody\Models\GetServicesResponse;
+use App\Mindbody\Models\GetProductsRequest;
+use App\Mindbody\Models\GetProductsResponse;
+use App\Mindbody\Models\GetContractsRequest;
+use App\Mindbody\Models\GetContractsResponse;
+use App\Mindbody\Models\GetCustomPaymentMethodsRequest;
+use App\Mindbody\Models\GetCustomPaymentMethodsResponse;
+use App\Mindbody\Models\PurchaseGiftCardRequest;
+use App\Mindbody\Models\PurchaseGiftCardResponse;
+use App\Mindbody\Models\GetPackagesRequest;
+use App\Mindbody\Models\GetPackagesResponse;
+use App\Mindbody\Models\GetGiftCardBalanceRequest;
+use App\Mindbody\Models\GetGiftCardBalanceResponse;
 
 class SaleApi extends BaseApi
 {

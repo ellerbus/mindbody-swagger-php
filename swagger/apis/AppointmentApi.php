@@ -1,20 +1,20 @@
 <?php
 
-namespace App\MindBody\Apis;
+namespace App\Mindbody\Apis;
 
-use App\MindBody\Models\AddAppointmentRequest;
-use App\MindBody\Models\AddAppointmentResponse;
-use App\MindBody\Models\UpdateAppointmentRequest;
-use App\MindBody\Models\UpdateAppointmentResponse;
-use App\MindBody\Models\GetBookableItemsRequest;
-use App\MindBody\Models\GetBookableItemsResponse;
-use App\MindBody\Models\GetActiveSessionTimesRequest;
-use App\MindBody\Models\GetActiveSessionTimesResponse;
-use App\MindBody\Models\GetScheduleItemsRequest;
-use App\MindBody\Models\GetScheduleItemsResponse;
-use App\MindBody\Models\GetAppointmentOptionsResponse;
-use App\MindBody\Models\GetStaffAppointmentsRequest;
-use App\MindBody\Models\GetStaffAppointmentsResponse;
+use App\Mindbody\Models\AddAppointmentRequest;
+use App\Mindbody\Models\AddAppointmentResponse;
+use App\Mindbody\Models\UpdateAppointmentRequest;
+use App\Mindbody\Models\UpdateAppointmentResponse;
+use App\Mindbody\Models\GetBookableItemsRequest;
+use App\Mindbody\Models\GetBookableItemsResponse;
+use App\Mindbody\Models\GetActiveSessionTimesRequest;
+use App\Mindbody\Models\GetActiveSessionTimesResponse;
+use App\Mindbody\Models\GetScheduleItemsRequest;
+use App\Mindbody\Models\GetScheduleItemsResponse;
+use App\Mindbody\Models\GetAppointmentOptionsResponse;
+use App\Mindbody\Models\GetStaffAppointmentsRequest;
+use App\Mindbody\Models\GetStaffAppointmentsResponse;
 
 class AppointmentApi extends BaseApi
 {
