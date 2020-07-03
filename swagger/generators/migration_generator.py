@@ -63,14 +63,14 @@ class MigrationGenerator(object):
                     typename = properties[key]['type']
                 elif '$ref' in properties[key]:
                     typename = properties[key]['$ref']
-                    typename = typename.split('/')[-1]
+                    typename = 'FK ' + typename.split('/')[-1]
                 if typename == 'array':
                     if '$ref' in properties[key]['items']:
                         ref = properties[key]['items']['$ref']
-                        typename = ref.split('/')[-1] + '[]'
+                        typename = 'FK ' + ref.split('/')[-1] + '[]'
                     elif 'type' in properties[key]['items']:
                         ref = properties[key]['items']['type']
-                        typename = ref.split('/')[-1] + '[]'
+                        typename = 'FK ' + ref.split('/')[-1] + '[]'
 
                 if format == 'date-time':
                     typename = 'dateTimeTz'

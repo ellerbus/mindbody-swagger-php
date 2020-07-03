@@ -21,8 +21,8 @@ class MindBodyWaitlistEntry extends Migration
 			$table->integer('organization_id');
 			$table->dateTimeTz('class_date');
 			$table->integer('class_id');
-			$table->ClassSchedule('class_schedule');
-			$table->Client('client');
+			$table->FK ClassSchedule('class_schedule');
+			$table->FK Client('client');
 			$table->dateTimeTz('enrollment_date_forward');
 			$table->integer('id');
 			$table->dateTimeTz('request_date_time');

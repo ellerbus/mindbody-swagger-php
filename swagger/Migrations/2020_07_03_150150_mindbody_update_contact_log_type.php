@@ -20,7 +20,7 @@ class MindBodyUpdateContactLogType extends Migration
 
 			$table->integer('organization_id');
 			$table->integer('id');
-			$table->integer[]('sub_types');
+			$table->FK integer[]('sub_types');
 
 			$keys = ['organization_id', 'id'];
 

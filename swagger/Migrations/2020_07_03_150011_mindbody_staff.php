@@ -40,9 +40,9 @@ class MindBodyStaff extends Migration
 			$table->string('state', 50);
 			$table->string('work_phone', 50);
 			$table->string('image_url', 50);
-			$table->Appointment[]('appointments');
-			$table->Unavailability[]('unavailabilities');
-			$table->Availability[]('availabilities');
+			$table->FK Appointment[]('appointments');
+			$table->FK Unavailability[]('unavailabilities');
+			$table->FK Availability[]('availabilities');
 
 			$keys = ['organization_id', 'id'];
 

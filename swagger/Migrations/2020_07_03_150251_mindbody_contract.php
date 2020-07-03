@@ -25,9 +25,9 @@ class MindBodyContract extends Migration
 			$table->integer('assigns_membership_id');
 			$table->string('assigns_membership_name', 50);
 			$table->boolean('sold_online');
-			$table->ContractItem[]('contract_items');
+			$table->FK ContractItem[]('contract_items');
 			$table->string('intro_offer', 50);
-			$table->AutopaySchedule('autopay_schedule');
+			$table->FK AutopaySchedule('autopay_schedule');
 			$table->integer('number_of_autopays');
 			$table->string('autopay_trigger_type', 50);
 			$table->string('action_upon_completion_of_autopays', 50);
@@ -38,9 +38,9 @@ class MindBodyContract extends Migration
 			$table->boolean('first_autopay_free');
 			$table->boolean('last_autopay_free');
 			$table->boolean('client_terminate_online');
-			$table->MembershipTypeRestriction[]('membership_type_restrictions');
-			$table->integer[]('location_purchase_restriction_ids');
-			$table->string[]('location_purchase_restriction_names');
+			$table->FK MembershipTypeRestriction[]('membership_type_restrictions');
+			$table->FK integer[]('location_purchase_restriction_ids');
+			$table->FK string[]('location_purchase_restriction_names');
 			$table->string('agreement_terms', 50);
 			$table->boolean('requires_electronic_confirmation');
 			$table->boolean('autopay_enabled');

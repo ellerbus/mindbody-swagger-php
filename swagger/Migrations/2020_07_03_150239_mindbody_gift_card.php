@@ -20,17 +20,17 @@ class MindBodyGiftCard extends Migration
 
 			$table->integer('organization_id');
 			$table->integer('id');
-			$table->integer[]('location_ids');
+			$table->FK integer[]('location_ids');
 			$table->string('description', 50);
 			$table->boolean('editable_by_consumer');
 			$table->double('card_value');
 			$table->double('sale_price');
 			$table->boolean('sold_online');
-			$table->integer[]('membership_restriction_ids');
+			$table->FK integer[]('membership_restriction_ids');
 			$table->string('gift_card_terms', 50);
 			$table->string('contact_info', 50);
 			$table->boolean('display_logo');
-			$table->GiftCardLayout[]('layouts');
+			$table->FK GiftCardLayout[]('layouts');
 
 			$keys = ['organization_id', 'id'];
 

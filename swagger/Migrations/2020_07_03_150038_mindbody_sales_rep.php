@@ -23,7 +23,7 @@ class MindBodySalesRep extends Migration
 			$table->integer('id');
 			$table->string('last_name', 50);
 			$table->integer('sales_rep_number');
-			$table->integer[]('sales_rep_numbers');
+			$table->FK integer[]('sales_rep_numbers');
 
 			$keys = ['organization_id', 'id'];
 

@@ -19,7 +19,7 @@ class MindBodyClientMembership extends Migration
 			$table->collation = 'utf8mb4_unicode_ci';
 
 			$table->integer('organization_id');
-			$table->Location[]('restricted_locations');
+			$table->FK Location[]('restricted_locations');
 			$table->string('icon_code', 50);
 			$table->integer('membership_id');
 			$table->dateTimeTz('active_date');
@@ -30,7 +30,7 @@ class MindBodyClientMembership extends Migration
 			$table->integer('product_id');
 			$table->string('name', 50);
 			$table->dateTimeTz('payment_date');
-			$table->Program('program');
+			$table->FK Program('program');
 			$table->integer('remaining');
 			$table->integer('site_id');
 			$table->string('action', 50);

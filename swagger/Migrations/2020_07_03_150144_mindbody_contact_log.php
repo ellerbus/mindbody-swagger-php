@@ -25,11 +25,11 @@ class MindBodyContactLog extends Migration
 			$table->dateTimeTz('followup_by_date');
 			$table->string('contact_method', 50);
 			$table->string('contact_name', 50);
-			$table->Client('client');
-			$table->Staff('created_by');
-			$table->Staff('assigned_to');
-			$table->ContactLogComment[]('comments');
-			$table->ContactLogType[]('types');
+			$table->FK Client('client');
+			$table->FK Staff('created_by');
+			$table->FK Staff('assigned_to');
+			$table->FK ContactLogComment[]('comments');
+			$table->FK ContactLogType[]('types');
 
 			$keys = ['organization_id', 'id'];
 

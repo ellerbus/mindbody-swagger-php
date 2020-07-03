@@ -20,13 +20,13 @@ class MindBodyAvailability extends Migration
 
 			$table->integer('organization_id');
 			$table->integer('id');
-			$table->Staff('staff');
-			$table->SessionType('session_type');
-			$table->Program[]('programs');
+			$table->FK Staff('staff');
+			$table->FK SessionType('session_type');
+			$table->FK Program[]('programs');
 			$table->dateTimeTz('start_date_time');
 			$table->dateTimeTz('end_date_time');
 			$table->dateTimeTz('bookable_end_date_time');
-			$table->Location('location');
+			$table->FK Location('location');
 
 			$keys = ['organization_id', 'id'];
 

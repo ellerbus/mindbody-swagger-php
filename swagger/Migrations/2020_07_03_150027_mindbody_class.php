@@ -20,10 +20,10 @@ class MindBodyClass extends Migration
 
 			$table->integer('organization_id');
 			$table->integer('class_schedule_id');
-			$table->Visit[]('visits');
-			$table->Client[]('clients');
-			$table->Location('location');
-			$table->Resource('resource');
+			$table->FK Visit[]('visits');
+			$table->FK Client[]('clients');
+			$table->FK Location('location');
+			$table->FK Resource('resource');
 			$table->integer('max_capacity');
 			$table->integer('web_capacity');
 			$table->integer('total_booked');
@@ -41,9 +41,9 @@ class MindBodyClass extends Migration
 			$table->dateTimeTz('start_date_time');
 			$table->dateTimeTz('end_date_time');
 			$table->dateTimeTz('last_modified_date_time');
-			$table->ClassDescription('class_description');
-			$table->Staff('staff');
-			$table->BookingWindow('booking_window');
+			$table->FK ClassDescription('class_description');
+			$table->FK Staff('staff');
+			$table->FK BookingWindow('booking_window');
 			$table->string('booking_status', 50);
 
 			$keys = ['organization_id', 'id'];

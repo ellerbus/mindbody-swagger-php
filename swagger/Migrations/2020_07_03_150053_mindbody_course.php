@@ -25,9 +25,9 @@ class MindBodyCourse extends Migration
 			$table->string('notes', 50);
 			$table->dateTimeTz('start_date');
 			$table->dateTimeTz('end_date');
-			$table->Location('location');
-			$table->Staff('organizer');
-			$table->Program('program');
+			$table->FK Location('location');
+			$table->FK Staff('organizer');
+			$table->FK Program('program');
 			$table->string('image_url', 50);
 
 			$keys = ['organization_id', 'id'];

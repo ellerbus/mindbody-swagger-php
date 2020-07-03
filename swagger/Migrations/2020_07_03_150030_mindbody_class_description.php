@@ -24,12 +24,12 @@ class MindBodyClassDescription extends Migration
 			$table->integer('id');
 			$table->string('image_url', 50);
 			$table->dateTimeTz('last_updated');
-			$table->Level('level');
+			$table->FK Level('level');
 			$table->string('name', 50);
 			$table->string('notes', 50);
 			$table->string('prereq', 50);
-			$table->Program('program');
-			$table->SessionType('session_type');
+			$table->FK Program('program');
+			$table->FK SessionType('session_type');
 			$table->string('category', 50);
 			$table->integer('category_id');
 			$table->string('subcategory', 50);

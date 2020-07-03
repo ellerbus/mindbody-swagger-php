@@ -19,14 +19,14 @@ class MindBodyCheckoutItemWrapper extends Migration
 			$table->collation = 'utf8mb4_unicode_ci';
 
 			$table->integer('organization_id');
-			$table->CheckoutItem('item');
+			$table->FK CheckoutItem('item');
 			$table->double('discount_amount');
-			$table->CheckoutAppointmentBookingRequest[]('appointment_booking_requests');
-			$table->integer[]('enrollment_ids');
-			$table->integer[]('class_ids');
-			$table->integer[]('course_ids');
-			$table->integer[]('visit_ids');
-			$table->integer[]('appointment_ids');
+			$table->FK CheckoutAppointmentBookingRequest[]('appointment_booking_requests');
+			$table->FK integer[]('enrollment_ids');
+			$table->FK integer[]('class_ids');
+			$table->FK integer[]('course_ids');
+			$table->FK integer[]('visit_ids');
+			$table->FK integer[]('appointment_ids');
 			$table->integer('id');
 			$table->integer('quantity');
 

@@ -25,7 +25,7 @@ class MindBodyMembership extends Migration
 			$table->double('member_retail_discount');
 			$table->double('member_service_discount');
 			$table->boolean('allow_clients_to_schedule_unpaid');
-			$table->ProgramMembership[]('online_booking_restricted_to_members_only');
+			$table->FK ProgramMembership[]('online_booking_restricted_to_members_only');
 			$table->integer('day_of_month_scheduling_opens_for_next_month');
 			$table->boolean('restrict_self_sign_in_to_members_only');
 			$table->boolean('allow_members_to_book_appointments_without_paying');

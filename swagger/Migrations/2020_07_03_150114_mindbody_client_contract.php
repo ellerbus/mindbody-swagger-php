@@ -27,7 +27,7 @@ class MindBodyClientContract extends Migration
 			$table->integer('origination_location_id');
 			$table->dateTimeTz('start_date');
 			$table->integer('site_id');
-			$table->UpcomingAutopayEvent[]('upcoming_autopay_events');
+			$table->FK UpcomingAutopayEvent[]('upcoming_autopay_events');
 
 			$keys = ['organization_id', 'id'];
 

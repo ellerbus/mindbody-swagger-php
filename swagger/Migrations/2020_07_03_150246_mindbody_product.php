@@ -28,8 +28,8 @@ class MindBodyProduct extends Migration
 			$table->double('online_price');
 			$table->string('short_description', 50);
 			$table->string('long_description', 50);
-			$table->Color('color');
-			$table->Size('size');
+			$table->FK Color('color');
+			$table->FK Size('size');
 
 			$keys = ['organization_id', 'id'];
 

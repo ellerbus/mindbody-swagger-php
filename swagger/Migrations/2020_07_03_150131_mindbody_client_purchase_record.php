@@ -19,7 +19,7 @@ class MindBodyClientPurchaseRecord extends Migration
 			$table->collation = 'utf8mb4_unicode_ci';
 
 			$table->integer('organization_id');
-			$table->Sale('sale');
+			$table->FK Sale('sale');
 			$table->string('description', 50);
 			$table->boolean('account_payment');
 			$table->double('price');

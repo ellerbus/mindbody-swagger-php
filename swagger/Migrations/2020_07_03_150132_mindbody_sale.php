@@ -24,9 +24,9 @@ class MindBodySale extends Migration
 			$table->string('sale_time', 50);
 			$table->dateTimeTz('sale_date_time');
 			$table->string('client_id', 50);
-			$table->PurchasedItem[]('purchased_items');
+			$table->FK PurchasedItem[]('purchased_items');
 			$table->integer('location_id');
-			$table->SalePayment[]('payments');
+			$table->FK SalePayment[]('payments');
 
 			$keys = ['organization_id', 'id'];
 

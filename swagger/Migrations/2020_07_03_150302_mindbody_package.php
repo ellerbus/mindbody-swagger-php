@@ -23,8 +23,8 @@ class MindBodyPackage extends Migration
 			$table->string('name', 50);
 			$table->double('discount_percentage');
 			$table->boolean('sell_online');
-			$table->Service[]('services');
-			$table->Product[]('products');
+			$table->FK Service[]('services');
+			$table->FK Product[]('products');
 
 			$keys = ['organization_id', 'id'];
 

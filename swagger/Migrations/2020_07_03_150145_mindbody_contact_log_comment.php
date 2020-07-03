@@ -22,7 +22,7 @@ class MindBodyContactLogComment extends Migration
 			$table->integer('id');
 			$table->string('text', 50);
 			$table->dateTimeTz('created_date_time');
-			$table->Staff('created_by');
+			$table->FK Staff('created_by');
 
 			$keys = ['organization_id', 'id'];
 

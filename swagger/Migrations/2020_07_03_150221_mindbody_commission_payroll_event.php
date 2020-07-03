@@ -23,7 +23,7 @@ class MindBodyCommissionPayrollEvent extends Migration
 			$table->dateTimeTz('sale_date_time');
 			$table->integer('sale_id');
 			$table->integer('product_id');
-			$table->CommissionDetail[]('earnings_details');
+			$table->FK CommissionDetail[]('earnings_details');
 			$table->double('earnings');
 
 			$keys = ['organization_id', 'id'];

@@ -19,10 +19,10 @@ class MindBodyLocation extends Migration
 			$table->collation = 'utf8mb4_unicode_ci';
 
 			$table->integer('organization_id');
-			$table->string[]('additional_image_ur_ls');
+			$table->FK string[]('additional_image_ur_ls');
 			$table->string('address', 50);
 			$table->string('address_2', 50);
-			$table->Amenity[]('amenities');
+			$table->FK Amenity[]('amenities');
 			$table->string('business_description', 50);
 			$table->string('city', 50);
 			$table->string('description', 50);

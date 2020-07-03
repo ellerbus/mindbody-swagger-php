@@ -27,7 +27,7 @@ class MindBodyClientService extends Migration
 			$table->integer('product_id');
 			$table->string('name', 50);
 			$table->dateTimeTz('payment_date');
-			$table->Program('program');
+			$table->FK Program('program');
 			$table->integer('remaining');
 			$table->integer('site_id');
 			$table->string('action', 50);

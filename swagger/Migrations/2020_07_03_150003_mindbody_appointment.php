@@ -35,7 +35,7 @@ class MindBodyAppointment extends Migration
 			$table->string('client_id', 50);
 			$table->boolean('first_appointment');
 			$table->integer('client_service_id');
-			$table->Resource[]('resources');
+			$table->FK Resource[]('resources');
 
 			$keys = ['organization_id', 'id'];
 

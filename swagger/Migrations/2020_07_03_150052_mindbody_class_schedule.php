@@ -19,13 +19,13 @@ class MindBodyClassSchedule extends Migration
 			$table->collation = 'utf8mb4_unicode_ci';
 
 			$table->integer('organization_id');
-			$table->Class[]('classes');
-			$table->Client[]('clients');
-			$table->Course('course');
+			$table->FK Class[]('classes');
+			$table->FK Client[]('clients');
+			$table->FK Course('course');
 			$table->integer('semester_id');
 			$table->boolean('is_available');
 			$table->integer('id');
-			$table->ClassDescription('class_description');
+			$table->FK ClassDescription('class_description');
 			$table->boolean('day_sunday');
 			$table->boolean('day_monday');
 			$table->boolean('day_tuesday');
@@ -39,8 +39,8 @@ class MindBodyClassSchedule extends Migration
 			$table->dateTimeTz('end_time');
 			$table->dateTimeTz('start_date');
 			$table->dateTimeTz('end_date');
-			$table->Staff('staff');
-			$table->Location('location');
+			$table->FK Staff('staff');
+			$table->FK Location('location');
 
 			$keys = ['organization_id', 'id'];
 

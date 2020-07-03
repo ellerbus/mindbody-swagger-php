@@ -20,7 +20,7 @@ class MindBodyClientRelationship extends Migration
 
 			$table->integer('organization_id');
 			$table->string('related_client_id', 50);
-			$table->Relationship('relationship');
+			$table->FK Relationship('relationship');
 			$table->string('relationship_name', 50);
 			$table->boolean('delete');
 

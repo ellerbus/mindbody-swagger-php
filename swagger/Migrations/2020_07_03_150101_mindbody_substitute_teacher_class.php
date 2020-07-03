@@ -20,7 +20,7 @@ class MindBodySubstituteTeacherClass extends Migration
 
 			$table->integer('organization_id');
 			$table->integer('class_schedule_id');
-			$table->Location('location');
+			$table->FK Location('location');
 			$table->integer('max_capacity');
 			$table->integer('web_capacity');
 			$table->integer('total_booked');
@@ -37,8 +37,8 @@ class MindBodySubstituteTeacherClass extends Migration
 			$table->dateTimeTz('start_date_time');
 			$table->dateTimeTz('end_date_time');
 			$table->dateTimeTz('last_modified_date_time');
-			$table->ClassDescription('class_description');
-			$table->Staff('staff');
+			$table->FK ClassDescription('class_description');
+			$table->FK Staff('staff');
 
 			$keys = ['organization_id', 'id'];
 

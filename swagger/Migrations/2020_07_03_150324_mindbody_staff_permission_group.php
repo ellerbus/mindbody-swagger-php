@@ -21,8 +21,8 @@ class MindBodyStaffPermissionGroup extends Migration
 			$table->integer('organization_id');
 			$table->string('permission_group_name', 50);
 			$table->boolean('ip_restricted');
-			$table->string[]('allowed_permissions');
-			$table->string[]('denied_permissions');
+			$table->FK string[]('allowed_permissions');
+			$table->FK string[]('denied_permissions');
 
 			$keys = ['organization_id', 'id'];
 

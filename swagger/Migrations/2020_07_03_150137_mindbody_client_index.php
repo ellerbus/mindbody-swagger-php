@@ -23,7 +23,7 @@ class MindBodyClientIndex extends Migration
 			$table->string('name', 50);
 			$table->boolean('required_business_mode');
 			$table->boolean('required_consumer_mode');
-			$table->ClientIndexValue[]('values');
+			$table->FK ClientIndexValue[]('values');
 			$table->string('action', 50);
 
 			$keys = ['organization_id', 'id'];
