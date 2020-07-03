@@ -46,6 +46,9 @@ class MindBodyClass extends Migration
 			$table->FK BookingWindow('booking_window');
 			$table->string('booking_status', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

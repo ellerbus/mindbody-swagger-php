@@ -22,6 +22,9 @@ class MindBodyCommissionDetail extends Migration
 			$table->string('commission_type', 50);
 			$table->double('commission_earnings');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

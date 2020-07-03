@@ -23,6 +23,9 @@ class MindBodyPurchasedItem extends Migration
 			$table->boolean('is_service');
 			$table->string('barcode_id', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

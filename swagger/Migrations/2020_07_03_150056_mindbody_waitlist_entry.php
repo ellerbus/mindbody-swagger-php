@@ -29,6 +29,9 @@ class MindBodyWaitlistEntry extends Migration
 			$table->integer('visit_ref_no');
 			$table->boolean('web');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

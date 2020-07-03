@@ -24,6 +24,9 @@ class MindBodyCustomClientFieldValue extends Migration
 			$table->string('data_type', 50);
 			$table->string('name', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

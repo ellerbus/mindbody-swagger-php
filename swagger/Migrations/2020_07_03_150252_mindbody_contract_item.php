@@ -27,6 +27,9 @@ class MindBodyContractItem extends Migration
 			$table->integer('quantity');
 			$table->boolean('one_time_item');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

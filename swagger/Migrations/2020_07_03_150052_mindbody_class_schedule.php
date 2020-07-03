@@ -42,6 +42,9 @@ class MindBodyClassSchedule extends Migration
 			$table->FK Staff('staff');
 			$table->FK Location('location');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -29,6 +29,9 @@ class MindBodyClientPurchaseRecord extends Migration
 			$table->boolean('returned');
 			$table->integer('quantity');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

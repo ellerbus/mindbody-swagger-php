@@ -82,6 +82,8 @@ class MigrationGenerator(object):
                 else:
                     file.write(f"\t\t\t$table->{typename}('{name}');\n")
         file.write(f'\n')
+        file.write(f"\t\t\t$table->timestamps();\n")
+        file.write(f"\t\t\t$table->softDeletes('deleted_at');\n\n")
         file.write(f"\t\t\t$keys = ['organization_id', 'id'];\n\n")
         file.write(f"\t\t\t$table->primary($keys);\n")
 

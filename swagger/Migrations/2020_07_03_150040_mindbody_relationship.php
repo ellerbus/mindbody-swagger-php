@@ -23,6 +23,9 @@ class MindBodyRelationship extends Migration
 			$table->string('relationship_name_1', 50);
 			$table->string('relationship_name_2', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

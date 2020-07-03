@@ -24,6 +24,9 @@ class MindBodyStaffPermissionGroup extends Migration
 			$table->FK string[]('allowed_permissions');
 			$table->FK string[]('denied_permissions');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

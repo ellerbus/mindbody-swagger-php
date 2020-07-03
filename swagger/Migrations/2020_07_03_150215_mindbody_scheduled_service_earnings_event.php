@@ -25,6 +25,9 @@ class MindBodyScheduledServiceEarningsEvent extends Migration
 			$table->double('earnings');
 			$table->dateTimeTz('date_time');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -29,6 +29,9 @@ class MindBodyClientContract extends Migration
 			$table->integer('site_id');
 			$table->FK UpcomingAutopayEvent[]('upcoming_autopay_events');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

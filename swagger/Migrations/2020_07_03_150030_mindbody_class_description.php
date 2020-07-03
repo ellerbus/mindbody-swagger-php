@@ -35,6 +35,9 @@ class MindBodyClassDescription extends Migration
 			$table->string('subcategory', 50);
 			$table->integer('subcategory_id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

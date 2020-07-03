@@ -32,6 +32,9 @@ class MindBodyGiftCard extends Migration
 			$table->boolean('display_logo');
 			$table->FK GiftCardLayout[]('layouts');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -33,6 +33,9 @@ class MindBodyMembership extends Migration
 			$table->boolean('allow_members_to_purchase_non_members_products');
 			$table->boolean('is_active');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

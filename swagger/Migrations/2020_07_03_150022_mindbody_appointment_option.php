@@ -24,6 +24,9 @@ class MindBodyAppointmentOption extends Migration
 			$table->string('value', 50);
 			$table->string('type', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

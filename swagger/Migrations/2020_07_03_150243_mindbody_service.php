@@ -29,6 +29,9 @@ class MindBodyService extends Migration
 			$table->string('name', 50);
 			$table->integer('count');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

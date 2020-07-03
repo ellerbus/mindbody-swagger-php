@@ -22,6 +22,9 @@ class MindBodyUpdateContactLogType extends Migration
 			$table->integer('id');
 			$table->FK integer[]('sub_types');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

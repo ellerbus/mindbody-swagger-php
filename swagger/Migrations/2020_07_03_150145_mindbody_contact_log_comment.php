@@ -24,6 +24,9 @@ class MindBodyContactLogComment extends Migration
 			$table->dateTimeTz('created_date_time');
 			$table->FK Staff('created_by');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

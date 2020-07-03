@@ -31,6 +31,9 @@ class MindBodyContactLog extends Migration
 			$table->FK ContactLogComment[]('comments');
 			$table->FK ContactLogType[]('types');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

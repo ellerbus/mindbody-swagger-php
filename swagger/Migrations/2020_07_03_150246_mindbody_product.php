@@ -31,6 +31,9 @@ class MindBodyProduct extends Migration
 			$table->FK Color('color');
 			$table->FK Size('size');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

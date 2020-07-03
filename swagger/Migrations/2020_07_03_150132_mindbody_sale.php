@@ -28,6 +28,9 @@ class MindBodySale extends Migration
 			$table->integer('location_id');
 			$table->FK SalePayment[]('payments');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

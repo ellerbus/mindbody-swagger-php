@@ -24,6 +24,9 @@ class MindBodyBookingWindow extends Migration
 			$table->dateTimeTz('daily_start_time');
 			$table->dateTimeTz('daily_end_time');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

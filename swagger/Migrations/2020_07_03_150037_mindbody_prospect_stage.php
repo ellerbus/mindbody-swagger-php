@@ -23,6 +23,9 @@ class MindBodyProspectStage extends Migration
 			$table->string('description', 50);
 			$table->integer('id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -41,6 +41,9 @@ class MindBodySite extends Migration
 			$table->string('time_zone', 50);
 			$table->boolean('accepts_direct_debit');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

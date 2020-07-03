@@ -24,6 +24,9 @@ class MindBodyUser extends Migration
 			$table->string('last_name', 50);
 			$table->string('type', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

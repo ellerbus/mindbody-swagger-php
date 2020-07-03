@@ -25,6 +25,9 @@ class MindBodyFormulaNote extends Migration
 			$table->dateTimeTz('entry_date_time');
 			$table->integer('appointment_id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

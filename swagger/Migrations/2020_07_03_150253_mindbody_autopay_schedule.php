@@ -23,6 +23,9 @@ class MindBodyAutopaySchedule extends Migration
 			$table->integer('frequency_value');
 			$table->string('frequency_time_unit', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

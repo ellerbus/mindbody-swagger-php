@@ -29,6 +29,9 @@ class MindBodyCreditCardInfo extends Migration
 			$table->string('billing_postal_code', 50);
 			$table->boolean('save_info');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

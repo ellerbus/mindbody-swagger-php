@@ -40,6 +40,9 @@ class MindBodySubstituteTeacherClass extends Migration
 			$table->FK ClassDescription('class_description');
 			$table->FK Staff('staff');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -24,6 +24,9 @@ class MindBodyUnavailability extends Migration
 			$table->dateTimeTz('end_date_time');
 			$table->string('description', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

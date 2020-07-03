@@ -24,6 +24,9 @@ class MindBodyUpcomingAutopayEvent extends Migration
 			$table->string('payment_method', 50);
 			$table->dateTimeTz('schedule_date');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

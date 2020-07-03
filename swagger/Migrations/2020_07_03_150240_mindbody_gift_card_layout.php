@@ -22,6 +22,9 @@ class MindBodyGiftCardLayout extends Migration
 			$table->integer('layout_id');
 			$table->string('layout_name', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

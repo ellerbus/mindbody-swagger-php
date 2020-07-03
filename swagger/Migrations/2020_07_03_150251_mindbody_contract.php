@@ -54,6 +54,9 @@ class MindBodyContract extends Migration
 			$table->double('total_contract_amount_tax');
 			$table->double('total_contract_amount_total');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

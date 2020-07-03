@@ -37,6 +37,9 @@ class MindBodyAppointment extends Migration
 			$table->integer('client_service_id');
 			$table->FK Resource[]('resources');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

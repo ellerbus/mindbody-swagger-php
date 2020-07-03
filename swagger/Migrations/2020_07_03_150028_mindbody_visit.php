@@ -41,6 +41,9 @@ class MindBodyVisit extends Migration
 			$table->boolean('web_signup');
 			$table->string('action', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

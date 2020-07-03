@@ -25,6 +25,9 @@ class MindBodySalePayment extends Migration
 			$table->string('type', 50);
 			$table->string('notes', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

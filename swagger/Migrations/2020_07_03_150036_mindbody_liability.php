@@ -23,6 +23,9 @@ class MindBodyLiability extends Migration
 			$table->boolean('is_released');
 			$table->integer('released_by');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

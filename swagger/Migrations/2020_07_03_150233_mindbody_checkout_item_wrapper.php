@@ -30,6 +30,9 @@ class MindBodyCheckoutItemWrapper extends Migration
 			$table->integer('id');
 			$table->integer('quantity');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

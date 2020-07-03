@@ -28,6 +28,9 @@ class MindBodyAvailability extends Migration
 			$table->dateTimeTz('bookable_end_date_time');
 			$table->FK Location('location');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

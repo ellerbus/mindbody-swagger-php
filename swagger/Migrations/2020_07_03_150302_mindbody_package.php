@@ -26,6 +26,9 @@ class MindBodyPackage extends Migration
 			$table->FK Service[]('services');
 			$table->FK Product[]('products');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

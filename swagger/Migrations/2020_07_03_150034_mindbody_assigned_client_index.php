@@ -22,6 +22,9 @@ class MindBodyAssignedClientIndex extends Migration
 			$table->integer('id');
 			$table->integer('value_id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

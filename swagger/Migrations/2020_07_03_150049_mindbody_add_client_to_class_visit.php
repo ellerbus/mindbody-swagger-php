@@ -43,6 +43,9 @@ class MindBodyAddClientToClassVisit extends Migration
 			$table->integer('site_id');
 			$table->integer('waitlist_entry_id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

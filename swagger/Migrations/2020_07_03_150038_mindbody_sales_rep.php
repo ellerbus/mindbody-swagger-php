@@ -25,6 +25,9 @@ class MindBodySalesRep extends Migration
 			$table->integer('sales_rep_number');
 			$table->FK integer[]('sales_rep_numbers');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

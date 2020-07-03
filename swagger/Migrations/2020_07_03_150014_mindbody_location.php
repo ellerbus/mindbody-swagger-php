@@ -45,6 +45,9 @@ class MindBodyLocation extends Migration
 			$table->double('average_rating');
 			$table->integer('total_number_of_deals');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

@@ -21,6 +21,9 @@ class MindBodyContactLogSubType extends Migration
 			$table->integer('organization_id');
 			$table->integer('id');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

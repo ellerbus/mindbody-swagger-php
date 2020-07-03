@@ -24,6 +24,9 @@ class MindBodyTip extends Migration
 			$table->dateTimeTz('sale_date_time');
 			$table->double('earnings');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

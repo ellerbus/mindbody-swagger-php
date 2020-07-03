@@ -74,6 +74,9 @@ class MindBodyClient extends Migration
 			$table->boolean('send_schedule_emails');
 			$table->boolean('send_schedule_texts');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

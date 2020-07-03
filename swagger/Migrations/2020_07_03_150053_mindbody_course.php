@@ -30,6 +30,9 @@ class MindBodyCourse extends Migration
 			$table->FK Program('program');
 			$table->string('image_url', 50);
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);

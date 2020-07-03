@@ -27,6 +27,9 @@ class MindBodyTimeCardEvent extends Migration
 			$table->double('hourly_rate');
 			$table->double('earnings');
 
+			$table->timestamps();
+			$table->softDeletes('deleted_at');
+
 			$keys = ['organization_id', 'id'];
 
 			$table->primary($keys);
